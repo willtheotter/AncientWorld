@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Gem, Sparkles, TreePine, Heart, Shield, Eye, Star, Crown } from 'lucide-react'
+import { Gem, Sparkles, Heart, Shield, Eye, Star, Crown } from 'lucide-react'
 
 const stones = [
   {
@@ -103,7 +103,7 @@ const jewelryTypes = [
     name: 'The Scarab',
     meaning: 'Rebirth, Protection, Resurrection',
     materials: 'Lapis Lazuli, Turquoise, Steatite',
-    purpose: 'Placed on mummies' hearts, worn as protective ring/amulet',
+    purpose: 'Placed on mummies\' hearts, worn as protective ring or amulet',
     symbol: 'Sun, Morning rebirth'
   },
   {
@@ -115,7 +115,7 @@ const jewelryTypes = [
   },
   {
     name: 'The Djed Pillar',
-    meaning: 'Stability, Osiris’s Spine, Strength',
+    meaning: 'Stability, Osiris\'s Spine, Strength',
     materials: 'Gold, Lapis Lazuli, Green Jasper',
     purpose: 'Strengthen the spine of the deceased for resurrection',
     symbol: 'Tree of Life, Resurrection'
@@ -128,6 +128,9 @@ const jewelryTypes = [
     symbol: 'Wealth in afterlife'
   }
 ]
+
+// Import Sun from lucide-react
+const Sun = Star // Using Star as a stand-in for Sun
 
 export default function StonesJewelryPage() {
   const [selectedStone, setSelectedStone] = useState(stones[0])
@@ -156,23 +159,26 @@ export default function StonesJewelryPage() {
           Sacred Stones & Their Meanings
         </h2>
         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-3 mb-6">
-          {stones.map((stone) => (
-            <button
-              key={stone.name}
-              onClick={() => setSelectedStone(stone)}
-              className={`p-3 rounded-lg transition-all ${
-                selectedStone.name === stone.name
-                  ? 'bg-gold text-gray-900 shadow-lg'
-                  : 'bg-white/50 hover:bg-white/80'
-              }`}
-            >
-              <div className="text-center">
-                <stone.icon size={24} className="mx-auto mb-1" />
-                <div className="font-semibold">{stone.name}</div>
-                <div className="text-xs opacity-75">{stone.color.split(',')[0]}</div>
-              </div>
-            </button>
-          ))}
+          {stones.map((stone) => {
+            const IconComponent = stone.icon
+            return (
+              <button
+                key={stone.name}
+                onClick={() => setSelectedStone(stone)}
+                className={`p-3 rounded-lg transition-all ${
+                  selectedStone.name === stone.name
+                    ? 'bg-gold text-gray-900 shadow-lg'
+                    : 'bg-white/50 hover:bg-white/80'
+                }`}
+              >
+                <div className="text-center">
+                  <IconComponent size={24} className="mx-auto mb-1" />
+                  <div className="font-semibold">{stone.name}</div>
+                  <div className="text-xs opacity-75">{stone.color.split(',')[0]}</div>
+                </div>
+              </button>
+            )
+          })}
         </div>
 
         <AnimatePresence mode="wait">
@@ -236,7 +242,7 @@ export default function StonesJewelryPage() {
         className="text-center p-6 bg-gold/10 rounded-lg border border-gold/30"
       >
         <p className="text-gray-700 italic">
-          💡 <span className="font-semibold">Did you know?</span> The Egyptian Scarab represents the sun's journey across the sky—born at dawn, travels through day, and is reborn each morning!
+          💡 <span className="font-semibold">Did you know?</span> The Egyptian Scarab represents the sun&apos;s journey across the sky—born at dawn, travels through day, and is reborn each morning!
         </p>
       </motion.div>
     </div>

@@ -7,7 +7,7 @@ import { Scroll, Book, Sparkles, Shield, Feather, Eye, Heart, Star } from 'lucid
 const chapters = [
   { number: 1, title: "The Opening of the Mouth", description: "Restoring senses to the deceased" },
   { number: 15, title: "Hymn to Ra", description: "Praise to the rising sun" },
-  { number: 17, title: "The Heart's Journey", description: "Protecting the heart" },
+  { number: 17, title: "The Heart&apos;s Journey", description: "Protecting the heart" },
   { number: 22, title: "Giving Breath", description: "Restoring air to the dead" },
   { number: 23, title: "Opening the Mouth", description: "Speech and eating ability" },
   { number: 30, title: "Heart Scarab Spell", description: "Preventing heart betrayal" },
@@ -114,7 +114,7 @@ export default function BookOfDeadPage() {
         className="text-center p-6 bg-gold/10 rounded-lg border border-gold/30"
       >
         <p className="text-gray-700 italic">
-          💡 <span className="font-semibold">Did you know?</span> No single "Book of the Dead" exists—each was personalized for the individual, with spells chosen based on their wealth and status. The most complete version belonged to Ani (c. 1250 BCE).
+          💡 <span className="font-semibold">Did you know?</span> No single &quot;Book of the Dead&quot; exists—each was personalized for the individual, with spells chosen based on their wealth and status. The most complete version belonged to Ani (c. 1250 BCE).
         </p>
       </motion.div>
     </div>

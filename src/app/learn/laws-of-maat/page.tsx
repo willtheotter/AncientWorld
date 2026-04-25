@@ -24,7 +24,7 @@ const laws = [
   { number: 17, law: "I have not been an eavesdropper.", category: "Privacy", principle: "Respect for others" },
   { number: 18, law: "I have not slandered.", category: "Speech", principle: "Avoid gossip" },
   { number: 19, law: "I have not been angry without reason.", category: "Emotions", principle: "Self-control" },
-  { number: 20, law: "I have not seduced anyone's wife.", category: "Relationships", principle: "Fidelity" },
+  { number: 20, law: "I have not seduced anyone&apos;s wife.", category: "Relationships", principle: "Fidelity" },
   { number: 21, law: "I have not polluted myself.", category: "Purity", principle: "Cleanliness" },
   { number: 22, law: "I have not terrorized anyone.", category: "Peace", principle: "Safety for all" },
   { number: 23, law: "I have not transgressed the law.", category: "Obedience", principle: "Rule of law" },
@@ -154,7 +154,7 @@ export default function LawsOfMaatPage() {
               </div>
               <div className="mt-4 pt-3 border-t border-gold/30">
                 <p className="text-sm text-gray-500 italic">
-                  These laws were declared during the "Weighing of the Heart" ceremony in the Hall of Maat
+                  These laws were declared during the &quot;Weighing of the Heart&quot; ceremony in the Hall of Maat
                 </p>
               </div>
             </motion.div>
@@ -172,7 +172,7 @@ export default function LawsOfMaatPage() {
           <span className="font-semibold">The Weighing of the Heart</span>
         </div>
         <p className="text-gray-700 text-sm">
-          In the Hall of Maat, the deceased's heart was weighed against the feather of Maat (truth). 
+          In the Hall of Maat, the deceased&apos;s heart was weighed against the feather of Maat (truth). 
           If the heart was lighter than the feather, they were worthy of paradise. If heavier, their soul was devoured by Ammit.
         </p>
       </motion.div>

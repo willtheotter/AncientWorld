@@ -119,7 +119,7 @@ export default function GatesUnderworldPage() {
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-gold">The 12 Gates of the Underworld</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          The soul's nocturnal journey through the Duat to reach resurrection
+          The soul&apos;s nocturnal journey through the Duat to reach resurrection
         </p>
       </motion.div>
 
@@ -198,7 +198,7 @@ export default function GatesUnderworldPage() {
       >
         <div className="flex items-center justify-center gap-2 mb-2">
           <Key size={20} className="text-gold" />
-          <span className="font-semibold">The Soul's Journey</span>
+          <span className="font-semibold">The Soul&apos;s Journey</span>
         </div>
         <p className="text-gray-700 text-sm">
           Passing through all 12 gates, the soul would be transformed, purified, and ultimately resurrected 

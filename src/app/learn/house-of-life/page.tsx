@@ -9,7 +9,7 @@ const sections = [
     title: 'The Per Ankh',
     subtitle: 'House of Life',
     icon: Library,
-    content: `The Per Ankh (House of Life) was ancient Egypt's most sacred institution of learning—part library, part university, part medical school, and part temple. These institutions were attached to major temples and served as centers for the preservation and creation of knowledge.
+    content: `The Per Ankh (House of Life) was ancient Egypt&apos;s most sacred institution of learning—part library, part university, part medical school, and part temple. These institutions were attached to major temples and served as centers for the preservation and creation of knowledge.
 
 Only priests, scribes, and the elite could enter. The House of Life housed thousands of papyrus scrolls containing medical texts, magical spells, religious rituals, astronomical observations, and literary works. Scribes spent years copying these texts by hand, preserving knowledge for future generations.`
   },
@@ -19,7 +19,7 @@ Only priests, scribes, and the elite could enter. The House of Life housed thous
     icon: GraduationCap,
     content: `Scribes were among the most respected professionals in Egypt, requiring 12+ years of rigorous training beginning in childhood. Students memorized hundreds of hieroglyphic signs, practiced on pottery shards (ostraca), and learned mathematics, astronomy, medicine, and law.
 
-The "Satire of the Trades" text famously encouraged boys to become scribes, describing how all other professions had hardships while scribes "directed the work of others." Literacy was estimated at only 1-5% of the population, making scribes a privileged class.`
+The &quot;Satire of the Trades&quot; text famously encouraged boys to become scribes, describing how all other professions had hardships while scribes &quot;directed the work of others.&quot; Literacy was estimated at only 1-5% of the population, making scribes a privileged class.`
   },
   {
     title: 'Medical Knowledge',
@@ -33,7 +33,7 @@ Doctors performed complex surgeries, set broken bones, treated wounds with honey
     title: 'Magical & Religious Texts',
     subtitle: 'Heka & Ritual',
     icon: Sparkles,
-    content: `The House of Life also produced magical texts, spells, and ritual instructions. These were not "superstition" but part of heka—the divine force of creation. Specific rituals were believed to heal the sick, protect the dead, and maintain cosmic order.
+    content: `The House of Life also produced magical texts, spells, and ritual instructions. These were not &quot;superstition&quot; but part of heka—the divine force of creation. Specific rituals were believed to heal the sick, protect the dead, and maintain cosmic order.
 
 The most famous texts produced include spells from the Book of the Dead, temple rituals, and healing incantations. Priests underwent extensive training in reciting these texts correctly—errors could be dangerous.`
   },
@@ -62,7 +62,7 @@ export default function HouseOfLifePage() {
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-gold">The House of Life</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Ancient Egypt's center of learning, medicine, and spiritual knowledge
+          Ancient Egypt&apos;s center of learning, medicine, and spiritual knowledge
         </p>
       </motion.div>
 
