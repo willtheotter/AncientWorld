@@ -1,0 +1,14 @@
+export const words = {
+  easy: [
+    'RA', 'NILE', 'EGYPT', 'PHARAOH', 'PYRAMID', 'SPHINX', 'ANUBIS', 'OSIRIS',
+    'HORUS', 'ISIS', 'THOTH', 'SCARAB', 'PAPYRUS', 'HIEROGLYPH'
+  ],
+  medium: [
+    'TUTANKHAMUN', 'RAMESSES', 'CLEOPATRA', 'SARCOPHAGUS', 'OBELISK', 'AMULET',
+    'CANOPIC', 'NEFERTITI', 'KHEPRI', 'MAAT', 'DUAT', 'ANKH'
+  ],
+  hard: [
+    'HATSHEPSUT', 'THUTMOSE', 'AKHENATEN', 'NARMER', 'IMHOTEP', 'SESHAT',
+    'WADJET', 'NEKHBET', 'SEKHMET', 'BASTET', 'APEP'
+  ]
+}
