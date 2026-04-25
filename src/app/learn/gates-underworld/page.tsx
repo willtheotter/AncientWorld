@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { DoorOpen, Shield, Flame, Eye, Skull, Snake, Crown, Key, Scroll, Sun, Moon, Star, Heart } from 'lucide-react'
+import { DoorOpen, Shield, Flame, Eye, Skull, Crown, Key, Scroll, Sun, Moon, Star, Heart, AlertTriangle } from 'lucide-react'
 
 const gates = [
   {

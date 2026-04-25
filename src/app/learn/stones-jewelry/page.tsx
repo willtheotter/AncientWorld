@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Gem, Sparkles, Heart, Shield, Eye, Star, Crown } from 'lucide-react'
+import { Gem, Sparkles, Heart, Shield, Eye, Star, Crown, Sun as SunIcon } from 'lucide-react'
 
 const stones = [
   {
@@ -39,7 +39,7 @@ const stones = [
     uses: 'Necklaces, rings, protective amulets for the dead.',
     deity: 'Isis',
     symbol: 'Setting sun, Maternal Blood',
-    icon: Sun
+    icon: SunIcon
   },
   {
     name: 'Malachite',
@@ -128,9 +128,6 @@ const jewelryTypes = [
     symbol: 'Wealth in afterlife'
   }
 ]
-
-// Import Sun from lucide-react
-const Sun = Star // Using Star as a stand-in for Sun
 
 export default function StonesJewelryPage() {
   const [selectedStone, setSelectedStone] = useState(stones[0])

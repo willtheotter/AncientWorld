@@ -2,9 +2,40 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Feather, BookOpen, User, Ship, Shield, Star, Scroll, Sun, Moon, Eye, Heart, Crown, Hand, Sparkles } from 'lucide-react'
+import { Feather, BookOpen, User, Ship, Shield, Star, Scroll, Sun, Moon, Eye, Heart, Crown, Hand, Sparkles, ScrollText } from 'lucide-react'
 
-const sections = [
+interface Deity {
+  name: string
+  role: string
+  symbol: string
+  description: string
+  attribution?: string
+}
+
+interface StoryPart {
+  title: string
+  text: string
+}
+
+interface SectionContent {
+  overview?: string
+  majorDeities?: Deity[]
+  story?: StoryPart[]
+  themes?: string[]
+  deities?: Deity[]
+  significance?: string
+  tenCommandments?: string[]
+}
+
+interface Section {
+  id: string
+  title: string
+  icon: React.ReactNode
+  color: string
+  content: SectionContent
+}
+
+const sections: Section[] = [
   {
     id: 'egyptian-deities',
     title: 'Egyptian Deities',
@@ -244,9 +275,11 @@ export default function ReligionMythologyPage() {
           </div>
 
           {/* Egyptian Deities Section */}
-          {activeSection.id === 'egyptian-deities' && (
+          {activeSection.id === 'egyptian-deities' && activeSection.content.majorDeities && (
             <div className="space-y-6">
-              <p className="text-gray-700 leading-relaxed">{activeSection.content.overview}</p>
+              {activeSection.content.overview && (
+                <p className="text-gray-700 leading-relaxed">{activeSection.content.overview}</p>
+              )}
               <div className="grid md:grid-cols-2 gap-4">
                 {activeSection.content.majorDeities.map((deity) => (
                   <div key={deity.name} className="bg-white/40 rounded-lg p-4">
@@ -263,9 +296,11 @@ export default function ReligionMythologyPage() {
           )}
 
           {/* Resurrection of Osiris Section */}
-          {activeSection.id === 'resurrection-osiris' && (
+          {activeSection.id === 'resurrection-osiris' && activeSection.content.story && (
             <div className="space-y-6">
-              <p className="text-gray-700 leading-relaxed">{activeSection.content.overview}</p>
+              {activeSection.content.overview && (
+                <p className="text-gray-700 leading-relaxed">{activeSection.content.overview}</p>
+              )}
               <div className="space-y-4">
                 {activeSection.content.story.map((part) => (
                   <div key={part.title} className="bg-white/40 rounded-lg p-4">
@@ -278,9 +313,11 @@ export default function ReligionMythologyPage() {
           )}
 
           {/* Shipwrecked Sailor Section */}
-          {activeSection.id === 'shipwrecked-sailor' && (
+          {activeSection.id === 'shipwrecked-sailor' && activeSection.content.story && (
             <div className="space-y-6">
-              <p className="text-gray-700 leading-relaxed">{activeSection.content.overview}</p>
+              {activeSection.content.overview && (
+                <p className="text-gray-700 leading-relaxed">{activeSection.content.overview}</p>
+              )}
               <div className="space-y-4">
                 {activeSection.content.story.map((part) => (
                   <div key={part.title} className="bg-white/40 rounded-lg p-4">
@@ -289,23 +326,27 @@ export default function ReligionMythologyPage() {
                   </div>
                 ))}
               </div>
-              <div className="bg-gold/10 rounded-lg p-4">
-                <h3 className="font-bold text-gold mb-2">Themes</h3>
-                <div className="flex flex-wrap gap-2">
-                  {activeSection.content.themes.map((theme) => (
-                    <span key={theme} className="px-2 py-1 bg-white/50 rounded-full text-xs text-gray-700">
-                      {theme}
-                    </span>
-                  ))}
+              {activeSection.content.themes && (
+                <div className="bg-gold/10 rounded-lg p-4">
+                  <h3 className="font-bold text-gold mb-2">Themes</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {activeSection.content.themes.map((theme) => (
+                      <span key={theme} className="px-2 py-1 bg-white/50 rounded-full text-xs text-gray-700">
+                        {theme}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           )}
 
           {/* Sinuhe Section */}
-          {activeSection.id === 'sinuhe' && (
+          {activeSection.id === 'sinuhe' && activeSection.content.story && (
             <div className="space-y-6">
-              <p className="text-gray-700 leading-relaxed">{activeSection.content.overview}</p>
+              {activeSection.content.overview && (
+                <p className="text-gray-700 leading-relaxed">{activeSection.content.overview}</p>
+              )}
               <div className="space-y-4">
                 {activeSection.content.story.map((part) => (
                   <div key={part.title} className="bg-white/40 rounded-lg p-4">
@@ -314,23 +355,27 @@ export default function ReligionMythologyPage() {
                   </div>
                 ))}
               </div>
-              <div className="bg-gold/10 rounded-lg p-4">
-                <h3 className="font-bold text-gold mb-2">Themes</h3>
-                <div className="flex flex-wrap gap-2">
-                  {activeSection.content.themes.map((theme) => (
-                    <span key={theme} className="px-2 py-1 bg-white/50 rounded-full text-xs text-gray-700">
-                      {theme}
-                    </span>
-                  ))}
+              {activeSection.content.themes && (
+                <div className="bg-gold/10 rounded-lg p-4">
+                  <h3 className="font-bold text-gold mb-2">Themes</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {activeSection.content.themes.map((theme) => (
+                      <span key={theme} className="px-2 py-1 bg-white/50 rounded-full text-xs text-gray-700">
+                        {theme}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           )}
 
           {/* Memphis Triad Section */}
-          {activeSection.id === 'memphis-triad' && (
+          {activeSection.id === 'memphis-triad' && activeSection.content.deities && (
             <div className="space-y-6">
-              <p className="text-gray-700 leading-relaxed">{activeSection.content.overview}</p>
+              {activeSection.content.overview && (
+                <p className="text-gray-700 leading-relaxed">{activeSection.content.overview}</p>
+              )}
               <div className="grid md:grid-cols-3 gap-4">
                 {activeSection.content.deities.map((deity) => (
                   <div key={deity.name} className="bg-white/40 rounded-lg p-4">
@@ -340,20 +385,26 @@ export default function ReligionMythologyPage() {
                     </div>
                     <p className="text-xs text-gold mb-1">{deity.role}</p>
                     <p className="text-sm text-gray-700 mb-2">{deity.description}</p>
-                    <p className="text-xs text-gray-500">{deity.attribution}</p>
+                    {deity.attribution && (
+                      <p className="text-xs text-gray-500">{deity.attribution}</p>
+                    )}
                   </div>
                 ))}
               </div>
-              <div className="bg-gold/10 rounded-lg p-4">
-                <p className="text-sm text-gray-700 italic">{activeSection.content.significance}</p>
-              </div>
+              {activeSection.content.significance && (
+                <div className="bg-gold/10 rounded-lg p-4">
+                  <p className="text-sm text-gray-700 italic">{activeSection.content.significance}</p>
+                </div>
+              )}
             </div>
           )}
 
           {/* Exodus Section */}
-          {activeSection.id === 'exodus-ten-commandments' && (
+          {activeSection.id === 'exodus-ten-commandments' && activeSection.content.story && (
             <div className="space-y-6">
-              <p className="text-gray-700 leading-relaxed">{activeSection.content.overview}</p>
+              {activeSection.content.overview && (
+                <p className="text-gray-700 leading-relaxed">{activeSection.content.overview}</p>
+              )}
               <div className="space-y-3">
                 {activeSection.content.story.map((part) => (
                   <div key={part.title} className="bg-white/40 rounded-lg p-3">
@@ -362,20 +413,24 @@ export default function ReligionMythologyPage() {
                   </div>
                 ))}
               </div>
-              <div className="bg-gold/20 rounded-lg p-4">
-                <h3 className="font-bold text-gold mb-2 flex items-center gap-2">
-                  <Scroll size={16} />
-                  The Ten Commandments
-                </h3>
-                <div className="grid md:grid-cols-2 gap-1">
-                  {activeSection.content.tenCommandments.map((cmd) => (
-                    <p key={cmd} className="text-xs text-gray-700">{cmd}</p>
-                  ))}
+              {activeSection.content.tenCommandments && (
+                <div className="bg-gold/20 rounded-lg p-4">
+                  <h3 className="font-bold text-gold mb-2 flex items-center gap-2">
+                    <Scroll size={16} />
+                    The Ten Commandments
+                  </h3>
+                  <div className="grid md:grid-cols-2 gap-1">
+                    {activeSection.content.tenCommandments.map((cmd) => (
+                      <p key={cmd} className="text-xs text-gray-700">{cmd}</p>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div className="bg-gold/10 rounded-lg p-4">
-                <p className="text-sm text-gray-700 italic">{activeSection.content.significance}</p>
-              </div>
+              )}
+              {activeSection.content.significance && (
+                <div className="bg-gold/10 rounded-lg p-4">
+                  <p className="text-sm text-gray-700 italic">{activeSection.content.significance}</p>
+                </div>
+              )}
             </div>
           )}
         </motion.div>
