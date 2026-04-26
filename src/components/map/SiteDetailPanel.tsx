@@ -2,7 +2,8 @@
 
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
-import { useEffect, useRef } from 'react'
+import Image from 'next/image'
+import { useEffect, useRef, useState } from 'react'
 import { X, MapPin, ChevronRight, Pyramid, Building2, Sun, Moon } from 'lucide-react'
 
 interface Location {
@@ -32,6 +33,7 @@ interface SiteDetailPanelProps {
 
 export default function SiteDetailPanel({ site, onClose }: SiteDetailPanelProps) {
   const panelRef = useRef<HTMLDivElement>(null)
+  const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({})
 
   // Handle click outside to close
   useEffect(() => {
@@ -61,6 +63,15 @@ export default function SiteDetailPanel({ site, onClose }: SiteDetailPanelProps)
       document.body.style.overflow = 'unset'
     }
   }, [site, onClose])
+
+  const getImagePath = (locationId: string) => {
+    // Try to use the AI regenerated image first
+    return `/images/sites/${locationId}-regenerated.jpg`
+  }
+
+  const handleImageError = (locationId: string) => {
+    setImageErrors(prev => ({ ...prev, [locationId]: true }))
+  }
 
   if (!site) return null
 
@@ -136,61 +147,110 @@ export default function SiteDetailPanel({ site, onClose }: SiteDetailPanelProps)
               <span>Explore {site.locations.length} sacred site{site.locations.length !== 1 ? 's' : ''} in {site.name}</span>
             </div>
             
-            {/* Locations list */}
+            {/* Locations list with AI regenerated image previews */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-gold border-b border-gold/30 pb-2 flex items-center gap-2">
                 <Pyramid size={18} />
                 Sacred Sites ({site.locations.length})
               </h3>
               
-              {site.locations.map((location, index) => (
-                <Link
-                  key={location.id}
-                  href={`/explore/${location.id}`}
-                  className="block group"
-                  onClick={onClose}
-                >
-                  <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    whileHover={{ x: 5 }}
-                    className="border border-gold/20 rounded-lg p-4 hover:border-gold/50 transition-all bg-white/30 hover:bg-white/50 cursor-pointer"
+              {site.locations.map((location, index) => {
+                const imagePath = getImagePath(location.id)
+                const hasError = imageErrors[location.id]
+                
+                return (
+                  <Link
+                    key={location.id}
+                    href={`/explore/${location.id}`}
+                    className="block group"
+                    onClick={onClose}
                   >
-                    <div className="flex justify-between items-start">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1 flex-wrap">
-                          <h4 className="font-bold text-egyptian-blue group-hover:text-gold transition-colors">
-                            {location.name}
-                          </h4>
-                          {location.deity && (
-                            <span className="text-xs bg-gold/20 px-1.5 py-0.5 rounded">
-                              {location.deity}
-                            </span>
-                          )}
-                          {location.type && (
-                            <span className="text-xs bg-egyptian-blue/20 px-1.5 py-0.5 rounded">
-                              {location.type}
-                            </span>
-                          )}
-                        </div>
-                        <p className="text-sm text-gray-600 mb-2">{location.description}</p>
-                        <div className="flex flex-wrap gap-1 mt-2">
-                          {location.visualHighlights.slice(0, 2).map((highlight, i) => (
-                            <span key={i} className="text-xs bg-gold/10 text-gold-dark px-2 py-0.5 rounded">
-                              {highlight}
-                            </span>
-                          ))}
-                          {location.visualHighlights.length > 2 && (
-                            <span className="text-xs text-gray-400">+{location.visualHighlights.length - 2} more</span>
-                          )}
-                        </div>
+                    <motion.div
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      whileHover={{ x: 5 }}
+                      className="border border-gold/20 rounded-lg p-4 hover:border-gold/50 transition-all bg-white/30 hover:bg-white/50 cursor-pointer"
+                    >
+                      {/* Image Preview */}
+                      <div className="mb-3 rounded-lg overflow-hidden h-32 bg-gradient-to-br from-amber-900/20 to-egyptian-blue/20">
+                        {!hasError ? (
+                          <Image
+                            src={imagePath}
+                            alt={location.name}
+                            width={400}
+                            height={128}
+                            className="w-full h-32 object-cover"
+                            onError={() => handleImageError(location.id)}
+                          />
+                        ) : (
+                          <div className="w-full h-32 flex flex-col items-center justify-center">
+                            <div className="text-4xl mb-1">
+                              {location.deity ? (
+                                <span>
+                                  {location.deity === 'Ra' && '𓇳'}
+                                  {location.deity === 'Horus' && '𓅃'}
+                                  {location.deity === 'Isis' && '𓊨'}
+                                  {location.deity === 'Osiris' && '𓋴'}
+                                  {location.deity === 'Anubis' && '𓃣'}
+                                  {location.deity === 'Thoth' && '𓁟'}
+                                  {location.deity === 'Athena' && '🦉'}
+                                  {location.deity === 'Zeus' && '⚡'}
+                                  {location.deity === 'Apollo' && '🎵'}
+                                  {(location.deity !== 'Ra' && 
+                                    location.deity !== 'Horus' && 
+                                    location.deity !== 'Isis' && 
+                                    location.deity !== 'Osiris' && 
+                                    location.deity !== 'Anubis' && 
+                                    location.deity !== 'Thoth' &&
+                                    location.deity !== 'Athena' && 
+                                    location.deity !== 'Zeus' && 
+                                    location.deity !== 'Apollo') && '🏺'}
+                                </span>
+                              ) : (
+                                '🏺'
+                              )}
+                            </div>
+                            <p className="text-xs text-gray-500">AI Regenerated preview coming soon</p>
+                          </div>
+                        )}
                       </div>
-                      <ChevronRight className="text-gold opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" size={20} />
-                    </div>
-                  </motion.div>
-                </Link>
-              ))}
+                      
+                      <div className="flex justify-between items-start">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-1 flex-wrap">
+                            <h4 className="font-bold text-egyptian-blue group-hover:text-gold transition-colors">
+                              {location.name}
+                            </h4>
+                            {location.deity && (
+                              <span className="text-xs bg-gold/20 px-1.5 py-0.5 rounded">
+                                {location.deity}
+                              </span>
+                            )}
+                            {location.type && (
+                              <span className="text-xs bg-egyptian-blue/20 px-1.5 py-0.5 rounded">
+                                {location.type}
+                              </span>
+                            )}
+                          </div>
+                          <p className="text-sm text-gray-600 mb-2">{location.description}</p>
+                          <div className="flex flex-wrap gap-1 mt-2">
+                            {location.visualHighlights.slice(0, 2).map((highlight, i) => (
+                              <span key={i} className="text-xs bg-gold/10 text-gold-dark px-2 py-0.5 rounded">
+                                {highlight}
+                              </span>
+                            ))}
+                            {location.visualHighlights.length > 2 && (
+                              <span className="text-xs text-gray-400">+{location.visualHighlights.length - 2} more</span>
+                            )}
+                          </div>
+                        </div>
+                        <ChevronRight className="text-gold opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" size={20} />
+                      </div>
+                    </motion.div>
+                  </Link>
+                )
+              })}
             </div>
 
             {/* Footer note */}

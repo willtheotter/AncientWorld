@@ -119,7 +119,7 @@ export default function AncientEgyptMap({ onSelectSite, selectedSite }: AncientE
         attributionControl={true}
         style={{ height: '100%', width: '100%' }}
         maxBounds={[
-          [10, -10],  // Southwest corner (Africa)
+          [-35, -20],  // Southwest corner (Africa)
           [50, 70]    // Northeast corner (Central Asia)
         ]}
         maxBoundsViscosity={1.0}
@@ -171,41 +171,36 @@ export default function AncientEgyptMap({ onSelectSite, selectedSite }: AncientE
         ))}
       </MapContainer>
 
-      {/* Search & Filter Component */}
+      {/* Search & Filter Component - Top Right */}
       <MapFilters 
         filters={filters}
         onFilterChange={setFilters}
       />
 
-      {/* Results counter */}
-      <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full z-[2000] flex items-center gap-2 pointer-events-none">
+      {/* Results counter - Bottom Left (moved from top-left to bottom-left) */}
+      <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full z-[2000] flex items-center gap-2 pointer-events-none">
         <span className="text-gold">🏺</span>
         {totalLocations} site{totalLocations !== 1 ? 's' : ''} found
       </div>
 
-      {/* Custom tooltip */}
+      {/* Custom tooltip - Bottom Center */}
       <AnimatePresence>
         {hoveredSite && filteredSites.find(s => s.id === hoveredSite) && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
-            className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/80 text-white px-4 py-2 rounded-lg text-sm z-[2000] whitespace-nowrap pointer-events-none"
+            className="absolute bottom-20 left-1/2 transform -translate-x-1/2 bg-black/80 text-white px-4 py-2 rounded-lg text-sm z-[2000] whitespace-nowrap pointer-events-none"
           >
             {filteredSites.find(s => s.id === hoveredSite)?.name}
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Map instructions */}
+      {/* Map instructions - Bottom Right */}
       <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full z-[2000] flex items-center gap-2 pointer-events-none">
         <span className="w-2 h-2 bg-gold rounded-full animate-pulse"></span>
         Click markers to explore
-      </div>
-
-      {/* World view indicator */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/60 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full z-[2000] pointer-events-none whitespace-nowrap">
-        🌍 Egypt • Nubia • Punt • Phoenicia • Babylon • Greece • Anatolia • Canaan
       </div>
     </div>
   )

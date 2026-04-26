@@ -1,0 +1,16 @@
+{
+  "name": "Ancient World Explorer",
+  "short_name": "Ancient Explorer",
+  "description": "Explore 115+ ancient sites across 10 civilizations",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f0e6d2",
+  "theme_color": "#d4af37",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}

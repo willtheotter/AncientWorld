@@ -1,7 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Globe, MapPin, BookOpen, Scale, Gem, Scroll, Users, Award, Compass, Heart, Shield, Star } from 'lucide-react'
+import { Globe, MapPin, BookOpen, Scale, Gem, Scroll, Users, Award, Compass, Heart, Shield, Star, Building2, Pyramid, Landmark, Crown, Feather, Music, Waves } from 'lucide-react'
+import { ImageIcon } from 'lucide-react'
 
 export default function AboutPage() {
   return (
@@ -18,7 +19,7 @@ export default function AboutPage() {
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-gold">Ancient World Explorer</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          An interactive journey through the civilizations, myths, and wonders of the ancient world
+          An interactive journey through 100+ legendary sites across 8 ancient civilizations
         </p>
       </motion.div>
 
@@ -34,8 +35,8 @@ export default function AboutPage() {
           <h2 className="text-2xl font-bold text-egyptian-blue">Our Mission</h2>
         </div>
         <p className="text-gray-700 leading-relaxed">
-          Ancient World Explorer brings history to life through interactive maps, educational games, 
-          and detailed cultural content. Our goal is to make the rich heritage of ancient civilizations 
+          Ancient World Explorer brings history to life through interactive maps, dual-image site views (AI regenerated + current state), 
+          educational games, and detailed cultural content. Our goal is to make the rich heritage of ancient civilizations 
           accessible, engaging, and meaningful for learners of all ages.
         </p>
       </motion.div>
@@ -49,9 +50,9 @@ export default function AboutPage() {
       >
         {[
           { label: 'Civilizations', value: '8', icon: <Globe size={20} />, color: 'from-amber-600 to-orange-600' },
-          { label: 'Historical Sites', value: '72+', icon: <MapPin size={20} />, color: 'from-emerald-600 to-teal-600' },
-          { label: 'Educational Topics', value: '50+', icon: <BookOpen size={20} />, color: 'from-blue-600 to-cyan-600' },
-          { label: 'Hours of Content', value: '100+', icon: <Scroll size={20} />, color: 'from-purple-600 to-pink-600' },
+          { label: 'Historical Sites', value: '100+', icon: <MapPin size={20} />, color: 'from-emerald-600 to-teal-600' },
+          { label: 'Deities Represented', value: '35+', icon: <Star size={20} />, color: 'from-purple-600 to-pink-600' },
+          { label: 'Temples & Monuments', value: '50+', icon: <Building2 size={20} />, color: 'from-blue-600 to-cyan-600' },
         ].map((stat, index) => (
           <motion.div
             key={stat.label}
@@ -81,59 +82,62 @@ export default function AboutPage() {
           {[
             {
               title: 'Interactive Map',
-              description: 'Explore 72+ archaeological sites across 8 ancient civilizations with our immersive map interface.',
+              description: 'Explore 100+ archaeological sites across 8 ancient civilizations with our immersive map interface. Click markers to discover detailed information.',
               icon: <MapPin size={28} />,
               color: 'from-amber-600 to-orange-600'
             },
             {
-              title: 'Educational Games',
-              description: 'Test your knowledge with trivia, solve puzzles, and learn through engaging gameplay experiences.',
-              icon: <Award size={28} />,
-              color: 'from-emerald-600 to-teal-600'
+              title: 'Dual-Image View',
+              description: 'Toggle between AI-regenerated images showing original glory and current state photographs of archaeological remains.',
+              icon: <ImageIcon size={28} />,
+              color: 'from-cyan-600 to-blue-600'
             },
             {
               title: 'Mythology Encyclopedia',
-              description: 'Discover gods, goddesses, and sacred stories from Egyptian, Greek, and Mesopotamian traditions.',
+              description: 'Discover 35+ gods and goddesses from Egyptian, Greek, Mesopotamian, and Canaanite traditions with detailed descriptions.',
               icon: <BookOpen size={28} />,
               color: 'from-blue-600 to-cyan-600'
             },
             {
-              title: 'Medical History',
-              description: 'Learn about ancient Egyptian healing practices, herbal remedies, and surgical techniques.',
-              icon: <Heart size={28} />,
-              color: 'from-red-600 to-pink-600'
+              title: 'Deity Filter System',
+              description: 'Filter map markers by specific deities to find temples and sacred sites dedicated to each god or goddess.',
+              icon: <Star size={28} />,
+              color: 'from-purple-600 to-pink-600'
             },
             {
-              title: 'Sacred Texts',
-              description: 'Explore the Book of the Dead, the 42 Laws of Maat, and other ancient wisdom literature.',
+              title: 'Civilization Explorer',
+              description: 'Dive deep into Egyptian, Nubian, Phoenician, Babylonian, Israelite, Hittite, and Greek cultures.',
+              icon: <Crown size={28} />,
+              color: 'from-emerald-600 to-teal-600'
+            },
+            {
+              title: 'Educational Content',
+              description: 'Access detailed historical descriptions, visual highlights, and cultural context for every site.',
               icon: <Scroll size={28} />,
-              color: 'from-purple-600 to-indigo-600'
-            },
-            {
-              title: 'Cultural Heritage',
-              description: 'Dive deep into the art, architecture, jewelry, and daily life of ancient peoples.',
-              icon: <Gem size={28} />,
-              color: 'from-cyan-600 to-blue-600'
+              color: 'from-indigo-600 to-blue-600'
             }
-          ].map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 + index * 0.05 }}
-              className={`egyptian-card hover:scale-105 transition-all duration-300 bg-gradient-to-br ${feature.color}/5`}
-            >
-              <div className={`w-14 h-14 rounded-full bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`}>
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-bold text-egyptian-blue mb-2">{feature.title}</h3>
-              <p className="text-gray-600 text-sm">{feature.description}</p>
-            </motion.div>
-          ))}
+          ].map((feature, index) => {
+            const Icon = feature.icon.type
+            return (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 + index * 0.05 }}
+                className={`egyptian-card hover:scale-105 transition-all duration-300 bg-gradient-to-br ${feature.color}/5`}
+              >
+                <div className={`w-14 h-14 rounded-full bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`}>
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold text-egyptian-blue mb-2">{feature.title}</h3>
+                <p className="text-gray-600 text-sm">{feature.description}</p>
+              </motion.div>
+            )
+          })}
         </div>
       </motion.div>
 
-      {/* Civilizations Section */}
+      {/* Civilizations Section - Expanded */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -146,27 +150,54 @@ export default function AboutPage() {
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {[
-            { name: 'Egyptian', icon: '🇪🇬', color: 'from-amber-600 to-orange-600', sites: 30 },
-            { name: 'Nubian/Kushite', icon: '🇸🇩', color: 'from-emerald-600 to-teal-600', sites: 6 },
-            { name: 'Phoenician', icon: '🇱🇧', color: 'from-blue-600 to-cyan-600', sites: 6 },
-            { name: 'Babylonian', icon: '🇮🇶', color: 'from-yellow-600 to-amber-600', sites: 6 },
-            { name: 'Hebrew/Canaanite', icon: '🇮🇱', color: 'from-indigo-600 to-blue-600', sites: 6 },
-            { name: 'Hittite', icon: '🇹🇷', color: 'from-red-600 to-orange-600', sites: 6 },
-            { name: 'Greek/Minoan', icon: '🇬🇷', color: 'from-cyan-600 to-blue-600', sites: 6 },
-            { name: 'Punt/Aksumite', icon: '🌍', color: 'from-purple-600 to-pink-600', sites: 6 },
+            { name: 'Egyptian', icon: '🇪🇬', color: 'from-amber-600 to-orange-600', sites: 45, deities: 'Amun-Ra, Isis, Osiris, Horus, Anubis, Thoth, Ptah, Hathor, Sobek, Bastet, Sekhmet, Khonsu, Mut, Montu, Neith, Wadjet, Nekhbet, Min, Sopdu, Atum' },
+            { name: 'Nubian/Kushite', icon: '🇸🇩', color: 'from-emerald-600 to-teal-600', sites: 8, deities: 'Amun, Apedemak, Isis' },
+            { name: 'Phoenician', icon: '🇱🇧', color: 'from-blue-600 to-cyan-600', sites: 8, deities: 'Melqart, Tanit, Baal, Eshmun' },
+            { name: 'Babylonian', icon: '🇮🇶', color: 'from-yellow-600 to-amber-600', sites: 8, deities: 'Marduk, Ishtar, Nabu, Shamash, Nanna' },
+            { name: 'Hebrew/Canaanite', icon: '🇮🇱', color: 'from-indigo-600 to-blue-600', sites: 8, deities: 'Yahweh, El, Baal' },
+            { name: 'Hittite', icon: '🇹🇷', color: 'from-red-600 to-orange-600', sites: 8, deities: 'Tarhunt, Arinna' },
+            { name: 'Greek/Minoan', icon: '🇬🇷', color: 'from-cyan-600 to-blue-600', sites: 15, deities: 'Zeus, Hera, Athena, Apollo, Poseidon, Demeter, Hephaestus, Dionysus, Artemis, Aphrodite, Ares, Hermes, Leto' },
+            { name: 'Red Sea Trade', icon: '🌊', color: 'from-purple-600 to-pink-600', sites: 6, deities: 'Various local gods' },
           ].map((civ, index) => (
             <motion.div
               key={civ.name}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.7 + index * 0.03 }}
-              className={`bg-gradient-to-r ${civ.color} rounded-lg p-3 text-center text-white shadow-md`}
+              className={`bg-gradient-to-r ${civ.color} rounded-lg p-3 text-center text-white shadow-md group`}
             >
               <div className="text-2xl mb-1">{civ.icon}</div>
               <div className="font-semibold text-sm">{civ.name}</div>
               <div className="text-xs opacity-90">{civ.sites} sites</div>
+              <div className="text-xs opacity-75 mt-1 hidden group-hover:block transition-all">
+                {civ.deities.split(',')[0]}...
+              </div>
             </motion.div>
           ))}
+        </div>
+      </motion.div>
+
+      {/* Key Features Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.75 }}
+        className="grid md:grid-cols-3 gap-4"
+      >
+        <div className="egyptian-card text-center">
+          <div className="text-3xl mb-2">🎨</div>
+          <h3 className="font-bold text-gold mb-1">AI Regenerated Images</h3>
+          <p className="text-xs text-gray-600">See how sites appeared in their original glory</p>
+        </div>
+        <div className="egyptian-card text-center">
+          <div className="text-3xl mb-2">📸</div>
+          <h3 className="font-bold text-gold mb-1">Current State Photos</h3>
+          <p className="text-xs text-gray-600">View archaeological remains as they exist today</p>
+        </div>
+        <div className="egyptian-card text-center">
+          <div className="text-3xl mb-2">🔍</div>
+          <h3 className="font-bold text-gold mb-1">Deity Filtering</h3>
+          <p className="text-xs text-gray-600">Find temples dedicated to specific gods</p>
         </div>
       </motion.div>
 
@@ -182,7 +213,7 @@ export default function AboutPage() {
           <span className="font-semibold">Start Your Journey Today</span>
         </div>
         <p className="text-gray-600 text-sm">
-          Explore the interactive map, dive into our educational content, and discover the wonders of the ancient world.
+          Explore the interactive map, toggle between ancient glory and modern remains, and discover 100+ legendary sites.
         </p>
         <div className="flex flex-wrap justify-center gap-3 mt-4">
           <a href="/" className="px-4 py-2 bg-gold text-gray-900 rounded-lg hover:bg-gold/80 transition-colors text-sm font-semibold">

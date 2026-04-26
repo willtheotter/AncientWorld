@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/ui/Navigation'
@@ -11,30 +11,48 @@ const inter = Inter({
   fallback: ['system-ui', 'sans-serif'],
 })
 
+// Separate viewport configuration (moved from metadata)
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: {
-    default: 'Ancient World Explorer | Egyptian Trials',
+    default: 'Ancient World Explorer | 100+ Historical Sites',
     template: '%s | Ancient World Explorer',
   },
-  description: 'Explore ancient civilizations including Egypt, Nubia, Phoenicia, Babylon, Greece, and more through interactive maps, games, and historical learning experiences.',
+  description: 'Explore 100+ ancient sites across 8 civilizations including Egypt, Nubia, Phoenicia, Babylon, Greece, and more. View AI-regenerated images and current archaeological remains through interactive maps.',
   keywords: [
     'ancient egypt',
-    'nubia', 
+    'nubia',
+    'kush',
     'phoenicia',
     'babylon',
+    'mesopotamia',
     'greece',
+    'minoan',
+    'hittite',
+    'israelite',
+    'canaanite',
     'interactive map',
     'history',
     'archaeology',
     'mythology',
+    'egyptian deities',
+    'greek gods',
     'ancient civilizations',
     'world history',
-    'educational games'
+    'educational games',
+    'ai reconstruction',
+    'historical sites'
   ],
-  authors: [{ name: 'Egyptian Trials', url: 'https://egyptianhangman.com' }],
-  creator: 'Egyptian Trials',
-  publisher: 'Egyptian Trials',
+  authors: [{ name: 'Ancient World Explorer', url: 'https://egyptianhangman.com' }],
+  creator: 'Ancient World Explorer',
+  publisher: 'Ancient World Explorer',
   robots: {
     index: true,
     follow: true,
@@ -51,30 +69,25 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://egyptianhangman.com',
     siteName: 'Ancient World Explorer',
-    title: 'Ancient World Explorer | Egyptian Trials',
-    description: 'Explore ancient civilizations through interactive maps, games, and historical learning experiences.',
+    title: 'Ancient World Explorer | 100+ Ancient Sites Across 8 Civilizations',
+    description: 'Journey through 100+ legendary sites with AI-regenerated images showing original glory and current state photographs of archaeological remains.',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Ancient World Explorer Map',
+        alt: 'Ancient World Explorer Interactive Map',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ancient World Explorer | Egyptian Trials',
-    description: 'Explore ancient civilizations through interactive maps and games',
+    title: 'Ancient World Explorer | 100+ Ancient Sites',
+    description: 'Explore 100+ historical sites with dual-image views - AI regenerated original glory and current archaeological state.',
     images: ['/images/og-image.jpg'],
-    creator: '@egyptiantrials',
+    creator: '@ancientexplorer',
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-    userScalable: true,
-  },
+  // icons are still in metadata
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
