@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback, useMemo } from 'react'
 import dynamic from 'next/dynamic'
 import { motion, AnimatePresence } from 'framer-motion'
 import { sites } from '@/lib/data/sites'
@@ -62,8 +62,8 @@ export default function AncientEgyptMap({ onSelectSite, selectedSite }: AncientE
     })
   }, [])
 
-  // Apply filters
-  useEffect(() => {
+  // Apply filters - optimized with useCallback
+  const applyFilters = useCallback(() => {
     let filtered = Object.values(sites)
 
     // Search filter
@@ -97,6 +97,59 @@ export default function AncientEgyptMap({ onSelectSite, selectedSite }: AncientE
     setFilteredSites(filtered)
   }, [filters])
 
+  useEffect(() => {
+    applyFilters()
+  }, [applyFilters])
+
+  // Memoize total locations count
+  const totalLocations = useMemo(() => {
+    return filteredSites.reduce((acc, site) => acc + site.locations.length, 0)
+  }, [filteredSites])
+
+  // Memoize markers to prevent unnecessary re-renders
+  const markers = useMemo(() => {
+    return filteredSites.map((site) => (
+      <Marker
+        key={site.id}
+        position={site.coordinates}
+        eventHandlers={{
+          click: () => {
+            console.log('Clicked:', site.name)
+            onSelectSite(site)
+          },
+          mouseover: () => setHoveredSite(site.id),
+          mouseout: () => setHoveredSite(null),
+        }}
+      >
+        <Popup>
+          <div className="text-center min-w-[180px] max-w-[250px]">
+            <strong className="text-egyptian-blue text-base block">{site.name}</strong>
+            <p className="text-sm text-gray-600 mt-1">{site.region}</p>
+            <p className="text-xs text-gold mt-1 font-semibold">
+              {site.locations.length} site{site.locations.length !== 1 ? 's' : ''}
+            </p>
+            {/* Show deity badges */}
+            {site.locations.some(loc => loc.deity) && (
+              <div className="flex flex-wrap gap-1 mt-2 justify-center">
+                {site.locations.map(loc => loc.deity && (
+                  <span key={loc.deity} className="text-xs bg-gold/20 px-1.5 py-0.5 rounded">
+                    {loc.deity}
+                  </span>
+                ))}
+              </div>
+            )}
+            {/* Show type badge */}
+            <div className="mt-2">
+              <span className="text-xs bg-egyptian-blue/20 px-1.5 py-0.5 rounded">
+                {site.locations[0]?.type || getSiteType(site.locations[0])}
+              </span>
+            </div>
+          </div>
+        </Popup>
+      </Marker>
+    ))
+  }, [filteredSites, onSelectSite])
+
   if (!mapLoaded) {
     return (
       <div className="w-full h-[70vh] bg-gradient-to-b from-amber-900/20 to-egyptian-blue/20 rounded-lg flex items-center justify-center">
@@ -108,19 +161,17 @@ export default function AncientEgyptMap({ onSelectSite, selectedSite }: AncientE
     )
   }
 
-  const totalLocations = filteredSites.reduce((acc, site) => acc + site.locations.length, 0)
-
   return (
     <div className="relative w-full h-[70vh] rounded-lg overflow-hidden border-2 border-gold/30 shadow-xl">
       <MapContainer
-        center={[32, 35]}  // Centered on Eastern Mediterranean to show all civilizations
-        zoom={4.5}          // Zoomed out to show from Greece to Mesopotamia
+        center={[32, 35]}
+        zoom={4.5}
         zoomControl={true}
         attributionControl={true}
         style={{ height: '100%', width: '100%' }}
         maxBounds={[
-          [-35, -20],  // Southwest corner (Africa)
-          [50, 70]    // Northeast corner (Central Asia)
+          [-35, -20],
+          [50, 70]
         ]}
         maxBoundsViscosity={1.0}
       >
@@ -129,46 +180,7 @@ export default function AncientEgyptMap({ onSelectSite, selectedSite }: AncientE
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
         />
         
-        {filteredSites.map((site) => (
-          <Marker
-            key={site.id}
-            position={site.coordinates}
-            eventHandlers={{
-              click: () => {
-                console.log('Clicked:', site.name)
-                onSelectSite(site)
-              },
-              mouseover: () => setHoveredSite(site.id),
-              mouseout: () => setHoveredSite(null),
-            }}
-          >
-            <Popup>
-              <div className="text-center min-w-[180px] max-w-[250px]">
-                <strong className="text-egyptian-blue text-base block">{site.name}</strong>
-                <p className="text-sm text-gray-600 mt-1">{site.region}</p>
-                <p className="text-xs text-gold mt-1 font-semibold">
-                  {site.locations.length} site{site.locations.length !== 1 ? 's' : ''}
-                </p>
-                {/* Show deity badges */}
-                {site.locations.some(loc => loc.deity) && (
-                  <div className="flex flex-wrap gap-1 mt-2 justify-center">
-                    {site.locations.map(loc => loc.deity && (
-                      <span key={loc.deity} className="text-xs bg-gold/20 px-1.5 py-0.5 rounded">
-                        {loc.deity}
-                      </span>
-                    ))}
-                  </div>
-                )}
-                {/* Show type badge */}
-                <div className="mt-2">
-                  <span className="text-xs bg-egyptian-blue/20 px-1.5 py-0.5 rounded">
-                    {site.locations[0]?.type || getSiteType(site.locations[0])}
-                  </span>
-                </div>
-              </div>
-            </Popup>
-          </Marker>
-        ))}
+        {markers}
       </MapContainer>
 
       {/* Search & Filter Component - Top Right */}
@@ -177,7 +189,7 @@ export default function AncientEgyptMap({ onSelectSite, selectedSite }: AncientE
         onFilterChange={setFilters}
       />
 
-      {/* Results counter - Bottom Left (moved from top-left to bottom-left) */}
+      {/* Results counter - Bottom Left */}
       <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-sm text-white text-xs px-3 py-1.5 rounded-full z-[2000] flex items-center gap-2 pointer-events-none">
         <span className="text-gold">🏺</span>
         {totalLocations} site{totalLocations !== 1 ? 's' : ''} found

@@ -19,7 +19,7 @@ export default function AboutPage() {
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-gold">Ancient World Explorer</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          An interactive journey through 100+ legendary sites across 8 ancient civilizations
+          An interactive journey through 200+ legendary sites across 20+ ancient civilizations
         </p>
       </motion.div>
 
@@ -36,7 +36,7 @@ export default function AboutPage() {
         </div>
         <p className="text-gray-700 leading-relaxed">
           Ancient World Explorer brings history to life through interactive maps, dual-image site views (AI regenerated + current state), 
-          educational games, and detailed cultural content. Our goal is to make the rich heritage of ancient civilizations 
+          educational content, and detailed cultural information. Our goal is to make the rich heritage of ancient civilizations 
           accessible, engaging, and meaningful for learners of all ages.
         </p>
       </motion.div>
@@ -49,10 +49,10 @@ export default function AboutPage() {
         className="grid grid-cols-2 md:grid-cols-4 gap-4"
       >
         {[
-          { label: 'Civilizations', value: '8', icon: <Globe size={20} />, color: 'from-amber-600 to-orange-600' },
-          { label: 'Historical Sites', value: '100+', icon: <MapPin size={20} />, color: 'from-emerald-600 to-teal-600' },
-          { label: 'Deities Represented', value: '35+', icon: <Star size={20} />, color: 'from-purple-600 to-pink-600' },
-          { label: 'Temples & Monuments', value: '50+', icon: <Building2 size={20} />, color: 'from-blue-600 to-cyan-600' },
+          { label: 'Civilizations', value: '20+', icon: <Globe size={20} />, color: 'from-amber-600 to-orange-600' },
+          { label: 'Historical Sites', value: '200+', icon: <MapPin size={20} />, color: 'from-emerald-600 to-teal-600' },
+          { label: 'Deities Represented', value: '60+', icon: <Star size={20} />, color: 'from-purple-600 to-pink-600' },
+          { label: 'Years of History', value: '5,000+', icon: <Landmark size={20} />, color: 'from-blue-600 to-cyan-600' },
         ].map((stat, index) => (
           <motion.div
             key={stat.label}
@@ -82,7 +82,7 @@ export default function AboutPage() {
           {[
             {
               title: 'Interactive Map',
-              description: 'Explore 100+ archaeological sites across 8 ancient civilizations with our immersive map interface. Click markers to discover detailed information.',
+              description: 'Explore 200+ archaeological sites across 20+ ancient civilizations with our immersive map interface. Click markers to discover detailed information.',
               icon: <MapPin size={28} />,
               color: 'from-amber-600 to-orange-600'
             },
@@ -93,10 +93,10 @@ export default function AboutPage() {
               color: 'from-cyan-600 to-blue-600'
             },
             {
-              title: 'Mythology Encyclopedia',
-              description: 'Discover 35+ gods and goddesses from Egyptian, Greek, Mesopotamian, and Canaanite traditions with detailed descriptions.',
-              icon: <BookOpen size={28} />,
-              color: 'from-blue-600 to-cyan-600'
+              title: 'Civilization Explorer',
+              description: 'Discover Egyptian, Nubian, Phoenician, Babylonian, Israelite, Hittite, Greek, Persian, Indian, Chinese, Maya, Inca, and more.',
+              icon: <Crown size={28} />,
+              color: 'from-emerald-600 to-teal-600'
             },
             {
               title: 'Deity Filter System',
@@ -105,10 +105,10 @@ export default function AboutPage() {
               color: 'from-purple-600 to-pink-600'
             },
             {
-              title: 'Civilization Explorer',
-              description: 'Dive deep into Egyptian, Nubian, Phoenician, Babylonian, Israelite, Hittite, and Greek cultures.',
-              icon: <Crown size={28} />,
-              color: 'from-emerald-600 to-teal-600'
+              title: 'Mythology Encyclopedia',
+              description: 'Discover 60+ gods and goddesses from Egyptian, Greek, Mesopotamian, Indian, Chinese, Maya, and Inca traditions.',
+              icon: <BookOpen size={28} />,
+              color: 'from-blue-600 to-cyan-600'
             },
             {
               title: 'Educational Content',
@@ -137,7 +137,7 @@ export default function AboutPage() {
         </div>
       </motion.div>
 
-      {/* Civilizations Section - Expanded */}
+      {/* Civilizations Section - Expanded to 20+ */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -150,28 +150,38 @@ export default function AboutPage() {
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {[
-            { name: 'Egyptian', icon: '🇪🇬', color: 'from-amber-600 to-orange-600', sites: 45, deities: 'Amun-Ra, Isis, Osiris, Horus, Anubis, Thoth, Ptah, Hathor, Sobek, Bastet, Sekhmet, Khonsu, Mut, Montu, Neith, Wadjet, Nekhbet, Min, Sopdu, Atum' },
-            { name: 'Nubian/Kushite', icon: '🇸🇩', color: 'from-emerald-600 to-teal-600', sites: 8, deities: 'Amun, Apedemak, Isis' },
-            { name: 'Phoenician', icon: '🇱🇧', color: 'from-blue-600 to-cyan-600', sites: 8, deities: 'Melqart, Tanit, Baal, Eshmun' },
-            { name: 'Babylonian', icon: '🇮🇶', color: 'from-yellow-600 to-amber-600', sites: 8, deities: 'Marduk, Ishtar, Nabu, Shamash, Nanna' },
-            { name: 'Hebrew/Canaanite', icon: '🇮🇱', color: 'from-indigo-600 to-blue-600', sites: 8, deities: 'Yahweh, El, Baal' },
-            { name: 'Hittite', icon: '🇹🇷', color: 'from-red-600 to-orange-600', sites: 8, deities: 'Tarhunt, Arinna' },
-            { name: 'Greek/Minoan', icon: '🇬🇷', color: 'from-cyan-600 to-blue-600', sites: 15, deities: 'Zeus, Hera, Athena, Apollo, Poseidon, Demeter, Hephaestus, Dionysus, Artemis, Aphrodite, Ares, Hermes, Leto' },
-            { name: 'Red Sea Trade', icon: '🌊', color: 'from-purple-600 to-pink-600', sites: 6, deities: 'Various local gods' },
+            { name: 'Egyptian', icon: 'PYR', color: 'from-amber-600 to-orange-600', sites: 45, region: 'Africa' },
+            { name: 'Nubian/Kushite', icon: 'MNT', color: 'from-emerald-600 to-teal-600', sites: 13, region: 'Africa' },
+            { name: 'Punt/Aksumite', icon: 'TRD', color: 'from-blue-600 to-cyan-600', sites: 10, region: 'Africa' },
+            { name: 'Phoenician', icon: 'SHP', color: 'from-purple-600 to-pink-600', sites: 10, region: 'Mediterranean' },
+            { name: 'Babylonian', icon: 'GTE', color: 'from-yellow-600 to-amber-600', sites: 10, region: 'Mesopotamia' },
+            { name: 'Israelite', icon: 'TMP', color: 'from-indigo-600 to-blue-600', sites: 10, region: 'Levant' },
+            { name: 'Hittite', icon: 'WLL', color: 'from-red-600 to-orange-600', sites: 10, region: 'Anatolia' },
+            { name: 'Greek', icon: 'PRT', color: 'from-cyan-600 to-blue-600', sites: 20, region: 'Europe' },
+            { name: 'Mycenaean', icon: 'SWD', color: 'from-amber-700 to-brown-600', sites: 10, region: 'Europe' },
+            { name: 'Minoan', icon: 'BUL', color: 'from-teal-600 to-green-600', sites: 10, region: 'Europe' },
+            { name: 'Persian', icon: 'LIO', color: 'from-purple-700 to-indigo-700', sites: 10, region: 'Asia' },
+            { name: 'Etruscan', icon: 'URN', color: 'from-orange-700 to-red-700', sites: 10, region: 'Europe' },
+            { name: 'Indian', icon: 'REL', color: 'from-saffron-600 to-orange-600', sites: 10, region: 'Asia' },
+            { name: 'Chinese', icon: 'DGN', color: 'from-red-700 to-gold-600', sites: 10, region: 'Asia' },
+            { name: 'Maya', icon: 'PYR', color: 'from-jade-600 to-green-600', sites: 5, region: 'Americas' },
+            { name: 'Inca', icon: 'SUN', color: 'from-terracotta-600 to-orange-600', sites: 3, region: 'Americas' },
+            { name: 'Ancient North America', icon: 'CLF', color: 'from-desert-600 to-sand-600', sites: 2, region: 'Americas' },
+            { name: 'West Africa', icon: 'MSC', color: 'from-orange-600 to-yellow-600', sites: 10, region: 'Africa' },
+            { name: 'North Africa', icon: 'DSR', color: 'from-amber-700 to-brown-600', sites: 10, region: 'Africa' },
+            { name: 'Southern Africa', icon: 'STN', color: 'from-green-600 to-emerald-600', sites: 10, region: 'Africa' },
           ].map((civ, index) => (
             <motion.div
               key={civ.name}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.7 + index * 0.03 }}
-              className={`bg-gradient-to-r ${civ.color} rounded-lg p-3 text-center text-white shadow-md group`}
+              transition={{ delay: 0.7 + index * 0.01 }}
+              className={`bg-gradient-to-r ${civ.color} rounded-lg p-2 text-center text-white shadow-md`}
             >
-              <div className="text-2xl mb-1">{civ.icon}</div>
-              <div className="font-semibold text-sm">{civ.name}</div>
-              <div className="text-xs opacity-90">{civ.sites} sites</div>
-              <div className="text-xs opacity-75 mt-1 hidden group-hover:block transition-all">
-                {civ.deities.split(',')[0]}...
-              </div>
+              <div className="text-lg mb-1">{civ.icon}</div>
+              <div className="font-semibold text-[11px] truncate">{civ.name}</div>
+              <div className="text-[10px] opacity-90">{civ.sites} sites</div>
+              <div className="text-[9px] opacity-70">{civ.region}</div>
             </motion.div>
           ))}
         </div>
@@ -213,7 +223,7 @@ export default function AboutPage() {
           <span className="font-semibold">Start Your Journey Today</span>
         </div>
         <p className="text-gray-600 text-sm">
-          Explore the interactive map, toggle between ancient glory and modern remains, and discover 100+ legendary sites.
+          Explore the interactive map, toggle between ancient glory and modern remains, and discover 200+ legendary sites.
         </p>
         <div className="flex flex-wrap justify-center gap-3 mt-4">
           <a href="/" className="px-4 py-2 bg-gold text-gray-900 rounded-lg hover:bg-gold/80 transition-colors text-sm font-semibold">

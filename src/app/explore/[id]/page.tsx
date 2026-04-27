@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
-import { ArrowLeft, MapPin, Sun, Moon, Eye, Sparkles, Globe, Building2, Pyramid, Landmark, Image as ImageIcon, History } from 'lucide-react'
+import { ArrowLeft, MapPin, Sun, Moon, Eye, Sparkles, Globe, Building2, Pyramid, Landmark, Image as ImageIcon, History, Play } from 'lucide-react'
 import { sites } from '@/lib/data/sites'
 
 // Helper function to get civilization emoji and color
@@ -19,28 +19,35 @@ const getCivilizationInfo = (region: string) => {
   if (region.includes('Judah') || region.includes('Canaan') || region.includes('Israel')) return { emoji: '🇮🇱', color: 'from-indigo-600 to-blue-600', name: 'Canaanite/Israelite' }
   if (region.includes('Anatolia') || region.includes('Turkey') || region.includes('Hittite')) return { emoji: '🇹🇷', color: 'from-red-600 to-orange-600', name: 'Hittite' }
   if (region.includes('Levant') || region.includes('Syria')) return { emoji: '🇸🇾', color: 'from-green-600 to-teal-600', name: 'Levantine' }
-  if (region.includes('Greece') || region.includes('Crete') || region.includes('Santorini')) return { emoji: '🇬🇷', color: 'from-cyan-600 to-blue-600', name: 'Greek/Minoan' }
-  if (region.includes('Sicily')) return { emoji: '🇮🇹', color: 'from-orange-600 to-yellow-600', name: 'Sicilian' }
+  if (region.includes('Greece') || region.includes('Crete') || region.includes('Santorini') || region.includes('Peloponnese')) return { emoji: '🇬🇷', color: 'from-cyan-600 to-blue-600', name: 'Greek/Minoan' }
+  if (region.includes('Sicily') || region.includes('Etruria')) return { emoji: '🇮🇹', color: 'from-orange-600 to-yellow-600', name: 'Italian' }
   if (region.includes('Red Sea') || region.includes('Horn of Africa')) return { emoji: '🌊', color: 'from-blue-600 to-cyan-600', name: 'Red Sea Trade' }
+  if (region.includes('Persia') || region.includes('Iran')) return { emoji: '🇮🇷', color: 'from-purple-600 to-indigo-600', name: 'Persian' }
+  if (region.includes('West Africa')) return { emoji: '🌍', color: 'from-orange-600 to-yellow-600', name: 'West African' }
+  if (region.includes('Southern Africa')) return { emoji: '🇿🇼', color: 'from-green-600 to-emerald-600', name: 'Southern African' }
   return { emoji: '🏺', color: 'from-amber-600 to-orange-600', name: 'Ancient' }
 }
 
-// Helper function to get both image paths
-const getImagePaths = (id: string, basePath: string) => {
-  // Original AI regenerated image (how it looked in its prime)
-  const regeneratedImage = `/images/sites/${id}-regenerated.jpg`
-  // Current state image (what exists today / archaeological remains)
-  const currentImage = `/images/sites/${id}-current.jpg`
-  // Fallback to base image if specific ones don't exist
-  const fallbackImage = basePath
-  
-  return { regeneratedImage, currentImage, fallbackImage }
+// Helper to extract YouTube embed URL
+const getYouTubeEmbedUrl = (url: string | undefined) => {
+  if (!url) return null
+  if (url.includes('youtu.be')) {
+    const videoId = url.split('youtu.be/')[1]?.split('?')[0]
+    return `https://www.youtube.com/embed/${videoId}`
+  }
+  if (url.includes('watch?v=')) {
+    const videoId = url.split('watch?v=')[1]?.split('&')[0]
+    return `https://www.youtube.com/embed/${videoId}`
+  }
+  if (url.includes('/embed/')) {
+    return url
+  }
+  return url
 }
 
 export default function ExplorePage() {
   const params = useParams()
   const id = params.id as string
-  const [imageError, setImageError] = useState(false)
   const [imageMode, setImageMode] = useState<'regenerated' | 'current'>('regenerated')
   const [regeneratedError, setRegeneratedError] = useState(false)
   const [currentError, setCurrentError] = useState(false)
@@ -63,16 +70,13 @@ export default function ExplorePage() {
   }
 
   const civInfo = getCivilizationInfo(foundSite.region)
-  const { regeneratedImage, currentImage, fallbackImage } = getImagePaths(id, foundLocation.image)
+  const youtubeEmbedUrl = getYouTubeEmbedUrl(foundLocation.youtubeUrl)
   
-  // Determine which image to show
   const getCurrentImageSrc = () => {
     if (imageMode === 'regenerated') {
-      if (!regeneratedError) return regeneratedImage
-      return fallbackImage
+      return foundLocation.imageRegenerated
     } else {
-      if (!currentError) return currentImage
-      return fallbackImage
+      return foundLocation.imageCurrent
     }
   }
   
@@ -82,7 +86,6 @@ export default function ExplorePage() {
     } else {
       setCurrentError(true)
     }
-    setImageError(true)
   }
   
   return (
@@ -135,7 +138,7 @@ export default function ExplorePage() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.05 }}
-        className="flex justify-center gap-4"
+        className="flex justify-center gap-4 flex-wrap"
       >
         <button
           onClick={() => setImageMode('regenerated')}
@@ -161,7 +164,7 @@ export default function ExplorePage() {
         </button>
       </motion.div>
       
-      {/* Main image with dual-mode support */}
+      {/* Main image */}
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -177,7 +180,7 @@ export default function ExplorePage() {
             transition={{ duration: 0.3 }}
             className="relative w-full h-full"
           >
-            {(!imageError || (imageMode === 'regenerated' && regeneratedError) || (imageMode === 'current' && currentError)) ? (
+            {(!(imageMode === 'regenerated' && regeneratedError) && !(imageMode === 'current' && currentError)) ? (
               <Image
                 src={getCurrentImageSrc()}
                 alt={`${foundLocation.name} - ${imageMode === 'regenerated' ? 'AI Regenerated Original Glory' : 'Current Archaeological State'}`}
@@ -196,18 +199,12 @@ export default function ExplorePage() {
                       ? 'AI regenerated image coming soon' 
                       : 'Current state photograph coming soon'}
                   </p>
-                  <p className="text-xs text-gray-500 mt-4">
-                    {imageMode === 'regenerated'
-                      ? 'This is how the site may have appeared in its original glory'
-                      : 'Archaeological remains awaiting photography'}
-                  </p>
                 </div>
               </div>
             )}
           </motion.div>
         </AnimatePresence>
         
-        {/* Image overlay with scene name and mode indicator */}
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
           <div className="flex items-center justify-between">
             <p className="text-white text-sm">{foundLocation.scene}</p>
@@ -232,10 +229,38 @@ export default function ExplorePage() {
         <span className="font-semibold text-gold">💡 About These Images</span>
         <p className="mt-1">
           {imageMode === 'regenerated' 
-            ? 'AI-regenerated images show how this site may have appeared in its original glory based on archaeological evidence and historical records.'
-            : 'Current state images show the site as it appears today, preserving the archaeological remains and weathered beauty of time.'}
+            ? 'AI-regenerated image shows how this site may have appeared in its original glory based on archaeological evidence and historical records.'
+            : 'Current state image shows the site as it appears today, preserving the archaeological remains and weathered beauty of time.'}
         </p>
       </motion.div>
+      
+      {/* YouTube Video Section - Using Play icon as fallback */}
+      {youtubeEmbedUrl && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="egyptian-card"
+        >
+          <div className="flex items-center gap-2 border-b border-gold/30 pb-2 mb-4">
+            <Play size={20} className="text-gold" />
+            <h2 className="text-xl font-bold text-gold">Featured Video</h2>
+          </div>
+          <div className="relative pb-[56.25%] h-0 rounded-lg overflow-hidden">
+            <iframe
+              src={youtubeEmbedUrl}
+              title={`Video about ${foundLocation.name}`}
+              className="absolute top-0 left-0 w-full h-full"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <p className="text-xs text-gray-500 mt-2 text-center">
+            Watch this video to learn more about {foundLocation.name}
+          </p>
+        </motion.div>
+      )}
       
       {/* Deity & Highlights Section */}
       <div className="grid md:grid-cols-2 gap-6">
@@ -243,7 +268,7 @@ export default function ExplorePage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+          transition={{ delay: 0.3 }}
           className="egyptian-card"
         >
           <h2 className="text-2xl font-bold text-gold mb-4 flex items-center gap-2">
@@ -256,7 +281,7 @@ export default function ExplorePage() {
                 key={index}
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3 + index * 0.05 }}
+                transition={{ delay: 0.35 + index * 0.05 }}
                 className="flex items-center gap-2 p-2 bg-white/30 rounded-lg"
               >
                 <Sparkles size={16} className="text-gold flex-shrink-0" />
@@ -270,7 +295,7 @@ export default function ExplorePage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.25 }}
+          transition={{ delay: 0.35 }}
           className="egyptian-card"
         >
           {foundLocation.deity && (
@@ -332,7 +357,7 @@ export default function ExplorePage() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4 }}
+        transition={{ delay: 0.45 }}
         className="egyptian-card space-y-4"
       >
         <div className="flex items-center gap-2 border-b border-gold/30 pb-2">
@@ -352,7 +377,7 @@ export default function ExplorePage() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.6 }}
+        transition={{ delay: 0.55 }}
         className="flex justify-between items-center pt-6 border-t border-gold/20 flex-wrap gap-4"
       >
         <Link
