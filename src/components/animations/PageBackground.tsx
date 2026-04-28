@@ -16,10 +16,12 @@ export default function PageBackground() {
   }
 
   return (
-    <HieroglyphicBackground 
-      variant={getBackgroundVariant()} 
-      opacity={0.25}
-      animated={true}
-    />
+    <div className="fixed inset-0 -z-10">
+      <HieroglyphicBackground 
+        variant={getBackgroundVariant()} 
+        opacity={0.25}
+        animated={true}
+      />
+    </div>
   )
 }
