@@ -115,12 +115,16 @@ export default function SiteDetailPanel({ site, onClose }: SiteDetailPanelProps)
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: '100%', opacity: 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-          className="fixed right-0 top-0 h-full w-full md:w-[500px] bg-papyrus/95 backdrop-blur-md shadow-2xl site-panel overflow-y-auto border-l-2 border-gold/30"
-          style={{ zIndex: 9999 }}
+          className="fixed right-0 h-full w-full md:w-[500px] bg-papyrus/95 backdrop-blur-md shadow-2xl site-panel overflow-y-auto border-l-2 border-gold/30"
+          style={{ 
+            zIndex: 9999,
+            top: '64px', // Add top offset to account for mobile banner (adjust as needed)
+            height: 'calc(100% - 64px)' // Reduce height to account for top offset
+          }}
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Header with close button - added more top padding */}
-          <div className="sticky top-0 bg-papyrus/95 backdrop-blur-md pt-8 pl-4 pr-4 pb-4 border-b border-gold/30 flex justify-between items-center z-10">
+          {/* Header with close button - adjusted padding for better spacing */}
+          <div className="sticky top-0 bg-papyrus/95 backdrop-blur-md pt-4 pl-4 pr-4 pb-4 border-b border-gold/30 flex justify-between items-center z-10">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center">
                 <span className="text-lg">{getCivilizationEmoji()}</span>
