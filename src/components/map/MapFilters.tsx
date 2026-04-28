@@ -243,9 +243,9 @@ export default function MapFilters({ filters, onFilterChange, onClose }: MapFilt
             animate={{ opacity: 1, y: 0, height: 'auto' }}
             exit={{ opacity: 0, y: -10, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="bg-papyrus/95 backdrop-blur-md rounded-lg shadow-xl border border-gold/30 overflow-hidden max-h-[85vh] overflow-y-auto"
+            className="bg-papyrus/95 backdrop-blur-md rounded-lg shadow-xl border border-gold/30 overflow-hidden max-h-[80vh] overflow-y-auto"
           >
-            <div className="p-5 space-y-5">
+            <div className="p-5 space-y-5 pb-8">
               {/* Deity Filter */}
               <div>
                 <label className="text-xs text-gold font-semibold uppercase tracking-wider flex items-center gap-1 mb-2">
@@ -356,6 +356,9 @@ export default function MapFilters({ filters, onFilterChange, onClose }: MapFilt
                 <span className="text-gold font-semibold">🏺 {totalSites} total sites</span>
                 {hasActiveFilters && <span className="text-gray-400"> • Filtered results shown</span>}
               </div>
+
+              {/* Extra bottom padding for better scrolling */}
+              <div className="h-2" />
             </div>
           </motion.div>
         )}

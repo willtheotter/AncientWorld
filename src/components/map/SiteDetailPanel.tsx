@@ -119,8 +119,8 @@ export default function SiteDetailPanel({ site, onClose }: SiteDetailPanelProps)
           style={{ zIndex: 9999 }}
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Header with close button */}
-          <div className="sticky top-0 bg-papyrus/95 backdrop-blur-md p-4 border-b border-gold/30 flex justify-between items-center z-10">
+          {/* Header with close button - added pt-safe for notched devices */}
+          <div className="sticky top-0 bg-papyrus/95 backdrop-blur-md pt-safe pl-4 pr-4 pb-4 border-b border-gold/30 flex justify-between items-center z-10">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center">
                 <span className="text-lg">{getCivilizationEmoji()}</span>
@@ -140,7 +140,7 @@ export default function SiteDetailPanel({ site, onClose }: SiteDetailPanelProps)
           </div>
 
           {/* Content */}
-          <div className="p-6 space-y-6">
+          <div className="p-6 space-y-6 pb-8">
             {/* Region description */}
             <div className="flex items-center gap-2 text-sm text-gray-600 bg-white/50 p-3 rounded-lg">
               {getRegionIcon()}
@@ -263,6 +263,8 @@ export default function SiteDetailPanel({ site, onClose }: SiteDetailPanelProps)
                 Press ESC or click outside to close
               </span>
             </div>
+            {/* Extra bottom padding for better scrolling */}
+            <div className="h-4" />
           </div>
         </motion.div>
       </motion.div>

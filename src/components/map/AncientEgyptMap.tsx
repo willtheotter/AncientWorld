@@ -132,7 +132,7 @@ export default function AncientEgyptMap({ onSelectSite, selectedSite }: Props) {
       {/* 📱 MOBILE FILTER BUTTON */}
       <button
         onClick={() => setShowFilters(prev => !prev)}
-        className="absolute top-4 left-4 z-[2000] bg-black/70 text-white px-3 py-2 rounded-lg md:hidden"
+        className="absolute top-4 right-4 z-[2000] bg-black/70 text-white px-3 py-2 rounded-lg md:hidden"
       >
         Filters
       </button>
