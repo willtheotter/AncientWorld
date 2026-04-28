@@ -6,7 +6,8 @@ import {
   Scroll, Calendar, Heart, BookOpen, ChevronRight, Scale, 
   Gem, Waves, Library, ScrollText, DoorOpen, Code, Feather, 
   Ship, Shield, Users, Globe, Building2, Crown, Sword, Sun, 
-  Moon, Star, FlaskConical, Atom, UserRound, Music, Zap
+  Moon, Star, FlaskConical, Atom, UserRound, Music, Zap,
+  Sparkles, Diamond
 } from 'lucide-react'
 
 const learnModules = [
@@ -101,13 +102,22 @@ const learnModules = [
     topics: ['Writing Systems', 'Mathematics', 'Astronomy', 'Engineering', 'Medicine']
   },
   {
-    id: 'stones-jewelry',
-    title: 'Stones & Jewelry',
-    description: 'Discover the sacred stones, precious gems, and symbolic jewelry of ancient civilizations worldwide.',
-    icon: Gem,
-    href: '/learn/stones-jewelry',
+    id: 'sacred-stones',
+    title: 'Sacred Stones & Crystals',
+    description: 'Discover the healing properties, spiritual meanings, and ancient uses of sacred stones and crystals.',
+    icon: Diamond,
+    href: '/learn/sacred-stones',
     color: 'from-cyan-600 to-blue-600',
-    topics: ['Sacred Stones', 'Birthstones', 'Amulets', 'Jewelry Making', 'Crystal Healing']
+    topics: ['Healing Crystals', 'Birthstones', 'Chakra Stones', 'Sacred Geometry', 'Crystal Medicine']
+  },
+  {
+    id: 'jewelry-amulets',
+    title: 'Jewelry & Amulets',
+    description: 'Explore the symbolic jewelry, protective amulets, and adornment traditions of ancient civilizations.',
+    icon: Gem,
+    href: '/learn/jewelry-amulets',
+    color: 'from-purple-600 to-pink-600',
+    topics: ['Royal Regalia', 'Protective Amulets', 'Signet Rings', 'Sacred Symbols', 'Burial Jewelry']
   },
   {
     id: 'sound-frequencies',
@@ -167,7 +177,7 @@ export default function LearnPage() {
         {[
           'Egyptian', 'Nubian', 'Phoenician', 'Babylonian', 'Israelite', 'Hittite', 
           'Greek', 'Persian', 'Indian', 'Chinese', 'Maya', 'Inca', 'Roman', 
-          'Carthaginian', 'Minoan', 'Mycenaean', 'Etruscan'
+          'Carthaginian', 'Minoan', 'Mycenaean', 'Etruscan', 'West African'
         ].map((civ, i) => (
           <span key={civ} className="px-3 py-1 bg-gold/10 rounded-full text-xs text-gray-700">
             {civ}
@@ -175,7 +185,7 @@ export default function LearnPage() {
         ))}
       </motion.div>
 
-      {/* Learning Modules Grid - 14 modules now */}
+      {/* Learning Modules Grid - 15 modules now */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {learnModules.map((module, index) => {
           const Icon = module.icon
@@ -184,7 +194,7 @@ export default function LearnPage() {
               key={module.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 + index * 0.015 }}
+              transition={{ delay: 0.1 + index * 0.01 }}
             >
               <Link href={module.href}>
                 <div className="egyptian-card h-full hover:scale-105 transition-all duration-300 cursor-pointer group">
@@ -249,7 +259,7 @@ export default function LearnPage() {
               key={civ.name}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.55 + i * 0.008 }}
+              transition={{ delay: 0.55 + i * 0.007 }}
               className="bg-white/30 rounded-lg p-2 text-center hover:bg-white/50 transition-colors"
             >
               <div className="font-semibold text-egyptian-blue text-sm">{civ.name}</div>
@@ -291,7 +301,7 @@ export default function LearnPage() {
         transition={{ delay: 0.8 }}
         className="text-center text-xs text-gray-500 border-t border-gold/20 pt-6"
       >
-        <span className="text-gold font-semibold">14 Learning Modules</span>
+        <span className="text-gold font-semibold">15 Learning Modules</span>
         <span className="mx-2">•</span>
         <span>20+ Civilizations</span>
         <span className="mx-2">•</span>

@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/ui/Navigation'
-import PageBackground from '@/components/animations/PageBackground'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -87,7 +86,6 @@ export const metadata: Metadata = {
     images: ['/images/og-image.jpg'],
     creator: '@ancientexplorer',
   },
-  // icons are still in metadata
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
@@ -116,7 +114,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} antialiased`}>
-        <PageBackground />
         <Navigation />
         <main className="relative z-10 container mx-auto px-4 py-8 md:px-6 lg:px-8 min-h-[calc(100vh-4rem)]">
           {children}

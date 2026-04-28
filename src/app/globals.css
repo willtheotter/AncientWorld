@@ -10,29 +10,18 @@
 
 @layer base {
   body {
-    background-image: linear-gradient(to bottom right, rgba(146, 64, 14, 0.2), rgba(16, 52, 166, 0.2));
+    background: #f5e6d3;
     min-height: 100vh;
     font-family: 'Georgia', 'Times New Roman', serif;
     position: relative;
-  }
-
-  /* Fixed background that won't scroll */
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: linear-gradient(to bottom right, rgba(146, 64, 14, 0.2), rgba(16, 52, 166, 0.2));
-    z-index: -2;
-    pointer-events: none;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 }
 
 @layer components {
   .egyptian-card {
-    background-color: rgba(240, 230, 210, 0.9);
+    background-color: rgba(240, 230, 210, 0.95);
     backdrop-filter: blur(8px);
     border-radius: 0.5rem;
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
@@ -228,42 +217,9 @@
   z-index: 9999 !important;
 }
 
-/* ========== FIXED POSITION BACKGROUND ========== */
-/* Ensure the hieroglyphic background is fixed */
+/* Remove any fixed backgrounds */
+.fixed-background,
 .hieroglyphic-background,
-canvas.hieroglyphic-canvas,
-.fixed-background {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  z-index: -10 !important;
-  pointer-events: none !important;
-}
-
-/* Ensure main content scrolls properly */
-main, 
-.main-content,
-#__next > div,
-.page-container {
-  position: relative;
-  z-index: 1;
-}
-
-/* Prevent background from affecting scroll */
-body {
-  overflow-x: hidden;
-  overflow-y: auto;
-  position: relative;
-}
-
-/* For any absolute positioned backgrounds */
-.bg-fixed-attachment {
-  background-attachment: fixed !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
+canvas.hieroglyphic-canvas {
+  display: none !important;
 }
