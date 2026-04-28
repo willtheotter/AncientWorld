@@ -34,7 +34,7 @@
   }
 }
 
-/* Hieroglyphics Animations */
+/* ========== HIEROGLYPHICS ANIMATIONS ========== */
 @keyframes float {
   0%, 100% {
     transform: translateY(0px) rotate(0deg);
@@ -88,17 +88,18 @@
   animation: fadeIn 1s ease-out forwards;
 }
 
-/* Leaflet Map Styles */
+/* ========== LEAFLET MAP STYLES ========== */
 .leaflet-container {
-  background: #2c1810;
+  background: #1a1a2e;
   font-family: 'Georgia', 'Times New Roman', serif;
 }
 
-/* Warmer map tiles */
+/* Warm filter for map tiles - gives ancient desert feel */
 .leaflet-tile {
-  filter: sepia(0.15) brightness(0.98) contrast(1.02);
+  filter: sepia(0.12) brightness(0.98) contrast(1.05) saturate(0.95);
 }
 
+/* Popup styling */
 .leaflet-popup-content-wrapper {
   background: rgba(240, 230, 210, 0.95);
   border-radius: 0.5rem;
@@ -117,6 +118,7 @@
   line-height: 1.4;
 }
 
+/* Zoom controls */
 .leaflet-control-zoom a {
   background-color: var(--color-papyrus);
   color: var(--color-egyptian-blue);
@@ -134,6 +136,36 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Attribution text styling */
+.leaflet-control-attribution {
+  background: rgba(0, 0, 0, 0.6) !important;
+  color: #d4af37 !important;
+  font-size: 9px !important;
+  padding: 2px 6px !important;
+  border-radius: 4px;
+}
+
+.leaflet-control-attribution a {
+  color: #d4af37 !important;
+}
+
+.leaflet-control-attribution a:hover {
+  color: #ffd700 !important;
+}
+
+/* Subtle vignette effect for atmosphere */
+.map-atmosphere-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(circle at center, transparent 50%, rgba(0,0,0,0.15) 100%);
+  mix-blend-mode: multiply;
+}
+
 /* Custom marker styling */
 .custom-marker {
   background: var(--color-gold);
@@ -149,7 +181,7 @@
   transform: scale(1.5);
 }
 
-/* Scrollbar styling */
+/* ========== SCROLLBAR STYLING ========== */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -168,7 +200,7 @@
   background: #b8941a;
 }
 
-/* Ensure proper z-indexing for map elements */
+/* ========== Z-INDEX MANAGEMENT ========== */
 .leaflet-control-container {
   z-index: 10;
 }
@@ -177,46 +209,7 @@
   z-index: 100;
 }
 
-/* High z-index for panels - using class instead of escaped selector */
+/* High z-index for panels */
 .site-panel {
   z-index: 9999 !important;
-}
-/* OpenTopoMap Egyptian Theme Enhancements */
-.leaflet-container {
-  background: #1a1a2e;
-}
-
-/* Warm filter for OpenTopoMap tiles - gives ancient desert feel */
-.leaflet-tile {
-  filter: sepia(0.12) brightness(0.98) contrast(1.05) saturate(0.95);
-}
-
-/* Subtle vignette effect for atmosphere */
-.map-atmosphere-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  z-index: 1;
-  background: radial-gradient(circle at center, transparent 50%, rgba(0,0,0,0.15) 100%);
-  mix-blend-mode: multiply;
-}
-
-/* Attribution text styling for better visibility */
-.leaflet-control-attribution {
-  background: rgba(0, 0, 0, 0.6) !important;
-  color: #d4af37 !important;
-  font-size: 9px !important;
-  padding: 2px 6px !important;
-  border-radius: 4px;
-}
-
-.leaflet-control-attribution a {
-  color: #d4af37 !important;
-}
-
-.leaflet-control-attribution a:hover {
-  color: #ffd700 !important;
 }

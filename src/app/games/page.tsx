@@ -20,6 +20,14 @@ const allGames = [
     color: 'from-blue-600 to-indigo-600',
   },
   {
+    title: 'Sacred Match',
+    description: 'Match Egyptian symbols, gods, and artifacts in this memory challenge.',
+    iconName: 'Gem',
+    href: '/games/sacred-match',
+    difficulty: '3 Levels',
+    color: 'from-purple-600 to-pink-600',
+  },
+  {
     title: 'Scales of Ma\'at',
     description: 'Balance good vs evil in this physics-based challenge.',
     iconName: 'Scale',
@@ -27,6 +35,15 @@ const allGames = [
     difficulty: 'Coming Soon',
     color: 'from-emerald-600 to-teal-600',
     comingSoon: true,
+  },
+  {
+    title: 'Egyptian Hangman (External)',
+    description: '15+ sounds, 1000+ words, 6 languages - Full experience!',
+    iconName: 'ExternalLink',
+    href: 'https://egyptianhangman.com/',
+    difficulty: 'All Levels',
+    color: 'from-red-600 to-orange-600',
+    external: true,
   },
 ]
 

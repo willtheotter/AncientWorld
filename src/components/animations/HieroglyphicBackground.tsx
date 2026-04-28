@@ -102,11 +102,11 @@ export default function HieroglyphicBackground({
           {currentBg.hieroglyphs.map((glyph, i) => (
             <div
               key={`main-${i}`}
-              className="absolute text-7xl opacity-10 animate-float"
+              className="absolute text-7xl opacity-10"
               style={{
                 top: fixedPositions[i].top,
                 left: fixedPositions[i].left,
-                animationDuration: `${6 + i * 1.5}s`,
+                animation: `float ${6 + i * 1.5}s ease-in-out infinite`,
                 animationDelay: `${i * 0.5}s`,
               }}
             >
@@ -117,11 +117,11 @@ export default function HieroglyphicBackground({
           {fixedPositions.slice(4, 12).map((pos, i) => (
             <div
               key={`random-${i}`}
-              className="absolute text-5xl opacity-8 animate-float-slow"
+              className="absolute text-5xl opacity-8"
               style={{
                 top: pos.top,
                 left: pos.left,
-                animationDuration: `${7 + i * 0.8}s`,
+                animation: `float-slow ${7 + i * 0.8}s ease-in-out infinite`,
                 animationDelay: `${i * 0.7}s`,
               }}
             >

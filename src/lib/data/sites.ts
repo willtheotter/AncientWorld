@@ -63,12 +63,13 @@ The library's collection grew to an estimated 400,000 to 700,000 scrolls, repres
 The temple hosted the largest festival in Egypt, the "Bastet Festival," drawing over 700,000 pilgrims each year. Celebrants came on decorated barges, playing castanets and flutes, with women engaging in "aubades" (serenades at dawn) and men dancing and singing—Egypt's version of Carnival.
 
 The sanctuary contained a massive statue of Bastet, a lioness-headed goddess who represented both the gentle protector of the home (as a cat) and the fierce defender of the pharaoh (as a lioness). The temple also housed a sacred cat cemetery with thousands of mummified cats.`,
-        imageRegenerated: '/images/sites/bubastis-regenerated.jpg',
-        imageCurrent: '/images/sites/bubastis-current.jpg',
+        imageRegenerated: '/images/sites/temple-bastet-regenerated.jpg',
+        imageCurrent: '/images/sites/temple-bastet-current.jpg',
         scene: 'The Festival City of Bastet',
         visualHighlights: ['Temple surrounded by canal water on three sides', 'Procession with cat-headed goddess statue', 'Pilgrim crowds celebrating with music and dance', 'Cat statues flanking the pylons', 'Sacred cat cemetery with thousands of mummies'],
         deity: 'Bastet',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/fIkCmQvjgZ0?si=9H4UABW5Qe3efjF3'
       }
     ]
   },
@@ -87,12 +88,13 @@ The sanctuary contained a massive statue of Bastet, a lioness-headed goddess who
         longDescription: `The Great Pyramid of Khufu (Cheops) was built around 2560 BCE as a tomb for Pharaoh Khufu of the Fourth Dynasty. It was the tallest man-made structure on Earth for over 3,800 years, rising 146.6 meters (481 feet) before losing its smooth limestone casing.
 
 The pyramid contains an estimated 2.3 million blocks of limestone and granite, weighing an average of 2.5 to 15 tons each, with some granite blocks in the "King's Chamber" reaching 80 tons. The internal architecture includes the descending passage, lower chamber, Grand Gallery, and the King's and Queen's chambers. The "air shafts" align with stars in the constellation Orion, suggesting religious significance.`,
-        imageRegenerated: '/images/sites/pyramid-regenerated.jpg',
-        imageCurrent: '/images/sites/pyramid-current.jpg',
+        imageRegenerated: '/images/sites/great-pyramid-regenerated.jpg',
+        imageCurrent: '/images/sites/great-pyramid-current.jpg',
         scene: 'The Night of the Luminous Pyramid',
         visualHighlights: ['Polished Tura limestone reflecting moonlight', 'Electrum cap catching starlight at apex', 'Milky Way mirrored on pyramid faces', 'Flickering fires at ground-level settlements', 'Grand Gallery interior with corbelled ceiling'],
         deity: 'Ra',
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/n5pQUkxzlz4?si=e__8v1wDexWCAo-j'
       },
       {
         id: 'great-sphinx',
@@ -103,70 +105,90 @@ The pyramid contains an estimated 2.3 million blocks of limestone and granite, w
 The statue was originally brightly painted: traces of red pigment remain on the face, and the nemes headdress showed alternating stripes of blue and yellow. The body was painted red, a color associated with solar power and regeneration.
 
 The "Dream Stele" between the Sphinx's paws records a dream of Pharaoh Thutmose IV, where the Sphinx promised him the throne if he cleared away the sand burying the statue—which he did and became pharaoh.`,
-        imageRegenerated: '/images/sites/sphinx-regenerated.jpg',
-        imageCurrent: '/images/sites/sphinx-current.jpg',
+        imageRegenerated: '/images/sites/great-sphinx-regenerated.jpg',
+        imageCurrent: '/images/sites/great-sphinx-current.jpg',
         scene: 'The Great Sphinx in Full Polychrome',
         visualHighlights: ['Warm reddish face tones with carved features', 'Blue and gold nemes headdress alternating bands', 'Pyramids of Khafre and Menkaure in background', 'Bold polychrome restoration showing original colors', 'Dream Stele between the paws with hieroglyphs'],
         deity: 'Horus',
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=VppKsVHwkwDtVcTF'
       }
     ]
   },
+// 5-7. Memphis Region
+memphis: {
+  id: 'memphis',
+  name: 'Memphis',
+  coordinates: [29.8447, 31.2509],
+  region: 'Egypt - Memphis',
+  locations: [
+    {
+      id: 'temple-ptah',
+      name: 'Temple of Ptah',
+      description: 'Great temple of the creator god Ptah',
+      longDescription: `The Temple of Ptah at Memphis was the religious center of Egypt's ancient capital. Ptah was the creator god who fashioned the world through thought and speech—"the Lord of Truth, Father of the gods." Unlike other Egyptian creation myths involving physical acts, Ptah created by divine utterance, inspiring later Judeo-Christian concepts of "in the beginning was the Word."
 
-  // 5-7. Memphis Region
-  memphis: {
-    id: 'memphis',
-    name: 'Memphis',
-    coordinates: [29.8447, 31.2509],
-    region: 'Egypt - Memphis',
-    locations: [
-      {
-        id: 'temple-ptah',
-        name: 'Temple of Ptah',
-        description: 'Great temple of the creator god Ptah',
-        longDescription: `The Temple of Ptah at Memphis was the religious center of Egypt's ancient capital. Ptah was the creator god who fashioned the world through thought and speech—"the Lord of Truth, Father of the gods." Unlike other Egyptian creation myths involving physical acts, Ptah created by divine utterance, inspiring later Judeo-Christian concepts of "in the beginning was the Word."
-
-The temple housed a massive statue of Ptah, described by Herodotus as a "colossos of Ptah, very great and remarkable." PtaThe temple's high priests, called "Greatest of the Directors of Craftsmen," were among Egypt's most powerful officials.`,
-        imageRegenerated: '/images/sites/memphis-ptah-regenerated.jpg',
-        imageCurrent: '/images/sites/memphis-ptah-current.jpg',
-        scene: 'The Creator God\'s Sanctuary',
-        visualHighlights: ['Massive statue of Ptah in his shrine', 'Creator god theology depicted in reliefs', 'Scenes of Ptah creating through speech', 'Pilgrims bringing offerings', 'Colonnaded courtyards with columns'],
-        deity: 'Ptah',
-        type: 'temple'
-      },
-      {
-        id: 'serapeum',
-        name: 'Serapeum of Memphis',
-        description: 'Underground galleries of the sacred Apis bulls',
-        longDescription: `The Serapeum of Memphis was the burial place of the Apis bulls, living manifestations of the god Ptah. Each bull was selected by specific markings and lived in the temple precinct as a god before being mummified and buried with great ceremony.
+The temple housed a massive statue of Ptah, described by Herodotus as a "colossos of Ptah, very great and remarkable." The temple's high priests, called "Greatest of the Directors of Craftsmen," were among Egypt's most powerful officials.`,
+      imageRegenerated: '/images/sites/temple-ptah-regenerated.jpg',
+      imageCurrent: '/images/sites/temple-ptah-current.jpg',
+      scene: 'The Creator God\'s Sanctuary',
+      visualHighlights: ['Massive statue of Ptah in his shrine', 'Creator god theology depicted in reliefs', 'Scenes of Ptah creating through speech', 'Pilgrims bringing offerings', 'Colonnaded courtyards with columns'],
+      deity: 'Ptah',
+      type: 'temple',
+      youtubeUrl: 'https://youtu.be/SYbnhkiwqLk?si=ENXcddmkE8osRdt0'
+    },
+    {
+      id: 'serapeum',
+      name: 'Serapeum of Memphis',
+      description: 'Underground galleries of the sacred Apis bulls',
+      longDescription: `The Serapeum of Memphis was the burial place of the Apis bulls, living manifestations of the god Ptah. Each bull was selected by specific markings and lived in the temple precinct as a god before being mummified and buried with great ceremony.
 
 The Serapeum's underground galleries stretch for hundreds of meters, containing 24 massive granite sarcophagi weighing up to 70 tons each. The chambers were carved from solid limestone, with some sarcophagi 4 meters long, 3 meters high, and 2.5 meters wide.
 
 The Greek historian Strabo (64 BCE - 24 CE) visited the site and described the path of sphinxes leading to the sanctuary, which remained a pilgrimage site into Roman times.`,
-        imageRegenerated: '/images/sites/serapeum-regenerated.jpg',
-        imageCurrent: '/images/sites/serapeum-current.jpg',
-        scene: 'The Tomb of the Apis Bulls',
-        visualHighlights: ['Massive granite sarcophagi weighing 70 tons', 'Underground galleries with torch-lit chambers', 'Apis bull burials with gold funerary masks', 'Ptah manifestations in the bull form', 'Sphinx-lined processional way above ground'],
-        deity: 'Ptah',
-        type: 'tomb'
-      },
-      {
-        id: 'step-pyramid',
-        name: 'Step Pyramid of Djoser',
-        description: 'The earliest monumental stone structure in history',
-        longDescription: `The Step Pyramid of Djoser, designed by the architect Imhotep (later deified as a god of medicine), marked the transition from mastaba tombs to true pyramids. It was Egypt's first massive stone structure, built for Pharaoh Djoser of the Third Dynasty around 2670 BCE.
+      imageRegenerated: '/images/sites/serapeum-regenerated.jpg',
+      imageCurrent: '/images/sites/serapeum-current.jpg',
+      scene: 'The Tomb of the Apis Bulls',
+      visualHighlights: ['Massive granite sarcophagi weighing 70 tons', 'Underground galleries with torch-lit chambers', 'Apis bull burials with gold funerary masks', 'Ptah manifestations in the bull form', 'Sphinx-lined processional way above ground'],
+      deity: 'Ptah',
+      type: 'tomb',
+      youtubeUrl: 'https://youtu.be/nfv3vRrfp2E?si=TFC0aICcwZiMN-NH'
+    },
+    {
+      id: 'step-pyramid',
+      name: 'Step Pyramid of Djoser',
+      description: 'The earliest monumental stone structure in history',
+      longDescription: `The Step Pyramid of Djoser, designed by the architect Imhotep (later deified as a god of medicine), marked the transition from mastaba tombs to true pyramids. It was Egypt's first massive stone structure, built for Pharaoh Djoser of the Third Dynasty around 2670 BCE.
 
 The pyramid originally rose 62 meters (203 feet) in six stepped tiers, representing a staircase for the pharaoh to ascend to the stars. The complex included the first stone columns in history, a mortuary temple, and a Heb-Sed court for the pharaoh's jubilee festival.
 
 The underground chambers (3.5 km of tunnels) include a central burial chamber with a 3.5-ton granite plug, galleries containing over 40,000 stone vessels, and chambers lined with blue faience tiles—Egypt's first use of this material.`,
-        imageRegenerated: '/images/sites/step-pyramid-regenerated.jpg',
-        imageCurrent: '/images/sites/step-pyramid-current.jpg',
-        scene: 'The First Pyramid',
-        visualHighlights: ['Six-tiered limestone step structure', 'Casing of white Tura limestone (originally smooth)', 'Mortuary temple complex with engaged columns', 'Imhotep\'s architectural innovation in stone', 'Heb-Sed court with shrine facades'],
-        type: 'monument'
-      }
-    ]
-  },
+      imageRegenerated: '/images/sites/step-pyramid-regenerated.jpg',
+      imageCurrent: '/images/sites/step-pyramid-current.jpg',
+      scene: 'The First Pyramid',
+      visualHighlights: ['Six-tiered limestone step structure', 'Casing of white Tura limestone (originally smooth)', 'Mortuary temple complex with engaged columns', 'Imhotep\'s architectural innovation in stone', 'Heb-Sed court with shrine facades'],
+      type: 'monument',
+      youtubeUrl: 'https://youtu.be/UqIWl6e6JIo?si=J264kvcdy-NqnHKQ'
+    },
+    {
+      id: 'temple-sekhmet',
+      name: 'Temple of Sekhmet',
+      description: 'The lioness goddess of war and healing',
+      longDescription: `The Temple of Sekhmet at Memphis was simultaneously the most feared and most beloved temple in Egypt. Sekhmet ("the Powerful One") was the lioness goddess of war, plague, pestilence, and desert storms—but also of healing, because the goddess who sent disease could also cure it.
+
+The temple contained hundreds of life-size statues of Sekhmet, seated on thrones with a lioness head and sun disk, standing in rows as silent, watchful guardians. Most date to Amenhotep III, who erected 730 statues—one for each day of the year—to pacify the goddess during a plague.
+
+Pilgrims came seeking cures, offering cool water, bread, and beer to Sekhmet's statues, sometimes directly pouring water over them and collecting the runoff as blessed medicine.`,
+      imageRegenerated: '/images/sites/temple-sekhmet-regenerated.jpg',
+      imageCurrent: '/images/sites/temple-sekhmet-current.jpg',
+      scene: 'The Temple of the Powerful One',
+      visualHighlights: ['Rows of lioness-headed Sekhmet statues in granite', 'Healing ritual chambers with stone basins', 'Offerings of bread, beer, and cool water', 'Plague apotropaic inscriptions on walls', 'Sun disk reflecting from the statues at dawn'],
+      deity: 'Sekhmet',
+      type: 'temple',
+      youtubeUrl: 'https://youtu.be/sQe_iZJfXAo?si=8AKcY-8YyvnoQqFL'
+    }
+  ]
+},
 
   // 8. Saqqara - Temple of Anubis
   saqqara: {
@@ -184,12 +206,13 @@ The underground chambers (3.5 km of tunnels) include a central burial chamber wi
 The temple features a long processional causeway lined with jackal statues, their bodies carved from black granite to symbolize the fertile soil of the Nile and the color of mummified flesh. Underground catacombs contain thousands of mummified dogs and jackals—ancient Egyptians offered these animal mummies to Anubis, believing they would carry their prayers to the god.
 
 Within the sanctuary, priests wearing jackal-headed masks performed the Opening of the Mouth ceremony, using ritual adzes and other instruments to "open" the senses of the deceased.`,
-        imageRegenerated: '/images/sites/anubis-saqqara-regenerated.jpg',
-        imageCurrent: '/images/sites/anubis-saqqara-current.jpg',
+        imageRegenerated: '/images/sites/anubis-temple-saqqara-regenerated.jpg',
+        imageCurrent: '/images/sites/anubis-temple-saqqara-current.jpg',
         scene: 'The House of the Jackal God',
         visualHighlights: ['Jackal statues lining the limestone causeway', 'Underground dog mummy galleries with stacked burials', 'Priests in jackal masks performing embalming rituals', 'Embalming tables with natron salts and linen', 'Torchlit sanctuary with gold-inlaid Anubis statue'],
         deity: 'Anubis',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/hQi9urf9ry8?si=A66_ioAw_cGG5rQH'
       }
     ]
   },
@@ -210,12 +233,13 @@ Within the sanctuary, priests wearing jackal-headed masks performed the Opening 
 The temple complex featured multiple obelisks representing petrified rays of sunlight—the most famous being the Obelisk of Senusret I (c. 1950 BCE), which still stands today at 20.7 meters tall. The temple's open-air design allowed the sun's rays to reach every corner, with no roof blocking the light.
 
 The temple's school, the "Per Ankh" (House of Life), trained priests who served throughout Egypt, spreading Heliopolitan theology.`,
-        imageRegenerated: '/images/sites/heliopolis-ra-regenerated.jpg',
-        imageCurrent: '/images/sites/heliopolis-ra-current.jpg',
+        imageRegenerated: '/images/sites/temple-ra-regenerated.jpg',
+        imageCurrent: '/images/sites/temple-ra-current.jpg',
         scene: 'The City of the Sun',
         visualHighlights: ['Multiple obelisks marking the sanctuary', 'Open-air sun altar with priests in white linen', 'Priests reciting the Litany of Ra at dawn', 'Solar barque chapel for the sun god\'s journey', 'Sacred Benben stone—the cult\'s oldest meteorite'],
         deity: 'Ra',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/fmY181wyY_k?si=VTbP-m-6nO7vZ50A'
       },
       {
         id: 'temple-atum',
@@ -226,12 +250,13 @@ The temple's school, the "Per Ankh" (House of Life), trained priests who served 
 Atum was depicted as a complete man wearing the double crown of Upper and Lower Egypt, reflecting his role as the "Lord of Both Lands." His temple contained the Benben Stone—a sacred meteorite shaped like a miniature obelisk or pyramidion—which was the oldest cult object in Heliopolis.
 
 The temple's walls showed Atum creating the world through masturbation (a uniquely Heliopolitan myth), spitting out Shu and Tefnut. Alexander the Great visited the temple after conquering Egypt in 332 BCE.`,
-        imageRegenerated: '/images/sites/atum-temple-regenerated.jpg',
-        imageCurrent: '/images/sites/atum-temple-current.jpg',
+        imageRegenerated: '/images/sites/temple-atum-regenerated.jpg',
+        imageCurrent: '/images/sites/temple-atum-current.jpg',
         scene: 'The Evening Sun\'s Sanctuary',
         visualHighlights: ['Atum statue with double crown of Egypt', 'Benben stone shrine in the inner sanctum', 'Ennead relief showing the nine creator gods', 'Evening solar barque shrine for night journey', 'Alexander the Great making offerings to Atum'],
         deity: 'Atum',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/fp5LnXwFXIo?si=eFx2tXDipqDE9V04'
       }
     ]
   },
@@ -255,7 +280,8 @@ Originally covered in painted reliefs, the columns depict scenes of the pharaoh 
         scene: 'The Hypostyle Hall at Karnak',
         visualHighlights: ['134 massive columns taller than 6-story building', 'Beams of sunlight through clerestory windows', 'Blue ceiling with 5-pointed golden stars', 'Incense-filled shafts of light', 'Reliefs of Seti I and Ramesses II'],
         deity: 'Amun-Ra',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/AHkpS7vbkTk?si=jb6OJix3tqeRbcvU'
       },
       {
         id: 'karnak-sacred-lake',
@@ -271,7 +297,8 @@ The perfect reflection of the temple columns and pylons in the still water creat
         scene: 'The Waters of Purification',
         visualHighlights: ['Perfect reflection of the temple in still water', 'Temple columns mirrored in the lake', 'Ritual washing area with stone steps', 'Sacred geese and tilapia fish', 'Stone platform for the divine barque'],
         deity: 'Amun-Ra',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/oGEfWjWHhQU?si=lztjAcRO88YGLRhA' 
       },
       {
         id: 'temple-khonsu',
@@ -282,12 +309,13 @@ The perfect reflection of the temple columns and pylons in the still water creat
 The temple features a hypostyle hall with 8 columns carved in high relief, leading to a barque sanctuary where the moon god's divine boat was kept. The roof is decorated with astronomical scenes depicting Khonsu sailing across the night sky.
 
 The temple was also a medical center where patients sought healing dreams through incubation—they slept in special chambers on the roof, hoping the god would visit their dreams and diagnose their illness.`,
-        imageRegenerated: '/images/sites/khonsu-temple-regenerated.jpg',
-        imageCurrent: '/images/sites/khonsu-temple-current.jpg',
+        imageRegenerated: '/images/sites/temple-khonsu-regenerated.jpg',
+        imageCurrent: '/images/sites/temple-khonsu-current.jpg',
         scene: 'The Moon God\'s Sanctuary',
         visualHighlights: ['Hypostyle hall with astronomical ceiling', 'Barque sanctuary for Khonsu\'s divine boat', 'Healing dream incubation chambers on roof', 'Oracle consultation scenes in relief', 'Lunar cycle reliefs showing moon phases'],
         deity: 'Khonsu',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/rv6zv9JsmQg?si=WWGhJajfQJcwlxD'
       },
       {
         id: 'red-chapel',
@@ -303,7 +331,8 @@ The chapel was dismantled during the Amarna Period and used as filler in later c
         scene: 'Hatshepsut\'s Alabaster Barque Shrine',
         visualHighlights: ['Red quartzite walls with bright Punt reliefs', 'Black diorite door frames', 'Opet Festival procession scenes in high relief', 'Hatshepsut named as "son of Amun"', 'Egyptian-Puntite contact scenes with exotic animals'],
         deity: 'Amun-Ra',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/PXt6x1Iosds?si=GMQzJse0FW-kxSKB'
       },
       {
         id: 'temple-ptah-karnak',
@@ -314,12 +343,13 @@ The chapel was dismantled during the Amarna Period and used as filler in later c
 The temple was built by Thutmose III (1479-1425 BCE), expanded by the Ptolemies, and restored by the Roman emperor Tiberius. The sanctuary contains a naos (shrine) with images of Ptah, his lioness consort Sekhmet, and their son Nefertum, the divine triad of Memphis.
 
 The Kushite pharaohs particularly honored Ptah, seeing continuity between their warrior god Apedemak and the Memphite creator deity.`,
-        imageRegenerated: '/images/sites/ptah-karnak-regenerated.jpg',
-        imageCurrent: '/images/sites/ptah-karnak-current.jpg',
+        imageRegenerated: '/images/sites/temple-ptah-karnak-regenerated.jpg',
+        imageCurrent: '/images/sites/temple-ptah-karnak-current.jpg',
         scene: 'The Creator God of Memphis',
         visualHighlights: ['Peristyle court with Kushite pharaoh reliefs', 'Naos shrine with divine triad', 'Massive mudbrick enclosure walls', 'Roman restoration inscriptions by Tiberius', 'Thutmose III foundation blocks with original paint'],
         deity: 'Ptah',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/sQe_iZJfXAo?si=NP6KH9A00CBYhtwP'
       },
       {
         id: 'mut-karnak',
@@ -330,12 +360,13 @@ The Kushite pharaohs particularly honored Ptah, seeing continuity between their 
 The temple featured 600 black granite statues of Sekhmet (Mut's lioness aspect), many now in the Cairo Museum. These seated statues, carved during the reign of Amenhotep III, show the lioness goddess with a sun disk and are inscribed with her epithet "She who Mauls"—intended to pacify the goddess's destructive power.
 
 The precinct also included the Chapel of Osiris-Djebekh and the Punt Hall with reliefs of Hatshepsut's Punt Expedition.`,
-        imageRegenerated: '/images/sites/mut-temple-regenerated.jpg',
-        imageCurrent: '/images/sites/mut-temple-current.jpg',
+        imageRegenerated: '/images/sites/mut-karnak-regenerated.jpg',
+        imageCurrent: '/images/sites/mut-karnak-current.jpg',
         scene: 'The Vulture Goddess of Thebes',
         visualHighlights: ['600 black granite Sekhmet statues standing in rows', 'Horseshoe-shaped sacred lake', 'Punt Hall with Hatshepsut expedition reliefs', 'God\'s Wife of Amun residential palace', 'Chapel of Osiris-Djebekh with funerary reliefs'],
         deity: 'Mut',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/oHqa8VlYUvw?si=l_F-TMJ1HwtbzQhq'
       }
     ]
   },
@@ -366,31 +397,6 @@ The king walked ahead of the barques, symbolically renewing his divine authority
     ]
   },
 
-  // 18. Temple of Sekhmet
-  memphisSekhmet: {
-    id: 'sekhmet-temple',
-    name: 'Temple of Sekhmet',
-    coordinates: [29.8447, 31.253],
-    region: 'Egypt - Memphis',
-    locations: [
-      {
-        id: 'temple-sekhmet',
-        name: 'Temple of Sekhmet',
-        description: 'The lioness goddess of war and healing',
-        longDescription: `The Temple of Sekhmet at Memphis was simultaneously the most feared and most beloved temple in Egypt. Sekhmet ("the Powerful One") was the lioness goddess of war, plague, pestilence, and desert storms—but also of healing, because the goddess who sent disease could also cure it.
-
-The temple contained hundreds of life-size statues of Sekhmet, seated on thrones with a lioness head and sun disk, standing in rows as silent, watchful guardians. Most date to Amenhotep III, who erected 730 statues—one for each day of the year—to pacify the goddess during a plague.
-
-Pilgrims came seeking cures, offering cool water, bread, and beer to Sekhmet's statues, sometimes directly pouring water over them and collecting the runoff as blessed medicine.`,
-        imageRegenerated: '/images/sites/sekhmet-temple-regenerated.jpg',
-        imageCurrent: '/images/sites/sekhmet-temple-current.jpg',
-        scene: 'The Temple of the Powerful One',
-        visualHighlights: ['Rows of lioness-headed Sekhmet statues in granite', 'Healing ritual chambers with stone basins', 'Offerings of bread, beer, and cool water', 'Plague apotropaic inscriptions on walls', 'Sun disk reflecting from the statues at dawn'],
-        deity: 'Sekhmet',
-        type: 'temple'
-      }
-    ]
-  },
 
   // 19. Temple of Thoth at Hermopolis
   hermopolis: {
@@ -704,7 +710,8 @@ Modern techniques (ground-penetrating radar, infrared imaging) continue to ident
         imageCurrent: '/images/sites/valley-kings-current.jpg',
         scene: 'The Royal Necropolis',
         visualHighlights: ['Subterranean tombs carved into limestone hills', 'Flickering torchlight illuminating golden goods', 'Gold burial masks and amulets', 'Solemn ceremonial atmosphere', 'Books of the Dead covering the walls'],
-        type: 'tomb'
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/hOSWxNqnPeU?si=IwTOkz3lc5kjs9i4'
       },
       {
         id: 'tutankhamun-tomb',

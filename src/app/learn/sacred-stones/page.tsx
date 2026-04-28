@@ -5,11 +5,14 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { 
   Gem, Sparkles, Heart, Shield, Eye, Star, Crown, 
   Sun as SunIcon, Moon, Droplet, Flame, Wind, Leaf, 
-  Diamond, Zap, Cloud, Waves, Target, Circle, Compass
+  Diamond, Coffee, Zap, Cloud, Snowflake, Anchor, 
+  Compass, MapPin, Feather, Music, Flower, TreePine,
+  Mountain, Waves, Battery, Target, Book, Cross,
+  Circle, Square, Triangle
 } from 'lucide-react'
 
 const stones = [
-  // Egyptian Stones (10)
+  // Egyptian Stones (1-8)
   {
     name: 'Lapis Lazuli',
     civilization: 'Egyptian',
@@ -115,6 +118,32 @@ const stones = [
     icon: SunIcon
   },
   {
+    name: 'Amethyst',
+    civilization: 'Egyptian',
+    meaning: 'Clarity, Protection, Sobriety',
+    color: 'Purple to Violet',
+    chakra: 'Third Eye, Crown',
+    frequency: '639 Hz',
+    healing: 'Calms the mind, protection, clarity in decision-making.',
+    uses: 'Amulets, jewelry, burial gifts for pharaohs.',
+    deity: 'Thoth',
+    symbol: 'Wisdom, Clarity',
+    icon: Star
+  },
+  {
+    name: 'Quartz (Clear)',
+    civilization: 'Egyptian',
+    meaning: 'Eternal Light, Healing, Vision',
+    color: 'Clear to White',
+    chakra: 'Crown',
+    frequency: '963 Hz',
+    healing: 'Healing, clarity, amplification of energy.',
+    uses: 'Crystal balls, healing rituals, temple offerings.',
+    deity: 'Ra',
+    symbol: 'Light, Purity',
+    icon: Sparkles
+  },
+  {
     name: 'Serpentine',
     civilization: 'Egyptian',
     meaning: 'Serpent Power, Rebirth, Protection',
@@ -126,6 +155,45 @@ const stones = [
     deity: 'Wadjet',
     symbol: 'Serpent, Protection',
     icon: Shield
+  },
+  {
+    name: 'Feldspar',
+    civilization: 'Egyptian',
+    meaning: 'Moon Magic, Fertility, Growth',
+    color: 'Cream to Pink',
+    chakra: 'Sacral',
+    frequency: '528 Hz',
+    healing: 'Fertility, growth, moon magic.',
+    uses: 'Amulets for fertility, jewelry.',
+    deity: 'Isis, Hathor',
+    symbol: 'Moon, Fertility',
+    icon: Moon
+  },
+  {
+    name: 'Calcite (Green)',
+    civilization: 'Egyptian',
+    meaning: 'Heart Opening, Healing, Growth',
+    color: 'Pale Green',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    healing: 'Heart healing, emotional growth, compassion.',
+    uses: 'Heart scarabs, amulets, tomb offerings.',
+    deity: 'Hathor',
+    symbol: 'Heart, Compassion',
+    icon: Heart
+  },
+  {
+    name: 'Breccia',
+    civilization: 'Egyptian',
+    meaning: 'Unity, Strength, Diversity',
+    color: 'Multi-colored fragments',
+    chakra: 'Root',
+    frequency: '396 Hz',
+    healing: 'Unity, strength through diversity, grounding.',
+    uses: 'Vessels, amulets, architectural elements.',
+    deity: 'Geb',
+    symbol: 'Unity, Earth',
+    icon: Circle
   },
   {
     name: 'Alabaster',
@@ -141,9 +209,9 @@ const stones = [
     icon: Crown
   },
 
-  // Greek Stones (8)
+  // Greek Stones (9-18) - Expanded to 10
   {
-    name: 'Amethyst',
+    name: 'Amethyst (Greek)',
     civilization: 'Greek',
     meaning: 'Sobriety, Clarity, Protection',
     color: 'Purple to Violet',
@@ -182,7 +250,7 @@ const stones = [
     icon: Flame
   },
   {
-    name: 'Clear Quartz',
+    name: 'Rock Crystal',
     civilization: 'Greek',
     meaning: 'Eternal Ice, Healing, Vision',
     color: 'Clear to White',
@@ -234,6 +302,32 @@ const stones = [
     icon: Leaf
   },
   {
+    name: 'Jasper',
+    civilization: 'Greek',
+    meaning: 'Courage, Strength, Endurance',
+    color: 'Red, Green, Yellow',
+    chakra: 'Root',
+    frequency: '432 Hz',
+    healing: 'Courage, endurance, protection.',
+    uses: 'Seals, amulets, intaglios.',
+    deity: 'Hercules',
+    symbol: 'Courage, Strength',
+    icon: Target
+  },
+  {
+    name: 'Sapphire',
+    civilization: 'Greek',
+    meaning: 'Wisdom, Divine Favor, Apollo',
+    color: 'Deep Blue',
+    chakra: 'Third Eye',
+    frequency: '432 Hz',
+    healing: 'Wisdom, divine connection, prophecy.',
+    uses: 'Oracle offerings, priestess jewelry.',
+    deity: 'Apollo',
+    symbol: 'Wisdom, Prophecy',
+    icon: Star
+  },
+  {
     name: 'Emerald',
     civilization: 'Greek',
     meaning: 'Venus Stone, Love, Beauty',
@@ -247,7 +341,7 @@ const stones = [
     icon: Heart
   },
 
-  // Roman Stones (5 - excluding duplicates)
+  // Roman Stones (19-24) - Expanded to 6
   {
     name: 'Diamond',
     civilization: 'Roman',
@@ -262,61 +356,74 @@ const stones = [
     icon: Diamond
   },
   {
-    name: 'Moonstone',
+    name: 'Agate (Roman)',
     civilization: 'Roman',
-    meaning: 'Moon Magic, Intuition, Fertility',
-    color: 'White with Blue Sheen',
-    chakra: 'Third Eye, Crown',
-    frequency: '639 Hz',
-    healing: 'Intuition, dreams, fertility, love.',
-    uses: 'Jewelry, amulets for travelers.',
-    deity: 'Diana, Luna',
-    symbol: 'Moon, Dreams',
-    icon: Moon
+    meaning: 'Protection, Health, Harvest',
+    color: 'Banded White, Grey, Blue, Brown',
+    chakra: 'Root',
+    frequency: '417 Hz',
+    healing: 'Protection from storms, good health, agricultural fertility.',
+    uses: 'Amulets, cameos, carved vessels.',
+    deity: 'Ceres, Neptune',
+    symbol: 'Harvest, Sea',
+    icon: Cloud
   },
   {
-    name: 'Sapphire',
+    name: 'Onyx (Roman)',
     civilization: 'Roman',
-    meaning: 'Wisdom, Divine Favor, Protection',
-    color: 'Deep Blue',
+    meaning: 'Strength, Self-Control, Protection',
+    color: 'Black with White Bands',
+    chakra: 'Root',
+    frequency: '396 Hz',
+    healing: 'Protection, self-mastery, overcoming grief.',
+    uses: 'Cameos, intaglios, protective amulets.',
+    deity: 'Mars, Venus',
+    symbol: 'Strength, Self-mastery',
+    icon: Shield
+  },
+  {
+    name: 'Carnelian (Roman)',
+    civilization: 'Roman',
+    meaning: 'Courage, Action, Leadership',
+    color: 'Orange-Red',
+    chakra: 'Sacral',
+    frequency: '417 Hz',
+    healing: 'Courage, action, leadership.',
+    uses: 'Signet rings, seals, intaglios.',
+    deity: 'Mars',
+    symbol: 'Courage, Action',
+    icon: Flame
+  },
+  {
+    name: 'Lapis Lazuli (Roman)',
+    civilization: 'Roman',
+    meaning: 'Truth, Royalty, Jupiter',
+    color: 'Deep Blue with Gold',
     chakra: 'Third Eye',
     frequency: '432 Hz',
-    healing: 'Wisdom, divine connection, prophecy.',
-    uses: 'Oracle offerings, priestess jewelry.',
+    healing: 'Truth, divine connection, royal favor.',
+    uses: 'Jewelry, inlays, amulets.',
     deity: 'Jupiter',
-    symbol: 'Wisdom, Prophecy',
+    symbol: 'Truth, Royalty',
     icon: Star
   },
   {
-    name: 'Ruby',
+    name: 'Emerald (Roman)',
     civilization: 'Roman',
-    meaning: 'Passion, Courage, Mars',
-    color: 'Red',
-    chakra: 'Root, Heart',
-    frequency: '417 Hz',
-    healing: 'Heart health, courage, success in battle.',
-    uses: 'Royal regalia, temple offerings.',
-    deity: 'Mars',
-    symbol: 'Sun, Royal power',
-    icon: SunIcon
-  },
-  {
-    name: 'Topaz',
-    civilization: 'Roman',
-    meaning: 'Strength, Intellect, Jupiter',
-    color: 'Golden Yellow',
-    chakra: 'Solar Plexus',
+    meaning: 'Venus Stone, Love, Fertility',
+    color: 'Green',
+    chakra: 'Heart',
     frequency: '528 Hz',
-    healing: 'Strength, intellect, manifestation.',
-    uses: 'Jewelry, intaglios, cameos.',
-    deity: 'Jupiter',
-    symbol: 'Strength, Wisdom',
-    icon: Crown
+    healing: 'Love, fertility, prosperity.',
+    uses: 'Jewelry, offerings to Venus.',
+    deity: 'Venus',
+    symbol: 'Love, Fertility',
+    icon: Leaf
   },
 
-  // Indian Stones (8)
+  // Indian Stones (25-32) - Expanded to 8
   {
-    name: 'Ruby (Indian)',
+    name: 'Ruby',
     civilization: 'Indian',
     meaning: 'Sun Stone, Royalty, Passion',
     color: 'Red to Pinkish-Red',
@@ -368,43 +475,17 @@ const stones = [
     icon: Star
   },
   {
-    name: 'Hessonite Garnet',
+    name: 'Diamond (Indian)',
     civilization: 'Indian',
-    meaning: 'Rahu Stone, Protection, Karma',
-    color: 'Cinnamon to Honey',
-    chakra: 'Root',
-    frequency: '396 Hz',
-    healing: 'Protection, karma clearing, grounding.',
-    uses: 'Astrological rings, amulets.',
-    deity: 'Rahu',
-    symbol: 'Protection, Karma',
-    icon: Shield
-  },
-  {
-    name: 'Cat\'s Eye',
-    civilization: 'Indian',
-    meaning: 'Ketu Stone, Protection, Spirituality',
-    color: 'Honey with Light Band',
-    chakra: 'Third Eye',
-    frequency: '432 Hz',
-    healing: 'Spiritual protection, intuition, clarity.',
-    uses: 'Astrological amulets, rings.',
-    deity: 'Ketu',
-    symbol: 'Protection, Spirituality',
-    icon: Eye
-  },
-  {
-    name: 'Coral (Red)',
-    civilization: 'Indian',
-    meaning: 'Mars Stone, Courage, Vitality',
-    color: 'Red to Pink',
-    chakra: 'Root',
-    frequency: '417 Hz',
-    healing: 'Courage, energy, vitality.',
-    uses: 'Astrological amulets, jewelry.',
-    deity: 'Mangala',
-    symbol: 'Courage, Vitality',
-    icon: Flame
+    meaning: 'Venus Stone, Beauty, Love',
+    color: 'Clear to White',
+    chakra: 'Crown',
+    frequency: '963 Hz',
+    healing: 'Beauty, love, prosperity.',
+    uses: 'Royal jewelry, bridal ornaments.',
+    deity: 'Venus (Shukra)',
+    symbol: 'Love, Beauty',
+    icon: Diamond
   },
   {
     name: 'Pearl (Indian)',
@@ -419,8 +500,34 @@ const stones = [
     symbol: 'Moon, Peace',
     icon: Moon
   },
+  {
+    name: 'Red Coral',
+    civilization: 'Indian',
+    meaning: 'Mars Stone, Courage, Energy',
+    color: 'Red to Pink',
+    chakra: 'Root',
+    frequency: '417 Hz',
+    healing: 'Courage, energy, vitality.',
+    uses: 'Astrological amulets, jewelry.',
+    deity: 'Mangala',
+    symbol: 'Courage, Energy',
+    icon: Flame
+  },
+  {
+    name: 'Hessonite Garnet',
+    civilization: 'Indian',
+    meaning: 'Rahu Stone, Protection, Karma',
+    color: 'Cinnamon to Honey',
+    chakra: 'Root',
+    frequency: '396 Hz',
+    healing: 'Protection, karma clearing, grounding.',
+    uses: 'Astrological rings, amulets.',
+    deity: 'Rahu',
+    symbol: 'Protection, Karma',
+    icon: Shield
+  },
 
-  // Chinese Stones (8)
+  // Chinese Stones (33-40) - Expanded to 8
   {
     name: 'Jade (Nephrite)',
     civilization: 'Chinese',
@@ -448,6 +555,19 @@ const stones = [
     icon: Star
   },
   {
+    name: 'Pearl (Chinese)',
+    civilization: 'Chinese',
+    meaning: 'Moon Stone, Purity, Wisdom',
+    color: 'White to Pink',
+    chakra: 'Crown',
+    frequency: '639 Hz',
+    healing: 'Heart health, peace, wisdom, fertility.',
+    uses: 'Royal jewelry, medicine, burial ornaments.',
+    deity: 'Guanyin, Moon Goddess',
+    symbol: 'Moon, Purity',
+    icon: Moon
+  },
+  {
     name: 'Cinnabar',
     civilization: 'Chinese',
     meaning: 'Life Force, Protection, Prosperity',
@@ -461,7 +581,7 @@ const stones = [
     icon: Flame
   },
   {
-    name: 'Rose Quartz',
+    name: 'Quartz (Rose)',
     civilization: 'Chinese',
     meaning: 'Love Stone, Harmony, Peace',
     color: 'Pink',
@@ -474,45 +594,6 @@ const stones = [
     icon: Heart
   },
   {
-    name: 'Smoky Quartz',
-    civilization: 'Chinese',
-    meaning: 'Grounding, Protection, Ancestors',
-    color: 'Brown to Black',
-    chakra: 'Root',
-    frequency: '396 Hz',
-    healing: 'Grounding, protection, ancestor connection.',
-    uses: 'Funerary objects, amulets.',
-    deity: 'Ancestors',
-    symbol: 'Earth, Ancestors',
-    icon: Shield
-  },
-  {
-    name: 'Aventurine',
-    civilization: 'Chinese',
-    meaning: 'Luck, Prosperity, Abundance',
-    color: 'Green',
-    chakra: 'Heart',
-    frequency: '528 Hz',
-    healing: 'Prosperity, luck, emotional calm.',
-    uses: 'Jewelry, carvings, feng shui.',
-    deity: 'Caishen',
-    symbol: 'Luck, Abundance',
-    icon: Sparkles
-  },
-  {
-    name: 'Tiger Eye',
-    civilization: 'Chinese',
-    meaning: 'Courage, Protection, Insight',
-    color: 'Golden Brown with Chatoyancy',
-    chakra: 'Solar Plexus',
-    frequency: '417 Hz',
-    healing: 'Courage, protection, insight.',
-    uses: 'Carved figures, jewelry, amulets.',
-    deity: 'Guan Yu',
-    symbol: 'Courage, Insight',
-    icon: Eye
-  },
-  {
     name: 'Turquoise (Chinese)',
     civilization: 'Chinese',
     meaning: 'Heaven Stone, Protection, Luck',
@@ -523,10 +604,36 @@ const stones = [
     uses: 'Jewelry, belt hooks, sword fittings.',
     deity: 'Xi Wangmu',
     symbol: 'Heaven, Luck',
-    icon: Droplet
+    icon: Eye
+  },
+  {
+    name: 'Agate (Chinese)',
+    civilization: 'Chinese',
+    meaning: 'Prosperity, Longevity, Protection',
+    color: 'Banded',
+    chakra: 'Root',
+    frequency: '417 Hz',
+    healing: 'Prosperity, longevity, protection.',
+    uses: 'Seals, snuff bottles, carvings.',
+    deity: 'Shou Xing',
+    symbol: 'Longevity',
+    icon: Circle
+  },
+  {
+    name: 'Crystal (Smoky)',
+    civilization: 'Chinese',
+    meaning: 'Grounding, Protection, Ancestors',
+    color: 'Brown to Black',
+    chakra: 'Root',
+    frequency: '396 Hz',
+    healing: 'Grounding, protection, ancestor connection.',
+    uses: 'Funerary objects, amulets.',
+    deity: 'Ancestors',
+    symbol: 'Earth, Ancestors',
+    icon: Mountain
   },
 
-  // Japanese Stones (5)
+  // Japanese Stones (41-44) - Expanded to 4
   {
     name: 'Amber',
     civilization: 'Japanese',
@@ -541,7 +648,7 @@ const stones = [
     icon: SunIcon
   },
   {
-    name: 'Coral (Japanese)',
+    name: 'Coral',
     civilization: 'Japanese',
     meaning: 'Sea Stone, Protection, Fertility',
     color: 'Red to Pink',
@@ -567,7 +674,7 @@ const stones = [
     icon: Leaf
   },
   {
-    name: 'Crystal (Japanese)',
+    name: 'Quartz (Japanese)',
     civilization: 'Japanese',
     meaning: 'Purity, Clarity, Healing',
     color: 'Clear',
@@ -579,21 +686,8 @@ const stones = [
     symbol: 'Purity, Clarity',
     icon: Sparkles
   },
-  {
-    name: 'Agate (Japanese)',
-    civilization: 'Japanese',
-    meaning: 'Protection, Stability, Calm',
-    color: 'Banded',
-    chakra: 'Root',
-    frequency: '417 Hz',
-    healing: 'Protection, emotional stability, calm.',
-    uses: 'Jewelry, carvings, amulets.',
-    deity: 'Inari',
-    symbol: 'Protection, Calm',
-    icon: Shield
-  },
 
-  // Mesoamerican Stones (5)
+  // Mesoamerican Stones (45-48) - Expanded to 4
   {
     name: 'Jadeite (Maya)',
     civilization: 'Mesoamerican',
@@ -646,21 +740,8 @@ const stones = [
     symbol: 'Mirror, Divination',
     icon: Star
   },
-  {
-    name: 'Serpentine (Mesoamerican)',
-    civilization: 'Mesoamerican',
-    meaning: 'Serpent Power, Rebirth, Magic',
-    color: 'Green to Black',
-    chakra: 'Heart',
-    frequency: '432 Hz',
-    healing: 'Rebirth, transformation, serpent magic.',
-    uses: 'Ritual objects, jewelry, carvings.',
-    deity: 'Quetzalcoatl',
-    symbol: 'Serpent, Rebirth',
-    icon: Shield
-  },
 
-  // Persian Stones (4)
+  // Persian Stones (49-51) - Expanded to 3
   {
     name: 'Turquoise (Persian)',
     civilization: 'Persian',
@@ -688,38 +769,25 @@ const stones = [
     icon: Shield
   },
   {
-    name: 'Carnelian (Persian)',
+    name: 'Lapis Lazuli (Persian)',
     civilization: 'Persian',
-    meaning: 'Setting Sun, Vitality, Power',
-    color: 'Orange-Red',
-    chakra: 'Sacral',
-    frequency: '417 Hz',
-    healing: 'Vitality, courage, power.',
-    uses: 'Seals, jewelry, amulets.',
-    deity: 'Mithra',
-    symbol: 'Sun, Vitality',
-    icon: SunIcon
-  },
-  {
-    name: 'Hematite (Persian)',
-    civilization: 'Persian',
-    meaning: 'Grounding, Protection, Reflection',
-    color: 'Metallic Grey',
-    chakra: 'Root',
-    frequency: '396 Hz',
-    healing: 'Grounding, protection, mirror of truth.',
-    uses: 'Polished mirrors, amulets, seals.',
+    meaning: 'Royal Stone, Truth, Divine Favor',
+    color: 'Deep Blue',
+    chakra: 'Third Eye',
+    frequency: '432 Hz',
+    healing: 'Truth, divine connection, royal favor.',
+    uses: 'Royal jewelry, inlays, seals.',
     deity: 'Ahura Mazda',
-    symbol: 'Truth, Reflection',
-    icon: Shield
+    symbol: 'Truth, Royalty',
+    icon: Star
   },
 
-  // Celtic Stones (5)
+  // Celtic Stones (52-55) - Expanded to 4
   {
-    name: 'Moonstone (Celtic)',
+    name: 'Moonstone',
     civilization: 'Celtic',
     meaning: 'Dream Stone, Intuition, Fertility',
-    color: 'White to Blue-White',
+    color: 'White to Blue-White with Adularescence',
     chakra: 'Third Eye, Crown',
     frequency: '639 Hz',
     healing: 'Intuition, dreams, fertility, love.',
@@ -742,7 +810,7 @@ const stones = [
     icon: Target
   },
   {
-    name: 'Clear Quartz (Celtic)',
+    name: 'Quartz (Clear Celtic)',
     civilization: 'Celtic',
     meaning: 'Star Stone, Divination, Healing',
     color: 'Clear',
@@ -766,44 +834,18 @@ const stones = [
     deity: 'Ancestors',
     symbol: 'Sun, Ancestors',
     icon: SunIcon
-  },
-  {
-    name: 'Green Jasper',
-    civilization: 'Celtic',
-    meaning: 'Earth Stone, Healing, Rain',
-    color: 'Green',
-    chakra: 'Heart',
-    frequency: '528 Hz',
-    healing: 'Earth connection, healing, rain magic.',
-    uses: 'Jewelry, amulets, ritual objects.',
-    deity: 'Dagda',
-    symbol: 'Earth, Healing',
-    icon: Leaf
   }
 ]
 
 const civilizations = ['All', 'Egyptian', 'Greek', 'Roman', 'Indian', 'Chinese', 'Japanese', 'Mesoamerican', 'Persian', 'Celtic']
 
-export default function SacredStonesPage() {
+export default function CrystalsStonesPage() {
   const [selectedStone, setSelectedStone] = useState(stones[0])
   const [selectedCivilization, setSelectedCivilization] = useState('All')
 
   const filteredStones = selectedCivilization === 'All' 
     ? stones 
     : stones.filter(stone => stone.civilization === selectedCivilization)
-
-  // Calculate counts by civilization
-  const civilizationCounts = {
-    Egyptian: stones.filter(s => s.civilization === 'Egyptian').length,
-    Greek: stones.filter(s => s.civilization === 'Greek').length,
-    Roman: stones.filter(s => s.civilization === 'Roman').length,
-    Indian: stones.filter(s => s.civilization === 'Indian').length,
-    Chinese: stones.filter(s => s.civilization === 'Chinese').length,
-    Japanese: stones.filter(s => s.civilization === 'Japanese').length,
-    Mesoamerican: stones.filter(s => s.civilization === 'Mesoamerican').length,
-    Persian: stones.filter(s => s.civilization === 'Persian').length,
-    Celtic: stones.filter(s => s.civilization === 'Celtic').length,
-  }
 
   return (
     <div className="max-w-6xl mx-auto space-y-8 pb-12">
@@ -817,20 +859,16 @@ export default function SacredStonesPage() {
           <Gem size={24} />
           <span className="text-sm uppercase tracking-wider">Sacred Treasures</span>
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold text-gold">Sacred Stones & Crystals</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-gold">Crystals & Sacred Stones</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Discover {stones.length} healing crystals and sacred stones from 9 ancient civilizations
+          Discover 55 sacred stones from 9 ancient civilizations
         </p>
-        <div className="flex justify-center gap-2 mt-2 flex-wrap">
-          <span className="px-2 py-0.5 bg-gold/20 rounded-full text-xs">Egyptian: {civilizationCounts.Egyptian}</span>
-          <span className="px-2 py-0.5 bg-gold/20 rounded-full text-xs">Greek: {civilizationCounts.Greek}</span>
-          <span className="px-2 py-0.5 bg-gold/20 rounded-full text-xs">Roman: {civilizationCounts.Roman}</span>
-          <span className="px-2 py-0.5 bg-gold/20 rounded-full text-xs">Indian: {civilizationCounts.Indian}</span>
-          <span className="px-2 py-0.5 bg-gold/20 rounded-full text-xs">Chinese: {civilizationCounts.Chinese}</span>
-          <span className="px-2 py-0.5 bg-gold/20 rounded-full text-xs">Japanese: {civilizationCounts.Japanese}</span>
-          <span className="px-2 py-0.5 bg-gold/20 rounded-full text-xs">Mesoamerican: {civilizationCounts.Mesoamerican}</span>
-          <span className="px-2 py-0.5 bg-gold/20 rounded-full text-xs">Persian: {civilizationCounts.Persian}</span>
-          <span className="px-2 py-0.5 bg-gold/20 rounded-full text-xs">Celtic: {civilizationCounts.Celtic}</span>
+        <div className="flex justify-center gap-2 mt-2">
+          <span className="px-2 py-0.5 bg-gold/20 rounded-full text-xs">Egyptian: 15</span>
+          <span className="px-2 py-0.5 bg-gold/20 rounded-full text-xs">Greek: 10</span>
+          <span className="px-2 py-0.5 bg-gold/20 rounded-full text-xs">Roman: 6</span>
+          <span className="px-2 py-0.5 bg-gold/20 rounded-full text-xs">Indian: 8</span>
+          <span className="px-2 py-0.5 bg-gold/20 rounded-full text-xs">Chinese: 8</span>
         </div>
       </motion.div>
 
@@ -862,17 +900,17 @@ export default function SacredStonesPage() {
             const IconComponent = stone.icon
             return (
               <button
-                key={`${stone.name}-${stone.civilization}`}
+                key={stone.name}
                 onClick={() => setSelectedStone(stone)}
                 className={`p-2 rounded-lg transition-all ${
-                  selectedStone.name === stone.name && selectedStone.civilization === stone.civilization
+                  selectedStone.name === stone.name
                     ? 'bg-gold text-gray-900 shadow-lg'
                     : 'bg-white/50 hover:bg-white/80'
                 }`}
               >
                 <div className="text-center">
                   <IconComponent size={20} className="mx-auto mb-1" />
-                  <div className="font-semibold text-xs truncate">{stone.name}</div>
+                  <div className="font-semibold text-xs">{stone.name}</div>
                   <div className="text-[10px] opacity-75">{stone.civilization}</div>
                 </div>
               </button>
@@ -882,7 +920,7 @@ export default function SacredStonesPage() {
 
         <AnimatePresence mode="wait">
           <motion.div
-            key={`${selectedStone.name}-${selectedStone.civilization}`}
+            key={selectedStone.name}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -890,7 +928,7 @@ export default function SacredStonesPage() {
           >
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <div className="flex items-center gap-2 mb-2 flex-wrap">
+                <div className="flex items-center gap-2 mb-2">
                   <selectedStone.icon size={28} className="text-gold" />
                   <h3 className="text-2xl font-bold text-gold">{selectedStone.name}</h3>
                   <span className="text-xs bg-gold/20 px-2 py-0.5 rounded">{selectedStone.civilization}</span>
@@ -915,25 +953,25 @@ export default function SacredStonesPage() {
         </AnimatePresence>
       </div>
 
-      {/* Summary by Civilization */}
+      {/* Stone Count by Civilization */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className="bg-gold/10 rounded-lg p-6 border border-gold/30"
       >
-        <h3 className="text-xl font-bold text-gold mb-3 text-center">{stones.length} Sacred Stones by Civilization</h3>
+        <h3 className="text-xl font-bold text-gold mb-3 text-center">55 Stones by Civilization</h3>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-2 text-center text-sm">
-          <div><span className="font-semibold text-egyptian-blue">Egyptian</span><p className="text-xs text-gray-600">{civilizationCounts.Egyptian} stones</p></div>
-          <div><span className="font-semibold text-egyptian-blue">Greek</span><p className="text-xs text-gray-600">{civilizationCounts.Greek} stones</p></div>
-          <div><span className="font-semibold text-egyptian-blue">Roman</span><p className="text-xs text-gray-600">{civilizationCounts.Roman} stones</p></div>
-          <div><span className="font-semibold text-egyptian-blue">Indian</span><p className="text-xs text-gray-600">{civilizationCounts.Indian} stones</p></div>
-          <div><span className="font-semibold text-egyptian-blue">Chinese</span><p className="text-xs text-gray-600">{civilizationCounts.Chinese} stones</p></div>
-          <div><span className="font-semibold text-egyptian-blue">Japanese</span><p className="text-xs text-gray-600">{civilizationCounts.Japanese} stones</p></div>
-          <div><span className="font-semibold text-egyptian-blue">Mesoamerican</span><p className="text-xs text-gray-600">{civilizationCounts.Mesoamerican} stones</p></div>
-          <div><span className="font-semibold text-egyptian-blue">Persian</span><p className="text-xs text-gray-600">{civilizationCounts.Persian} stones</p></div>
-          <div><span className="font-semibold text-egyptian-blue">Celtic</span><p className="text-xs text-gray-600">{civilizationCounts.Celtic} stones</p></div>
+          <div><span className="font-semibold text-egyptian-blue">Egyptian</span><p className="text-xs text-gray-600">15 stones</p></div>
+          <div><span className="font-semibold text-egyptian-blue">Greek</span><p className="text-xs text-gray-600">10 stones</p></div>
+          <div><span className="font-semibold text-egyptian-blue">Roman</span><p className="text-xs text-gray-600">6 stones</p></div>
+          <div><span className="font-semibold text-egyptian-blue">Indian</span><p className="text-xs text-gray-600">8 stones</p></div>
+          <div><span className="font-semibold text-egyptian-blue">Chinese</span><p className="text-xs text-gray-600">8 stones</p></div>
+          <div><span className="font-semibold text-egyptian-blue">Japanese</span><p className="text-xs text-gray-600">4 stones</p></div>
+          <div><span className="font-semibold text-egyptian-blue">Mesoamerican</span><p className="text-xs text-gray-600">4 stones</p></div>
+          <div><span className="font-semibold text-egyptian-blue">Persian</span><p className="text-xs text-gray-600">3 stones</p></div>
+          <div><span className="font-semibold text-egyptian-blue">Celtic</span><p className="text-xs text-gray-600">4 stones</p></div>
         </div>
-        <p className="text-center text-xs text-gray-500 mt-3">Total: {stones.length} sacred stones from 9 civilizations</p>
+        <p className="text-center text-xs text-gray-500 mt-3">Total: 55 sacred stones from 9 civilizations</p>
       </motion.div>
 
       {/* Fun Fact */}

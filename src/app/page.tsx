@@ -33,28 +33,28 @@ interface CivilizationStat {
   color: string
 }
 
-// Civilization stats for the homepage - Updated with accurate counts
+// Civilization stats for the homepage - 15 civilizations
 const civilizationStats: CivilizationStat[] = [
-  { name: 'Egypt', icon: '𓋴', count: 45, color: 'from-amber-600 to-orange-600' },
-  { name: 'Nubia', icon: '𓋹', count: 13, color: 'from-emerald-600 to-teal-600' },
-  { name: 'Punt', icon: '𓆣', count: 10, color: 'from-blue-600 to-cyan-600' },
-  { name: 'Phoenicia', icon: '𓂀', count: 10, color: 'from-purple-600 to-pink-600' },
-  { name: 'Babylon', icon: '𓊨', count: 10, color: 'from-yellow-600 to-amber-600' },
-  { name: 'Hebrew', icon: '𓅃', count: 10, color: 'from-indigo-600 to-blue-600' },
-  { name: 'Hittite', icon: '𓁟', count: 10, color: 'from-red-600 to-orange-600' },
-  { name: 'Greece', icon: '𓇳', count: 10, color: 'from-cyan-600 to-blue-600' },
-  { name: 'Mycenaean', icon: '⚔️', count: 10, color: 'from-amber-700 to-brown-600' },
-  { name: 'Minoan', icon: '🐂', count: 10, color: 'from-teal-600 to-green-600' },
-  { name: 'Persia', icon: '🦁', count: 10, color: 'from-purple-700 to-indigo-700' },
-  { name: 'Etruscan', icon: '🏺', count: 10, color: 'from-orange-700 to-red-700' },
-  { name: 'India', icon: '🕉️', count: 10, color: 'from-saffron-600 to-orange-600' },
-  { name: 'China', icon: '🐉', count: 10, color: 'from-red-700 to-gold-600' },
-  { name: 'Maya', icon: '🏛️', count: 5, color: 'from-jade-600 to-green-600' },
-  { name: 'Inca', icon: '☀️', count: 3, color: 'from-terracotta-600 to-orange-600' },
-  { name: 'North America', icon: '🗿', count: 2, color: 'from-desert-600 to-sand-600' },
-  { name: 'West Africa', icon: '👑', count: 10, color: 'from-orange-600 to-yellow-600' },
-  { name: 'North Africa', icon: '🏜️', count: 10, color: 'from-amber-700 to-brown-600' },
-  { name: 'South Africa', icon: '🏺', count: 10, color: 'from-green-600 to-emerald-600' },
+  { name: 'Egyptian', icon: 'PYR', count: 45, color: 'from-amber-600 to-orange-600' },
+  { name: 'Nubian', icon: 'MNT', count: 13, color: 'from-emerald-600 to-teal-600' },
+  { name: 'Punt', icon: 'TRD', count: 10, color: 'from-blue-600 to-cyan-600' },
+  { name: 'Phoenician', icon: 'SHP', count: 10, color: 'from-purple-600 to-pink-600' },
+  { name: 'Babylonian', icon: 'GTE', count: 10, color: 'from-yellow-600 to-amber-600' },
+  { name: 'Israelite', icon: 'TMP', count: 10, color: 'from-indigo-600 to-blue-600' },
+  { name: 'Hittite', icon: 'WLL', count: 10, color: 'from-red-600 to-orange-600' },
+  { name: 'Greek', icon: 'PRT', count: 10, color: 'from-cyan-600 to-blue-600' },
+  { name: 'Mycenaean', icon: 'SWD', count: 10, color: 'from-amber-700 to-brown-600' },
+  { name: 'Minoan', icon: 'BUL', count: 10, color: 'from-teal-600 to-green-600' },
+  { name: 'Persian', icon: 'LIO', count: 10, color: 'from-purple-700 to-indigo-700' },
+  { name: 'Etruscan', icon: 'URN', count: 10, color: 'from-orange-700 to-red-700' },
+  { name: 'Indian', icon: 'REL', count: 10, color: 'from-orange-600 to-red-600' },
+  { name: 'Chinese', icon: 'DGN', count: 10, color: 'from-red-700 to-gold-600' },
+  { name: 'West African', icon: 'MSC', count: 10, color: 'from-orange-600 to-yellow-600' },
+  { name: 'North African', icon: 'DSR', count: 10, color: 'from-amber-700 to-brown-600' },
+  { name: 'Southern African', icon: 'STN', count: 10, color: 'from-green-600 to-emerald-600' },
+  { name: 'Mesoamerican', icon: 'SUN', count: 8, color: 'from-green-700 to-teal-600' },
+  { name: 'Andean', icon: 'MOU', count: 5, color: 'from-terracotta-600 to-orange-600' },
+  { name: 'North American', icon: 'HUT', count: 2, color: 'from-desert-600 to-sand-600' },
 ]
 
 // Type definition for featured site
@@ -82,11 +82,11 @@ export default function Home() {
           Ancient World Explorer
         </h1>
         <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto drop-shadow-md">
-          Journey through 200+ legendary sites across Egypt, Nubia, Persia, India, China, Greece, Rome, and the Americas
+          Journey through 200+ legendary sites across Egypt, Nubia, Persia, India, China, Greece, and the Americas
         </p>
       </motion.div>
 
-      {/* Civilization Stats - Responsive grid */}
+      {/* Civilization Stats - 20 civilizations */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -98,10 +98,10 @@ export default function Home() {
             key={civ.name}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.15 + index * 0.01 }}
+            transition={{ delay: 0.15 + index * 0.008 }}
             className={`bg-gradient-to-r ${civ.color} rounded-lg p-2 text-center shadow-md`}
           >
-            <div className="text-xl">{civ.icon}</div>
+            <div className="text-sm font-bold">{civ.icon}</div>
             <div className="text-[10px] font-semibold text-white truncate">{civ.name}</div>
             <div className="text-[9px] text-white/80">{civ.count} sites</div>
           </motion.div>
@@ -140,13 +140,13 @@ export default function Home() {
               key={dest.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 + index * 0.01 }}
+              transition={{ delay: 0.5 + index * 0.008 }}
             >
               <Link
                 href={`/explore/${dest.id}`}
                 className="egyptian-card block text-center hover:scale-105 transition-all duration-300 group cursor-pointer"
               >
-                <div className="text-2xl mb-1 group-hover:scale-110 transition-transform duration-300">{dest.icon}</div>
+                <div className="text-xl mb-1 group-hover:scale-110 transition-transform duration-300">{dest.icon}</div>
                 <div className="font-semibold text-gray-800 text-xs truncate">{dest.name}</div>
                 <div className="text-[10px] text-gold opacity-0 group-hover:opacity-100 transition-opacity mt-1">Explore</div>
               </Link>
@@ -155,7 +155,7 @@ export default function Home() {
         </div>
       </motion.div>
 
-      {/* Quick Stats Section - Updated */}
+      {/* Quick Stats Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
