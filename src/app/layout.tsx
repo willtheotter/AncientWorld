@@ -115,7 +115,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} antialiased`}>
         <Navigation />
-        <main className="relative z-10 container mx-auto px-4 py-8 md:px-6 lg:px-8 min-h-[calc(100vh-4rem)]">
+        <main className="relative z-10 container mx-auto px-4 pt-24 pb-12 md:pt-28 md:px-6 lg:px-8 min-h-screen">
           {children}
         </main>
       </body>
