@@ -677,8 +677,8 @@ abydos: {
       longDescription: `The Temple of Seti I (1294-1279 BCE) is Abydos' crown jewel, renowned for its stunning, well-preserved reliefs and its inclusion of the Abydos King List—a chronological wall recording 76 pharaohs from Menes (c. 3100 BCE) through the early dynasties to Seti I himself, omitting the Amarna Period rulers. This king list is essential for reconstructing Egyptian chronology.
 
 Behind the temple lies the Osireion, a profound subterranean monument intended as a symbolic tomb for Osiris, featuring massive granite pillars and a central platform surrounded by water—symbolizing the primordial mound emerging from chaos.`,
-      imageRegenerated: '/images/sites/abydos-regenerated.jpg',
-      imageCurrent: '/images/sites/abydos-current.jpg',
+      imageRegenerated: '/images/sites/temple-seti-regenerated.jpg',
+      imageCurrent: '/images/sites/temple-seti-current.jpg',
       scene: 'The Cult of Osiris',
       visualHighlights: ['Deeply carved reliefs with fine detail', 'Abydos King List of 76 pharaohs', 'Osireion underground water temple', 'Pilgrim offering stelae in sanctuary', 'Osiris cult statues in multiple chapels'],
       deity: 'Osiris',
