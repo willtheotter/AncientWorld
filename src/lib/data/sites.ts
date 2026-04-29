@@ -115,80 +115,81 @@ The "Dream Stele" between the Sphinx's paws records a dream of Pharaoh Thutmose 
       }
     ]
   },
-// 5-7. Memphis Region
-memphis: {
-  id: 'memphis',
-  name: 'Memphis',
-  coordinates: [29.8447, 31.2509],
-  region: 'Egypt - Memphis',
-  locations: [
-    {
-      id: 'temple-ptah',
-      name: 'Temple of Ptah',
-      description: 'Great temple of the creator god Ptah',
-      longDescription: `The Temple of Ptah at Memphis was the religious center of Egypt's ancient capital. Ptah was the creator god who fashioned the world through thought and speech—"the Lord of Truth, Father of the gods." Unlike other Egyptian creation myths involving physical acts, Ptah created by divine utterance, inspiring later Judeo-Christian concepts of "in the beginning was the Word."
+
+  // 5-7. Memphis Region
+  memphis: {
+    id: 'memphis',
+    name: 'Memphis',
+    coordinates: [29.8447, 31.2509],
+    region: 'Egypt - Memphis',
+    locations: [
+      {
+        id: 'temple-ptah',
+        name: 'Temple of Ptah',
+        description: 'Great temple of the creator god Ptah',
+        longDescription: `The Temple of Ptah at Memphis was the religious center of Egypt's ancient capital. Ptah was the creator god who fashioned the world through thought and speech—"the Lord of Truth, Father of the gods." Unlike other Egyptian creation myths involving physical acts, Ptah created by divine utterance, inspiring later Judeo-Christian concepts of "in the beginning was the Word."
 
 The temple housed a massive statue of Ptah, described by Herodotus as a "colossos of Ptah, very great and remarkable." The temple's high priests, called "Greatest of the Directors of Craftsmen," were among Egypt's most powerful officials.`,
-      imageRegenerated: '/images/sites/temple-ptah-regenerated.jpg',
-      imageCurrent: '/images/sites/temple-ptah-current.jpg',
-      scene: 'The Creator God\'s Sanctuary',
-      visualHighlights: ['Massive statue of Ptah in his shrine', 'Creator god theology depicted in reliefs', 'Scenes of Ptah creating through speech', 'Pilgrims bringing offerings', 'Colonnaded courtyards with columns'],
-      deity: 'Ptah',
-      type: 'temple',
-      youtubeUrl: 'https://youtu.be/SYbnhkiwqLk?si=ENXcddmkE8osRdt0'
-    },
-    {
-      id: 'serapeum',
-      name: 'Serapeum of Memphis',
-      description: 'Underground galleries of the sacred Apis bulls',
-      longDescription: `The Serapeum of Memphis was the burial place of the Apis bulls, living manifestations of the god Ptah. Each bull was selected by specific markings and lived in the temple precinct as a god before being mummified and buried with great ceremony.
+        imageRegenerated: '/images/sites/temple-ptah-regenerated.jpg',
+        imageCurrent: '/images/sites/temple-ptah-current.jpg',
+        scene: 'The Creator God\'s Sanctuary',
+        visualHighlights: ['Massive statue of Ptah in his shrine', 'Creator god theology depicted in reliefs', 'Scenes of Ptah creating through speech', 'Pilgrims bringing offerings', 'Colonnaded courtyards with columns'],
+        deity: 'Ptah',
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/SYbnhkiwqLk?si=ENXcddmkE8osRdt0'
+      },
+      {
+        id: 'serapeum',
+        name: 'Serapeum of Memphis',
+        description: 'Underground galleries of the sacred Apis bulls',
+        longDescription: `The Serapeum of Memphis was the burial place of the Apis bulls, living manifestations of the god Ptah. Each bull was selected by specific markings and lived in the temple precinct as a god before being mummified and buried with great ceremony.
 
 The Serapeum's underground galleries stretch for hundreds of meters, containing 24 massive granite sarcophagi weighing up to 70 tons each. The chambers were carved from solid limestone, with some sarcophagi 4 meters long, 3 meters high, and 2.5 meters wide.
 
 The Greek historian Strabo (64 BCE - 24 CE) visited the site and described the path of sphinxes leading to the sanctuary, which remained a pilgrimage site into Roman times.`,
-      imageRegenerated: '/images/sites/serapeum-regenerated.jpg',
-      imageCurrent: '/images/sites/serapeum-current.jpg',
-      scene: 'The Tomb of the Apis Bulls',
-      visualHighlights: ['Massive granite sarcophagi weighing 70 tons', 'Underground galleries with torch-lit chambers', 'Apis bull burials with gold funerary masks', 'Ptah manifestations in the bull form', 'Sphinx-lined processional way above ground'],
-      deity: 'Ptah',
-      type: 'tomb',
-      youtubeUrl: 'https://youtu.be/nfv3vRrfp2E?si=TFC0aICcwZiMN-NH'
-    },
-    {
-      id: 'step-pyramid',
-      name: 'Step Pyramid of Djoser',
-      description: 'The earliest monumental stone structure in history',
-      longDescription: `The Step Pyramid of Djoser, designed by the architect Imhotep (later deified as a god of medicine), marked the transition from mastaba tombs to true pyramids. It was Egypt's first massive stone structure, built for Pharaoh Djoser of the Third Dynasty around 2670 BCE.
+        imageRegenerated: '/images/sites/serapeum-regenerated.jpg',
+        imageCurrent: '/images/sites/serapeum-current.jpg',
+        scene: 'The Tomb of the Apis Bulls',
+        visualHighlights: ['Massive granite sarcophagi weighing 70 tons', 'Underground galleries with torch-lit chambers', 'Apis bull burials with gold funerary masks', 'Ptah manifestations in the bull form', 'Sphinx-lined processional way above ground'],
+        deity: 'Ptah',
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/nfv3vRrfp2E?si=TFC0aICcwZiMN-NH'
+      },
+      {
+        id: 'step-pyramid',
+        name: 'Step Pyramid of Djoser',
+        description: 'The earliest monumental stone structure in history',
+        longDescription: `The Step Pyramid of Djoser, designed by the architect Imhotep (later deified as a god of medicine), marked the transition from mastaba tombs to true pyramids. It was Egypt's first massive stone structure, built for Pharaoh Djoser of the Third Dynasty around 2670 BCE.
 
 The pyramid originally rose 62 meters (203 feet) in six stepped tiers, representing a staircase for the pharaoh to ascend to the stars. The complex included the first stone columns in history, a mortuary temple, and a Heb-Sed court for the pharaoh's jubilee festival.
 
 The underground chambers (3.5 km of tunnels) include a central burial chamber with a 3.5-ton granite plug, galleries containing over 40,000 stone vessels, and chambers lined with blue faience tiles—Egypt's first use of this material.`,
-      imageRegenerated: '/images/sites/step-pyramid-regenerated.jpg',
-      imageCurrent: '/images/sites/step-pyramid-current.jpg',
-      scene: 'The First Pyramid',
-      visualHighlights: ['Six-tiered limestone step structure', 'Casing of white Tura limestone (originally smooth)', 'Mortuary temple complex with engaged columns', 'Imhotep\'s architectural innovation in stone', 'Heb-Sed court with shrine facades'],
-      type: 'monument',
-      youtubeUrl: 'https://youtu.be/UqIWl6e6JIo?si=J264kvcdy-NqnHKQ'
-    },
-    {
-      id: 'temple-sekhmet',
-      name: 'Temple of Sekhmet',
-      description: 'The lioness goddess of war and healing',
-      longDescription: `The Temple of Sekhmet at Memphis was simultaneously the most feared and most beloved temple in Egypt. Sekhmet ("the Powerful One") was the lioness goddess of war, plague, pestilence, and desert storms—but also of healing, because the goddess who sent disease could also cure it.
+        imageRegenerated: '/images/sites/step-pyramid-regenerated.jpg',
+        imageCurrent: '/images/sites/step-pyramid-current.jpg',
+        scene: 'The First Pyramid',
+        visualHighlights: ['Six-tiered limestone step structure', 'Casing of white Tura limestone (originally smooth)', 'Mortuary temple complex with engaged columns', 'Imhotep\'s architectural innovation in stone', 'Heb-Sed court with shrine facades'],
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/UqIWl6e6JIo?si=J264kvcdy-NqnHKQ'
+      },
+      {
+        id: 'temple-sekhmet',
+        name: 'Temple of Sekhmet',
+        description: 'The lioness goddess of war and healing',
+        longDescription: `The Temple of Sekhmet at Memphis was simultaneously the most feared and most beloved temple in Egypt. Sekhmet ("the Powerful One") was the lioness goddess of war, plague, pestilence, and desert storms—but also of healing, because the goddess who sent disease could also cure it.
 
 The temple contained hundreds of life-size statues of Sekhmet, seated on thrones with a lioness head and sun disk, standing in rows as silent, watchful guardians. Most date to Amenhotep III, who erected 730 statues—one for each day of the year—to pacify the goddess during a plague.
 
 Pilgrims came seeking cures, offering cool water, bread, and beer to Sekhmet's statues, sometimes directly pouring water over them and collecting the runoff as blessed medicine.`,
-      imageRegenerated: '/images/sites/temple-sekhmet-regenerated.jpg',
-      imageCurrent: '/images/sites/temple-sekhmet-current.jpg',
-      scene: 'The Temple of the Powerful One',
-      visualHighlights: ['Rows of lioness-headed Sekhmet statues in granite', 'Healing ritual chambers with stone basins', 'Offerings of bread, beer, and cool water', 'Plague apotropaic inscriptions on walls', 'Sun disk reflecting from the statues at dawn'],
-      deity: 'Sekhmet',
-      type: 'temple',
-      youtubeUrl: 'https://youtu.be/sQe_iZJfXAo?si=8AKcY-8YyvnoQqFL'
-    }
-  ]
-},
+        imageRegenerated: '/images/sites/temple-sekhmet-regenerated.jpg',
+        imageCurrent: '/images/sites/temple-sekhmet-current.jpg',
+        scene: 'The Temple of the Powerful One',
+        visualHighlights: ['Rows of lioness-headed Sekhmet statues in granite', 'Healing ritual chambers with stone basins', 'Offerings of bread, beer, and cool water', 'Plague apotropaic inscriptions on walls', 'Sun disk reflecting from the statues at dawn'],
+        deity: 'Sekhmet',
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/sQe_iZJfXAo?si=8AKcY-8YyvnoQqFL'
+      }
+    ]
+  },
 
   // 8. Saqqara - Temple of Anubis
   saqqara: {
@@ -298,7 +299,7 @@ The perfect reflection of the temple columns and pylons in the still water creat
         visualHighlights: ['Perfect reflection of the temple in still water', 'Temple columns mirrored in the lake', 'Ritual washing area with stone steps', 'Sacred geese and tilapia fish', 'Stone platform for the divine barque'],
         deity: 'Amun-Ra',
         type: 'temple',
-        youtubeUrl: 'https://youtu.be/oGEfWjWHhQU?si=lztjAcRO88YGLRhA' 
+        youtubeUrl: 'https://youtu.be/oGEfWjWHhQU?si=lztjAcRO88YGLRhA'
       },
       {
         id: 'temple-khonsu',
@@ -396,7 +397,6 @@ The king walked ahead of the barques, symbolically renewing his divine authority
       }
     ]
   },
-
 
   // 19. Temple of Thoth at Hermopolis
   hermopolis: {
@@ -663,32 +663,75 @@ The complex includes the Temple of Hathor (with columns carved with Bes), the Ki
       }
     ]
   },
+// 30. Abydos - Temple of Seti I
+abydos: {
+  id: 'abydos',
+  name: 'Abydos',
+  coordinates: [26.185, 31.919],
+  region: 'Egypt - Upper Egypt',
+  locations: [
+    {
+      id: 'temple-seti',
+      name: 'Temple of Seti I',
+      description: 'Famous for the Abydos King List of 76 pharaohs',
+      longDescription: `The Temple of Seti I (1294-1279 BCE) is Abydos' crown jewel, renowned for its stunning, well-preserved reliefs and its inclusion of the Abydos King List—a chronological wall recording 76 pharaohs from Menes (c. 3100 BCE) through the early dynasties to Seti I himself, omitting the Amarna Period rulers. This king list is essential for reconstructing Egyptian chronology.
 
-  // 30. Abydos - Temple of Seti I
-  abydos: {
-    id: 'abydos',
-    name: 'Abydos',
-    coordinates: [26.185, 31.919],
-    region: 'Egypt - Upper Egypt',
-    locations: [
-      {
-        id: 'temple-seti',
-        name: 'Temple of Seti I',
-        description: 'Spiritual center of Osiris worship',
-        longDescription: `Abydos was the spiritual center of Osiris worship, where the god of the afterlife was believed to be buried. Pilgrims came here to be buried near Osiris, leaving offering stelae that provide a wealth of information about Egyptian religious practice.
+Behind the temple lies the Osireion, a profound subterranean monument intended as a symbolic tomb for Osiris, featuring massive granite pillars and a central platform surrounded by water—symbolizing the primordial mound emerging from chaos.`,
+      imageRegenerated: '/images/sites/abydos-regenerated.jpg',
+      imageCurrent: '/images/sites/abydos-current.jpg',
+      scene: 'The Cult of Osiris',
+      visualHighlights: ['Deeply carved reliefs with fine detail', 'Abydos King List of 76 pharaohs', 'Osireion underground water temple', 'Pilgrim offering stelae in sanctuary', 'Osiris cult statues in multiple chapels'],
+      deity: 'Osiris',
+      type: 'temple',
+      youtubeUrl: 'https://youtu.be/tGXQRGTFduM?si=HcoAR6zedu39ZGHp'
+    },
+    {
+      id: 'osireion',
+      name: 'Osireion',
+      description: 'Subterranean symbolic tomb of Osiris',
+      longDescription: `The Osireion is a unique, profound subterranean monument located directly behind the Temple of Seti I, intended as a symbolic tomb for Osiris. Built by Seti I and completed by his son Ramesses II, this enigmatic structure features massive granite pillars and a central platform surrounded by water channels—representing the primordial mound of creation emerging from the endless sea of chaos.
 
-The Temple of Seti I (1294-1279 BCE) features the Abydos King List—a chronological wall of 76 pharaohs from Menes (c. 3100 BCE) to Seti I himself, omitting the Amarna Period rulers. This king list is essential for reconstructing Egyptian chronology.
+Unlike traditional Egyptian temples, the Osireion was designed as a cenotaph (false tomb) to connect the pharaoh directly with Osiris, god of the afterlife. The underground chamber's austere, megalithic architecture resembles a valley temple of the Old Kingdom pyramid complexes, intentionally archaic in style. Early archaeologists found that the structure had been deliberately flooded, creating an eerie reflection of the granite supports in the dark water.`,
+      imageRegenerated: '/images/sites/osireion-regenerated.jpg',
+      imageCurrent: '/images/sites/osireion-current.jpg',
+      scene: 'The Primordial Mound',
+      visualHighlights: ['Massive granite pillars in subterranean chamber', 'Water channels surrounding central platform', 'Archaic valley-temple style architecture', 'Eerie reflections in dark water', 'Central sarcophagus-shaped platform'],
+      deity: 'Osiris',
+      type: 'tomb',
+      youtubeUrl: 'https://youtu.be/dKW7c8yDLnM?si=SREGSCQshgglgcXj'
+    },
+    {
+      id: 'umm-el-qab',
+      name: 'Umm el-Qa\'ab',
+      description: 'Royal cemetery of Egypt\'s first pharaohs',
+      longDescription: `Umm el-Qa'ab, meaning "Mother of Pots" in Arabic, is the sacred royal cemetery where predynastic and early dynastic kings of the 1st and 2nd dynasties were buried. This desolate desert site contains the tombs of Egypt's first pharaohs, including Narmer (who unified Upper and Lower Egypt), Aha, Djer, Den, and Qa'a—the earliest known royal burials in Egyptian history.
 
-Behind the temple lies the Osireion, a mysterious subterranean structure built by Seti I to resemble the tomb of Osiris. The Osireion has massive granite pillars and a central platform surrounded by water, symbolizing the primordial mound emerging from chaos.`,
-        imageRegenerated: '/images/sites/abydos-regenerated.jpg',
-        imageCurrent: '/images/sites/abydos-current.jpg',
-        scene: 'The Cult of Osiris',
-        visualHighlights: ['Deeply carved reliefs with fine detail', 'Abydos King List of 76 pharaohs', 'Osireion underground water temple', 'Pilgrim offering stelae in sanctuary', 'Osiris cult statues in multiple chapels'],
-        deity: 'Osiris',
-        type: 'temple'
-      }
-    ]
-  },
+The name "Mother of Pots" derives from the thousands of broken offering jars left by centuries of pilgrims who came to venerate these earliest kings. The tombs are modest mudbrick chambers compared to later pyramids, but their importance is immense: inscriptions from Umm el-Qa'ab represent some of the earliest hieroglyphic writing. Later Egyptians believed this was the actual burial place of Osiris himself, making Abydos the most holy site in Egypt for thousands of years.`,
+      imageRegenerated: '/images/sites/umm-el-qab-regenerated.jpg',
+      imageCurrent: '/images/sites/umm-el-qab-current.jpg',
+      scene: 'The First Pharaohs',
+      visualHighlights: ['Royal tombs of Narmer and early dynastic kings', 'Thousands of broken offering jars', 'Early hieroglyphic inscriptions', 'Mudbrick chamber architecture', 'Pilgrim devotional landscape'],
+      deity: 'Osiris',
+      type: 'tomb',
+      youtubeUrl: 'https://youtu.be/H5n9mICwA5Q?si=mSgNl1RceMF--DL9'
+    },
+    {
+      id: 'temple-ramesses',
+      name: 'Temple of Ramesses II',
+      description: 'Smaller temple of the great pharaoh',
+      longDescription: `The Temple of Ramesses II is a smaller, partially destroyed temple located near the temple of his father, Seti I. While less intricately decorated and more ruined than the adjacent monument, this temple still preserves striking reliefs showing Ramesses II making offerings to Osiris, Isis, and Horus.
+
+The first hypostyle hall features pillars with engaged Osiride statues of Ramesses—a signature motif of his reign. Though many blocks were re-used in later periods, the temple's sanctuary retains a triad of chapels for Osiris, Isis, and Horus. Recent excavations have uncovered evidence of a rare symbolic "Tomb of Osiris" burial chamber beneath the temple floor, connecting Ramesses II to the same Osirian mysteries his father honored.`,
+      imageRegenerated: '/images/sites/temple-ramesses-regenerated.jpg',
+      imageCurrent: '/images/sites/temple-ramesses-current.jpg',
+      scene: 'A Son Completing His Father’s Work',
+      visualHighlights: ['Osiride pillars of Ramesses II', 'Reliefs of Ramesses before Osiris', 'Triple sanctuary chapels', 'Symbolic Tomb of Osiris beneath', 'Lesser scale but elegant proportions'],
+      deity: 'Osiris',
+      type: 'temple',
+      youtubeUrl: 'https://youtu.be/Y7PJdGe2800?si=tYnyKh6uxLcZkQ1F'
+    }
+  ]
+},
 
   // 31-35. Valley of the Kings (5 locations)
   valleyKings: {
@@ -722,11 +765,12 @@ Modern techniques (ground-penetrating radar, infrared imaging) continue to ident
 The four small rooms (antechamber, annex, burial chamber, treasury) were packed with objects stacked to the ceiling. The burial chamber's gold-covered wooden shrine took Carter ten weeks to dismantle.
 
 The boy king ruled for only nine years (c. 1332-1323 BCE), dying around age 18, apparently from a combination of malaria and a broken leg that became infected.`,
-        imageRegenerated: '/images/sites/tutankhamun-regenerated.jpg',
-        imageCurrent: '/images/sites/tutankhamun-current.jpg',
+        imageRegenerated: '/images/sites/tutankhamun-tomb-regenerated.jpg',
+        imageCurrent: '/images/sites/tutankhamun-tomb-current.jpg',
         scene: 'The Boy King\'s Treasure',
         visualHighlights: ['Golden death mask with lapis lazuli', 'Canopic chest with alabaster jars', 'Painted burial chamber with Tutankhamun', 'Treasure stacked to the ceiling', 'Solid gold sarcophagus weighing 110 kilograms'],
-        type: 'tomb'
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/5d8SlwGDXXE?si=UsLjDOoktkIZJCV9'
       },
       {
         id: 'nefertari-tomb',
@@ -737,23 +781,25 @@ The boy king ruled for only nine years (c. 1332-1323 BCE), dying around age 18, 
 The "Prism Chamber" effect comes from polished white limestone walls covered in paint without any bare stone visible. Gold details shimmer when light hits them, while the ceiling is painted with a dark star-filled sky.
 
 The tomb was closed for extensive restoration from 1986-1992, removing salt, fungi, and bacteria, and now allows limited visitors with special permission.`,
-        imageRegenerated: '/images/sites/nefertari-regenerated.jpg',
-        imageCurrent: '/images/sites/nefertari-current.jpg',
+        imageRegenerated: '/images/sites/nefertari-tomb-regenerated.jpg',
+        imageCurrent: '/images/sites/nefertari-tomb-current.jpg',
         scene: 'The Queen\'s Immortal Art',
         visualHighlights: ['Pristine colored paintings covering all walls', 'Gold details shimmering under light', 'Star-filled celestial ceiling', 'Queen in transparent linen robes', 'Immersive journey through the underworld'],
-        type: 'tomb'
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/1_3IXJLfH2I?si=HPU0ts9EVz_3ufgw'
       },
       {
-      id: 'seti-tomb',
-      name: 'Tomb of Seti I (KV17)',
-      description: 'The longest and most decorated tomb in the valley',
-      longDescription: `The Tomb of Seti I (KV17) is the longest and most elaborately decorated...`,
-      imageRegenerated: '/images/sites/seti-tomb-regenerated.jpg',
-      imageCurrent: '/images/sites/seti-tomb-current.jpg',
-      scene: 'The Longest Corridor to Eternity',
-      visualHighlights: ['137-meter descending corridor', 'Raised relief carving', 'Alabaster translucent sarcophagus', 'Unfinished chambers', 'Astronomical ceiling'],
-      type: 'tomb'  
-},
+        id: 'seti-tomb',
+        name: 'Tomb of Seti I (KV17)',
+        description: 'The longest and most decorated tomb in the valley',
+        longDescription: `The Tomb of Seti I (KV17) is the longest and most elaborately decorated...`,
+        imageRegenerated: '/images/sites/seti-tomb-regenerated.jpg',
+        imageCurrent: '/images/sites/seti-tomb-current.jpg',
+        scene: 'The Longest Corridor to Eternity',
+        visualHighlights: ['137-meter descending corridor', 'Raised relief carving', 'Alabaster translucent sarcophagus', 'Unfinished chambers', 'Astronomical ceiling'],
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/z_OF4tWF8-c?si=a1w3fz1y23OQB1ii'
+      },
       {
         id: 'ramses-tomb',
         name: 'Tomb of Ramses VI (KV9)',
@@ -767,11 +813,13 @@ The tomb was used as a shelter for Christian hermits in late antiquity, who left
         imageCurrent: '/images/sites/ramses-tomb-current.jpg',
         scene: 'The Celestial Ceiling',
         visualHighlights: ['Double image of Nut swallowing/ birthing the sun', 'Solar barque scenes of sun god\'s journey', 'Book of Night and Book of Day texts', 'Christian Coptic graffiti', 'Greek and Roman tourist inscriptions'],
-        type: 'tomb'
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/RhSZcxxooBI?si=ThefQok2d9umI0Dv'
       }
     ]
   }
 }
+
 // ========== ADDITIONAL EGYPTIAN SITES (36-40) ==========
 export const additionalEgyptianSites: Record<string, Site> = {
   // 36. Faiyum Oasis - Agricultural Heartland
@@ -790,11 +838,12 @@ export const additionalEgyptianSites: Record<string, Site> = {
 The "Malachite Gardens" refers to the intense green of the cultivated fields—irrigated by a network of canals—set against the golden-yellow desert cliffs. The oasis produces dates, figs, grapes, olives, and roses (used for perfumes). The area was also a center for fishing (Lake Qarun, once called Lake Moeris, teeming with tilapia) and hunting (waterfowl, crocodiles, hippos), as shown in tomb paintings of officials who served here.
 
 Today, the oasis is known for its waterwheels (over 200 wooden wheels, some dating to the Ptolemaic period), which raise water from canals to higher fields—a continuous technology spanning over 2,000 years. The site also contains the Hawara Pyramid (Amenemhat III) and the necropolis of Lahun (Senusret II), with the famous "Lahun Papyri" documenting daily life.`,
-        imageRegenerated: '/images/sites/fayum-regenerated.jpg',
-        imageCurrent: '/images/sites/fayum-current.jpg',
+        imageRegenerated: '/images/sites/malachite-gardens-regenerated.jpg',
+        imageCurrent: '/images/sites/malachite-gardens-current.jpg',
         scene: 'The Oasis Gardens',
         visualHighlights: ['Vibrant green cultivated fields against golden desert cliffs', 'Bahr Yussef canal distributing Nile water', 'Wooden waterwheels (200+ still in use)', 'Lake Qarun fishing and hunting scenes in tombs', 'Agricultural abundance (dates, figs, olives, roses)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/mGPIgnVeutk?si=ldesXFSJUJ1pxOOk'
       }
     ]
   },
@@ -815,12 +864,13 @@ Today, the oasis is known for its waterwheels (over 200 wooden wheels, some dati
 The city was called Akhetaten ("Horizon of the Aten"), and its boundaries were marked by 14 boundary stelae carved into the cliffs, recording Akhenaten's founding declaration. The city was abandoned shortly after Akhenaten's death (c. 1336 BCE), when his son Tutankhamun restored the old gods and moved the capital back to Thebes. This short occupation (only 15 years) preserved the city as a time capsule of 14th-century BCE life.
 
 Excavations have revealed residential neighborhoods (Workmen's Village with planned housing, North Suburb for elites), palaces (North Palace, Great Palace with the "Window of Appearance" where Akhenaten and Nefertiti appeared to reward officials), temples (Great Temple of Aten, the most open-air temple in Egypt, with thousands of offering tables), and rock-cut tombs of nobles. The site is the only ancient Egyptian city preserved as a planned settlement, allowing archaeologists to study daily life, social organization, and the distinctive Amarna art style with its elongated figures, intimate family scenes (Akhenaten playing with his daughters, kissing Nefertiti), and realistic depictions of royal life.`,
-        imageRegenerated: '/images/sites/amarna-regenerated.jpg',
-        imageCurrent: '/images/sites/amarna-current.jpg',
+        imageRegenerated: '/images/sites/crimson-amarna-regenerated.jpg',
+        imageCurrent: '/images/sites/crimson-amarna-current.jpg',
         scene: 'The Sun City of Akhenaten',
         visualHighlights: ['Open-air Aten temples with thousands of offering tables', 'Sun altars with no roofs or enclosed spaces (direct sunlight worship)', 'Royal tomb with reliefs of Akhenaten mourning his daughter Meketaten', 'Amarna art style with elongated figures and realistic family scenes', 'Boundary stelae with founding declaration in hieroglyphs'],
         deity: 'Aten',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/UZhHbrtVZnY?si=tJno5WiJ-rpWxxkP'
       }
     ]
   },
@@ -841,12 +891,13 @@ Excavations have revealed residential neighborhoods (Workmen's Village with plan
 The tombs of Psusennes I ('The Silver Pharaoh'), Amenemope, Shoshenq II, and others contained a silver coffin (the only silver royal coffin ever found, weighing 400 kg), a gold funerary mask (second only to Tutankhamun's in beauty), gold and lapis lazuli jewelry, hundreds of ushabti figures, and canopic jars of alabaster. The treasure was moved to Cairo for safekeeping just before WWII and then overlooked for decades due to the war's chaos and the fame of Tutankhamun's discovery.
 
 The temple precinct includes the Great Temple of Amun (with reused Old Kingdom blocks, some from Giza?), walls inscribed by Ramesses II (who built extensively here), and a sacred lake. Tanis's remote location—now surrounded by agricultural fields, not heavily touristed—preserved its mystery, including persistent pop-culture myths connecting it to Raiders of the Lost Ark (though the Ark never was here, the site was used as a filming location for the movie's map room).`,
-        imageRegenerated: '/images/sites/tanis-regenerated.jpg',
-        imageCurrent: '/images/sites/tanis-current.jpg',
+        imageRegenerated: '/images/sites/tanis-royal-tombs-regenerated.jpg',
+        imageCurrent: '/images/sites/tanis-royal-tombs-current.jpg',
         scene: 'The Silver Pharaoh\'s Treasure',
         visualHighlights: ['Silver coffin of Psusennes I (unique royal silver burial)', 'Gold funerary mask with lapis lazuli inlay', 'Intact royal burial chambers with stacked treasures', 'Lapis lazuli and gold jewelry collection', 'Reused Old Kingdom temple blocks with earlier inscriptions'],
         deity: 'Amun',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/GQsiDLqKb5Y?si=NrWwm6cnJUtOkgGa'
       }
     ]
   },
@@ -871,7 +922,8 @@ The pyramid complex includes a small satellite pyramid (for the Ka, the pharaoh'
         imageCurrent: '/images/sites/bent-pyramid-current.jpg',
         scene: 'The Pyramid That Changed Shape',
         visualHighlights: ['Lower steep 54-degree angle', 'Upper shallower 43-degree angle', 'Preserved limestone casing partially intact (unique)', 'Two entrances (north and west) with descending passages', 'Corbelled interior ceiling reminiscent of the Grand Gallery'],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/LZ0sSIIaXRU?si=H1qAI5ZuliMdpZMW'
       },
       {
         id: 'red-pyramid',
@@ -886,7 +938,8 @@ The pyramid was opened to the public only in the 2010s, and visitors can now des
         imageCurrent: '/images/sites/red-pyramid-current.jpg',
         scene: 'The First True Pyramid',
         visualHighlights: ['Constant 43-degree slope (engineering success)', 'Pink-hued limestone core giving its name', '62-meter descending entrance passage', 'Corbelled interior chamber ceiling 15m high', 'Model for all later smooth-sided pyramids'],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/2I_Syq0ULVo?si=wKh6B5bDDlAmmGe5'
       }
     ]
   },
@@ -909,15 +962,17 @@ The pyramid was begun by Pharaoh Huni (last king of the 3rd Dynasty, c. 2630 BCE
 The complex includes a mortuary temple (with fragments of fine reliefs showing Sneferu in Heb-Sed robes), a causeway (partially excavated), a valley temple (still buried), and a satellite pyramid (for the Ka). Mastaba tombs of royal family members (including Nefermaat, son of Sneferu, and his wife Ateth), surround the pyramid in neat rows, with preserved reliefs including the famous "Geese of Meidum" (now in the Egyptian Museum), showing remarkable naturalism for the Old Kingdom.
 
 The site's remote location and "tower" appearance inspired the nickname "False Pyramid" among local Bedouin. The collapse debris has never been cleared, so the pyramid remains as a record of ancient engineering failure—a valuable lesson in pyramid construction history.`,
-        imageRegenerated: '/images/sites/meidum-regenerated.jpg',
-        imageCurrent: '/images/sites/meidum-current.jpg',
+        imageRegenerated: '/images/sites/meidum-pyramid-regenerated.jpg',
+        imageCurrent: '/images/sites/meidum-pyramid-current.jpg',
         scene: 'The Tower of Collapse',
         visualHighlights: ['Three-tiered central tower rising from rubble mound', 'Collapsed outer casing blocks strewn around base', 'Transitional pyramid design (step pyramid → true pyramid)', 'Mastaba tombs with "Geese of Meidum" relief', 'Remote desert location with dramatic views'],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/UTUse_2ae0A?si=qv0yrqBWku6Jowmu'
       }
     ]
   }
-};
+}
+
 // ========== SECTION 3: NUBIA & KUSH (40-50) ==========
 export const nubianSites: Record<string, Site> = {
   // 40. Kerma - The Earliest Nubian Kingdom
