@@ -1009,18 +1009,20 @@ export const nubianSites: Record<string, Site> = {
         imageCurrent: '/images/sites/western-deffufa-current.jpg',
         scene: 'The Western Deffufa of Kerma',
         visualHighlights: ['Massive mudbrick temple rising 18 meters', 'ritual offering tables and chambers', 'Subterranean royal burial chambers', 'Evidence of human sacrifices (hundreds)', 'Egyptian rival civilization control of gold mines'],
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Z_VhhGI0Cmk?si=bKDOieVWWijKp4sK'
       },
       {
         id: 'kerma-royal-tombs',
         name: 'Kerma Royal Cemeteries',
         description: 'Massive tumuli with hundreds of sacrifices',
         longDescription: `The royal tombs at Kerma are among the largest burial mounds ever built in Africa, with diameters exceeding 90 meters. These tumuli contained the remains of Kerma's kings, surrounded by hundreds of sacrificed retainers intended to serve their ruler in the afterlife. The tombs held incredible wealth—gold, ivory, Egyptian imports (scarabs, amulets, alabaster vessels), and exotic animals. The largest tomb contained over 400 human sacrifices, demonstrating the absolute power of Kerma's kings. This practice of human sacrifice in royal burials continued in Kush for centuries, with archaeological evidence found throughout Nubia.`,
-        imageRegenerated: '/images/sites/kerma-tombs-regenerated.jpg',
-        imageCurrent: '/images/sites/kerma-tombs-current.jpg',
+        imageRegenerated: '/images/sites/kerma-royal-tombs-regenerated.jpg',
+        imageCurrent: '/images/sites/kerma-royal-tombs-current.jpg',
         scene: 'The Burial Mounds of Kerma\'s Kings',
         visualHighlights: ['90-meter diameter royal tumuli', '400+ human sacrifice burials', 'Gold, ivory, and Egyptian imports', 'Exotic animal remains', 'Hierarchical burial layout'],
-        type: 'tomb'
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/Z_VhhGI0Cmk?si=bKDOieVWWijKp4sK'
       }
     ]
   },
@@ -1037,34 +1039,26 @@ export const nubianSites: Record<string, Site> = {
         name: 'Napata',
         description: 'Political-religious center of Kushite pharaohs',
         longDescription: `Napata was the southern capital of the Kingdom of Kush, where the Black Pharaohs of the 25th Dynasty originated. Located at the holy mountain of Jebel Barkal, Napata blended Egyptian and Kushite traditions into a unique hybrid culture. The city featured multiple temples dedicated to Amun (including the Great Temple of Amun and Temple of Mut), royal palaces (including the Palace of Taharqa), and burial grounds with pyramidal tombs (el-Kurru and Nuri). It was from Napata that the Kushite king Piye led his campaign to conquer Egypt, reuniting the Nile Valley under native rule. Though later sacked by the Assyrians (c. 660 BCE), Napata remained a religious center for centuries, with pilgrims traveling to the oracle of Amun at Jebel Barkal—which chose kings, legitimized military campaigns, and guided Kushite state policy for over 1,000 years.`,
-        imageRegenerated: '/images/sites/napata-regenerated.jpg',
-        imageCurrent: '/images/sites/napata-current.jpg',
+        imageRegenerated: '/images/sites/napata-city-regenerated.jpg',
+        imageCurrent: '/images/sites/napata-city-current.jpg',
         scene: 'The Kushite Capital of Napata',
         visualHighlights: ['Temples of Amun with Egyptian-Kushite hybrid architecture', 'Palace complexes of the 25th Dynasty pharaohs', 'Royal burial pyramids at el-Kurru and Nuri', 'Oracle of Amun at Jebel Barkal', 'Piye\'s victory stela recording conquest of Egypt'],
         deity: 'Amun',
-        type: 'city'
-      }
-    ]
-  },
-
-  // 42. Jebel Barkal - The Sacred Mountain
-  jebelBarkal: {
-    id: 'jebel-barkal',
-    name: 'Jebel Barkal',
-    coordinates: [18.5333, 31.8333],
-    region: 'Nubia / Kush (Sudan)',
-    locations: [
+        type: 'city',
+        youtubeUrl:'https://youtu.be/CKv3lGdlkCY?si=1fG996ivGIepP8JL'
+      },
       {
         id: 'jebel-barkal-mountain',
         name: 'Jebel Barkal',
         description: 'Sacred mountain of Amun and Kushite kingship',
         longDescription: `A dramatic sandstone formation rises from the desert—the sacred mountain of Jebel Barkal, rising 98 meters above the plain. The Kushites believed this was where the god Amun resided, making it the religious heart of the Kingdom of Kush. The mountain's distinctive pinnacle resembles a uraeus (cobra), reinforcing its divine significance. At its base lie the ruins of multiple temples, including the Great Temple of Amun (founded by Thutmose III), Temple of Mut, and Temple of Taharqa. For over a thousand years, every Kushite king traveled here to be crowned and to receive Amun's blessing. The mountain was considered the source of kingship itself—where Amun declared who would rule. The site also contains royal burial pyramids from both Napatan and Meroitic periods.`,
-        imageRegenerated: '/images/sites/jebel-barkal-regenerated.jpg',
-        imageCurrent: '/images/sites/jebel-barkal-current.jpg',
+        imageRegenerated: '/images/sites/jebel-barkal-mountain-regenerated.jpg',
+        imageCurrent: '/images/sites/jebel-barkal-mountain-current.jpg',
         scene: 'The Sacred Mountain of Amun',
         visualHighlights: ['Dramatic sandstone pinnacle 98 meters high', 'Uraeus-shaped peak (cobra symbol of kingship)', 'Great Temple of Amun at the base', 'Kushite royal burial pyramids', 'Coronation site of every Kushite king'],
         deity: 'Amun',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/3WemovbNNl8?si=P1W1q01ncbggkegv'
       }
     ]
   },
@@ -1085,7 +1079,8 @@ export const nubianSites: Record<string, Site> = {
         imageCurrent: '/images/sites/el-kurru-current.jpg',
         scene: 'The First Kushite Royal Cemetery',
         visualHighlights: ['14 steep-sided pyramids', 'Underground burial chambers with Egyptian-style reliefs', 'Tomb of Piye with Osiris scenes', 'Horse burials (standing, fully bridled)', 'Kushite military elite cavalry culture'],
-        type: 'tomb'
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/m7fSJzhL2CI?si=vBXRQEFTiO4Fpx09'
       }
     ]
   },
@@ -1102,12 +1097,13 @@ export const nubianSites: Record<string, Site> = {
         name: 'Pyramids of Nuri',
         description: 'Burial place of Taharqa and later Napatan kings',
         longDescription: `Nuri was the royal cemetery of the Napatan period (7th-4th centuries BCE), replacing El-Kurru. The site contains over 80 pyramids—more than any other site in Sudan—including the pyramid of Taharqa (c. 690-664 BCE), the most powerful Kushite pharaoh who fought the Assyrians and moved his capital back to Napata. Taharqa's pyramid is the largest at Nuri (20 meters square at base, estimated 50 meters tall). Other tombs include those of Tantamani, Atlanersa, Senkamanisken, and other kings, as well as queens and princes. The pyramids are built of red sandstone with offering chapels decorated in relief. Several tombs contained alabaster and gold funerary objects, including shabtis, amulets, and jewelry now in the Boston Museum of Fine Arts. The site's remote location preserved it from extensive looting.`,
-        imageRegenerated: '/images/sites/nuri-regenerated.jpg',
-        imageCurrent: '/images/sites/nuri-current.jpg',
+        imageRegenerated: '/images/sites/nuri-pyramids-regenerated.jpg',
+        imageCurrent: '/images/sites/nuri-pyramids-current.jpg',
         scene: 'The Royal Pyramids of Nuri',
         visualHighlights: ['80+ red sandstone pyramids', 'Taharqa\'s pyramid (largest, c. 50 meters)', 'Offering chapels with relief decoration', 'Alabaster and gold funerary objects', 'Remote desert setting'],
         deity: 'Amun',
-        type: 'tomb'
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/JUl41Oj3tSQ?si=_Hiw2oE0tpob5f22'
       }
     ]
   },
@@ -1129,18 +1125,20 @@ export const nubianSites: Record<string, Site> = {
         scene: 'The Iron Capital of Kush',
         visualHighlights: ['Royal palace complex (Royal City)', 'Temples to Amun and lion-headed Apedemak', 'Massive ironworking slag heaps', 'Steam bath ritual bathing complex', 'Meroitic undeciphered language stelae'],
         deity: 'Apedemak',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/YhltK0xLY9g?si=xxN11zUOaTeQjSpw'
       },
       {
         id: 'meroe-necropolis',
         name: 'Pyramids of Meroë',
         description: 'Steep, narrow pyramids unique to Kushite architecture',
         longDescription: `Unlike the smooth-sided pyramids of Egypt, the Meroë pyramids are steep, narrow, and distinctly Kushite. Over 200 pyramids stand in the desert, their red sandstone glowing in the setting sun. These pyramids served as tombs for Kushite royalty (kings, queens, and high officials) from 300 BCE to 350 CE. The burial chambers are underground, accessed by a staircase, with the pyramids built above ground as 'mastaba' platforms. Many pyramids have chapels with reliefs showing the deceased making offerings to gods (Apedemak, Isis, Bes). The decoration includes Kushite elements: the royal figure sits on a lion throne, wears an elephant-skin robe, and holds a spear—images not found in Egypt. The pyramids are smaller than Egyptian examples (peak 30 meters, average 6-8 meters).`,
-        imageRegenerated: '/images/sites/meroe-pyramids-regenerated.jpg',
-        imageCurrent: '/images/sites/meroe-pyramids-current.jpg',
+        imageRegenerated: '/images/sites/meroe-necropolis-regenerated.jpg',
+        imageCurrent: '/images/sites/meroe-necropolis-current.jpg',
         scene: 'The Royal Necropolis of Meroë',
         visualHighlights: ['Over 200 steep, narrow pyramids', 'Red sandstone construction glowing in sunset', 'Chapels with Kushite-specific reliefs (lion throne, elephant robe)', 'Underground burial chambers', 'Meroitic period (300 BCE - 350 CE)'],
-        type: 'tomb'
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/atlsWmshkwg?si=5oVBeuNlqXiO9rEc'
       }
     ]
   },

@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Search, Filter, X, MapPin, Building2, Pyramid, Landmark, Globe, Compass, Castle, Crown } from 'lucide-react'
+import { Search, Filter, X, MapPin, Building2, Pyramid, Landmark, Globe, Compass, Castle } from 'lucide-react'
 
 export interface FilterOptions {
   search: string
@@ -15,8 +15,10 @@ interface MapFiltersProps {
   filters: FilterOptions
   onFilterChange: (filters: FilterOptions) => void
   onClose?: () => void
+  sites?: Record<string, any> // Pass sites from your sites.ts
 }
 
+// Deities from your siteIdsByDeity
 const deities = [
   { id: 'all', name: 'All Deities', icon: '𓋹' },
   // Egyptian Deities
@@ -36,11 +38,8 @@ const deities = [
   { id: 'Mut', name: 'Mut', icon: '🦅' },
   { id: 'Montu', name: 'Montu', icon: '🏹' },
   { id: 'Neith', name: 'Neith', icon: '🏺' },
-  { id: 'Wadjet', name: 'Wadjet', icon: '🐍' },
-  { id: 'Nekhbet', name: 'Nekhbet', icon: '🦅' },
-  { id: 'Min', name: 'Min', icon: '🌾' },
-  { id: 'Atum', name: 'Atum', icon: '𓇳' },
   { id: 'Aten', name: 'Aten', icon: '☀️' },
+  { id: 'Atum', name: 'Atum', icon: '𓇳' },
   // Greek Deities
   { id: 'Zeus', name: 'Zeus', icon: '⚡' },
   { id: 'Hera', name: 'Hera', icon: '👑' },
@@ -54,95 +53,101 @@ const deities = [
   { id: 'Aphrodite', name: 'Aphrodite', icon: '❤️' },
   { id: 'Ares', name: 'Ares', icon: '⚔️' },
   { id: 'Hermes', name: 'Hermes', icon: '✈️' },
-  { id: 'Leto', name: 'Leto', icon: '👩' },
-  // Mesopotamian Deities
+  // Babylonian Deities
   { id: 'Marduk', name: 'Marduk', icon: '𓊨' },
   { id: 'Ishtar', name: 'Ishtar', icon: '⭐' },
   { id: 'Nabu', name: 'Nabu', icon: '📜' },
   { id: 'Shamash', name: 'Shamash', icon: '☀️' },
   { id: 'Nanna', name: 'Nanna', icon: '🌙' },
-  // Canaanite/Israelite Deities
+  // Israelite
   { id: 'Yahweh', name: 'Yahweh', icon: '🕯️' },
-  // Phoenician Deities
+  // Phoenician
   { id: 'Tanit', name: 'Tanit', icon: '🌙' },
   { id: 'Melqart', name: 'Melqart', icon: '🏛️' },
-  { id: 'Baalat', name: 'Baalat', icon: '👑' },
   { id: 'Eshmun', name: 'Eshmun', icon: '🏺' },
-  { id: 'Apedemak', name: 'Apedemak', icon: '🦁' },
-  // Indian Deities
+  // Persian
+  { id: 'Ahura Mazda', name: 'Ahura Mazda', icon: '🔥' },
+  { id: 'Anahita', name: 'Anahita', icon: '💧' },
+  // Indian
   { id: 'Shiva', name: 'Shiva', icon: '🕉️' },
   { id: 'Buddha', name: 'Buddha', icon: '☸️' },
-  { id: 'Vishnu', name: 'Vishnu', icon: '🌀' },
-  { id: 'Brahma', name: 'Brahma', icon: '📿' },
-  // Chinese Deities
-  { id: 'Yu Huang', name: 'Jade Emperor', icon: '☯️' },
-  { id: 'Guan Yin', name: 'Guanyin', icon: '🌸' },
-  // Americas Deities
-  { id: 'Quetzalcoatl', name: 'Quetzalcoatl', icon: '🐍' },
+  // Maya
   { id: 'Kukulkan', name: 'Kukulkan', icon: '🐍' },
+  { id: 'Itzamna', name: 'Itzamna', icon: '🦎' },
+  { id: 'Chaac', name: 'Chaac', icon: '🌧️' },
+  // Inca
   { id: 'Inti', name: 'Inti', icon: '☀️' },
   { id: 'Viracocha', name: 'Viracocha', icon: '👑' },
 ]
 
+// Regions that match your site.region values
 const regions = [
   { id: 'all', name: 'All Regions', icon: <Globe size={14} /> },
-  // Egypt
+  // North Africa
   { id: 'Egypt - Delta', name: 'Egypt - Nile Delta', icon: <MapPin size={14} /> },
   { id: 'Egypt - Memphis', name: 'Egypt - Memphis / Giza', icon: <Pyramid size={14} /> },
   { id: 'Egypt - Thebes', name: 'Egypt - Thebes / Luxor', icon: <Building2 size={14} /> },
   { id: 'Egypt - Upper Egypt', name: 'Egypt - Upper Egypt', icon: <Compass size={14} /> },
   { id: 'Egypt - Far South', name: 'Egypt - Far South / Nubia', icon: <Compass size={14} /> },
+  { id: 'Egypt - Middle Egypt', name: 'Egypt - Middle Egypt', icon: <Compass size={14} /> },
   // Nubia & East Africa
-  { id: 'Nubia / Kush', name: 'Nubia / Kush (Sudan)', icon: <Pyramid size={14} /> },
+  { id: 'Nubia / Kush (Sudan)', name: 'Nubia / Kush (Sudan)', icon: <Pyramid size={14} /> },
   { id: 'East Africa (Ethiopia)', name: 'East Africa - Aksum (Ethiopia)', icon: <Landmark size={14} /> },
-  // Red Sea & Punt
-  { id: 'Red Sea Coast', name: 'Red Sea Coast', icon: <Compass size={14} /> },
-  { id: 'Horn of Africa', name: 'Horn of Africa (Somalia/Eritrea)', icon: <MapPin size={14} /> },
-  { id: 'Red Sea', name: 'Red Sea', icon: <Compass size={14} /> },
-  // Phoenicia & North Africa
-  { id: 'Phoenicia', name: 'Phoenicia (Lebanon)', icon: <Building2 size={14} /> },
-  { id: 'North Africa', name: 'North Africa - Carthage', icon: <Landmark size={14} /> },
-  { id: 'Sicily', name: 'Sicily - Motya', icon: <MapPin size={14} /> },
-  // Mesopotamia
-  { id: 'Mesopotamia', name: 'Mesopotamia (Iraq)', icon: <Building2 size={14} /> },
-  // Canaan & Hebrews
-  { id: 'Judah/Canaan', name: 'Judah / Canaan (Israel/Palestine)', icon: <Landmark size={14} /> },
-  { id: 'Sinai Peninsula', name: 'Sinai Peninsula', icon: <Compass size={14} /> },
-  // Anatolia & Invaders
-  { id: 'Anatolia', name: 'Anatolia (Turkey)', icon: <Building2 size={14} /> },
-  { id: 'Levant', name: 'Levant (Syria/Lebanon)', icon: <Compass size={14} /> },
-  // Greece & Aegean
+  // Red Sea & Horn of Africa
+  { id: 'Red Sea Coast (Egypt)', name: 'Red Sea Coast', icon: <Compass size={14} /> },
+  { id: 'Horn of Africa (Eritrea)', name: 'Horn of Africa (Eritrea)', icon: <MapPin size={14} /> },
+  { id: 'Horn of Africa (Somalia)', name: 'Horn of Africa (Somalia)', icon: <MapPin size={14} /> },
+  // West Africa
+  { id: 'West Africa (Mauritania)', name: 'West Africa - Mauritania', icon: <Landmark size={14} /> },
+  { id: 'West Africa (Nigeria)', name: 'West Africa - Nigeria', icon: <Building2 size={14} /> },
+  { id: 'West Africa (Mali)', name: 'West Africa - Mali', icon: <Landmark size={14} /> },
+  { id: 'West Africa (Ghana)', name: 'West Africa - Ghana', icon: <Compass size={14} /> },
+  // Central Africa
+  { id: 'Central Africa (Congo Basin)', name: 'Central Africa (Congo Basin)', icon: <Compass size={14} /> },
+  { id: 'Great Lakes (Congo/Rwanda)', name: 'Great Lakes (Congo/Rwanda)', icon: <Landmark size={14} /> },
+  // Southern Africa
+  { id: 'Southern Africa (Zimbabwe)', name: 'Southern Africa (Zimbabwe)', icon: <Landmark size={14} /> },
+  { id: 'Southern Africa (South Africa)', name: 'Southern Africa (South Africa)', icon: <Landmark size={14} /> },
+  { id: 'Southern Africa (Botswana)', name: 'Southern Africa (Botswana)', icon: <Landmark size={14} /> },
+  { id: 'Southern Africa (Namibia)', name: 'Southern Africa (Namibia)', icon: <Landmark size={14} /> },
+  // North Africa (non-Egypt)
+  { id: 'North Africa (Tunisia)', name: 'North Africa (Tunisia)', icon: <Landmark size={14} /> },
+  { id: 'North Africa (Algeria)', name: 'North Africa (Algeria)', icon: <Landmark size={14} /> },
+  { id: 'North Africa (Morocco)', name: 'North Africa (Morocco)', icon: <Landmark size={14} /> },
+  { id: 'North Africa (Libya)', name: 'North Africa (Libya)', icon: <Landmark size={14} /> },
+  // Mediterranean & Middle East
+  { id: 'Phoenicia (Lebanon)', name: 'Phoenicia (Lebanon)', icon: <Building2 size={14} /> },
+  { id: 'Mesopotamia (Iraq)', name: 'Mesopotamia (Iraq)', icon: <Building2 size={14} /> },
+  { id: 'Judah/Canaan (Israel)', name: 'Judah / Canaan (Israel)', icon: <Landmark size={14} /> },
+  { id: 'Judah/Canaan (West Bank)', name: 'Judah / Canaan (West Bank)', icon: <Landmark size={14} /> },
+  { id: 'Anatolia (Turkey)', name: 'Anatolia (Turkey)', icon: <Castle size={14} /> },
+  { id: 'Levant (Syria)', name: 'Levant (Syria)', icon: <Compass size={14} /> },
+  { id: 'Sinai Peninsula (Egypt)', name: 'Sinai Peninsula', icon: <Compass size={14} /> },
+  { id: 'Cyprus', name: 'Cyprus', icon: <MapPin size={14} /> },
+  // Greece & Europe
   { id: 'Greece', name: 'Greece', icon: <Landmark size={14} /> },
-  { id: 'Crete', name: 'Crete - Minoan Civilization', icon: <Building2 size={14} /> },
-  { id: 'Santorini', name: 'Santorini - Akrotiri', icon: <Compass size={14} /> },
-  // Cyprus
-  { id: 'Cyprus', name: 'Cyprus - Paphos', icon: <MapPin size={14} /> },
-  // Persia / Iran
-  { id: 'Persia', name: 'Persia (Iran)', icon: <Building2 size={14} /> },
-  // Etruria / Italy
-  { id: 'Etruria', name: 'Etruria (Italy)', icon: <Castle size={14} /> },
-  // India
-  { id: 'Indus Valley', name: 'Indus Valley (Pakistan/India)', icon: <Building2 size={14} /> },
-  { id: 'Northern India', name: 'Northern India (Bihar, UP)', icon: <Landmark size={14} /> },
-  { id: 'Western India', name: 'Western India (Maharashtra)', icon: <Compass size={14} /> },
-  // China
-  { id: 'Northern China', name: 'Northern China (Henan, Shaanxi, Beijing)', icon: <Pyramid size={14} /> },
-  { id: 'Western China', name: 'Western China (Gansu)', icon: <Compass size={14} /> },
-  { id: 'Southern China', name: 'Southern China (Sichuan)', icon: <Landmark size={14} /> },
+  { id: 'Crete', name: 'Crete', icon: <Building2 size={14} /> },
+  { id: 'Santorini', name: 'Santorini', icon: <Compass size={14} /> },
+  { id: 'Asia Minor (Turkey)', name: 'Asia Minor (Turkey)', icon: <Castle size={14} /> },
+  { id: 'Etruria (Italy)', name: 'Etruria (Italy)', icon: <Castle size={14} /> },
+  { id: 'Italy', name: 'Italy', icon: <Castle size={14} /> },
+  // Asia
+  { id: 'Persia (Iran)', name: 'Persia (Iran)', icon: <Building2 size={14} /> },
+  { id: 'Indus Valley (Pakistan)', name: 'Indus Valley (Pakistan)', icon: <Building2 size={14} /> },
+  { id: 'India', name: 'India', icon: <Landmark size={14} /> },
+  { id: 'Northern India (Bihar)', name: 'Northern India (Bihar)', icon: <Landmark size={14} /> },
+  { id: 'Western India (Maharashtra)', name: 'Western India (Maharashtra)', icon: <Compass size={14} /> },
+  { id: 'Northern China (Henan)', name: 'Northern China (Henan)', icon: <Pyramid size={14} /> },
+  { id: 'Northern China (Shaanxi)', name: 'Northern China (Shaanxi)', icon: <Pyramid size={14} /> },
+  { id: 'Northern China (Beijing)', name: 'Northern China (Beijing)', icon: <Pyramid size={14} /> },
+  { id: 'Western China (Gansu)', name: 'Western China (Gansu)', icon: <Compass size={14} /> },
+  { id: 'Southern China (Sichuan)', name: 'Southern China (Sichuan)', icon: <Landmark size={14} /> },
   // Americas
-  { id: 'Mesoamerica', name: 'Mesoamerica (Mexico)', icon: <Pyramid size={14} /> },
-  { id: 'Maya Region', name: 'Maya Region (Guatemala, Mexico, Honduras)', icon: <Building2 size={14} /> },
-  { id: 'Andes', name: 'Andes (Peru, Bolivia)', icon: <Landmark size={14} /> },
-  { id: 'North America', name: 'North America (USA)', icon: <Compass size={14} /> },
-  // Africa - General
-  { id: 'Southern Africa', name: 'Southern Africa (Zimbabwe, South Africa)', icon: <Landmark size={14} /> },
-  { id: 'West Africa (Mauritania)', name: 'West Africa - Dhar Tichitt (Mauritania)', icon: <Landmark size={14} /> },
-  { id: 'West Africa (Nigeria)', name: 'West Africa - Nok / Ife / Benin (Nigeria)', icon: <Building2 size={14} /> },
-  { id: 'West Africa (Mali)', name: 'West Africa - Timbuktu / Jenne-Jeno (Mali)', icon: <Landmark size={14} /> },
-  { id: 'West Africa (Ghana)', name: 'West Africa - Kintampo (Ghana)', icon: <Compass size={14} /> },
-  { id: 'North Africa (Libya)', name: 'North Africa - Garamantes (Libya)', icon: <Compass size={14} /> },
-  { id: 'North Africa (Algeria)', name: 'North Africa - Tassili (Algeria)', icon: <Landmark size={14} /> },
-  { id: 'North Africa (Morocco)', name: 'North Africa - Volubilis (Morocco)', icon: <Building2 size={14} /> },
+  { id: 'North America (Mexico)', name: 'North America (Mexico)', icon: <Pyramid size={14} /> },
+  { id: 'North America (Guatemala)', name: 'North America (Guatemala)', icon: <Pyramid size={14} /> },
+  { id: 'North America (Honduras)', name: 'North America (Honduras)', icon: <Pyramid size={14} /> },
+  { id: 'South America (Peru)', name: 'South America (Peru)', icon: <Landmark size={14} /> },
+  { id: 'South America (Bolivia)', name: 'South America (Bolivia)', icon: <Landmark size={14} /> },
 ]
 
 const types = [
@@ -154,9 +159,47 @@ const types = [
   { id: 'palace', name: 'Palace', icon: <Castle size={16} /> },
 ]
 
-export default function MapFilters({ filters, onFilterChange, onClose }: MapFiltersProps) {
+export default function MapFilters({ filters, onFilterChange, onClose, sites }: MapFiltersProps) {
   const [isExpanded, setIsExpanded] = useState(false)
   const [localSearch, setLocalSearch] = useState(filters.search)
+
+  // Calculate real counts from sites data
+  const getFilterCounts = useMemo(() => {
+    if (!sites) return { totalSites: '200+', deityCounts: {}, regionCounts: {}, typeCounts: {} }
+    
+    let totalLocations = 0
+    const deityCounts: Record<string, number> = {}
+    const regionCounts: Record<string, number> = {}
+    const typeCounts: Record<string, number> = { temple: 0, tomb: 0, monument: 0, city: 0, palace: 0 }
+    
+    Object.values(sites).forEach((site: any) => {
+      site.locations?.forEach((location: any) => {
+        totalLocations++
+        
+        // Count by deity (from location.deity)
+        if (location.deity) {
+          deityCounts[location.deity] = (deityCounts[location.deity] || 0) + 1
+        }
+        
+        // Count by region (from site.region)
+        if (site.region) {
+          regionCounts[site.region] = (regionCounts[site.region] || 0) + 1
+        }
+        
+        // Count by type (from location.type)
+        if (location.type) {
+          typeCounts[location.type] = (typeCounts[location.type] || 0) + 1
+        }
+      })
+    })
+    
+    return {
+      totalSites: totalLocations.toString(),
+      deityCounts,
+      regionCounts,
+      typeCounts
+    }
+  }, [sites])
 
   const handleSearchSubmit = useCallback(() => {
     onFilterChange({ ...filters, search: localSearch })
@@ -180,7 +223,7 @@ export default function MapFilters({ filters, onFilterChange, onClose }: MapFilt
 
   const hasActiveFilters = useMemo(() => {
     return filters.deity !== 'all' || filters.region !== 'all' || filters.type !== 'all' || filters.search !== ''
-  }, [filters.deity, filters.region, filters.type, filters.search])
+  }, [filters])
 
   const getRegionDisplay = useCallback(() => {
     const region = regions.find(r => r.id === filters.region)
@@ -191,9 +234,6 @@ export default function MapFilters({ filters, onFilterChange, onClose }: MapFilt
     const deity = deities.find(d => d.id === filters.deity)
     return deity ? deity.name : 'All Deities'
   }, [filters.deity])
-
-  // Total sites count
-  const totalSites = '200+'
 
   return (
     <div className="absolute top-4 right-4 z-[2000] w-80">
@@ -210,7 +250,7 @@ export default function MapFilters({ filters, onFilterChange, onClose }: MapFilt
             value={localSearch}
             onChange={(e) => setLocalSearch(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder="Search 200+ ancient sites..."
+            placeholder="Search ancient sites..."
             className="flex-1 bg-transparent px-3 py-2 outline-none text-gray-800 placeholder-gray-500 text-sm"
           />
           {localSearch && (
@@ -246,49 +286,87 @@ export default function MapFilters({ filters, onFilterChange, onClose }: MapFilt
             className="bg-papyrus/95 backdrop-blur-md rounded-lg shadow-xl border border-gold/30 overflow-hidden max-h-[80vh] overflow-y-auto"
           >
             <div className="p-5 space-y-5 pb-8">
-              {/* Deity Filter */}
+              {/* Clear Filter Button - Prominent at top */}
               <div>
-                <label className="text-xs text-gold font-semibold uppercase tracking-wider flex items-center gap-1 mb-2">
-                  <span>𓋹</span> Filter by Deity ({deities.length - 1} gods)
-                </label>
-                <div className="flex flex-wrap gap-2 mt-1 max-h-48 overflow-y-auto pb-1">
-                  {deities.map((deity) => (
-                    <button
-                      key={deity.id}
-                      onClick={() => onFilterChange({ ...filters, deity: deity.id })}
-                      className={`px-3 py-1.5 rounded-full text-xs transition-all ${
-                        filters.deity === deity.id
-                          ? 'bg-gold text-gray-900 font-semibold shadow-md'
-                          : 'bg-white/50 hover:bg-gold/20 text-gray-700'
-                      }`}
-                    >
-                      <span className="mr-1">{deity.icon}</span>
-                      {deity.name}
-                    </button>
-                  ))}
-                </div>
+                {hasActiveFilters ? (
+                  <button
+                    onClick={clearFilters}
+                    className="w-full py-2.5 bg-gradient-to-r from-red-500/80 to-red-600/80 hover:from-red-500 hover:to-red-600 text-white font-semibold rounded-lg text-sm transition-all duration-200 shadow-md flex items-center justify-center gap-2"
+                  >
+                    <X size={16} />
+                    Clear All Filters
+                  </button>
+                ) : (
+                  <div className="w-full py-2.5 bg-gray-200/50 text-gray-400 font-semibold rounded-lg text-sm text-center cursor-not-allowed">
+                    No Active Filters
+                  </div>
+                )}
               </div>
 
-              {/* Region Filter */}
+              {/* Region Filter - Moved to Top */}
               <div>
                 <label className="text-xs text-gold font-semibold uppercase tracking-wider flex items-center gap-1 mb-2">
                   <Globe size={12} /> Filter by Region
                 </label>
                 <div className="grid grid-cols-1 gap-1.5 mt-1 max-h-48 overflow-y-auto pr-1">
-                  {regions.map((region) => (
-                    <button
-                      key={region.id}
-                      onClick={() => onFilterChange({ ...filters, region: region.id })}
-                      className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs transition-all text-left ${
-                        filters.region === region.id
-                          ? 'bg-gold text-gray-900 font-semibold shadow-md'
-                          : 'bg-white/50 hover:bg-gold/20 text-gray-700'
-                      }`}
-                    >
-                      <span className="opacity-70">{region.icon}</span>
-                      <span>{region.name}</span>
-                    </button>
-                  ))}
+                  {regions.map((region) => {
+                    const count = getFilterCounts.regionCounts[region.id] || 0
+                    return (
+                      <button
+                        key={region.id}
+                        onClick={() => onFilterChange({ ...filters, region: region.id })}
+                        className={`flex items-center justify-between gap-2 px-3 py-2 rounded-lg text-xs transition-all text-left ${
+                          filters.region === region.id
+                            ? 'bg-gold text-gray-900 font-semibold shadow-md'
+                            : 'bg-white/50 hover:bg-gold/20 text-gray-700'
+                        }`}
+                      >
+                        <div className="flex items-center gap-2">
+                          <span className="opacity-70">{region.icon}</span>
+                          <span>{region.name}</span>
+                        </div>
+                        {count > 0 && (
+                          <span className={`text-xs ${filters.region === region.id ? 'text-gray-800' : 'text-gray-500'}`}>
+                            ({count})
+                          </span>
+                        )}
+                      </button>
+                    )
+                  })}
+                </div>
+              </div>
+
+              {/* Deity Filter - Below Regions */}
+              <div>
+                <label className="text-xs text-gold font-semibold uppercase tracking-wider flex items-center gap-1 mb-2">
+                  <span>𓋹</span> Filter by Deity
+                </label>
+                <div className="flex flex-wrap gap-2 mt-1 max-h-48 overflow-y-auto pb-1">
+                  {deities.map((deity) => {
+                    const count = deity.id === 'all' 
+                      ? Object.values(getFilterCounts.deityCounts).reduce((a, b) => a + b, 0)
+                      : getFilterCounts.deityCounts[deity.id] || 0
+                    
+                    if (deity.id !== 'all' && count === 0) return null
+                    
+                    return (
+                      <button
+                        key={deity.id}
+                        onClick={() => onFilterChange({ ...filters, deity: deity.id })}
+                        className={`px-3 py-1.5 rounded-full text-xs transition-all ${
+                          filters.deity === deity.id
+                            ? 'bg-gold text-gray-900 font-semibold shadow-md'
+                            : 'bg-white/50 hover:bg-gold/20 text-gray-700'
+                        }`}
+                      >
+                        <span className="mr-1">{deity.icon}</span>
+                        {deity.name}
+                        {deity.id !== 'all' && count > 0 && (
+                          <span className="ml-1 opacity-70">({count})</span>
+                        )}
+                      </button>
+                    )
+                  })}
                 </div>
               </div>
 
@@ -296,20 +374,29 @@ export default function MapFilters({ filters, onFilterChange, onClose }: MapFilt
               <div>
                 <label className="text-xs text-gold font-semibold uppercase tracking-wider mb-2 block">Filter by Type</label>
                 <div className="flex flex-wrap gap-2 mt-1">
-                  {types.map((type) => (
-                    <button
-                      key={type.id}
-                      onClick={() => onFilterChange({ ...filters, type: type.id })}
-                      className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm transition-all ${
-                        filters.type === type.id
-                          ? 'bg-gold text-gray-900 font-semibold shadow-md'
-                          : 'bg-white/50 hover:bg-gold/20 text-gray-700'
-                      }`}
-                    >
-                      {type.icon}
-                      {type.name}
-                    </button>
-                  ))}
+                  {types.map((type) => {
+                    const count = type.id === 'all' 
+                      ? Object.values(getFilterCounts.typeCounts).reduce((a, b) => a + b, 0)
+                      : getFilterCounts.typeCounts[type.id as keyof typeof getFilterCounts.typeCounts] || 0
+                    
+                    return (
+                      <button
+                        key={type.id}
+                        onClick={() => onFilterChange({ ...filters, type: type.id })}
+                        className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm transition-all ${
+                          filters.type === type.id
+                            ? 'bg-gold text-gray-900 font-semibold shadow-md'
+                            : 'bg-white/50 hover:bg-gold/20 text-gray-700'
+                        }`}
+                      >
+                        {type.icon}
+                        {type.name}
+                        {count > 0 && (
+                          <span className="ml-1 text-xs opacity-70">({count})</span>
+                        )}
+                      </button>
+                    )
+                  })}
                 </div>
               </div>
 
@@ -334,30 +421,12 @@ export default function MapFilters({ filters, onFilterChange, onClose }: MapFilt
                 </div>
               )}
 
-              {/* Clear Filters Button */}
-              <div className="pt-2">
-                {hasActiveFilters ? (
-                  <button
-                    onClick={clearFilters}
-                    className="w-full py-2.5 bg-gradient-to-r from-red-500/80 to-red-600/80 hover:from-red-500 hover:to-red-600 text-white font-semibold rounded-lg text-sm transition-all duration-200 shadow-md flex items-center justify-center gap-2"
-                  >
-                    <X size={16} />
-                    Clear All Filters
-                  </button>
-                ) : (
-                  <div className="w-full py-2.5 bg-gray-200/50 text-gray-400 font-semibold rounded-lg text-sm text-center cursor-not-allowed">
-                    No Active Filters
-                  </div>
-                )}
-              </div>
-
               {/* Results Count */}
               <div className="text-center text-xs text-gray-500 pt-3 border-t border-gold/20">
-                <span className="text-gold font-semibold">🏺 {totalSites} total sites</span>
-                {hasActiveFilters && <span className="text-gray-400"> • Filtered results shown</span>}
+                <span className="text-gold font-semibold">🏺 {getFilterCounts.totalSites} total sites</span>
+                {hasActiveFilters && <span className="text-gray-400"> • Filtered results</span>}
               </div>
 
-              {/* Extra bottom padding for better scrolling */}
               <div className="h-2" />
             </div>
           </motion.div>
