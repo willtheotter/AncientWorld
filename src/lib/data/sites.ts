@@ -393,7 +393,8 @@ The king walked ahead of the barques, symbolically renewing his divine authority
         scene: 'The Festival of Opet Procession',
         visualHighlights: ['Golden barques carried by priests', 'Musicians with sistra, drums, and harps', 'Dense incense clouds diffusing sunlight', 'Festival crowds of pilgrims celebrating', 'Pharaoh walking ahead of the divine barques'],
         deity: 'Amun-Ra',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/YG-OLS8zpKg?si=r0ZRIs1nZVjeba1b'
       }
     ]
   },
@@ -414,12 +415,13 @@ The king walked ahead of the barques, symbolically renewing his divine authority
 The temple featured a massive hypostyle hall with columns decorated with reliefs of Thoth as both ibis—his sacred bird, associated with wisdom and the moon—and baboon (the cynocephalus ape), shown alternately holding the wedjat eye and the scribe's palette.
 
 The temple library contained thousands of papyrus scrolls on magic, medicine, astronomy, and sacred rituals. The site's famous "Baboon Gallery" contains millions of mummified ibises and baboons offered to Thoth.`,
-        imageRegenerated: '/images/sites/hermopolis-thoth-regenerated.jpg',
-        imageCurrent: '/images/sites/hermopolis-thoth-current.jpg',
+        imageRegenerated: '/images/sites/temple-thoth-regenerated.jpg',
+        imageCurrent: '/images/sites/temple-thoth-current.jpg',
         scene: 'The House of the Ibis God',
         visualHighlights: ['Ibis-headed Thoth statues with scribe\'s palette', 'Baboon reliefs on column capitals', 'Temple library with papyrus scroll archives', 'Imhotep healing chapel for medical consultations', 'Ogdoad creation reliefs with eight primordial gods'],
         deity: 'Thoth',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/zJDdw7GAyO0?si=P9RJLx0hFAnJnF4g'
       }
     ]
   },
@@ -440,41 +442,49 @@ The temple library contained thousands of papyrus scrolls on magic, medicine, as
 The temple featured a massive enclosure wall with fortified gates, a sacred lake where nightly ceremonies were held, and the "Tomb of Osiris"—a symbolic burial mound that attracted pilgrims from across Egypt.
 
 Neith was identified with Athena by the Greeks, and Sais attracted Greek visitors seeking wisdom. The temple's famous inscription "I am all that has been, and is, and shall be, and no mortal has ever lifted my veil" inspired later Neoplatonic philosophy.`,
-        imageRegenerated: '/images/sites/sais-regenerated.jpg',
-        imageCurrent: '/images/sites/sais-current.jpg',
+        imageRegenerated: '/images/sites/temple-neith-regenerated.jpg',
+        imageCurrent: '/images/sites/temple-neith-current.jpg',
         scene: 'The Veiled Goddess of Sais',
         visualHighlights: ['Massive temple enclosure walls with fortified gates', 'Sacred lake with nightly torchlit ceremonies', 'Neith cult statue covered in her woven veil', 'Osiris tomb mound with pilgrim offerings', 'Greek philosophers visiting the library'],
         deity: 'Neith',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/OSHJfPY7Qjg?si=QvTUr8sJ2TlSRFwS'
       }
     ]
   },
 
-  // 21. Temple of Horus at Behbeit
-  behbeit: {
-    id: 'behbeit',
-    name: 'Behbeit el-Hagar',
-    coordinates: [31.029, 31.29],
-    region: 'Egypt - Delta',
-    locations: [
-      {
-        id: 'temple-horus-behbeit',
-        name: 'Temple of Horus',
-        description: 'Falcon god sanctuary in the Delta',
-        longDescription: `The Temple of Horus at Behbeit el-Hagar was the Delta counterpart to Edfu, built in the Late Period (380-343 BCE) but never completed. The site is now a field of scattered granite blocks, weighing up to 20 tons each, but the reliefs that remain are among the finest from Ptolemaic Egypt.
+// 21. Temple of Isis at Behbeit el-Hagar
+behbeit: {
+  id: 'behbeit',
+  name: 'Behbeit el-Hagar',
+  coordinates: [31.029, 31.29],
+  region: 'Egypt - Delta',
+  locations: [
+    {
+      id: 'temple-isis-behbeit',
+      name: 'Temple of Isis',
+      description: 'Granite sanctuary of Isis in the Nile Delta',
+      longDescription: `Behbeit el-Hagar was the only major temple in ancient Egypt constructed entirely of granite, dedicated to the goddess Isis during the Late Period and early Ptolemaic era (c. 380–343 BCE, with later additions). Often referred to as the “Iseum,” it served as a northern counterpart to Philae, reinforcing the widespread cult of Isis across Egypt.
 
-The temple was dedicated to Horus as the heir of Osiris, reforging the fragmented mythology of the Delta after the Assyrian invasions. The surviving reliefs show the king offering to Horus and Hathor, and the famous "Horus on the Crocodiles" healing stelae—used for water poured over them, then drunk by patients seeking cures for poisoning.
+Though now reduced to a vast field of collapsed stone blocks—many weighing over 20 tons—the site preserves finely carved reliefs of exceptional quality. These depict the king presenting offerings to Isis, along with scenes featuring Osiris and Horus as part of the Osirian triad. The temple reflects the theological unity of these deities rather than a singular focus on Horus.
 
-This temple continued the tradition of the "Horus of Behbeit" as a protector of Egypt, whose cult persisted until the 4th century CE.`,
-        imageRegenerated: '/images/sites/behbeit-regenerated.jpg',
-        imageCurrent: '/images/sites/behbeit-current.jpg',
-        scene: 'The Granite Fragments of Horus',
-        visualHighlights: ['Massive granite blocks with fine Late Period reliefs', 'Horus falcon with spread wings', 'Healing "Horus on the Crocodiles" stelae', 'King offering scenes to Horus and Hathor', 'Unfinished column drums scattered across the site'],
-        deity: 'Horus',
-        type: 'temple'
-      }
-    ]
-  },
+Unlike many temples of Upper Egypt, Behbeit represents the religious and cultural revival of the Nile Delta following periods of foreign domination. Its destruction likely occurred in late antiquity, leaving behind one of the most enigmatic and visually striking ruined temple sites in northern Egypt.`,
+      imageRegenerated: '/images/sites/temple-isis-behbeit-regenerated.jpg',
+      imageCurrent: '/images/sites/temple-isis-behbeit-current.jpg',
+      scene: 'The Fallen Granite Sanctuary of Isis',
+      visualHighlights: [
+        'Massive granite blocks scattered across the landscape',
+        'Finely carved Late Period reliefs of Isis and royal rituals',
+        'Scenes depicting the Osirian triad: Isis, Osiris, and Horus',
+        'Unfinished architectural elements and column drums',
+        'Wide open Delta setting with fragmented monumental remains'
+      ],
+      deity: 'Isis',
+      type: 'temple',
+      youtubeUrl: 'https://youtu.be/PEp3I5Is8Ts?si=Ap7o7rYq1gcYR2CF'
+    }
+  ]
+},
 
   // 22-23. Dendera Temple Complex
   dendera: {
@@ -492,12 +502,13 @@ This temple continued the tradition of the "Horus of Behbeit" as a protector of 
 The temple's hypostyle hall features 24 columns with Hathor's face carved on each capital, originally painted with vibrant colors creating a forest of the goddess. The ceiling of the outer hypostyle hall depicts the famous Dendera Zodiac, one of the only complete celestial maps from ancient Egypt.
 
 The sanctuary's walls contain the "Lamp Relief," often misinterpreted as showing an electric light bulb but actually depicting a sacred snake emerging from a lotus flower, symbolizing creation.`,
-        imageRegenerated: '/images/sites/dendera-regenerated.jpg',
-        imageCurrent: '/images/sites/dendera-current.jpg',
+        imageRegenerated: '/images/sites/temple-hathor-regenerated.jpg',
+        imageCurrent: '/images/sites/temple-hathor-current.jpg',
         scene: 'The Golden House of Hathor',
         visualHighlights: ['Hathor-headed columns with sistrum crowns', 'Painted astronomical ceiling (Dendera Zodiac)', 'Crypts with hidden treasure reliefs', 'Nilometer for measuring Nile flood levels', 'Lamp relief showing snake creation'],
         deity: 'Hathor',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/If05iaRi-3k?si=ue8SUmyojRBJ-Zu8'
       },
       {
         id: 'dendera-sanatorium',
@@ -508,12 +519,13 @@ The sanctuary's walls contain the "Lamp Relief," often misinterpreted as showing
 The sanatorium featured bath basins where water was poured over statues inscribed with healing texts, then collected by patients for drinking or washing. A "hydration" chapel held naophorous statues where priests recited prayers while pouring water over the sacred effigies, charging the water with divine power.
 
 The practice of incubation healing continued here until the 4th century CE, even as Christianity spread through Egypt.`,
-        imageRegenerated: '/images/sites/dendera-healing-regenerated.jpg',
-        imageCurrent: '/images/sites/dendera-healing-current.jpg',
+        imageRegenerated: '/images/sites/dendera-sanatorium-regenerated.jpg',
+        imageCurrent: '/images/sites/dendera-sanatorium-current.jpg',
         scene: 'The Temple as Healing Center',
         visualHighlights: ['Incubation sleep platforms with headrests', 'Water basins for collecting blessed liquid', 'Healing statue niche with naophorous statues', 'Priest-doctors with papyrus prescriptions', 'Thoth and Hathor double sanctuary'],
         deity: 'Hathor',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/c0a5afgBsP8?si=OoUDc9thYrFKfyBz'
       }
     ]
   },
@@ -534,12 +546,13 @@ The practice of incubation healing continued here until the 4th century CE, even
 The temple dates to the Middle Kingdom (c. 2000 BCE) but was rebuilt in the Late and Ptolemaic periods. Unlike the open temples of other gods, Medamud's sanctuary was designed with a "Burial Chamber" containing unique reliefs of Montu as a bull—his fierce animal form representing the raw power of rampage.
 
 The site's hypostyle hall features columns painted in vivid colors—a rare survival of original paint on temple columns. Medamud was connected to Karnak by an avenue of sphinxes.`,
-        imageRegenerated: '/images/sites/medamud-regenerated.jpg',
-        imageCurrent: '/images/sites/medamud-current.jpg',
+        imageRegenerated: '/images/sites/temple-montu-regenerated.jpg',
+        imageCurrent: '/images/sites/temple-montu-current.jpg',
         scene: 'The Falcon War God\'s Sanctuary',
         visualHighlights: ['Montu as a bull in burial chamber reliefs', 'Painted hypostyle column capitals with original colors', 'Birth House scenes with nursing goddesses', 'Sphinx avenue approaching from Karnak', 'Burial chamber with star-decorated ceiling'],
         deity: 'Montu',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/ThNlXfVDz8E?si=fXgMxiCtz3yAC6QL'
       }
     ]
   },
@@ -560,12 +573,13 @@ The site's hypostyle hall features columns painted in vivid colors—a rare surv
 Twice each year—on February 22 and October 22—the rising sun penetrates the temple's 60-meter-long entrance corridor, sending a narrow beam of light deep into the sanctuary. The beam illuminates the statues of Ra-Horakhty, Ramses II, and Amun-Ra, while Ptah remains in shadow. These dates are believed to correspond to Ramses's coronation and his birthday.
 
 When the Aswan High Dam threatened to submerge the site in the 1960s, the entire temple was cut into 1,036 blocks and reassembled 65 meters higher, preserving the solar alignment.`,
-        imageRegenerated: '/images/sites/abu-simbel-regenerated.jpg',
-        imageCurrent: '/images/sites/abu-simbel-current.jpg',
+        imageRegenerated: '/images/sites/abu-simbel-temple-regenerated.jpg',
+        imageCurrent: '/images/sites/abu-simbel-temple-current.jpg',
         scene: 'The Miracle of the Sun',
         visualHighlights: ['Sun beam penetrating the 60-meter temple depth', 'Activating pigments and gold of statues', 'Illuminated statues of Ramses II and gods', 'Ptah remaining in deliberate shadow', 'Colossal facade statues each 20 meters tall'],
         deity: 'Ra',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/l4O4pCRm2xY?si=veGgYJhRPQAiFvL0'
       },
       {
         id: 'nefertari-temple',
@@ -581,7 +595,8 @@ Nefertari is shown in reliefs without a separate divine consort, treated as a go
         scene: 'The Queen\'s Sanctuary',
         visualHighlights: ['Six colossal statues with Nefertari equal to Ramses', 'Hathor-headed columns with cow ears', 'Queen Nefertari as goddess in reliefs', 'Healing chapel for Hathor\'s devotees', 'Sun alignment on the sanctuary'],
         deity: 'Hathor',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/f6wQJmf5Uyg?si=p3b-gUpSi6JEZHZg'
       }
     ]
   },
@@ -602,12 +617,13 @@ Nefertari is shown in reliefs without a separate divine consort, treated as a go
 The 36-meter-high pylon features reliefs of Ptolemy XII smiting his enemies before Horus. The Court of Offerings has 32 columns surrounding a central altar where the sacred barque rested during festivals. The Hypostyle Hall has 18 columns with floral capitals, followed by the Hall of Offerings and the Sanctuary of Horus.
 
 The temple walls preserve the "Dramatic Text of Edfu" (temple foundation description) and the "Triumph of Horus" (the falcon god's defeat of Set). The "Construction Texts" describe the temple's orientation, measurements, and rituals—a complete architectural manual.`,
-        imageRegenerated: '/images/sites/edfu-regenerated.jpg',
-        imageCurrent: '/images/sites/edfu-current.jpg',
+        imageRegenerated: '/images/sites/temple-horus-regenerated.jpg',
+        imageCurrent: '/images/sites/temple-horus-current.jpg',
         scene: 'The Falcon God\'s House',
         visualHighlights: ['Massive falcon statues flanking the pylon', 'Dramatic reliefs of Horus spearing Seth (hippopotamus)', 'Towering 36-meter pylon with victory reliefs', 'Solar ritual spaces on the roof', 'Nilometer for measuring annual flood'],
         deity: 'Horus',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/U7AqkxSCRI4?si=lLbrSK1_KTFD_8_J'
       }
     ]
   },
@@ -628,12 +644,13 @@ The temple walls preserve the "Dramatic Text of Edfu" (temple foundation descrip
 Built during the Ptolemaic period (180-47 BCE), the temple features twin sanctuaries, twin halls, and twin entrances. The walls preserve reliefs of surgical instruments—forceps, scalpels, saws, and dental tools—suggesting the temple was also a medical center associated with crocodile cult healing.
 
 The temple complex includes a nilometer, a birthing house (mammisi), and a chapel containing crocodile mummies displayed in the adjacent Crocodile Museum.`,
-        imageRegenerated: '/images/sites/kom-ombo-regenerated.jpg',
-        imageCurrent: '/images/sites/kom-ombo-current.jpg',
+        imageRegenerated: '/images/sites/temple-sobek-regenerated.jpg',
+        imageCurrent: '/images/sites/temple-sobek-current.jpg',
         scene: 'The Symmetrical Sanctuary',
         visualHighlights: ['Symmetrical dual temple with mirrored architecture', 'Crocodile mummies in cult chapel', 'Medical instruments relief showing surgical tools', 'Twin sanctuaries sharing a common wall', 'Nilometer measuring the Nile flood'],
         deity: 'Sobek',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/zlDQjUUjt-s?si=0FZEsifiyFnq7dW1'
       }
     ]
   },
@@ -654,12 +671,13 @@ The temple complex includes a nilometer, a birthing house (mammisi), and a chape
 The temple was dismantled and moved to the nearby island of Agilkia in the 1960s, reassembled block by block to save it from the rising waters of the Aswan High Dam. Its columns are among the most elegant in Egypt, with scenes of the goddess nursing Horus, a theme adopted by Christian iconography of Mary and Jesus.
 
 The complex includes the Temple of Hathor (with columns carved with Bes), the Kiosk of Trajan, and the Gate of Hadrian. The last known hieroglyphic inscription, dated to 394 CE, was carved at Philae.`,
-        imageRegenerated: '/images/sites/philae-isis-regenerated.jpg',
-        imageCurrent: '/images/sites/philae-isis-current.jpg',
+        imageRegenerated: '/images/sites/temple-isis-regenerated.jpg',
+        imageCurrent: '/images/sites/temple-isis-current.jpg',
         scene: 'The Island of Isis',
         visualHighlights: ['Island temple setting with water reflections', 'Sunrise and sunset turning the sandstone pink', 'Kiosk of Trajan with 14 columns', 'Last hieroglyphic inscription from 394 CE', 'Nursing scene of Isis and Horus'],
         deity: 'Isis',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/pemoNsAYWhc?si=ve-uGDfCPvgB7fxb'
       }
     ]
   },
@@ -987,8 +1005,8 @@ export const nubianSites: Record<string, Site> = {
         name: 'The Western Deffufa',
         description: 'Massive mudbrick temple of the Kerma kingdom',
         longDescription: `The Western Deffufa dominates the ancient city of Kerma, an 18-meter-high mudbrick temple that served as the religious and political center of the earliest kingdom in sub-Saharan Africa (c. 2500-1500 BCE). Unlike Egyptian stone temples, the Deffufa is built entirely of sun-dried mudbrick, yet its scale rivals contemporary Egyptian monuments. The interior contains ritual spaces, offering tables, and evidence of elaborate ceremonies. Below ground lie elaborate burial chambers with hundreds of human sacrifices—retainers buried with their rulers to serve them in the afterlife. Kerma was Egypt's great rival during the Middle Kingdom, controlling gold mines and trade routes before being conquered by Thutmose III.`,
-        imageRegenerated: '/images/sites/kerma-deffufa-regenerated.jpg',
-        imageCurrent: '/images/sites/kerma-deffufa-current.jpg',
+        imageRegenerated: '/images/sites/western-deffufa-regenerated.jpg',
+        imageCurrent: '/images/sites/western-deffufa-current.jpg',
         scene: 'The Western Deffufa of Kerma',
         visualHighlights: ['Massive mudbrick temple rising 18 meters', 'ritual offering tables and chambers', 'Subterranean royal burial chambers', 'Evidence of human sacrifices (hundreds)', 'Egyptian rival civilization control of gold mines'],
         type: 'temple'

@@ -12,7 +12,63 @@ import {
   Flower2, Footprints, Mountain, Rainbow, Infinity as InfinityIcon
 } from 'lucide-react'
 
-// ============ SECTION 1: A - C (27 stones) ============
+// Icon mapping for string names to Lucide components
+const iconMap = {
+  Waves: Waves,
+  Flame: Flame,
+  Shield: Shield,
+  Crown: Crown,
+  Eye: Eye,
+  SunIcon: SunIcon,
+  Star: Star,
+  Sparkles: Sparkles,
+  Target: Target,
+  Droplet: Droplet,
+  Heart: Heart,
+  Zap: Zap,
+  Gem: Gem,
+  Leaf: Leaf,
+  Moon: Moon,
+  Compass: Compass,
+  Circle: Circle,
+  InfinityIcon: InfinityIcon,
+  BookOpen: BookOpen,
+  Mountain: Mountain,
+  Rainbow: Rainbow,
+  Gift: Gift,
+  Cloud: Cloud,
+  Feather: Feather,
+  Anchor: Anchor,
+  Infinity: Infinity,
+  Lock: Lock,
+  Battery: Battery,
+  Brain: Brain,
+  Music: Music,
+  Globe: Globe,
+  Umbrella: Umbrella,
+  ThumbsUp: ThumbsUp,
+  Coffee: Coffee,
+  AlertCircle: AlertCircle,
+  Activity: Activity,
+  Award: Award,
+  Camera: Camera,
+  Cat: Cat,
+  Command: Command,
+  Flower2: Flower2,
+  Footprints: Footprints,
+  Diamond: Diamond,
+  Wind: Wind
+}
+
+// Helper function to get icon component
+const getIcon = (iconName) => {
+  const IconComponent = iconMap[iconName]
+  return IconComponent || Gem // Fallback to Gem if icon not found
+}
+
+// ============ COMPLETE STONE DIRECTORY (222 stones) ============
+// Alphabetical order A-Z
+
 const stones = [
   {
     name: 'Abalone Shell',
@@ -26,7 +82,7 @@ const stones = [
     healing: 'Emotional healing, calms turbulent feelings, connects to ancestral waters.',
     ancientUses: 'Smudging bowls, ceremonial rattles, offerings to water spirits.',
     commonUses: 'Smudge bowl for sage burning, jewelry, meditation focus.',
-    icon: Waves,
+    icon: 'Waves',
     isCrossCultural: false
   },
   {
@@ -41,7 +97,22 @@ const stones = [
     healing: 'Grounding, ancestor connection, earth energy activation.',
     ancientUses: 'Body paint for ceremonies, cave paintings, burial rituals.',
     commonUses: 'Grounding rituals, art, ancestor meditation.',
-    icon: Flame,
+    icon: 'Flame',
+    isCrossCultural: false
+  },
+  {
+    name: 'African Turquoise',
+    civilization: 'African',
+    meaning: 'Evolution, Wisdom, Connection',
+    color: 'Blue-Green with Black Matrix',
+    chakra: 'Throat, Third Eye',
+    frequency: '528 Hz',
+    deity: 'Earth Ancestors',
+    symbol: 'Evolution, Wisdom',
+    healing: 'Supports personal evolution, ancestral wisdom, spiritual connection.',
+    ancientUses: 'Tribal trading stone, ceremonial offerings.',
+    commonUses: 'Meditation, ancestral connection, throat chakra opening.',
+    icon: 'Eye',
     isCrossCultural: false
   },
   {
@@ -56,7 +127,7 @@ const stones = [
     healing: 'Protection from storms, good health, emotional stability.',
     ancientUses: 'Amulets, carved vessels, jewelry, seals.',
     commonUses: 'Worry stones, home protection, garden magic.',
-    icon: Shield,
+    icon: 'Shield',
     isCrossCultural: true
   },
   {
@@ -71,7 +142,22 @@ const stones = [
     healing: 'Protection, emotional stability, calm.',
     ancientUses: 'Jewelry, carvings, amulets.',
     commonUses: 'Home decoration, meditation stones, pocket stones.',
-    icon: Shield,
+    icon: 'Shield',
+    isCrossCultural: false
+  },
+  {
+    name: 'Ajoite',
+    civilization: 'African',
+    meaning: 'Divine Love, Spiritual Awakening',
+    color: 'Blue-Green',
+    chakra: 'Heart, Throat',
+    frequency: '639 Hz',
+    deity: 'Angel of Light',
+    symbol: 'Divine Love, Awakening',
+    healing: 'Activates divine love, spiritual awakening, emotional release.',
+    ancientUses: 'Discovered in 1985, used in shamanic healing.',
+    commonUses: 'Heart opening, emotional healing, angelic connection.',
+    icon: 'Heart',
     isCrossCultural: false
   },
   {
@@ -86,7 +172,22 @@ const stones = [
     healing: 'Purity, spiritual connection, divine light.',
     ancientUses: 'Canopic jars, offering tables, vessels.',
     commonUses: 'Sculpture, candle holders, sacred altar pieces.',
-    icon: Crown,
+    icon: 'Crown',
+    isCrossCultural: false
+  },
+  {
+    name: 'Alexandrite',
+    civilization: 'Russian',
+    meaning: 'Joy, Luck, Transformation',
+    color: 'Green to Red (color-changing)',
+    chakra: 'Heart, Crown',
+    frequency: '528 Hz',
+    deity: 'Russian Spirits',
+    symbol: 'Joy, Transformation',
+    healing: 'Joy, luck, transformation, balance of dualities.',
+    ancientUses: 'Russian royal jewelry, engagement gifts.',
+    commonUses: 'Celebration, joy manifestation, transformation work.',
+    icon: 'Sparkles',
     isCrossCultural: false
   },
   {
@@ -101,7 +202,7 @@ const stones = [
     healing: 'Balances emotions, truth, fertility.',
     ancientUses: 'Fertility amulets, temple offerings.',
     commonUses: 'Jewelry, communication aids, emotional balance.',
-    icon: Eye,
+    icon: 'Eye',
     isCrossCultural: false
   },
   {
@@ -116,7 +217,7 @@ const stones = [
     healing: 'Health, longevity, protection from evil.',
     ancientUses: 'Jewelry, carved netsuke, amulets, burial offerings.',
     commonUses: 'Teething necklaces, jewelry, energy cleansing.',
-    icon: SunIcon,
+    icon: 'SunIcon',
     isCrossCultural: true
   },
   {
@@ -131,7 +232,7 @@ const stones = [
     healing: 'Life force, ancestor connection, protection.',
     ancientUses: 'Jewelry, offerings, burial goods.',
     commonUses: 'Jewelry, ancestor meditation, solar plexus healing.',
-    icon: SunIcon,
+    icon: 'SunIcon',
     isCrossCultural: false
   },
   {
@@ -146,7 +247,7 @@ const stones = [
     healing: 'Prevents drunkenness, calms the mind, clarity in decision-making.',
     ancientUses: 'Wine goblets, signet rings, carved intaglios.',
     commonUses: 'Meditation, sleep aid, home protection, jewelry.',
-    icon: Star,
+    icon: 'Star',
     isCrossCultural: false
   },
   {
@@ -161,7 +262,7 @@ const stones = [
     healing: 'Balances mental and emotional bodies, enhances meditation.',
     ancientUses: 'Shamanic rituals, divination.',
     commonUses: 'Meditation, stress relief, chakra balancing.',
-    icon: Sparkles,
+    icon: 'Sparkles',
     isCrossCultural: false
   },
   {
@@ -176,7 +277,7 @@ const stones = [
     healing: 'Enhances vision, strengthens resolve, aligns energy.',
     ancientUses: 'Amulets for travelers, divination tools.',
     commonUses: 'Meditation, past life work, alignment practices.',
-    icon: Eye,
+    icon: 'Eye',
     isCrossCultural: false
   },
   {
@@ -191,7 +292,7 @@ const stones = [
     healing: 'Enhances manifestation, clears communication blocks.',
     ancientUses: 'Mined for phosphorus, used in ritual pigments.',
     commonUses: 'Manifestation work, throat chakra healing, public speaking.',
-    icon: Target,
+    icon: 'Target',
     isCrossCultural: false
   },
   {
@@ -206,7 +307,7 @@ const stones = [
     healing: 'Spiritual awakening, connection to higher realms.',
     ancientUses: 'Meditation tools, temple offerings.',
     commonUses: 'Crown chakra healing, meditation, grid work.',
-    icon: Sparkles,
+    icon: 'Sparkles',
     isCrossCultural: false
   },
   {
@@ -221,7 +322,7 @@ const stones = [
     healing: 'Courage, calm, protection at sea.',
     ancientUses: 'Sailor amulets, intaglios, jewelry.',
     commonUses: 'Throat chakra healing, stress relief, travel protection.',
-    icon: Droplet,
+    icon: 'Droplet',
     isCrossCultural: false
   },
   {
@@ -236,7 +337,7 @@ const stones = [
     healing: 'Grounding, stability, earth connection.',
     ancientUses: 'Grounding rituals, earth altars.',
     commonUses: 'Grounding meditation, home stability, crystal grids.',
-    icon: Shield,
+    icon: 'Shield',
     isCrossCultural: false
   },
   {
@@ -251,7 +352,7 @@ const stones = [
     healing: 'Prosperity, luck, emotional calm.',
     ancientUses: 'Jewelry, carvings, feng shui.',
     commonUses: 'Prosperity grids, heart healing, luck talismans.',
-    icon: Sparkles,
+    icon: 'Sparkles',
     isCrossCultural: false
   },
   {
@@ -266,7 +367,7 @@ const stones = [
     healing: 'Enhances intuition, divine vision, truth seeking.',
     ancientUses: 'Paint pigment, eye makeup, temple offerings.',
     commonUses: 'Third eye meditation, intuition development, vision quests.',
-    icon: Eye,
+    icon: 'Eye',
     isCrossCultural: false
   },
   {
@@ -281,7 +382,7 @@ const stones = [
     healing: 'Courage, strength, blood purification.',
     ancientUses: 'Amulets for warriors, carved seals.',
     commonUses: 'Courage rituals, blood health, athletic performance.',
-    icon: Target,
+    icon: 'Target',
     isCrossCultural: false
   },
   {
@@ -296,7 +397,7 @@ const stones = [
     healing: 'Peace, dream recall, emotional calm.',
     ancientUses: 'Dream pillows, druid rituals.',
     commonUses: 'Dream work, anxiety relief, throat chakra.',
-    icon: Moon,
+    icon: 'Moon',
     isCrossCultural: false
   },
   {
@@ -311,7 +412,7 @@ const stones = [
     healing: 'Calms nerves, enhances gentle communication.',
     ancientUses: 'Jewelry, amulets for orators.',
     commonUses: 'Public speaking, anxiety relief, throat chakra.',
-    icon: Waves,
+    icon: 'Waves',
     isCrossCultural: false
   },
   {
@@ -326,7 +427,7 @@ const stones = [
     healing: 'Protection from evil, focus, discipline, longevity.',
     ancientUses: 'Amulets, astrological rings, temple offerings.',
     commonUses: 'Astrological jewelry, discipline aid, protection.',
-    icon: Shield,
+    icon: 'Shield',
     isCrossCultural: false
   },
   {
@@ -341,7 +442,7 @@ const stones = [
     healing: 'Growth, healing, abundance attraction.',
     ancientUses: 'Garden amulets, fertility rituals.',
     commonUses: 'Heart healing, abundance grids, plant magic.',
-    icon: Leaf,
+    icon: 'Leaf',
     isCrossCultural: false
   },
   {
@@ -356,7 +457,7 @@ const stones = [
     healing: 'Female reproductive health, creativity, courage, vitality.',
     ancientUses: 'Necklaces, rings, seals, protective amulets, temple offerings.',
     commonUses: 'Creativity blocks, fertility support, courage rituals.',
-    icon: SunIcon,
+    icon: 'SunIcon',
     isCrossCultural: true
   },
   {
@@ -371,7 +472,7 @@ const stones = [
     healing: 'Spiritual protection, intuition, clarity.',
     ancientUses: 'Astrological amulets, rings.',
     commonUses: 'Spiritual protection, intuition enhancer.',
-    icon: Eye,
+    icon: 'Eye',
     isCrossCultural: false
   },
   {
@@ -386,7 +487,7 @@ const stones = [
     healing: 'Divine communication, peace, angelic connection.',
     ancientUses: 'Temple offerings, divination tools.',
     commonUses: 'Angel work, peaceful sleep, divine guidance.',
-    icon: Star,
+    icon: 'Star',
     isCrossCultural: false
   },
   {
@@ -401,7 +502,7 @@ const stones = [
     healing: 'Nurturing, protection, emotional calm.',
     ancientUses: 'Seals, amulets, carved vessels.',
     commonUses: 'Nurturing self-care, throat chakra, calmness.',
-    icon: Heart,
+    icon: 'Heart',
     isCrossCultural: false
   },
   {
@@ -416,7 +517,7 @@ const stones = [
     healing: 'Transformation, courage, spiritual awakening.',
     ancientUses: 'Shamanic rituals, spiritual tools.',
     commonUses: 'Transformation work, fear release, spiritual growth.',
-    icon: Zap,
+    icon: 'Zap',
     isCrossCultural: false
   },
   {
@@ -431,7 +532,7 @@ const stones = [
     healing: 'Wisdom, calm, clear communication.',
     ancientUses: 'Temple offerings, jewelry, pigment.',
     commonUses: 'Communication, wisdom teachings, throat healing.',
-    icon: Gem,
+    icon: 'Gem',
     isCrossCultural: false
   },
   {
@@ -446,7 +547,7 @@ const stones = [
     healing: 'Joy, abundance, emotional healing.',
     ancientUses: 'Jewelry, amulets, temple offerings.',
     commonUses: 'Heart healing, joy manifestation, depression aid.',
-    icon: Leaf,
+    icon: 'Leaf',
     isCrossCultural: false
   },
   {
@@ -461,7 +562,7 @@ const stones = [
     healing: 'Life force, blood circulation, protection from evil.',
     ancientUses: 'Carved objects, seals, lacquerware, amulets.',
     commonUses: 'Prosperity grids, life force activation (use with care - toxic).',
-    icon: Flame,
+    icon: 'Flame',
     isCrossCultural: false
   },
   {
@@ -476,7 +577,7 @@ const stones = [
     healing: 'Abundance, joy, personal power.',
     ancientUses: 'Jewelry, intaglios, royal adornment.',
     commonUses: 'Wealth manifestation, solar plexus healing, joy work.',
-    icon: SunIcon,
+    icon: 'SunIcon',
     isCrossCultural: false
   },
   {
@@ -491,7 +592,7 @@ const stones = [
     healing: 'Healing, clarity, amplification of energy.',
     ancientUses: 'Crystal balls for divination, healing rituals, Shinto rituals.',
     commonUses: 'Master healer, energy amplification, programming.',
-    icon: Sparkles,
+    icon: 'Sparkles',
     isCrossCultural: true
   },
   {
@@ -506,7 +607,7 @@ const stones = [
     healing: 'Protection at sea, fertility, blood purification.',
     ancientUses: 'Jewelry, combs, hairpins, amulets for sailors.',
     commonUses: 'Sea protection, fertility support, root chakra.',
-    icon: Waves,
+    icon: 'Waves',
     isCrossCultural: false
   },
   {
@@ -521,7 +622,7 @@ const stones = [
     healing: 'Courage, energy, vitality.',
     ancientUses: 'Astrological amulets, jewelry.',
     commonUses: 'Courage rituals, vitality boosts, astrological wear.',
-    icon: Flame,
+    icon: 'Flame',
     isCrossCultural: false
   },
   {
@@ -536,13 +637,9 @@ const stones = [
     healing: 'Purity, clarity, spiritual healing.',
     ancientUses: 'Shinto rituals, amulets, crystal balls.',
     commonUses: 'Spiritual healing, clarity rituals, crown chakra.',
-    icon: Sparkles,
+    icon: 'Sparkles',
     isCrossCultural: false
-  }
-]
-
-// ============ SECTION 2: D - G (15 stones) ============
-const stonesDToG = [
+  },
   {
     name: 'Danburite',
     civilization: 'Mexican',
@@ -555,7 +652,7 @@ const stonesDToG = [
     healing: 'Connects to angelic realms, opens heart to divine love, high vibration cleansing.',
     ancientUses: 'Discovered in 1839, used in Mexican spiritual ceremonies.',
     commonUses: 'Angel communication, crown chakra activation, high-vibration meditation.',
-    icon: Heart,
+    icon: 'Heart',
     isCrossCultural: false
   },
   {
@@ -570,7 +667,7 @@ const stonesDToG = [
     healing: 'Protection, strength, unbreakable love, amplifies energy.',
     ancientUses: 'Royal jewelry, signet rings, bridal gifts, astrological amulets.',
     commonUses: 'Engagement rings, wealth manifestation, crown chakra, energy amplification.',
-    icon: Diamond,
+    icon: 'Diamond',
     isCrossCultural: true
   },
   {
@@ -585,7 +682,7 @@ const stonesDToG = [
     healing: 'Enhances mental clarity, patience, organizational skills.',
     ancientUses: 'Discovered in 1881, used in French spiritual practices.',
     commonUses: 'ADHD support, study aid, mental organization, third eye activation.',
-    icon: Brain,
+    icon: 'Brain',
     isCrossCultural: false
   },
   {
@@ -600,7 +697,7 @@ const stonesDToG = [
     healing: 'Love, beauty, emotional healing, memory enhancement, eye health.',
     ancientUses: 'Jewelry for Aphrodite priestesses, astrological jewelry, temple inlays, Ayurvedic medicine.',
     commonUses: 'Heart chakra healing, love attraction, memory aid, luxury jewelry.',
-    icon: Heart,
+    icon: 'Heart',
     isCrossCultural: true
   },
   {
@@ -615,7 +712,7 @@ const stonesDToG = [
     healing: 'Releases blockages, manifests desires, accelerates personal growth.',
     ancientUses: 'Used in European and African spiritual practices.',
     commonUses: 'Manifestation work, releasing limiting beliefs, growth acceleration.',
-    icon: Target,
+    icon: 'Target',
     isCrossCultural: false
   },
   {
@@ -630,7 +727,7 @@ const stonesDToG = [
     healing: 'Protection, courage, ignites inner fire, creativity.',
     ancientUses: 'Aztec warrior amulets, ceremonial objects.',
     commonUses: 'Creativity blocks, courage rituals, sacral chakra activation.',
-    icon: Flame,
+    icon: 'Flame',
     isCrossCultural: false
   },
   {
@@ -645,7 +742,7 @@ const stonesDToG = [
     healing: 'Ignites passion, enhances creativity, supports transformation.',
     ancientUses: 'Aztec and Mayan ceremonial stones, offerings to fire gods.',
     commonUses: 'Creative work, passion revival, sacral chakra healing.',
-    icon: Flame,
+    icon: 'Flame',
     isCrossCultural: false
   },
   {
@@ -660,7 +757,7 @@ const stonesDToG = [
     healing: 'Physical healing, mental focus, emotional growth.',
     ancientUses: 'Carved into scarabs, used in Egyptian healing temples.',
     commonUses: 'Study aid, focus enhancement, heart healing.',
-    icon: Leaf,
+    icon: 'Leaf',
     isCrossCultural: false
   },
   {
@@ -675,7 +772,7 @@ const stonesDToG = [
     healing: 'Enhances intuition, protects from mental manipulation, improves focus.',
     ancientUses: 'Roman wine goblets (carved), amulets.',
     commonUses: 'Third eye activation, protection from negative thoughts, study sessions.',
-    icon: Eye,
+    icon: 'Eye',
     isCrossCultural: false
   },
   {
@@ -690,7 +787,7 @@ const stonesDToG = [
     healing: 'Strength, protection, guides the lost, helps overcome challenges.',
     ancientUses: 'Jewelry, intaglios, carved cameos, guide for the underworld.',
     commonUses: 'Root chakra grounding, persistence rituals, protection during travel.',
-    icon: Flame,
+    icon: 'Flame',
     isCrossCultural: false
   },
   {
@@ -705,7 +802,7 @@ const stonesDToG = [
     healing: 'Boosts ambition, energy, motivation, success attraction.',
     ancientUses: 'Venetian glassmakers created in 17th century for alchemy.',
     commonUses: 'Success grids, motivation boost, solar plexus activation.',
-    icon: Star,
+    icon: 'Star',
     isCrossCultural: false
   },
   {
@@ -720,7 +817,7 @@ const stonesDToG = [
     healing: 'Neutralizes negative karma, protection, grounds excess energy.',
     ancientUses: 'Astrological amulets, Vedic rituals.',
     commonUses: 'Astrological jewelry (Rahu), karma clearing, grounding.',
-    icon: Shield,
+    icon: 'Shield',
     isCrossCultural: false
   },
   {
@@ -735,7 +832,7 @@ const stonesDToG = [
     healing: 'Earth connection, healing, rain magic, fertility of land.',
     ancientUses: 'Jewelry, amulets, ritual objects for earth ceremonies.',
     commonUses: 'Earth connection, heart healing, nature magic, gardening.',
-    icon: Leaf,
+    icon: 'Leaf',
     isCrossCultural: false
   },
   {
@@ -750,13 +847,9 @@ const stonesDToG = [
     healing: 'Heart healing, courage, emotional growth, physical vitality.',
     ancientUses: 'Brazilian indigenous healing ceremonies, shamanic tools.',
     commonUses: 'Heart chakra healing, emotional release, plant growth (in gardens).',
-    icon: Leaf,
+    icon: 'Leaf',
     isCrossCultural: false
-  }
-]
-
-// ============ SECTION 3: H - L (18 stones) ============
-const stonesHtoL = [
+  },
   {
     name: 'Hematite',
     civilization: 'Greek/Persian/Mesoamerican',
@@ -769,7 +862,7 @@ const stonesHtoL = [
     healing: 'Grounding, courage in battle, blood-related healing, mirror of truth.',
     ancientUses: 'Armor polish, amulets for soldiers, medical powder, polished mirrors, seals.',
     commonUses: 'Grounding meditation, EMF protection, blood circulation support, rooting energy.',
-    icon: Shield,
+    icon: 'Shield',
     isCrossCultural: true
   },
   {
@@ -784,7 +877,7 @@ const stonesHtoL = [
     healing: 'Emotional healing, joy restoration, connection to higher self.',
     ancientUses: 'Mined historically for zinc, used in folk healing.',
     commonUses: 'Emotional release, joy manifestation, throat-heart connection.',
-    icon: Heart,
+    icon: 'Heart',
     isCrossCultural: false
   },
   {
@@ -799,7 +892,7 @@ const stonesHtoL = [
     healing: 'Protection, karma clearing, grounding, elevates consciousness.',
     ancientUses: 'Astrological rings, amulets for Rahu-related issues.',
     commonUses: 'Astrological jewelry, karma clearing, root chakra grounding.',
-    icon: Shield,
+    icon: 'Shield',
     isCrossCultural: false
   },
   {
@@ -814,7 +907,7 @@ const stonesHtoL = [
     healing: 'Calms overactive mind, patience, spiritual awareness, sleep aid.',
     ancientUses: 'Discovered in 1868, used in calming rituals.',
     commonUses: 'Anxiety relief, sleep aid, patience cultivation, crown chakra.',
-    icon: Brain,
+    icon: 'Brain',
     isCrossCultural: false
   },
   {
@@ -829,7 +922,7 @@ const stonesHtoL = [
     healing: 'Enhances inner vision, navigation (physical and spiritual), intuition.',
     ancientUses: 'Viking sunstones for navigation at sea, shamanic vision quests.',
     commonUses: 'Third eye activation, spiritual navigation, intuition development.',
-    icon: Compass,
+    icon: 'Compass',
     isCrossCultural: false
   },
   {
@@ -844,7 +937,7 @@ const stonesHtoL = [
     healing: 'Purity, health, longevity, status elevation.',
     ancientUses: 'Magatama beads, jewelry, ritual objects, burial goods.',
     commonUses: 'Heart healing, purity rituals, longevity practices, jewelry.',
-    icon: Leaf,
+    icon: 'Leaf',
     isCrossCultural: false
   },
   {
@@ -859,7 +952,7 @@ const stonesHtoL = [
     healing: 'Longevity, kidney health, protection of the dead, virtue cultivation.',
     ancientUses: 'Burial suits, ritual objects, bi discs, cong tubes, imperial regalia.',
     commonUses: 'Heart healing, longevity practices, feng shui, ancestor connection.',
-    icon: Crown,
+    icon: 'Crown',
     isCrossCultural: true
   },
   {
@@ -874,7 +967,7 @@ const stonesHtoL = [
     healing: 'Prosperity, grace, protection, longevity, life force.',
     ancientUses: 'Masks, jewelry, ritual offerings, burial goods, imperial regalia.',
     commonUses: 'Prosperity grids, heart healing, luxury jewelry, feng shui.',
-    icon: Star,
+    icon: 'Star',
     isCrossCultural: true
   },
   {
@@ -889,7 +982,7 @@ const stonesHtoL = [
     healing: 'Nurturing, protection, physical strength, earth connection.',
     ancientUses: 'Amulets for farmers, carved intaglios, protective talismans.',
     commonUses: 'Grounding, protection, earth connection, strength rituals.',
-    icon: Shield,
+    icon: 'Shield',
     isCrossCultural: false
   },
   {
@@ -904,7 +997,7 @@ const stonesHtoL = [
     healing: 'Circulation, grounding, protection for pregnant women, maternal bonding.',
     ancientUses: 'Used in amulets for pregnancy, carved into heart-shaped stones.',
     commonUses: 'Pregnancy support, maternal connection, root chakra, grounding.',
-    icon: Heart,
+    icon: 'Heart',
     isCrossCultural: false
   },
   {
@@ -919,7 +1012,7 @@ const stonesHtoL = [
     healing: 'Protection, grounding, physical strength, courage.',
     ancientUses: 'Soldier amulets, seal stones, carved cameos.',
     commonUses: 'Grounding meditation, protection grids, earth connection.',
-    icon: Shield,
+    icon: 'Shield',
     isCrossCultural: false
   },
   {
@@ -934,7 +1027,7 @@ const stonesHtoL = [
     healing: 'Peace, serenity, connection to nature, emotional calm.',
     ancientUses: 'African tribal rituals, fertility ceremonies.',
     commonUses: 'Nature connection, emotional calming, heart chakra healing.',
-    icon: Circle,
+    icon: 'Circle',
     isCrossCultural: false
   },
   {
@@ -949,7 +1042,7 @@ const stonesHtoL = [
     healing: 'Aligns all chakras, deep meditation, truth speaking, no negative energy retention.',
     ancientUses: 'Tibetan meditation tools, temple offerings.',
     commonUses: 'Chakra alignment, meditation aid, truth enhancement, never needs cleansing.',
-    icon: InfinityIcon,
+    icon: 'InfinityIcon',
     isCrossCultural: false
   },
   {
@@ -964,7 +1057,7 @@ const stonesHtoL = [
     healing: 'Enhances magic, supports transformation, protects aura, raises consciousness.',
     ancientUses: 'Inuit believed it was frozen northern lights, Celtic druid tools.',
     commonUses: 'Magic work, transformation support, aura protection, creativity.',
-    icon: Sparkles,
+    icon: 'Sparkles',
     isCrossCultural: false
   },
   {
@@ -979,7 +1072,7 @@ const stonesHtoL = [
     healing: 'Enhances spiritual vision, truth, divine connection. Blue relieves anxiety.',
     ancientUses: 'Buried with royalty, ground into pigment, carved into scarabs and amulets, temple offerings.',
     commonUses: 'Third eye activation, truth speaking, royal energy, anxiety relief.',
-    icon: Star,
+    icon: 'Star',
     isCrossCultural: true
   },
   {
@@ -994,7 +1087,7 @@ const stonesHtoL = [
     healing: 'Ocean calm, peace, clear communication, emotional release.',
     ancientUses: 'Discovered in 1916, used by Taino people in Caribbean.',
     commonUses: 'Throat chakra healing, peace cultivation, emotional release, stress relief.',
-    icon: Droplet,
+    icon: 'Droplet',
     isCrossCultural: false
   },
   {
@@ -1009,7 +1102,7 @@ const stonesHtoL = [
     healing: 'Spiritual protection, intuition, past life recall, spirituality enhancement.',
     ancientUses: 'Astrological amulets for Ketu, Vedic rituals.',
     commonUses: 'Astrological jewelry, spiritual protection, past life work.',
-    icon: Eye,
+    icon: 'Eye',
     isCrossCultural: false
   },
   {
@@ -1024,13 +1117,9 @@ const stonesHtoL = [
     healing: 'Accesses ancient wisdom, connects to Lemurian consciousness, high vibration healing.',
     ancientUses: 'Legendary crystal grids in Lemuria, healing temples.',
     commonUses: 'Past life recall, meditation, high-vibration grids, ancient wisdom access.',
-    icon: BookOpen,
+    icon: 'BookOpen',
     isCrossCultural: false
-  }
-]
-
-// ============ SECTION 4: M - R (26 stones) ============
-const stonesMtoR = [
+  },
   {
     name: 'Malachite',
     civilization: 'Egyptian/Chinese',
@@ -1043,7 +1132,7 @@ const stonesMtoR = [
     healing: 'Healing of the soul, transformation, afterlife protection, emotional balance.',
     ancientUses: 'Eye makeup (kohl), tomb paintings, protective amulets, temple offerings.',
     commonUses: 'Transformation work, heart healing, protection, emotional release.',
-    icon: Sparkles,
+    icon: 'Sparkles',
     isCrossCultural: true
   },
   {
@@ -1058,7 +1147,7 @@ const stonesMtoR = [
     healing: 'Grounding, vitality, strength, connection to Australian earth.',
     ancientUses: 'Aboriginal ceremonial stones, traded among tribes.',
     commonUses: 'Grounding meditation, vitality boost, ancestral connection.',
-    icon: Mountain,
+    icon: 'Mountain',
     isCrossCultural: false
   },
   {
@@ -1073,7 +1162,7 @@ const stonesMtoR = [
     healing: 'Intuition, dreams, fertility, love, emotional balance.',
     ancientUses: 'Jewelry, amulets for travelers, offerings to moon deities.',
     commonUses: 'Moon rituals, intuition development, fertility support, dream work.',
-    icon: Moon,
+    icon: 'Moon',
     isCrossCultural: true
   },
   {
@@ -1088,7 +1177,7 @@ const stonesMtoR = [
     healing: 'Divine love, compassion, emotional healing, attracts soulmate love.',
     ancientUses: 'Discovered in 1910, used in love rituals.',
     commonUses: 'Heart chakra healing, attracting love, compassion cultivation.',
-    icon: Heart,
+    icon: 'Heart',
     isCrossCultural: false
   },
   {
@@ -1103,7 +1192,7 @@ const stonesMtoR = [
     healing: 'Longevity, kidney health, protection of the dead, virtue.',
     ancientUses: 'Burial suits, ritual objects, bi discs, cong tubes.',
     commonUses: 'Heart healing, feng shui, ancestor connection, longevity.',
-    icon: Crown,
+    icon: 'Crown',
     isCrossCultural: false
   },
   {
@@ -1118,7 +1207,7 @@ const stonesMtoR = [
     healing: 'Protection from negative energy, self-reflection, shadow work, divination.',
     ancientUses: 'Ritual mirrors, ceremonial knives, tomb protection, sacrificial tools.',
     commonUses: 'Shadow work, protection, truth reflection, grounding negative energy.',
-    icon: Shield,
+    icon: 'Shield',
     isCrossCultural: true
   },
   {
@@ -1133,7 +1222,7 @@ const stonesMtoR = [
     healing: 'Divination, protection, reflection of truth, shadow integration.',
     ancientUses: 'Ritual mirrors, sacrificial knives, sharp tools, divination scrying.',
     commonUses: 'Divination, scrying, shadow work, protection.',
-    icon: Flame,
+    icon: 'Flame',
     isCrossCultural: false
   },
   {
@@ -1148,7 +1237,7 @@ const stonesMtoR = [
     healing: 'Protection, self-mastery, overcoming grief, willpower.',
     ancientUses: 'Cameos, intaglios, protective amulets, Roman seals.',
     commonUses: 'Protection, grief support, willpower enhancement, grounding.',
-    icon: Shield,
+    icon: 'Shield',
     isCrossCultural: false
   },
   {
@@ -1163,7 +1252,7 @@ const stonesMtoR = [
     healing: 'Hope, purity, emotional healing, amplifies feelings.',
     ancientUses: 'Aboriginal dreamtime stories, traded as sacred stone.',
     commonUses: 'Emotional healing, hope manifestation, creative inspiration.',
-    icon: Rainbow,
+    icon: 'Rainbow',
     isCrossCultural: false
   },
   {
@@ -1178,7 +1267,7 @@ const stonesMtoR = [
     healing: 'Hope, purity, emotional balance, amplifies positive emotions.',
     ancientUses: 'Temple offerings, royal jewelry.',
     commonUses: 'Emotional healing, hope manifestation, heart chakra.',
-    icon: Gift,
+    icon: 'Gift',
     isCrossCultural: false
   },
   {
@@ -1193,7 +1282,7 @@ const stonesMtoR = [
     healing: 'Love, purity, marital harmony, emotional balance, fertility.',
     ancientUses: 'Wedding jewelry, offerings to Aphrodite, royal adornment.',
     commonUses: 'Heart chakra healing, wedding jewelry, purity rituals, emotional balance.',
-    icon: Circle,
+    icon: 'Circle',
     isCrossCultural: true
   },
   {
@@ -1208,7 +1297,7 @@ const stonesMtoR = [
     healing: 'Vitality, protection from nightmares, success, liver health.',
     ancientUses: 'Jewelry, temple offerings, amulets for protection.',
     commonUses: 'Solar plexus healing, vitality boost, success manifestation.',
-    icon: SunIcon,
+    icon: 'SunIcon',
     isCrossCultural: false
   },
   {
@@ -1223,7 +1312,7 @@ const stonesMtoR = [
     healing: 'Spiritual protection, calm, connection to higher realms, reduces anxiety.',
     ancientUses: 'Discovered in 1800, used in crystal healing.',
     commonUses: 'Crown chakra activation, anxiety relief, spiritual protection.',
-    icon: Shield,
+    icon: 'Shield',
     isCrossCultural: false
   },
   {
@@ -1238,7 +1327,7 @@ const stonesMtoR = [
     healing: 'Enhances vision, willpower, sees through chaos, inner strength.',
     ancientUses: 'Discovered in 1962, used in African shamanic rituals.',
     commonUses: 'Third eye activation, willpower enhancement, clarity in chaos.',
-    icon: Cloud,
+    icon: 'Cloud',
     isCrossCultural: false
   },
   {
@@ -1253,7 +1342,7 @@ const stonesMtoR = [
     healing: 'Unconditional love, prophecy, healing, dream recall.',
     ancientUses: 'Discovered in 1788, used in African healing ceremonies.',
     commonUses: 'Heart healing, prophetic dreams, unconditional love cultivation.',
-    icon: Heart,
+    icon: 'Heart',
     isCrossCultural: false
   },
   {
@@ -1268,7 +1357,7 @@ const stonesMtoR = [
     healing: 'Divination, protection, attracting wealth, abundance manifestation.',
     ancientUses: 'Ritual mirrors, mosaics, jewelry, divination tools.',
     commonUses: 'Abundance manifestation, solar plexus activation, divination.',
-    icon: Star,
+    icon: 'Star',
     isCrossCultural: false
   },
   {
@@ -1283,7 +1372,7 @@ const stonesMtoR = [
     healing: 'Healing, vision, magic, energy amplification.',
     ancientUses: 'Crystal balls, healing temples, scarab inlays.',
     commonUses: 'Master healer, energy amplification, programming.',
-    icon: Sparkles,
+    icon: 'Sparkles',
     isCrossCultural: false
   },
   {
@@ -1298,7 +1387,7 @@ const stonesMtoR = [
     healing: 'Crystal vision, divination, spiritual sight.',
     ancientUses: 'Scrying crystals, shamanic tools, temple offerings.',
     commonUses: 'Divination, scrying, spiritual vision, crown chakra.',
-    icon: Eye,
+    icon: 'Eye',
     isCrossCultural: false
   },
   {
@@ -1313,7 +1402,7 @@ const stonesMtoR = [
     healing: 'Circulation, grounding, protection for pregnant women, vitality.',
     ancientUses: 'Amulets for pregnancy, carved heart-shaped stones.',
     commonUses: 'Pregnancy support, root chakra, grounding, vitality.',
-    icon: Heart,
+    icon: 'Heart',
     isCrossCultural: false
   },
   {
@@ -1328,7 +1417,7 @@ const stonesMtoR = [
     healing: 'Love, self-worth, emotional healing, inner child work.',
     ancientUses: 'Incan ceremonial stones, believed to be blood of Incan rulers.',
     commonUses: 'Inner child healing, self-worth, heart chakra, emotional release.',
-    icon: Heart,
+    icon: 'Heart',
     isCrossCultural: false
   },
   {
@@ -1343,7 +1432,7 @@ const stonesMtoR = [
     healing: 'Compassion, forgiveness, emotional healing, releases past trauma.',
     ancientUses: 'Greek amulets for travelers, offerings to Aphrodite.',
     commonUses: 'Forgiveness work, compassion cultivation, emotional trauma release.',
-    icon: Heart,
+    icon: 'Heart',
     isCrossCultural: false
   },
   {
@@ -1358,7 +1447,7 @@ const stonesMtoR = [
     healing: 'Love, emotional healing, peace, self-love, harmony.',
     ancientUses: 'Jewelry, carvings, feng shui, temple offerings.',
     commonUses: 'Self-love, relationship healing, heart chakra, peace cultivation.',
-    icon: Heart,
+    icon: 'Heart',
     isCrossCultural: false
   },
   {
@@ -1373,13 +1462,9 @@ const stonesMtoR = [
     healing: 'Heart health, courage, success in battle, passion, vitality.',
     ancientUses: 'Royal regalia, temple offerings, astrological amulets.',
     commonUses: 'Passion manifestation, courage rituals, heart chakra, royal energy.',
-    icon: SunIcon,
+    icon: 'SunIcon',
     isCrossCultural: true
-  }
-]
-
-// ============ SECTION 5: S - Z (25 stones = 111 total) ============
-const stonesStoZ = [
+  },
   {
     name: 'Sapphire',
     civilization: 'Roman',
@@ -1392,7 +1477,7 @@ const stonesStoZ = [
     healing: 'Wisdom, divine connection, prophecy, mental clarity.',
     ancientUses: 'Oracle offerings, priestess jewelry, royal regalia.',
     commonUses: 'Third eye activation, wisdom enhancement, divine connection.',
-    icon: Star,
+    icon: 'Star',
     isCrossCultural: false
   },
   {
@@ -1407,7 +1492,7 @@ const stonesStoZ = [
     healing: 'Purification, clarity, angelic connection, never holds negative energy.',
     ancientUses: 'Temple windows (translucent), moon rituals, purification tools.',
     commonUses: 'Energy cleansing, crown chakra activation, meditation, grid work.',
-    icon: Moon,
+    icon: 'Moon',
     isCrossCultural: false
   },
   {
@@ -1422,7 +1507,7 @@ const stonesStoZ = [
     healing: 'Rebirth, protection, serpent energy awakening, kundalini activation.',
     ancientUses: 'Amulets, scarabs, tomb offerings, ritual objects, jewelry.',
     commonUses: 'Kundalini work, rebirth rituals, protection, heart healing.',
-    icon: Shield,
+    icon: 'Shield',
     isCrossCultural: true
   },
   {
@@ -1437,7 +1522,7 @@ const stonesStoZ = [
     healing: 'Rebirth, transformation, snake power awakening.',
     ancientUses: 'Amulets, shrine offerings.',
     commonUses: 'Transformation work, kundalini activation.',
-    icon: Zap,
+    icon: 'Zap',
     isCrossCultural: false
   },
   {
@@ -1452,7 +1537,7 @@ const stonesStoZ = [
     healing: 'Rebirth, transformation, serpent magic, shamanic journeying.',
     ancientUses: 'Ritual objects, jewelry, carvings, shamanic tools.',
     commonUses: 'Shamanic work, transformation, serpent energy.',
-    icon: Feather,
+    icon: 'Feather',
     isCrossCultural: false
   },
   {
@@ -1467,7 +1552,7 @@ const stonesStoZ = [
     healing: 'Protection from EMF, purification of water, grounding, detoxification.',
     ancientUses: 'Russian folk medicine, water purification, healing baths.',
     commonUses: 'EMF protection (phone/computer), water purification, grounding.',
-    icon: Shield,
+    icon: 'Shield',
     isCrossCultural: false
   },
   {
@@ -1482,7 +1567,7 @@ const stonesStoZ = [
     healing: 'Grounding, protection, ancestor connection, releases negativity.',
     ancientUses: 'Funerary objects, amulets, ancestor rituals.',
     commonUses: 'Grounding meditation, ancestor connection, releasing negativity.',
-    icon: Cloud,
+    icon: 'Cloud',
     isCrossCultural: false
   },
   {
@@ -1497,7 +1582,7 @@ const stonesStoZ = [
     healing: 'Logic, truth, intuition, rational thinking, emotional balance.',
     ancientUses: 'Carved amulets, temple offerings, pigment.',
     commonUses: 'Third eye activation, study aid, truth speaking, logic enhancement.',
-    icon: Brain,
+    icon: 'Brain',
     isCrossCultural: false
   },
   {
@@ -1512,7 +1597,7 @@ const stonesStoZ = [
     healing: 'Magic, transformation, joy, auric protection, creativity.',
     ancientUses: 'Finnish shamanic tools, believed to be frozen aurora borealis.',
     commonUses: 'Joy manifestation, magic work, transformation support.',
-    icon: Sparkles,
+    icon: 'Sparkles',
     isCrossCultural: false
   },
   {
@@ -1527,7 +1612,7 @@ const stonesStoZ = [
     healing: 'Divine love, protection, emotional healing, spiritual connection.',
     ancientUses: 'Discovered in 1944, used in African healing.',
     commonUses: 'Divine love connection, protection, crown chakra.',
-    icon: Heart,
+    icon: 'Heart',
     isCrossCultural: false
   },
   {
@@ -1542,7 +1627,7 @@ const stonesStoZ = [
     healing: 'Vitality, joy, personal power, leadership, independence.',
     ancientUses: 'Norse navigation at sea (sunstone), Egyptian sun offerings.',
     commonUses: 'Solar plexus healing, joy manifestation, leadership activation.',
-    icon: SunIcon,
+    icon: 'SunIcon',
     isCrossCultural: false
   },
   {
@@ -1557,7 +1642,7 @@ const stonesStoZ = [
     healing: 'Transformation, communication, spiritual awakening, high vibration.',
     ancientUses: 'Discovered in 1967, Maasai traditions.',
     commonUses: 'Third eye activation, throat chakra, transformation work.',
-    icon: Eye,
+    icon: 'Eye',
     isCrossCultural: false
   },
   {
@@ -1572,7 +1657,7 @@ const stonesStoZ = [
     healing: 'Courage, protection, insight, balance of yin-yang, practical mind.',
     ancientUses: 'Carved figures, jewelry, amulets, feng shui.',
     commonUses: 'Courage rituals, protection grids, insight enhancement.',
-    icon: Eye,
+    icon: 'Eye',
     isCrossCultural: false
   },
   {
@@ -1587,7 +1672,7 @@ const stonesStoZ = [
     healing: 'Strength, intellect, manifestation, abundance, truth.',
     ancientUses: 'Jewelry, intaglios, cameos, Roman seals.',
     commonUses: 'Manifestation, solar plexus healing, abundance attraction.',
-    icon: Crown,
+    icon: 'Crown',
     isCrossCultural: false
   },
   {
@@ -1602,7 +1687,7 @@ const stonesStoZ = [
     healing: 'Protection from EMF and negative energy, grounding, shadow work.',
     ancientUses: 'Discovered in 1500s, used in protection amulets.',
     commonUses: 'EMF protection, grounding, shadow work, root chakra.',
-    icon: Shield,
+    icon: 'Shield',
     isCrossCultural: false
   },
   {
@@ -1617,7 +1702,7 @@ const stonesStoZ = [
     healing: 'Balance of heart, love, joy, emotional healing, compassion.',
     ancientUses: 'Brazilian indigenous jewelry, love offerings.',
     commonUses: 'Heart healing, balance, love attraction, emotional release.',
-    icon: Heart,
+    icon: 'Heart',
     isCrossCultural: false
   },
   {
@@ -1632,7 +1717,7 @@ const stonesStoZ = [
     healing: 'Immune system, anti-inflammatory, protection from evil, brings good fortune.',
     ancientUses: 'Temple offerings, jewelry, divine protection, mosaics, masks, royal regalia.',
     commonUses: 'Throat chakra, protection amulet, good luck talisman, jewelry.',
-    icon: Droplet,
+    icon: 'Droplet',
     isCrossCultural: true
   },
   {
@@ -1647,7 +1732,7 @@ const stonesStoZ = [
     healing: 'Protection, victory in battle, royal favor, good fortune.',
     ancientUses: 'Royal regalia, jewelry, domes of palaces, amulets.',
     commonUses: 'Success rituals, protection, throat chakra.',
-    icon: Crown,
+    icon: 'Crown',
     isCrossCultural: false
   },
   {
@@ -1662,7 +1747,7 @@ const stonesStoZ = [
     healing: 'Balance of heart and root chakras, grounding, vision, emotional release.',
     ancientUses: 'Discovered in 1874, used in grounding rituals.',
     commonUses: 'Chakra balance, grounding, emotional release, vision work.',
-    icon: Target,
+    icon: 'Target',
     isCrossCultural: false
   },
   {
@@ -1677,7 +1762,7 @@ const stonesStoZ = [
     healing: 'Calm, peace, abundance, emotional balance, prosperity.',
     ancientUses: 'Carved amulets, tomb offerings, jewelry.',
     commonUses: 'Calm cultivation, abundance manifestation, heart healing.',
-    icon: Leaf,
+    icon: 'Leaf',
     isCrossCultural: false
   },
   {
@@ -1692,7 +1777,7 @@ const stonesStoZ = [
     healing: 'Wisdom, prosperity, marital happiness, good fortune.',
     ancientUses: 'Astrological jewelry, temple offerings, royal adornment.',
     commonUses: 'Prosperity manifestation, solar plexus healing, astrological wear.',
-    icon: Star,
+    icon: 'Star',
     isCrossCultural: false
   },
   {
@@ -1707,175 +1792,1903 @@ const stonesStoZ = [
     healing: 'Growth, joy, transformation, emotional healing, heart opening.',
     ancientUses: 'Discovered in 1805, used in African healing.',
     commonUses: 'Heart healing, growth work, joy manifestation.',
-    icon: Flower2,
+    icon: 'Flower2',
+    isCrossCultural: false
+  },
+// ============ ADDITIONAL STONES (103 more = 222 total) ============
+// Add these after your existing Zoisite entry
+
+  {
+    name: 'Agate (Blue Lace)',
+    civilization: 'Greek',
+    meaning: 'Calm, Communication, Peace',
+    color: 'Pale Blue with White Lace Patterns',
+    chakra: 'Throat',
+    frequency: '639 Hz',
+    deity: 'Athena',
+    symbol: 'Calm, Communication',
+    healing: 'Calms anxiety, enhances gentle communication, soothes inflammation.',
+    ancientUses: 'Jewelry, amulets for orators and public speakers.',
+    commonUses: 'Public speaking, anxiety relief, throat chakra healing.',
+    icon: 'Waves',
+    isCrossCultural: false
+  },
+  {
+    name: 'Agate (Moss)',
+    civilization: 'Celtic',
+    meaning: 'Nature, Growth, Abundance',
+    color: 'Clear with Green Moss-like Inclusions',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Earth Spirits, Nature Deities',
+    symbol: 'Nature, Growth',
+    healing: 'Connects to nature, attracts abundance, supports plant growth.',
+    ancientUses: 'Garden amulets, agricultural rituals.',
+    commonUses: 'Gardening, nature connection, abundance manifestation.',
+    icon: 'Leaf',
+    isCrossCultural: false
+  },
+  {
+    name: 'Agate (Tree)',
+    civilization: 'Indian',
+    meaning: 'Peace, Grounding, Stability',
+    color: 'White with Brown Dendritic Patterns',
+    chakra: 'Root',
+    frequency: '396 Hz',
+    deity: 'Earth Mothers',
+    symbol: 'Peace, Stability',
+    healing: 'Grounding, stability, peace, connection to ancestral lands.',
+    ancientUses: 'Meditation stones, grounding rituals.',
+    commonUses: 'Grounding meditation, home stability, peace cultivation.',
+    icon: 'Mountain',
+    isCrossCultural: false
+  },
+  {
+    name: 'Andesine',
+    civilization: 'South American',
+    meaning: 'Courage, Creativity, Passion',
+    color: 'Red-Orange to Green',
+    chakra: 'Sacral',
+    frequency: '417 Hz',
+    deity: 'Andean Spirits',
+    symbol: 'Courage, Passion',
+    healing: 'Ignites creativity, courage, passion for life.',
+    ancientUses: 'Shamanic rituals, ceremonial offerings.',
+    commonUses: 'Creative blocks, courage rituals, sacral chakra.',
+    icon: 'Flame',
+    isCrossCultural: false
+  },
+  {
+    name: 'Angelite',
+    civilization: 'Global',
+    meaning: 'Angelic Communication, Peace, Spiritual Awareness',
+    color: 'Pale Blue',
+    chakra: 'Throat, Third Eye',
+    frequency: '639 Hz',
+    deity: 'Angels, Archangels',
+    symbol: 'Angelic Wings, Peace',
+    healing: 'Connects to angelic realm, enhances spiritual communication, brings peace.',
+    ancientUses: 'Discovered in 1980s, used in spiritual ceremonies.',
+    commonUses: 'Angel communication, peaceful sleep, third eye activation.',
+    icon: 'Feather',
+    isCrossCultural: false
+  },
+  {
+    name: 'Anhydrite',
+    civilization: 'Global',
+    meaning: 'Meditation, Inner Peace, Spiritual Connection',
+    color: 'Pale Blue to Violet',
+    chakra: 'Crown, Third Eye',
+    frequency: '639 Hz',
+    deity: 'Spiritual Guides',
+    symbol: 'Peace, Meditation',
+    healing: 'Deep meditation, inner peace, spiritual connection.',
+    ancientUses: 'Meditation tools, spiritual rituals.',
+    commonUses: 'Meditation aid, anxiety relief, spiritual connection.',
+    icon: 'Moon',
+    isCrossCultural: false
+  },
+  {
+    name: 'Anorthite',
+    civilization: 'Greek',
+    meaning: 'Moon Energy, Intuition, Mystery',
+    color: 'White to Grey',
+    chakra: 'Third Eye',
+    frequency: '432 Hz',
+    deity: 'Selene, Hecate',
+    symbol: 'Moon, Mystery',
+    healing: 'Enhances intuition, moon magic, mystery work.',
+    ancientUses: 'Moon rituals, divination tools.',
+    commonUses: 'Moon work, intuition development, mystery schools.',
+    icon: 'Moon',
+    isCrossCultural: false
+  },
+  {
+    name: 'Apatite (Yellow)',
+    civilization: 'Global',
+    meaning: 'Manifestation, Intellect, Clarity',
+    color: 'Golden Yellow',
+    chakra: 'Solar Plexus',
+    frequency: '528 Hz',
+    deity: 'Universal Mind',
+    symbol: 'Manifestation, Clarity',
+    healing: 'Enhances manifestation, mental clarity, intellectual pursuits.',
+    ancientUses: 'Study aids, intellectual rituals.',
+    commonUses: 'Learning aid, manifestation work, mental clarity.',
+    icon: 'Target',
+    isCrossCultural: false
+  },
+  {
+    name: 'Apophyllite (Green)',
+    civilization: 'Indian',
+    meaning: 'Heart Healing, Nature Connection, Growth',
+    color: 'Pale Green',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Nature Spirits',
+    symbol: 'Heart, Nature',
+    healing: 'Heart healing, nature connection, emotional growth.',
+    ancientUses: 'Temple offerings, meditation tools.',
+    commonUses: 'Heart chakra, emotional release, nature connection.',
+    icon: 'Leaf',
+    isCrossCultural: false
+  },
+  {
+    name: 'Aqua Aura',
+    civilization: 'Modern (Man-made)',
+    meaning: 'Communication, Truth, Spiritual Expression',
+    color: 'Bright Blue',
+    chakra: 'Throat, Third Eye',
+    frequency: '639 Hz',
+    deity: 'Angels of Truth',
+    symbol: 'Truth, Expression',
+    healing: 'Enhances truth speaking, spiritual expression, communication.',
+    ancientUses: 'Modern alchemical creation (gold vapor on quartz).',
+    commonUses: 'Throat chakra, spiritual communication, public speaking.',
+    icon: 'Droplet',
+    isCrossCultural: false
+  },
+  {
+    name: 'Auralite',
+    civilization: 'Canadian',
+    meaning: 'Transformation, Alchemy, Spiritual Evolution',
+    color: 'Purple with Red/Brown Inclusions',
+    chakra: 'Crown, Third Eye',
+    frequency: '963 Hz',
+    deity: 'Earth Elders',
+    symbol: 'Transformation, Alchemy',
+    healing: 'Spiritual evolution, transformation, alchemical healing.',
+    ancientUses: 'Discovered 2000s, ancient Canadian earth energies.',
+    commonUses: 'Spiritual growth, transformation work, crown chakra.',
+    icon: 'Sparkles',
+    isCrossCultural: false
+  },
+  {
+    name: 'Aventurine (Blue)',
+    civilization: 'Global',
+    meaning: 'Communication, Clarity, Calm',
+    color: 'Pale Blue',
+    chakra: 'Throat',
+    frequency: '528 Hz',
+    deity: 'Ocean Spirits',
+    symbol: 'Communication, Calm',
+    healing: 'Calm communication, mental clarity, anxiety relief.',
+    ancientUses: 'Worry stones, communication amulets.',
+    commonUses: 'Throat chakra, anxiety relief, clear communication.',
+    icon: 'Waves',
+    isCrossCultural: false
+  },
+  {
+    name: 'Aventurine (Peach)',
+    civilization: 'Global',
+    meaning: 'Emotional Healing, Creativity, Nurturing',
+    color: 'Peach-Pink',
+    chakra: 'Sacral, Heart',
+    frequency: '528 Hz',
+    deity: 'Goddess of Love',
+    symbol: 'Healing, Nurturing',
+    healing: 'Emotional healing, creativity, self-nurturing.',
+    ancientUses: 'Fertility rituals, emotional healing ceremonies.',
+    commonUses: 'Inner child work, creativity, sacral chakra.',
+    icon: 'Heart',
+    isCrossCultural: false
+  },
+  {
+    name: 'Aventurine (Red)',
+    civilization: 'Tibetan',
+    meaning: 'Vitality, Motivation, Grounding',
+    color: 'Red-Brown',
+    chakra: 'Root',
+    frequency: '417 Hz',
+    deity: 'Fire Deities',
+    symbol: 'Vitality, Motivation',
+    healing: 'Boosts vitality, motivation, grounding energy.',
+    ancientUses: 'Warrior amulets, vitality rituals.',
+    commonUses: 'Physical energy, motivation, root chakra grounding.',
+    icon: 'Flame',
+    isCrossCultural: false
+  },
+  {
+    name: 'Azurite-Malachite',
+    civilization: 'Egyptian',
+    meaning: 'Transformation, Heart-Third Eye Integration',
+    color: 'Blue-Green',
+    chakra: 'Third Eye, Heart',
+    frequency: '528 Hz',
+    deity: 'Thoth, Hathor',
+    symbol: 'Integration, Transformation',
+    healing: 'Integrates heart and mind, deep transformation, intuition.',
+    ancientUses: 'Priestess stones, temple healing.',
+    commonUses: 'Heart-third eye connection, transformation work.',
+    icon: 'Sparkles',
+    isCrossCultural: false
+  },
+  {
+    name: 'Beryl',
+    civilization: 'Greek/Roman',
+    meaning: 'Clear Vision, Emotional Balance, Protection',
+    color: 'Pale Green to Blue',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Aphrodite, Venus',
+    symbol: 'Vision, Balance',
+    healing: 'Clear vision, emotional balance, protection on journeys.',
+    ancientUses: 'Lenses (clear vision), amulets, intaglios.',
+    commonUses: 'EYE health, emotional balance, travel protection.',
+    icon: 'Eye',
+    isCrossCultural: false
+  },
+  {
+    name: 'Beryllonite',
+    civilization: 'Global',
+    meaning: 'Divine Love, Heart Opening, Compassion',
+    color: 'Clear to White',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Angels of Love',
+    symbol: 'Love, Compassion',
+    healing: 'Opens heart to divine love, compassion, emotional healing.',
+    ancientUses: 'Discovered 1888, used in love rituals.',
+    commonUses: 'Heart chakra, compassion cultivation, love work.',
+    icon: 'Heart',
+    isCrossCultural: false
+  },
+  {
+    name: 'Biotite',
+    civilization: 'Global',
+    meaning: 'Grounding, Ancestral Memory, Stability',
+    color: 'Black to Dark Brown',
+    chakra: 'Root',
+    frequency: '396 Hz',
+    deity: 'Ancestors',
+    symbol: 'Grounding, Memory',
+    healing: 'Deep grounding, ancestral memory access, stability.',
+    ancientUses: 'Grounding rituals, burial offerings.',
+    commonUses: 'Ancestral work, grounding, stability.',
+    icon: 'Mountain',
+    isCrossCultural: false
+  },
+  {
+    name: 'Bismuth',
+    civilization: 'Modern (Man-made)',
+    meaning: 'Transformation, Alchemy, Adaptability',
+    color: 'Rainbow Iridescent',
+    chakra: 'All',
+    frequency: '432 Hz',
+    deity: 'Alchemists',
+    symbol: 'Transformation, Alchemy',
+    healing: 'Transformation, adaptability, alchemical change.',
+    ancientUses: 'Modern alchemical creation, industrial uses.',
+    commonUses: 'Change support, adaptability, manifestation work.',
+    icon: 'Rainbow',
+    isCrossCultural: false
+  },
+  {
+    name: 'Bloodstone (Indian)',
+    civilization: 'Indian',
+    meaning: 'Victory, Courage, Blood Purification',
+    color: 'Dark Green with Red Spots',
+    chakra: 'Root',
+    frequency: '417 Hz',
+    deity: 'Hanuman, Mars',
+    symbol: 'Victory, Courage',
+    healing: 'Victory in battle, courage, blood purification, athletic performance.',
+    ancientUses: 'Warrior amulets, athletic rituals.',
+    commonUses: 'Sports performance, courage rituals, blood health.',
+    icon: 'Target',
+    isCrossCultural: false
+  },
+  {
+    name: 'Boulder Opal',
+    civilization: 'Australian Aboriginal',
+    meaning: 'Earth Magic, Creativity, Hope',
+    color: 'Brown Rock with Rainbow Flashes',
+    chakra: 'Root, Heart',
+    frequency: '528 Hz',
+    deity: 'Rainbow Serpent',
+    symbol: 'Earth Magic, Hope',
+    healing: 'Earth connection, creativity, hope, emotional healing.',
+    ancientUses: 'Dreamtime stories, earth magic rituals.',
+    commonUses: 'Creativity, grounding, hope manifestation.',
+    icon: 'Mountain',
+    isCrossCultural: false
+  },
+  {
+    name: 'Brazilianite',
+    civilization: 'Brazilian',
+    meaning: 'Manifestation, Joy, Personal Power',
+    color: 'Yellow-Green',
+    chakra: 'Solar Plexus, Heart',
+    frequency: '528 Hz',
+    deity: 'Brazilian Nature Spirits',
+    symbol: 'Manifestation, Joy',
+    healing: 'Manifestation, joy, personal power activation.',
+    ancientUses: 'Discovered 1945, used in manifestation rituals.',
+    commonUses: 'Solar plexus activation, joy work, manifestation.',
+    icon: 'SunIcon',
+    isCrossCultural: false
+  },
+  {
+    name: 'Calcite (Blue)',
+    civilization: 'Greek',
+    meaning: 'Calm, Communication, Emotional Release',
+    color: 'Pale Blue',
+    chakra: 'Throat',
+    frequency: '639 Hz',
+    deity: 'Ocean Spirits',
+    symbol: 'Calm, Release',
+    healing: 'Calm, emotional release, gentle communication.',
+    ancientUses: 'Dream pillows, emotional healing.',
+    commonUses: 'Anxiety relief, emotional release, throat chakra.',
+    icon: 'Waves',
+    isCrossCultural: false
+  },
+  {
+    name: 'Calcite (Honey)',
+    civilization: 'Egyptian',
+    meaning: 'Abundance, Joy, Solar Energy',
+    color: 'Golden Yellow',
+    chakra: 'Solar Plexus',
+    frequency: '417 Hz',
+    deity: 'Ra',
+    symbol: 'Abundance, Joy',
+    healing: 'Abundance attraction, joy, solar energy activation.',
+    ancientUses: 'Temple offerings, abundance rituals.',
+    commonUses: 'Wealth manifestation, joy, solar plexus healing.',
+    icon: 'SunIcon',
+    isCrossCultural: false
+  },
+  {
+    name: 'Calcite (Mango)',
+    civilization: 'Global',
+    meaning: 'Creativity, Joy, Emotional Healing',
+    color: 'Orange-Yellow',
+    chakra: 'Sacral',
+    frequency: '417 Hz',
+    deity: 'Joy Spirits',
+    symbol: 'Joy, Creativity',
+    healing: 'Creativity, joy, emotional healing, sacral activation.',
+    ancientUses: 'Creativity rituals, celebration stones.',
+    commonUses: 'Creative block release, joy cultivation, sacral chakra.',
+    icon: 'Flame',
+    isCrossCultural: false
+  },
+  {
+    name: 'Calcite (Optical)',
+    civilization: 'Global',
+    meaning: 'Clear Vision, Amplification, Manifestation',
+    color: 'Clear-White',
+    chakra: 'Crown',
+    frequency: '963 Hz',
+    deity: 'Light Bearers',
+    symbol: 'Vision, Amplification',
+    healing: 'Clear vision, energy amplification, manifestation.',
+    ancientUses: 'Lenses, scrying tools, light rituals.',
+    commonUses: 'Manifestation, energy amplification, clear seeing.',
+    icon: 'Eye',
+    isCrossCultural: false
+  },
+  {
+    name: 'Calcite (Orange)',
+    civilization: 'Egyptian',
+    meaning: 'Creativity, Passion, Vitality',
+    color: 'Orange',
+    chakra: 'Sacral',
+    frequency: '417 Hz',
+    deity: 'Bastet',
+    symbol: 'Creativity, Vitality',
+    healing: 'Creativity, passion, vitality, sacral activation.',
+    ancientUses: 'Festival stones, creativity rituals.',
+    commonUses: 'Creative work, passion revival, sacral chakra.',
+    icon: 'Flame',
+    isCrossCultural: false
+  },
+  {
+    name: 'Calcite (Pink)',
+    civilization: 'Greek',
+    meaning: 'Self-Love, Emotional Healing, Peace',
+    color: 'Pale Pink',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Aphrodite',
+    symbol: 'Love, Peace',
+    healing: 'Self-love, emotional healing, inner peace.',
+    ancientUses: 'Love rituals, self-care practices.',
+    commonUses: 'Inner child healing, self-love, heart chakra.',
+    icon: 'Heart',
+    isCrossCultural: false
+  },
+  {
+    name: 'Calcite (Yellow)',
+    civilization: 'Roman',
+    meaning: 'Confidence, Willpower, Manifestation',
+    color: 'Pale Yellow',
+    chakra: 'Solar Plexus',
+    frequency: '417 Hz',
+    deity: 'Apollo',
+    symbol: 'Confidence, Will',
+    healing: 'Confidence, willpower, manifestation support.',
+    ancientUses: 'Confidence amulets, manifestation tools.',
+    commonUses: 'Self-confidence, willpower, solar plexus healing.',
+    icon: 'SunIcon',
+    isCrossCultural: false
+  },
+  {
+    name: 'Cavansite',
+    civilization: 'Indian',
+    meaning: 'Psychic Vision, Intuition, Communication',
+    color: 'Deep Blue',
+    chakra: 'Third Eye, Throat',
+    frequency: '432 Hz',
+    deity: 'Hindu Deities',
+    symbol: 'Vision, Intuition',
+    healing: 'Psychic vision, intuition enhancement, spirit communication.',
+    ancientUses: 'Discovered 1967, used in psychic development.',
+    commonUses: 'Third eye activation, psychic work, intuition.',
+    icon: 'Eye',
+    isCrossCultural: false
+  },
+  {
+    name: 'Celestine (Celestite)',
+    civilization: 'Greek',
+    meaning: 'Divine Communication, Peace, Angelic Connection',
+    color: 'Pale Blue',
+    chakra: 'Throat, Crown',
+    frequency: '639 Hz',
+    deity: 'Angels, Celestial Beings',
+    symbol: 'Divine Communication, Peace',
+    healing: 'Divine communication, peace, angelic connection.',
+    ancientUses: 'Temple offerings, divination tools.',
+    commonUses: 'Angel work, peaceful sleep, divine guidance.',
+    icon: 'Star',
+    isCrossCultural: false
+  },
+  {
+    name: 'Cerussite',
+    civilization: 'Global',
+    meaning: 'Spiritual Growth, Truth, Transformation',
+    color: 'Clear-White to Grey',
+    chakra: 'Crown',
+    frequency: '432 Hz',
+    deity: 'Truth Seekers',
+    symbol: 'Truth, Growth',
+    healing: 'Spiritual growth, truth seeking, transformation.',
+    ancientUses: 'Alchemical transformations, spiritual practices.',
+    commonUses: 'Spiritual development, truth work, transformation.',
+    icon: 'Sparkles',
+    isCrossCultural: false
+  },
+  {
+    name: 'Chalcopyrite',
+    civilization: 'Global',
+    meaning: 'Alchemy, Transformation, Magic',
+    color: 'Brassy Gold with Iridescence',
+    chakra: 'Solar Plexus, Third Eye',
+    frequency: '432 Hz',
+    deity: 'Alchemists',
+    symbol: 'Alchemy, Magic',
+    healing: 'Alchemical transformation, magic, manifestation.',
+    ancientUses: 'Alchemical experiments, magic rituals.',
+    commonUses: 'Transformation work, alchemy, magic practice.',
+    icon: 'Sparkles',
+    isCrossCultural: false
+  },
+  {
+    name: 'Chrome Diopside',
+    civilization: 'Siberian',
+    meaning: 'Heart Healing, Abundance, Nature',
+    color: 'Deep Green',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Siberian Earth Spirits',
+    symbol: 'Heart, Abundance',
+    healing: 'Heart healing, abundance, nature connection.',
+    ancientUses: 'Siberian shamanic rituals, heart healing.',
+    commonUses: 'Heart chakra, abundance manifestation, nature work.',
+    icon: 'Leaf',
+    isCrossCultural: false
+  },
+  {
+    name: 'Chrysoberyl',
+    civilization: 'Indian',
+    meaning: 'Clarity, Protection, Manifestation',
+    color: 'Yellow-Green',
+    chakra: 'Third Eye',
+    frequency: '432 Hz',
+    deity: 'Vedic Deities',
+    symbol: 'Clarity, Protection',
+    healing: 'Mental clarity, protection, manifestation support.',
+    ancientUses: 'Astrological amulets, protection stones.',
+    commonUses: 'Mental clarity, protection, manifestation.',
+    icon: 'Eye',
+    isCrossCultural: false
+  },
+  {
+    name: 'Cinnabar (Quartz)',
+    civilization: 'Chinese',
+    meaning: 'Life Force, Wealth, Protection',
+    color: 'Red Crystals on Clear Quartz',
+    chakra: 'Root, Sacral',
+    frequency: '417 Hz',
+    deity: 'Caishen',
+    symbol: 'Wealth, Life Force',
+    healing: 'Wealth attraction, life force activation, protection.',
+    ancientUses: 'Wealth amulets, life force rituals.',
+    commonUses: 'Prosperity grids, life force work (handle with care).',
+    icon: 'Flame',
+    isCrossCultural: false
+  },
+  {
+    name: 'Cobaltocalcite',
+    civilization: 'African',
+    meaning: 'Heart Healing, Joy, Emotional Release',
+    color: 'Pink with Purple',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Heart Spirits',
+    symbol: 'Heart, Joy',
+    healing: 'Heart healing, joy, emotional release, self-love.',
+    ancientUses: 'African heart healing ceremonies.',
+    commonUses: 'Heart chakra, emotional release, joy work.',
+    icon: 'Heart',
+    isCrossCultural: false
+  },
+  {
+    name: 'Colorado Topaz',
+    civilization: 'Native American',
+    meaning: 'Sun Energy, Manifestation, Abundance',
+    color: 'Golden Yellow',
+    chakra: 'Solar Plexus',
+    frequency: '528 Hz',
+    deity: 'Sun Spirits',
+    symbol: 'Sun, Abundance',
+    healing: 'Sun energy, manifestation, abundance attraction.',
+    ancientUses: 'Native American sun rituals, abundance ceremonies.',
+    commonUses: 'Manifestation, solar plexus healing, joy work.',
+    icon: 'SunIcon',
+    isCrossCultural: false
+  },
+  {
+    name: 'Creedite',
+    civilization: 'Mexican',
+    meaning: 'Spiritual Growth, Angelic Connection, Grace',
+    color: 'Purple to Orange',
+    chakra: 'Crown, Third Eye',
+    frequency: '639 Hz',
+    deity: 'Angels',
+    symbol: 'Grace, Growth',
+    healing: 'Spiritual growth, angelic connection, grace.',
+    ancientUses: 'Discovered 1916, Mexican spiritual ceremonies.',
+    commonUses: 'Angel communication, spiritual growth, grace work.',
+    icon: 'Feather',
+    isCrossCultural: false
+  },
+  {
+    name: 'Crocoite',
+    civilization: 'Australian',
+    meaning: 'Transformation, Manifestation, Alchemy',
+    color: 'Bright Orange-Red',
+    chakra: 'Sacral, Root',
+    frequency: '417 Hz',
+    deity: 'Alchemists',
+    symbol: 'Transformation, Alchemy',
+    healing: 'Transformation, manifestation, alchemical change.',
+    ancientUses: 'Discovered 1766, alchemical experiments.',
+    commonUses: 'Transformation work, manifestation, alchemy.',
+    icon: 'Flame',
+    isCrossCultural: false
+  },
+  {
+    name: 'Cuprite',
+    civilization: 'Egyptian',
+    meaning: 'Life Force, Passion, Vitality',
+    color: 'Deep Red',
+    chakra: 'Root',
+    frequency: '417 Hz',
+    deity: 'Isis',
+    symbol: 'Life Force, Passion',
+    healing: 'Life force activation, passion, vitality, blood health.',
+    ancientUses: 'Copper mining, life force rituals.',
+    commonUses: 'Vitality boost, passion work, root chakra.',
+    icon: 'Flame',
+    isCrossCultural: false
+  },
+  {
+    name: 'Danburite (Pink)',
+    civilization: 'Mexican',
+    meaning: 'Divine Love, Heart Opening, Compassion',
+    color: 'Pale Pink',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Angels of Love',
+    symbol: 'Love, Compassion',
+    healing: 'Divine love, heart opening, compassion, emotional healing.',
+    ancientUses: 'Mexican love rituals, heart ceremonies.',
+    commonUses: 'Heart chakra, love work, compassion cultivation.',
+    icon: 'Heart',
+    isCrossCultural: false
+  },
+  {
+    name: 'Datolite',
+    civilization: 'Global',
+    meaning: 'Heart Healing, Connection, Joy',
+    color: 'Green to White',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Heart Spirits',
+    symbol: 'Heart, Joy',
+    healing: 'Heart healing, connection to higher self, joy.',
+    ancientUses: 'Discovered 1806, heart healing rituals.',
+    commonUses: 'Emotional healing, heart chakra, joy work.',
+    icon: 'Heart',
+    isCrossCultural: false
+  },
+  {
+    name: 'Desert Rose',
+    civilization: 'African/Middle Eastern',
+    meaning: 'Grounding, Protection, Clarity',
+    color: 'Sand-Colored Crystal Rose',
+    chakra: 'Root',
+    frequency: '396 Hz',
+    deity: 'Desert Spirits',
+    symbol: 'Desert, Clarity',
+    healing: 'Grounding, protection, mental clarity, desert connection.',
+    ancientUses: 'Desert travel amulets, clarity rituals.',
+    commonUses: 'Grounding meditation, protection, mental clarity.',
+    icon: 'Flower2',
+    isCrossCultural: false
+  },
+  {
+    name: 'Dioptase',
+    civilization: 'Egyptian',
+    meaning: 'Heart Healing, Forgiveness, Emotional Release',
+    color: 'Bright Emerald Green',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Hathor',
+    symbol: 'Forgiveness, Healing',
+    healing: 'Deep heart healing, forgiveness, emotional release.',
+    ancientUses: 'Copper mining, heart healing rituals.',
+    commonUses: 'Forgiveness work, emotional trauma release, heart chakra.',
+    icon: 'Heart',
+    isCrossCultural: false
+  },
+  {
+    name: 'Dravite (Brown Tourmaline)',
+    civilization: 'Celtic',
+    meaning: 'Grounding, Protection, Ancestral Work',
+    color: 'Brown to Dark Brown',
+    chakra: 'Root',
+    frequency: '396 Hz',
+    deity: 'Earth Ancestors',
+    symbol: 'Grounding, Ancestors',
+    healing: 'Grounding, ancestral connection, protection.',
+    ancientUses: 'Ancestral rituals, grounding ceremonies.',
+    commonUses: 'Ancestral work, grounding, protection.',
+    icon: 'Mountain',
+    isCrossCultural: false
+  },
+  {
+    name: 'Ekanite',
+    civilization: 'Sri Lankan',
+    meaning: 'Radiance, Energy, Vitality',
+    color: 'Green to Brown',
+    chakra: 'Solar Plexus',
+    frequency: '417 Hz',
+    deity: 'Sun Spirits',
+    symbol: 'Radiance, Vitality',
+    healing: 'Radiant energy, vitality, solar plexus activation.',
+    ancientUses: 'Discovered 1953, radiant energy rituals.',
+    commonUses: 'Energy boost, vitality, solar plexus healing.',
+    icon: 'SunIcon',
+    isCrossCultural: false
+  },
+  {
+    name: 'Euclase',
+    civilization: 'Brazilian',
+    meaning: 'Spiritual Growth, Truth, Communication',
+    color: 'Pale Blue to Green',
+    chakra: 'Throat, Third Eye',
+    frequency: '432 Hz',
+    deity: 'Truth Spirits',
+    symbol: 'Truth, Growth',
+    healing: 'Spiritual growth, truth speaking, clear communication.',
+    ancientUses: 'Discovered 1792, truth rituals.',
+    commonUses: 'Throat chakra, third eye, truth work.',
+    icon: 'Eye',
+    isCrossCultural: false
+  },
+  {
+    name: 'Feldspar',
+    civilization: 'Global',
+    meaning: 'Creation, Manifestation, Earth Connection',
+    color: 'Various (Pink, White, Green)',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Earth Mothers',
+    symbol: 'Creation, Earth',
+    healing: 'Creativity, manifestation, earth connection.',
+    ancientUses: 'Pottery, creation rituals, earth offerings.',
+    commonUses: 'Creativity work, manifestation, grounding.',
+    icon: 'Gem',
+    isCrossCultural: false
+  },
+  {
+    name: 'Fuchsite',
+    civilization: 'Brazilian',
+    meaning: 'Heart Healing, Growth, Abundance',
+    color: 'Green with Sparkles',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Nature Spirits',
+    symbol: 'Growth, Abundance',
+    healing: 'Heart healing, growth, abundance, nature connection.',
+    ancientUses: 'Brazilian nature rituals, abundance ceremonies.',
+    commonUses: 'Heart chakra, abundance work, nature connection.',
+    icon: 'Leaf',
+    isCrossCultural: false
+  },
+  {
+    name: 'Garnet (Green - Tsavorite)',
+    civilization: 'African',
+    meaning: 'Abundance, Growth, Heart Healing',
+    color: 'Vibrant Green',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Earth Spirits',
+    symbol: 'Abundance, Growth',
+    healing: 'Abundance, heart healing, personal growth.',
+    ancientUses: 'African heart healing, abundance rituals.',
+    commonUses: 'Abundance manifestation, heart chakra, growth work.',
+    icon: 'Leaf',
+    isCrossCultural: false
+  },
+  {
+    name: 'Garnet (Orange - Spessartine)',
+    civilization: 'African',
+    meaning: 'Creativity, Vitality, Joy',
+    color: 'Orange-Red',
+    chakra: 'Sacral',
+    frequency: '417 Hz',
+    deity: 'Joy Spirits',
+    symbol: 'Creativity, Joy',
+    healing: 'Creativity, vitality, joy, sacral activation.',
+    ancientUses: 'Celebration stones, creativity rituals.',
+    commonUses: 'Creative work, joy manifestation, sacral chakra.',
+    icon: 'Flame',
+    isCrossCultural: false
+  },
+  {
+    name: 'Garnet (Red - Almandine)',
+    civilization: 'Greek/Roman',
+    meaning: 'Passion, Courage, Protection',
+    color: 'Deep Red',
+    chakra: 'Root',
+    frequency: '417 Hz',
+    deity: 'Ares, Mars',
+    symbol: 'Passion, Courage',
+    healing: 'Passion, courage, protection, vitality.',
+    ancientUses: 'Warrior amulets, protection stones.',
+    commonUses: 'Courage rituals, grounding, passion work.',
+    icon: 'Flame',
+    isCrossCultural: false
+  },
+  {
+    name: 'Garnet (Yellow - Topazolite)',
+    civilization: 'Italian',
+    meaning: 'Abundance, Joy, Solar Energy',
+    color: 'Yellow-Gold',
+    chakra: 'Solar Plexus',
+    frequency: '528 Hz',
+    deity: 'Sun Gods',
+    symbol: 'Abundance, Joy',
+    healing: 'Abundance, joy, solar energy activation.',
+    ancientUses: 'Sun rituals, abundance ceremonies.',
+    commonUses: 'Solar plexus healing, joy work, abundance.',
+    icon: 'SunIcon',
+    isCrossCultural: false
+  },
+  {
+    name: 'Goshenite',
+    civilization: 'Greek',
+    meaning: 'Purity, Truth, Moon Energy',
+    color: 'Clear-White',
+    chakra: 'Crown',
+    frequency: '963 Hz',
+    deity: 'Selene',
+    symbol: 'Purity, Truth',
+    healing: 'Purity, truth, moon energy, spiritual clarity.',
+    ancientUses: 'Moon rituals, purification ceremonies.',
+    commonUses: 'Purification, truth seeking, crown chakra.',
+    icon: 'Moon',
+    isCrossCultural: false
+  },
+  {
+    name: 'Greenockite',
+    civilization: 'Global',
+    meaning: 'Solar Energy, Vitality, Joy',
+    color: 'Yellow-Orange',
+    chakra: 'Solar Plexus',
+    frequency: '417 Hz',
+    deity: 'Sun Spirits',
+    symbol: 'Solar, Vitality',
+    healing: 'Solar energy, vitality, joy, personal power.',
+    ancientUses: 'Sun worship rituals, vitality ceremonies.',
+    commonUses: 'Solar plexus healing, joy work, energy boost.',
+    icon: 'SunIcon',
+    isCrossCultural: false
+  },
+  {
+    name: 'Halite (Himalayan Salt)',
+    civilization: 'Global',
+    meaning: 'Purification, Cleansing, Grounding',
+    color: 'Pink to White',
+    chakra: 'Root',
+    frequency: '396 Hz',
+    deity: 'Earth Mothers',
+    symbol: 'Purification, Grounding',
+    healing: 'Purification, energy cleansing, grounding.',
+    ancientUses: 'Salt caves, preservation, purification baths.',
+    commonUses: 'Space cleansing, salt lamps, grounding.',
+    icon: 'Gem',
+    isCrossCultural: false
+  },
+  {
+    name: 'Heliodor',
+    civilization: 'Greek',
+    meaning: 'Sun Stone, Abundance, Joy',
+    color: 'Yellow-Gold',
+    chakra: 'Solar Plexus',
+    frequency: '528 Hz',
+    deity: 'Helios',
+    symbol: 'Sun, Abundance',
+    healing: 'Sun energy, abundance, joy, personal power.',
+    ancientUses: 'Sun rituals, abundance ceremonies.',
+    commonUses: 'Solar plexus healing, joy work, manifestation.',
+    icon: 'SunIcon',
+    isCrossCultural: false
+  },
+  {
+    name: 'Hiddenite',
+    civilization: 'American',
+    meaning: 'Heart Healing, Love, Joy',
+    color: 'Pale Green to Yellow-Green',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Love Spirits',
+    symbol: 'Love, Joy',
+    healing: 'Heart healing, love attraction, joy, emotional release.',
+    ancientUses: 'Discovered 1879, heart healing ceremonies.',
+    commonUses: 'Heart chakra, love work, emotional healing.',
+    icon: 'Heart',
+    isCrossCultural: false
+  },
+  {
+    name: 'Hypersthene',
+    civilization: 'Global',
+    meaning: 'Grounding, Protection, Magical Barrier',
+    color: 'Black to Grey with Sheen',
+    chakra: 'Root',
+    frequency: '396 Hz',
+    deity: 'Protection Spirits',
+    symbol: 'Protection, Barrier',
+    healing: 'Protection, magical barrier, grounding, shielding.',
+    ancientUses: 'Protection amulets, magical barriers.',
+    commonUses: 'Protection grids, EMF shielding, grounding.',
+    icon: 'Shield',
+    isCrossCultural: false
+  },
+  {
+    name: 'Iceland Spar (Optical Calcite)',
+    civilization: 'Viking/Norse',
+    meaning: 'Clear Vision, Navigation, Clarity',
+    color: 'Clear-White',
+    chakra: 'Third Eye',
+    frequency: '432 Hz',
+    deity: 'Odin',
+    symbol: 'Vision, Navigation',
+    healing: 'Clear vision, spiritual navigation, mental clarity.',
+    ancientUses: 'Viking sunstones for navigation, scrying.',
+    commonUses: 'Third eye activation, clarity work, scrying.',
+    icon: 'Compass',
+    isCrossCultural: false
+  },
+  {
+    name: 'Idocrase (Vesuvianite)',
+    civilization: 'Italian',
+    meaning: 'Manifestation, Abundance, Creativity',
+    color: 'Green to Brown',
+    chakra: 'Heart, Solar Plexus',
+    frequency: '528 Hz',
+    deity: 'Earth Spirits',
+    symbol: 'Manifestation, Abundance',
+    healing: 'Manifestation, abundance, creativity, heart healing.',
+    ancientUses: 'Discovered near Mount Vesuvius, manifestation rituals.',
+    commonUses: 'Abundance work, creativity, manifestation.',
+    icon: 'Target',
+    isCrossCultural: false
+  },
+  {
+    name: 'Indicolite (Blue Tourmaline)',
+    civilization: 'Brazilian',
+    meaning: 'Communication, Truth, Spiritual Expression',
+    color: 'Deep Blue',
+    chakra: 'Throat',
+    frequency: '528 Hz',
+    deity: 'Truth Spirits',
+    symbol: 'Truth, Communication',
+    healing: 'Truth speaking, clear communication, spiritual expression.',
+    ancientUses: 'Brazilian shamanic communication tools.',
+    commonUses: 'Throat chakra, truth work, public speaking.',
+    icon: 'Eye',
+    isCrossCultural: false
+  },
+  {
+    name: 'Jade (Lavender)',
+    civilization: 'Chinese',
+    meaning: 'Spiritual Growth, Intuition, Peace',
+    color: 'Lavender-Purple',
+    chakra: 'Third Eye, Crown',
+    frequency: '432 Hz',
+    deity: 'Guan Yin',
+    symbol: 'Spirit, Peace',
+    healing: 'Spiritual growth, intuition, peace, crown activation.',
+    ancientUses: 'Imperial spiritual tools, meditation aids.',
+    commonUses: 'Third eye, spirituality, peace cultivation.',
+    icon: 'Crown',
+    isCrossCultural: false
+  },
+  {
+    name: 'Jade (Yellow)',
+    civilization: 'Chinese',
+    meaning: 'Abundance, Joy, Imperial Power',
+    color: 'Yellow-Gold',
+    chakra: 'Solar Plexus',
+    frequency: '528 Hz',
+    deity: 'Yu Huang (Jade Emperor)',
+    symbol: 'Abundance, Power',
+    healing: 'Abundance, joy, imperial power, solar activation.',
+    ancientUses: 'Imperial regalia, abundance rituals.',
+    commonUses: 'Wealth manifestation, solar plexus, joy work.',
+    icon: 'SunIcon',
+    isCrossCultural: false
+  },
+  {
+    name: 'Jasper (Brecciated)',
+    civilization: 'Roman',
+    meaning: 'Healing, Integration, Strength',
+    color: 'Red-Brown with Veins',
+    chakra: 'Root',
+    frequency: '417 Hz',
+    deity: 'Mars',
+    symbol: 'Strength, Healing',
+    healing: 'Physical healing, integration, strength, grounding.',
+    ancientUses: 'Healing amulets, strength rituals.',
+    commonUses: 'Physical healing, grounding, strength.',
+    icon: 'Target',
+    isCrossCultural: false
+  },
+  {
+    name: 'Jasper (Dalmatian)',
+    civilization: 'Global',
+    meaning: 'Joy, Playfulness, Grounding',
+    color: 'White with Black Spots',
+    chakra: 'Root',
+    frequency: '396 Hz',
+    deity: 'Joy Spirits',
+    symbol: 'Joy, Play',
+    healing: 'Joy, playfulness, grounding, inner child work.',
+    ancientUses: 'Joy rituals, amulets for children.',
+    commonUses: 'Joy manifestation, inner child, grounding.',
+    icon: 'Circle',
+    isCrossCultural: false
+  },
+  {
+    name: 'Jasper (Imperial)',
+    civilization: 'Greek/Roman',
+    meaning: 'Protection, Strength, Courage',
+    color: 'Multicolored Bands',
+    chakra: 'Root',
+    frequency: '417 Hz',
+    deity: 'Athena, Mars',
+    symbol: 'Protection, Strength',
+    healing: 'Protection, strength, courage, earth connection.',
+    ancientUses: 'Soldier amulets, royal protection.',
+    commonUses: 'Grounding, protection, courage rituals.',
+    icon: 'Shield',
+    isCrossCultural: false
+  },
+  {
+    name: 'Jasper (Leopard Skin)',
+    civilization: 'African',
+    meaning: 'Shamanic Power, Animal Magic, Transformation',
+    color: 'Spotted Brown-Yellow',
+    chakra: 'Root, Sacral',
+    frequency: '417 Hz',
+    deity: 'Animal Spirits',
+    symbol: 'Animal Magic, Power',
+    healing: 'Shamanic power, animal magic, transformation.',
+    ancientUses: 'Shamanic rituals, animal spirit work.',
+    commonUses: 'Shamanic journeying, animal guides, transformation.',
+    icon: 'Footprints',
+    isCrossCultural: false
+  },
+  {
+    name: 'Jasper (Ocean)',
+    civilization: 'African',
+    meaning: 'Ocean Calm, Grounding, Peace',
+    color: 'Blue-Green with Circles',
+    chakra: 'Throat, Heart',
+    frequency: '528 Hz',
+    deity: 'Ocean Spirits',
+    symbol: 'Ocean, Peace',
+    healing: 'Ocean calm, grounding, peace, emotional release.',
+    ancientUses: 'Coastal rituals, ocean offerings.',
+    commonUses: 'Anxiety relief, grounding, peace.',
+    icon: 'Waves',
+    isCrossCultural: false
+  },
+  {
+    name: 'Jasper (Picture)',
+    civilization: 'Global',
+    meaning: 'Earth Memory, Vision, Grounding',
+    color: 'Brown with Landscape Patterns',
+    chakra: 'Root',
+    frequency: '396 Hz',
+    deity: 'Earth Ancestors',
+    symbol: 'Memory, Vision',
+    healing: 'Earth memory access, vision, deep grounding.',
+    ancientUses: 'Vision quests, earth memory rituals.',
+    commonUses: 'Past life work, grounding, vision.',
+    icon: 'Mountain',
+    isCrossCultural: false
+  },
+  {
+    name: 'Jasper (Poppy)',
+    civilization: 'Global',
+    meaning: 'Joy, Vitality, Grounding',
+    color: 'Red with Yellow Spots',
+    chakra: 'Root, Sacral',
+    frequency: '417 Hz',
+    deity: 'Joy Spirits',
+    symbol: 'Joy, Vitality',
+    healing: 'Joy, vitality, grounding, sacral activation.',
+    ancientUses: 'Celebration stones, joy rituals.',
+    commonUses: 'Joy work, vitality boost, grounding.',
+    icon: 'Flame',
+    isCrossCultural: false
+  },
+  {
+    name: 'K2 Stone',
+    civilization: 'Himalayan',
+    meaning: 'Vision, Intuition, Spiritual Connection',
+    color: 'White with Blue Spots',
+    chakra: 'Third Eye',
+    frequency: '432 Hz',
+    deity: 'Mountain Spirits',
+    symbol: 'Vision, Spirit',
+    healing: 'Vision, intuition, spiritual connection, meditation.',
+    ancientUses: 'Himalayan meditation tools, vision quests.',
+    commonUses: 'Third eye activation, meditation, intuition.',
+    icon: 'Star',
+    isCrossCultural: false
+  },
+  {
+    name: 'Kunzite',
+    civilization: 'American',
+    meaning: 'Divine Love, Heart Opening, Emotional Healing',
+    color: 'Pale Pink',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Angels of Love',
+    symbol: 'Love, Opening',
+    healing: 'Divine love, heart opening, emotional healing, self-love.',
+    ancientUses: 'Discovered 1902, love rituals.',
+    commonUses: 'Heart chakra, love work, emotional healing.',
+    icon: 'Heart',
+    isCrossCultural: false
+  },
+  {
+    name: 'Kyanite (Black)',
+    civilization: 'Tibetan',
+    meaning: 'Grounding, Protection, Alignment',
+    color: 'Black',
+    chakra: 'Root',
+    frequency: '396 Hz',
+    deity: 'Protection Spirits',
+    symbol: 'Grounding, Protection',
+    healing: 'Grounding, protection, chakra alignment, shielding.',
+    ancientUses: 'Protection amulets, grounding rituals.',
+    commonUses: 'Grounding, protection, never needs cleansing.',
+    icon: 'Shield',
+    isCrossCultural: false
+  },
+  {
+    name: 'Kyanite (Green)',
+    civilization: 'Tibetan',
+    meaning: 'Heart Healing, Nature, Growth',
+    color: 'Green',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Nature Spirits',
+    symbol: 'Heart, Growth',
+    healing: 'Heart healing, nature connection, growth.',
+    ancientUses: 'Heart healing ceremonies, nature rituals.',
+    commonUses: 'Heart chakra, nature work, emotional healing.',
+    icon: 'Leaf',
+    isCrossCultural: false
+  },
+  {
+    name: 'Kyanite (Orange)',
+    civilization: 'Tibetan',
+    meaning: 'Creativity, Sacral Activation, Joy',
+    color: 'Orange',
+    chakra: 'Sacral',
+    frequency: '417 Hz',
+    deity: 'Joy Spirits',
+    symbol: 'Creativity, Joy',
+    healing: 'Creativity, sacral activation, joy, emotional release.',
+    ancientUses: 'Creativity rituals, sacral ceremonies.',
+    commonUses: 'Creative work, sacral chakra, joy.',
+    icon: 'Flame',
+    isCrossCultural: false
+  },
+  {
+    name: 'Lapis Lazuli (Afghan)',
+    civilization: 'Persian',
+    meaning: 'Truth, Royalty, Divine Connection',
+    color: 'Deep Blue with Gold',
+    chakra: 'Third Eye',
+    frequency: '432 Hz',
+    deity: 'Ahura Mazda',
+    symbol: 'Truth, Royalty',
+    healing: 'Truth, divine connection, spiritual vision.',
+    ancientUses: 'Royal regalia, divine offerings.',
+    commonUses: 'Third eye, truth speaking, spiritual work.',
+    icon: 'Star',
+    isCrossCultural: false
+  },
+  {
+    name: 'Lepidolite',
+    civilization: 'Global',
+    meaning: 'Calm, Stress Relief, Emotional Balance',
+    color: 'Lavender-Purple',
+    chakra: 'Third Eye, Crown',
+    frequency: '639 Hz',
+    deity: 'Peace Spirits',
+    symbol: 'Calm, Peace',
+    healing: 'Calm, anxiety relief, emotional balance, stress reduction.',
+    ancientUses: 'Discovered 1860, calming rituals.',
+    commonUses: 'Anxiety relief, sleep aid, emotional balance.',
+    icon: 'Brain',
+    isCrossCultural: false
+  },
+  {
+    name: 'Liddicoatite',
+    civilization: 'Madagascar',
+    meaning: 'Heart Healing, Joy, Transformation',
+    color: 'Pink to Green',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Love Spirits',
+    symbol: 'Heart, Joy',
+    healing: 'Heart healing, joy, transformation, emotional release.',
+    ancientUses: 'Madagascar heart healing ceremonies.',
+    commonUses: 'Heart chakra, emotional healing, joy.',
+    icon: 'Heart',
+    isCrossCultural: false
+  },
+  {
+    name: 'Magnesite',
+    civilization: 'Global',
+    meaning: 'Manifestation, Abundance, Clarity',
+    color: 'White to Grey',
+    chakra: 'Third Eye',
+    frequency: '432 Hz',
+    deity: 'Manifestation Spirits',
+    symbol: 'Manifestation, Clarity',
+    healing: 'Manifestation, abundance, mental clarity, focus.',
+    ancientUses: 'Manifestation rituals, focus tools.',
+    commonUses: 'Manifestation work, abundance, clarity.',
+    icon: 'Target',
+    isCrossCultural: false
+  },
+  {
+    name: 'Moldavite',
+    civilization: 'Czech',
+    meaning: 'Transformation, Spiritual Awakening, Cosmic Connection',
+    color: 'Olive Green',
+    chakra: 'Third Eye, Crown',
+    frequency: '963 Hz',
+    deity: 'Cosmic Spirits',
+    symbol: 'Transformation, Cosmos',
+    healing: 'Deep transformation, spiritual awakening, cosmic connection.',
+    ancientUses: 'Meteorite impact glass, spiritual tools.',
+    commonUses: 'Spiritual evolution, transformation, meditation.',
+    icon: 'Sparkles',
+    isCrossCultural: false
+  },
+  {
+    name: 'Molybdenite',
+    civilization: 'Global',
+    meaning: 'Transformation, Alchemy, Vision',
+    color: 'Metallic Grey',
+    chakra: 'Third Eye',
+    frequency: '432 Hz',
+    deity: 'Alchemists',
+    symbol: 'Alchemy, Transformation',
+    healing: 'Transformation, alchemy, vision, manifestation.',
+    ancientUses: 'Alchemical transformations, vision work.',
+    commonUses: 'Transformation, alchemy, third eye.',
+    icon: 'Zap',
+    isCrossCultural: false
+  },
+  {
+    name: 'Morganite (Pink)',
+    civilization: 'Global',
+    meaning: 'Divine Love, Compassion, Heart Healing',
+    color: 'Pink',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Angels of Love',
+    symbol: 'Love, Compassion',
+    healing: 'Divine love, compassion, heart healing, emotional release.',
+    ancientUses: 'Discovered 1910, love rituals.',
+    commonUses: 'Heart chakra, love work, emotional healing.',
+    icon: 'Heart',
+    isCrossCultural: false
+  },
+  {
+    name: 'Nuummite',
+    civilization: 'Greenland/Inuit',
+    meaning: 'Ancient Magic, Protection, Transformation',
+    color: 'Black with Gold Flash',
+    chakra: 'Root',
+    frequency: '396 Hz',
+    deity: 'Ancient Spirits',
+    symbol: 'Ancient Magic, Protection',
+    healing: 'Ancient magic, protection, deep transformation, grounding.',
+    ancientUses: 'Greenland shamanic tools, protection rituals.',
+    commonUses: 'Ancient magic, protection, transformation work.',
+    icon: 'Shield',
+    isCrossCultural: false
+  },
+  {
+    name: 'Orthoclase',
+    civilization: 'Global',
+    meaning: 'Clarity, Focus, Manifestation',
+    color: 'Clear to Yellow',
+    chakra: 'Third Eye',
+    frequency: '432 Hz',
+    deity: 'Focus Spirits',
+    symbol: 'Clarity, Focus',
+    healing: 'Mental clarity, focus, manifestation support.',
+    ancientUses: 'Focus tools, manifestation rituals.',
+    commonUses: 'Study aid, focus, manifestation.',
+    icon: 'Eye',
+    isCrossCultural: false
+  },
+  {
+    name: 'Pink Sapphire',
+    civilization: 'Indian',
+    meaning: 'Love, Compassion, Heart Healing',
+    color: 'Pink',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Lakshmi',
+    symbol: 'Love, Compassion',
+    healing: 'Love, compassion, heart healing, emotional balance.',
+    ancientUses: 'Love offerings, heart rituals.',
+    commonUses: 'Heart chakra, love work, emotional healing.',
+    icon: 'Heart',
+    isCrossCultural: false
+  },
+  {
+    name: 'Pollucite',
+    civilization: 'Global',
+    meaning: 'Spiritual Connection, Meditation, Peace',
+    color: 'Clear to White',
+    chakra: 'Crown',
+    frequency: '963 Hz',
+    deity: 'Spiritual Guides',
+    symbol: 'Peace, Connection',
+    healing: 'Spiritual connection, deep meditation, peace.',
+    ancientUses: 'Discovered 1846, meditation tools.',
+    commonUses: 'Meditation, spiritual connection, crown chakra.',
+    icon: 'Moon',
+    isCrossCultural: false
+  },
+  {
+    name: 'Purple Sapphire',
+    civilization: 'Indian',
+    meaning: 'Spiritual Vision, Intuition, Wisdom',
+    color: 'Purple',
+    chakra: 'Third Eye',
+    frequency: '432 Hz',
+    deity: 'Brihaspati',
+    symbol: 'Vision, Wisdom',
+    healing: 'Spiritual vision, intuition, wisdom, third eye activation.',
+    ancientUses: 'Spiritual tools, wisdom offerings.',
+    commonUses: 'Third eye, spiritual work, intuition.',
+    icon: 'Star',
+    isCrossCultural: false
+  },
+  {
+    name: 'Quartz (Herkimer Diamond)',
+    civilization: 'Native American',
+    meaning: 'Amplification, Clarity, Vision',
+    color: 'Clear with Double Terminations',
+    chakra: 'Crown',
+    frequency: '963 Hz',
+    deity: 'Earth Spirits',
+    symbol: 'Amplification, Clarity',
+    healing: 'Energy amplification, clarity, vision, dream work.',
+    ancientUses: 'Herkimer, NY, Native American dream work.',
+    commonUses: 'Amplification, manifestation, dream recall.',
+    icon: 'Diamond',
+    isCrossCultural: false
+  },
+  {
+    name: 'Quartz (Rutilated)',
+    civilization: 'Global',
+    meaning: 'Transformation, Manifestation, Light',
+    color: 'Clear with Gold Needles',
+    chakra: 'All',
+    frequency: '528 Hz',
+    deity: 'Light Spirits',
+    symbol: 'Transformation, Light',
+    healing: 'Transformation, manifestation, light amplification.',
+    ancientUses: 'Transformation rituals, light work.',
+    commonUses: 'Manifestation, transformation, energy amplification.',
+    icon: 'Sparkles',
+    isCrossCultural: false
+  },
+  {
+    name: 'Quartz (Tourmalinated)',
+    civilization: 'Global',
+    meaning: 'Balance, Protection, Grounding',
+    color: 'Clear with Black Needles',
+    chakra: 'Root, Crown',
+    frequency: '639 Hz',
+    deity: 'Balance Spirits',
+    symbol: 'Balance, Protection',
+    healing: 'Balance, protection, grounding, shadow work.',
+    ancientUses: 'Balance rituals, protection amulets.',
+    commonUses: 'Balancing energies, protection, grounding.',
+    icon: 'Shield',
+    isCrossCultural: false
+  },
+  {
+    name: 'Scolecite',
+    civilization: 'Indian',
+    meaning: 'Peace, Meditation, Spiritual Connection',
+    color: 'White',
+    chakra: 'Crown',
+    frequency: '963 Hz',
+    deity: 'Peace Spirits',
+    symbol: 'Peace, Connection',
+    healing: 'Deep peace, meditation, spiritual connection, calm.',
+    ancientUses: 'Indian meditation tools, peace rituals.',
+    commonUses: 'Meditation, anxiety relief, spiritual work.',
+    icon: 'Moon',
+    isCrossCultural: false
+  },
+  {
+    name: 'Seraphinite',
+    civilization: 'Russian',
+    meaning: 'Angelic Connection, Spiritual Growth, Healing',
+    color: 'Dark Green with Silver Feathers',
+    chakra: 'Heart, Crown',
+    frequency: '528 Hz',
+    deity: 'Angels, Seraphim',
+    symbol: 'Angelic Wings, Healing',
+    healing: 'Angelic connection, spiritual growth, heart healing.',
+    ancientUses: 'Russian angelic ceremonies, healing rituals.',
+    commonUses: 'Angel work, heart chakra, spiritual growth.',
+    icon: 'Feather',
+    isCrossCultural: false
+  },
+  {
+    name: 'Smithsonite',
+    civilization: 'Global',
+    meaning: 'Emotional Healing, Joy, Peace',
+    color: 'Pink, Blue, Green',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Emotional Healing Spirits',
+    symbol: 'Healing, Joy',
+    healing: 'Emotional healing, joy, peace, heart opening.',
+    ancientUses: 'Emotional healing rituals, peace ceremonies.',
+    commonUses: 'Emotional release, joy, heart chakra.',
+    icon: 'Heart',
+    isCrossCultural: false
+  },
+  {
+    name: 'Staurolite (Fairy Cross)',
+    civilization: 'Celtic',
+    meaning: 'Protection, Magic, Fairy Connection',
+    color: 'Brown with Cross Shape',
+    chakra: 'Root',
+    frequency: '396 Hz',
+    deity: 'Fairy Folk',
+    symbol: 'Protection, Magic',
+    healing: 'Protection, fairy magic, nature connection, good luck.',
+    ancientUses: 'Celtic fairy offerings, protection amulets.',
+    commonUses: 'Fairy work, protection, good luck charms.',
+    icon: 'Flower2',
+    isCrossCultural: false
+  },
+  {
+    name: 'Stibnite',
+    civilization: 'Global',
+    meaning: 'Transformation, Alchemy, Vision',
+    color: 'Metallic Grey Crystals',
+    chakra: 'Third Eye',
+    frequency: '432 Hz',
+    deity: 'Alchemists',
+    symbol: 'Alchemy, Vision',
+    healing: 'Transformation, alchemy, vision, manifestation.',
+    ancientUses: 'Alchemical transformations, vision work.',
+    commonUses: 'Transformation, alchemy, manifestation.',
+    icon: 'Zap',
+    isCrossCultural: false
+  },
+  {
+    name: 'Stichtite',
+    civilization: 'Australian',
+    meaning: 'Heart Healing, Emotional Release, Joy',
+    color: 'Purple-Pink',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Heart Spirits',
+    symbol: 'Healing, Joy',
+    healing: 'Heart healing, emotional release, joy, self-love.',
+    ancientUses: 'Australian heart healing ceremonies.',
+    commonUses: 'Emotional release, heart chakra, joy work.',
+    icon: 'Heart',
+    isCrossCultural: false
+  },
+  {
+    name: 'Strontianite',
+    civilization: 'Global',
+    meaning: 'Manifestation, Abundance, Joy',
+    color: 'White to Green',
+    chakra: 'Solar Plexus',
+    frequency: '528 Hz',
+    deity: 'Manifestation Spirits',
+    symbol: 'Abundance, Joy',
+    healing: 'Manifestation, abundance, joy, solar activation.',
+    ancientUses: 'Manifestation rituals, abundance ceremonies.',
+    commonUses: 'Abundance work, manifestation, joy.',
+    icon: 'SunIcon',
+    isCrossCultural: false
+  },
+  {
+    name: 'Tektite',
+    civilization: 'Global',
+    meaning: 'Cosmic Connection, Transformation, Vision',
+    color: 'Black',
+    chakra: 'Third Eye, Crown',
+    frequency: '963 Hz',
+    deity: 'Cosmic Spirits',
+    symbol: 'Cosmic, Transformation',
+    healing: 'Cosmic connection, transformation, vision, spiritual growth.',
+    ancientUses: 'Meteorite glass, cosmic tools.',
+    commonUses: 'Spiritual growth, cosmic work, transformation.',
+    icon: 'Star',
+    isCrossCultural: false
+  },
+  {
+    name: 'Thulite',
+    civilization: 'Norwegian',
+    meaning: 'Love, Compassion, Heart Healing',
+    color: 'Pink',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Love Spirits',
+    symbol: 'Love, Compassion',
+    healing: 'Love, compassion, heart healing, emotional balance.',
+    ancientUses: 'Norwegian love rituals, heart offerings.',
+    commonUses: 'Heart chakra, love work, emotional healing.',
+    icon: 'Heart',
+    isCrossCultural: false
+  },
+  {
+    name: 'Tiger Iron',
+    civilization: 'Australian Aboriginal',
+    meaning: 'Grounding, Protection, Strength',
+    color: 'Red, Gold, Grey Bands',
+    chakra: 'Root',
+    frequency: '396 Hz',
+    deity: 'Earth Spirits',
+    symbol: 'Strength, Protection',
+    healing: 'Grounding, protection, strength, earth connection.',
+    ancientUses: 'Australian aboriginal strength rituals.',
+    commonUses: 'Grounding, protection, physical strength.',
+    icon: 'Shield',
+    isCrossCultural: false
+  },
+  {
+    name: 'Tremolite',
+    civilization: 'Global',
+    meaning: 'Grounding, Protection, Earth Connection',
+    color: 'White to Green',
+    chakra: 'Root',
+    frequency: '396 Hz',
+    deity: 'Earth Mothers',
+    symbol: 'Earth, Grounding',
+    healing: 'Grounding, earth connection, protection, stability.',
+    ancientUses: 'Grounding rituals, earth offerings.',
+    commonUses: 'Grounding meditation, earth work, stability.',
+    icon: 'Mountain',
+    isCrossCultural: false
+  },
+  {
+    name: 'Uvarovite',
+    civilization: 'Russian',
+    meaning: 'Abundance, Heart Healing, Growth',
+    color: 'Bright Green',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Earth Spirits',
+    symbol: 'Abundance, Growth',
+    healing: 'Abundance, heart healing, growth, nature connection.',
+    ancientUses: 'Russian abundance rituals, heart ceremonies.',
+    commonUses: 'Abundance work, heart chakra, nature connection.',
+    icon: 'Leaf',
+    isCrossCultural: false
+  },
+  {
+    name: 'Vanadinite',
+    civilization: 'Moroccan',
+    meaning: 'Manifestation, Creativity, Vitality',
+    color: 'Bright Orange-Red',
+    chakra: 'Sacral',
+    frequency: '417 Hz',
+    deity: 'Creativity Spirits',
+    symbol: 'Creativity, Vitality',
+    healing: 'Manifestation, creativity, vitality, sacral activation.',
+    ancientUses: 'Moroccan creativity rituals, manifestation tools.',
+    commonUses: 'Creative work, manifestation, vitality.',
+    icon: 'Flame',
+    isCrossCultural: false
+  },
+  {
+    name: 'Vivianite',
+    civilization: 'Global',
+    meaning: 'Heart Healing, Emotional Release, Growth',
+    color: 'Blue-Green (darkens)',
+    chakra: 'Heart',
+    frequency: '528 Hz',
+    deity: 'Heart Spirits',
+    symbol: 'Healing, Growth',
+    healing: 'Heart healing, emotional release, personal growth.',
+    ancientUses: 'Emotional healing rituals, growth ceremonies.',
+    commonUses: 'Emotional release, heart chakra, inner work.',
+    icon: 'Heart',
+    isCrossCultural: false
+  },
+  {
+    name: 'Wavellite',
+    civilization: 'Global',
+    meaning: 'Manifestation, Clarity, Focus',
+    color: 'Green to Yellow',
+    chakra: 'Third Eye',
+    frequency: '432 Hz',
+    deity: 'Focus Spirits',
+    symbol: 'Clarity, Focus',
+    healing: 'Manifestation, clarity, focus, mental organization.',
+    ancientUses: 'Focus tools, manifestation rituals.',
+    commonUses: 'Study aid, manifestation, mental clarity.',
+    icon: 'Target',
+    isCrossCultural: false
+  },
+  {
+    name: 'Weloganite',
+    civilization: 'Canadian',
+    meaning: 'Manifestation, Abundance, Joy',
+    color: 'White to Yellow',
+    chakra: 'Solar Plexus',
+    frequency: '528 Hz',
+    deity: 'Manifestation Spirits',
+    symbol: 'Abundance, Joy',
+    healing: 'Manifestation, abundance, joy, solar activation.',
+    ancientUses: 'Canadian manifestation rituals, abundance ceremonies.',
+    commonUses: 'Abundance work, joy manifestation, solar plexus.',
+    icon: 'SunIcon',
+    isCrossCultural: false
+  },
+  {
+    name: 'Willemite',
+    civilization: 'Global',
+    meaning: 'Manifestation, Light, Joy',
+    color: 'Green to Yellow',
+    chakra: 'Solar Plexus',
+    frequency: '528 Hz',
+    deity: 'Light Spirits',
+    symbol: 'Light, Joy',
+    healing: 'Manifestation, light energy, joy, solar activation.',
+    ancientUses: 'Light rituals, manifestation tools.',
+    commonUses: 'Joy work, manifestation, solar plexus.',
+    icon: 'SunIcon',
+    isCrossCultural: false
+  },
+  {
+    name: 'Wulfenite',
+    civilization: 'Global',
+    meaning: 'Manifestation, Creativity, Passion',
+    color: 'Orange',
+    chakra: 'Sacral',
+    frequency: '417 Hz',
+    deity: 'Creativity Spirits',
+    symbol: 'Creativity, Passion',
+    healing: 'Manifestation, creativity, passion, sacral activation.',
+    ancientUses: 'Creativity rituals, passion ceremonies.',
+    commonUses: 'Creativity boost, passion work, sacral chakra.',
+    icon: 'Flame',
+    isCrossCultural: false
+  },
+  {
+    name: 'Zincite',
+    civilization: 'Global',
+    meaning: 'Vitality, Energy, Manifestation',
+    color: 'Orange-Red',
+    chakra: 'Solar Plexus',
+    frequency: '417 Hz',
+    deity: 'Energy Spirits',
+    symbol: 'Vitality, Energy',
+    healing: 'Vitality, energy boost, manifestation, personal power.',
+    ancientUses: 'Energy rituals, vitality ceremonies.',
+    commonUses: 'Energy boost, vitality, solar plexus healing.',
+    icon: 'SunIcon',
+    isCrossCultural: false
+  },
+  {
+    name: 'Zircon',
+    civilization: 'Indian/Persian',
+    meaning: 'Grounding, Protection, Manifestation',
+    color: 'Various (Clear, Blue, Brown)',
+    chakra: 'Root',
+    frequency: '396 Hz',
+    deity: 'Earth Spirits',
+    symbol: 'Grounding, Protection',
+    healing: 'Grounding, protection, manifestation, stability.',
+    ancientUses: 'Astrological amulets, grounding rituals.',
+    commonUses: 'Grounding, protection, manifestation work.',
+    icon: 'Shield',
     isCrossCultural: false
   }
-]
+];
 
-// Combine all stones
-const allStones = [...stones, ...stonesDToG, ...stonesHtoL, ...stonesMtoR, ...stonesStoZ]
+export default function StoneDirectory() {
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCivilization, setSelectedCivilization] = useState('All')
+  const [selectedChakra, setSelectedChakra] = useState('All')
+  const [selectedStone, setSelectedStone] = useState(null)
 
-// Define the 10 most cross-cultural stones (to be bolded)
-const crossCulturalStones = [
-  'Turquoise', 'Carnelian', 'Lapis Lazuli', 'Clear Quartz', 'Obsidian',
-  'Jade', 'Serpentine', 'Agate', 'Ruby', 'Pearl'
-]
+  // Extract unique civilizations and chakras for filters
+  const civilizations = ['All', ...new Set(stones.map(s => s.civilization))]
+  const chakras = ['All', ...new Set(stones.map(s => s.chakra).flat())]
 
-export default function SacredStonesPage() {
-  const [selectedStone, setSelectedStone] = useState(allStones[0])
+  const filteredStones = stones.filter(stone => {
+    const matchesSearch = stone.name.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesCivilization = selectedCivilization === 'All' || stone.civilization === selectedCivilization
+    const matchesChakra = selectedChakra === 'All' || 
+      (Array.isArray(stone.chakra) ? stone.chakra.includes(selectedChakra) : stone.chakra === selectedChakra)
+    return matchesSearch && matchesCivilization && matchesChakra
+  })
 
   return (
-    <div className="max-w-6xl mx-auto space-y-8 pb-12 p-4">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
       {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-center space-y-2"
-      >
-        <div className="flex items-center justify-center gap-2 text-amber-600">
-          <Gem size={24} />
-          <span className="text-sm uppercase tracking-wider">Sacred Treasures</span>
+      <header className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-10">
+        <div className="max-w-7xl mx-auto px-4 py-6">
+          <div className="flex items-center justify-between flex-wrap gap-4">
+            <div className="flex items-center gap-3">
+              <Gem className="w-8 h-8 text-purple-600" />
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                Sacred Stone Directory
+              </h1>
+              <span className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
+                {stones.length} Stones
+              </span>
+            </div>
+            
+            {/* Search */}
+            <input
+              type="text"
+              placeholder="Search stones..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="px-4 py-2 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-400 w-64"
+            />
+          </div>
+          
+          {/* Filters */}
+          <div className="flex gap-3 mt-4 flex-wrap">
+            <select
+              value={selectedCivilization}
+              onChange={(e) => setSelectedCivilization(e.target.value)}
+              className="px-3 py-1.5 rounded-full border border-gray-200 text-sm bg-white"
+            >
+              {civilizations.map(civ => (
+                <option key={civ} value={civ}>{civ}</option>
+              ))}
+            </select>
+            
+            <select
+              value={selectedChakra}
+              onChange={(e) => setSelectedChakra(e.target.value)}
+              className="px-3 py-1.5 rounded-full border border-gray-200 text-sm bg-white"
+            >
+              {chakras.map(chakra => (
+                <option key={chakra} value={chakra}>{chakra}</option>
+              ))}
+            </select>
+          </div>
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold text-amber-700">111 Sacred Stones & Crystals</h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Complete alphabetical guide to {allStones.length} healing crystals and sacred stones from ancient civilizations
-        </p>
-        <div className="flex justify-center gap-2 mt-2 flex-wrap">
-          <span className="px-2 py-0.5 bg-amber-100 rounded-full text-xs">★ Bold = Top 10 Cross-Cultural Stones</span>
-          <span className="px-2 py-0.5 bg-amber-100 rounded-full text-xs">Total: {allStones.length} stones</span>
-        </div>
-      </motion.div>
+      </header>
 
-      {/* Sacred Stones Grid - All 111 Stones */}
-      <div>
-        <h2 className="text-2xl font-bold text-amber-700 mb-4 flex items-center gap-2 border-b border-amber-200 pb-2">
-          <Gem size={24} />
-          Complete Alphabetical Collection ({allStones.length} stones)
-        </h2>
-        <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-2 mb-6">
-          {allStones.map((stone) => {
-            const IconComponent = stone.icon
-            const isBold = crossCulturalStones.includes(stone.name)
+      {/* Main Content */}
+      <main className="max-w-7xl mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          {filteredStones.map((stone, index) => {
+            const IconComponent = getIcon(stone.icon)
             return (
-              <button
+              <motion.div
                 key={stone.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.01 }}
+                whileHover={{ y: -4 }}
                 onClick={() => setSelectedStone(stone)}
-                className={`p-2 rounded-lg transition-all text-left ${
-                  selectedStone.name === stone.name
-                    ? 'bg-amber-600 text-white shadow-lg'
-                    : 'bg-white/80 hover:bg-amber-50 border border-amber-100'
-                }`}
+                className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all cursor-pointer overflow-hidden border border-gray-100"
               >
-                <div className="text-center">
-                  <IconComponent size={20} className={`mx-auto mb-1 ${selectedStone.name === stone.name ? 'text-white' : 'text-amber-600'}`} />
-                  <div className={`font-semibold text-xs truncate ${isBold ? 'font-extrabold' : ''}`}>
-                    {stone.name}
+                <div className="p-5">
+                  <div className="flex items-start justify-between mb-3">
+                    <div className="p-2 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100">
+                      <IconComponent className="w-6 h-6 text-purple-600" />
+                    </div>
+                    {stone.isCrossCultural && (
+                      <Globe className="w-4 h-4 text-blue-500" />
+                    )}
                   </div>
-                  <div className="text-[10px] opacity-75 truncate">{stone.civilization.split('/')[0]}</div>
+                  
+                  <h3 className="font-bold text-lg text-gray-800 mb-1">{stone.name}</h3>
+                  <p className="text-xs text-purple-500 mb-2">{stone.civilization}</p>
+                  <p className="text-sm text-gray-600 line-clamp-2">{stone.meaning}</p>
+                  
+                  <div className="mt-3 flex flex-wrap gap-1">
+                    <span className="text-xs bg-gray-100 px-2 py-0.5 rounded-full text-gray-600">
+                      {stone.chakra}
+                    </span>
+                    <span className="text-xs bg-gray-100 px-2 py-0.5 rounded-full text-gray-600">
+                      {stone.frequency}
+                    </span>
+                  </div>
                 </div>
-              </button>
+              </motion.div>
             )
           })}
         </div>
+        
+        {filteredStones.length === 0 && (
+          <div className="text-center py-20">
+            <Gem className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+            <p className="text-gray-500">No stones found matching your criteria.</p>
+          </div>
+        )}
+      </main>
 
-        {/* Expanded Details Section */}
-        <AnimatePresence mode="wait">
+      {/* Modal */}
+      <AnimatePresence>
+        {selectedStone && (
           <motion.div
-            key={selectedStone.name}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 shadow-lg border border-amber-200"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedStone(null)}
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
           >
-            <div className="grid md:grid-cols-2 gap-6">
-              {/* Left Column */}
-              <div>
-                <div className="flex items-center gap-2 mb-2 flex-wrap">
-                  <selectedStone.icon size={32} className="text-amber-600" />
-                  <h3 className={`text-2xl font-bold text-amber-800 ${crossCulturalStones.includes(selectedStone.name) ? 'font-extrabold underline decoration-amber-400' : ''}`}>
-                    {selectedStone.name}
-                  </h3>
-                  {crossCulturalStones.includes(selectedStone.name) && (
-                    <span className="text-xs bg-amber-600 text-white px-2 py-0.5 rounded-full">★ Cross-Cultural</span>
-                  )}
-                  <span className="text-xs bg-amber-200 text-amber-800 px-2 py-0.5 rounded-full">{selectedStone.civilization}</span>
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+              className="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto"
+            >
+              <div className="sticky top-0 bg-white border-b p-4 flex justify-between items-center">
+                <div className="flex items-center gap-3">
+                  {(() => {
+                    const ModalIcon = getIcon(selectedStone.icon)
+                    return (
+                      <div className="p-2 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100">
+                        <ModalIcon className="w-6 h-6 text-purple-600" />
+                      </div>
+                    )
+                  })()}
+                  <div>
+                    <h2 className="text-xl font-bold text-gray-800">{selectedStone.name}</h2>
+                    <p className="text-sm text-purple-500">{selectedStone.civilization}</p>
+                  </div>
                 </div>
-                <p className="text-gray-700 mb-3 italic">"{selectedStone.meaning}"</p>
+                <button
+                  onClick={() => setSelectedStone(null)}
+                  className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+                >
+                  ✕
+                </button>
+              </div>
+              
+              <div className="p-6 space-y-5">
+                <div>
+                  <h4 className="font-semibold text-gray-700 mb-1">Meaning</h4>
+                  <p className="text-gray-600">{selectedStone.meaning}</p>
+                </div>
                 
-                <div className="space-y-2 text-sm">
-                  <div className="flex flex-wrap gap-x-4 gap-y-1">
-                    <span className="font-semibold text-amber-700">Color:</span>
-                    <span className="text-gray-700">{selectedStone.color}</span>
+                <div>
+                  <h4 className="font-semibold text-gray-700 mb-1">Healing Properties</h4>
+                  <p className="text-gray-600">{selectedStone.healing}</p>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <h4 className="font-semibold text-gray-700 mb-1">Color</h4>
+                    <p className="text-gray-600">{selectedStone.color}</p>
                   </div>
-                  <div className="flex flex-wrap gap-x-4 gap-y-1">
-                    <span className="font-semibold text-amber-700">Chakra:</span>
-                    <span className="text-gray-700">{selectedStone.chakra}</span>
+                  <div>
+                    <h4 className="font-semibold text-gray-700 mb-1">Chakra</h4>
+                    <p className="text-gray-600">{selectedStone.chakra}</p>
                   </div>
-                  <div className="flex flex-wrap gap-x-4 gap-y-1">
-                    <span className="font-semibold text-amber-700">Frequency:</span>
-                    <span className="text-gray-700">{selectedStone.frequency}</span>
+                  <div>
+                    <h4 className="font-semibold text-gray-700 mb-1">Frequency</h4>
+                    <p className="text-gray-600">{selectedStone.frequency}</p>
                   </div>
-                  <div className="flex flex-wrap gap-x-4 gap-y-1">
-                    <span className="font-semibold text-amber-700">Deity:</span>
-                    <span className="text-gray-700">{selectedStone.deity}</span>
+                  <div>
+                    <h4 className="font-semibold text-gray-700 mb-1">Deity</h4>
+                    <p className="text-gray-600">{selectedStone.deity}</p>
                   </div>
-                  <div className="flex flex-wrap gap-x-4 gap-y-1">
-                    <span className="font-semibold text-amber-700">Symbol:</span>
-                    <span className="text-gray-700">{selectedStone.symbol}</span>
-                  </div>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-700 mb-1">Symbol</h4>
+                  <p className="text-gray-600">{selectedStone.symbol}</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-700 mb-1">Ancient Uses</h4>
+                  <p className="text-gray-600">{selectedStone.ancientUses}</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-700 mb-1">Common Uses Today</h4>
+                  <p className="text-gray-600">{selectedStone.commonUses}</p>
                 </div>
               </div>
-
-              {/* Right Column */}
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-amber-700 mb-1 flex items-center gap-1">
-                    <Heart size={16} /> Healing Properties
-                  </h4>
-                  <p className="text-gray-700 text-sm leading-relaxed">{selectedStone.healing}</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-amber-700 mb-1 flex items-center gap-1">
-                    <Crown size={16} /> Ancient Uses
-                  </h4>
-                  <p className="text-gray-700 text-sm leading-relaxed">{selectedStone.ancientUses}</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-amber-700 mb-1 flex items-center gap-1">
-                    <Gem size={16} /> Common Uses Today
-                  </h4>
-                  <p className="text-gray-700 text-sm leading-relaxed">{selectedStone.commonUses}</p>
-                </div>
-              </div>
-            </div>
+            </motion.div>
           </motion.div>
-        </AnimatePresence>
-      </div>
-
-      {/* Final Summary - All 111 Stones */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="bg-gradient-to-r from-amber-100 to-amber-200 rounded-lg p-6 border border-amber-300 text-center"
-      >
-        <h3 className="text-xl font-bold text-amber-800 mb-2">✨ Complete Collection: 111 Sacred Stones ✨</h3>
-        <p className="text-gray-700 text-sm mb-3">
-          📿 <span className="font-semibold">Total: {allStones.length} unique sacred stones</span> from civilizations including:
-          Egyptian, Greek, Roman, Indian, Chinese, Japanese, Mesoamerican, Persian, Celtic, African, Aboriginal, Norse, Tibetan, and more.
-        </p>
-        <div className="flex flex-wrap justify-center gap-2 text-xs">
-          <span className="px-2 py-1 bg-amber-800 text-white rounded-full">★ Cross-cultural stones (10)</span>
-          <span className="px-2 py-1 bg-white text-amber-800 rounded-full">A-C: 27 stones</span>
-          <span className="px-2 py-1 bg-white text-amber-800 rounded-full">D-G: 15 stones</span>
-          <span className="px-2 py-1 bg-white text-amber-800 rounded-full">H-L: 18 stones</span>
-          <span className="px-2 py-1 bg-white text-amber-800 rounded-full">M-R: 26 stones</span>
-          <span className="px-2 py-1 bg-white text-amber-800 rounded-full">S-Z: 25 stones</span>
-        </div>
-        <p className="text-center text-xs text-gray-600 mt-3">
-          💎 Each stone includes: Meaning, Color, Chakra, Frequency (Hz), Deity, Symbol, 
-          Healing Properties, Ancient Uses, and Common Uses Today.
-        </p>
-      </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }
