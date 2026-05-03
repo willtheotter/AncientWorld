@@ -3639,27 +3639,19 @@ export default function StoneDirectory() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       onClick={() => setSelectedStone(null)}
-      className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-0 sm:p-4"
     >
       <motion.div
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.9, opacity: 0 }}
         onClick={(e) => e.stopPropagation()}
-        drag="y"
-        dragConstraints={{ top: 0, bottom: 0 }}
-        dragElastic={0.2}
-        onDragEnd={(e, { offset, velocity }) => {
-          if (offset.y > 100 || velocity.y > 500) {
-            setSelectedStone(null)
-          }
-        }}
-        className="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto relative"
+        className="bg-white w-full h-full sm:h-auto sm:rounded-2xl sm:max-w-2xl sm:max-h-[85vh] sm:overflow-y-auto relative flex flex-col"
       >
-        {/* Sticky header with close button - large padding top on mobile */}
-        <div className="sticky top-0 bg-white border-b z-10">
-          <div className="pt-8 sm:pt-4 pb-3 sm:pb-4 px-4 sm:px-6 flex justify-between items-start">
-            <div className="flex items-center gap-3">
+        {/* Fixed header with close button - always visible at top */}
+        <div className="bg-white border-b z-10 flex-shrink-0">
+          <div className="p-4 flex justify-between items-center">
+            <div className="flex items-center gap-3 min-w-0 flex-1">
               {(() => {
                 const ModalIcon = getIcon(selectedStone.icon)
                 return (
@@ -3668,15 +3660,16 @@ export default function StoneDirectory() {
                   </div>
                 )
               })()}
-              <div>
-                <h2 className="text-xl font-bold text-gray-800">{selectedStone.name}</h2>
-                <p className="text-sm text-purple-500">{selectedStone.civilization}</p>
+              <div className="min-w-0 flex-1">
+                <h2 className="text-xl font-bold text-gray-800 truncate">{selectedStone.name}</h2>
+                <p className="text-sm text-purple-500 truncate">{selectedStone.civilization}</p>
               </div>
             </div>
             <button
               onClick={() => setSelectedStone(null)}
-              className="p-3 -m-1 rounded-full hover:bg-gray-100 transition-colors flex-shrink-0"
+              className="p-3 -mr-2 rounded-full hover:bg-gray-100 active:bg-gray-200 transition-colors flex-shrink-0"
               aria-label="Close"
+              style={{ minWidth: '48px', minHeight: '48px' }}
             >
               <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -3685,8 +3678,8 @@ export default function StoneDirectory() {
           </div>
         </div>
         
-        {/* Content with extra top padding on mobile for better scroll spacing */}
-        <div className="p-4 sm:p-6 pt-2 sm:pt-4 space-y-5">
+        {/* Scrollable content area with visible scrollbar */}
+        <div className="flex-1 overflow-y-auto p-4 space-y-5" style={{ WebkitOverflowScrolling: 'touch' }}>
           <div>
             <h4 className="font-semibold text-gray-700 mb-1">Meaning</h4>
             <p className="text-gray-600">{selectedStone.meaning}</p>
@@ -3731,12 +3724,9 @@ export default function StoneDirectory() {
             <p className="text-gray-600">{selectedStone.commonUses}</p>
           </div>
           
-          {/* Extra bottom padding for better scrolling on mobile */}
-          <div className="h-8 sm:h-6"></div>
+          {/* Extra bottom padding */}
+          <div className="h-4"></div>
         </div>
-        
-        {/* Drag indicator line at the top for mobile */}
-        <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gray-300 rounded-full" />
       </motion.div>
     </motion.div>
   )}
