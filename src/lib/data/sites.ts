@@ -20,14 +20,14 @@ export interface Site {
   locations: Location[]
 }
 
-// ========== SECTION 1: EGYPTIAN SITES (1-35) ==========
+// ========== SECTION 1: EGYPTIAN SITES (LOWER AND UPPER EGYPT ONLY) ==========
 export const egyptianSites: Record<string, Site> = {
-  // 1. Alexandria - Library of Alexandria
+  // 1. Alexandria - Library of Alexandria (Lower Egypt - Delta)
   alexandria: {
     id: 'alexandria',
     name: 'Alexandria',
     coordinates: [31.2001, 29.9187],
-    region: 'Egypt - Delta',
+    region: 'Lower Egypt',
     locations: [
       {
         id: 'library-alexandria',
@@ -47,12 +47,12 @@ The library's collection grew to an estimated 400,000 to 700,000 scrolls, repres
     ]
   },
 
-  // 2. Bubastis - Temple of Bastet
+  // 2. Bubastis - Temple of Bastet (Lower Egypt - Delta)
   bubastis: {
     id: 'bubastis',
     name: 'Bubastis',
     coordinates: [30.5667, 31.5167],
-    region: 'Egypt - Delta',
+    region: 'Lower Egypt',
     locations: [
       {
         id: 'temple-bastet',
@@ -74,12 +74,12 @@ The sanctuary contained a massive statue of Bastet, a lioness-headed goddess who
     ]
   },
 
-  // 3-4. Giza Plateau - Great Pyramid & Sphinx
+  // 3-4. Giza Plateau (Lower Egypt - Memphis region)
   giza: {
     id: 'giza',
     name: 'Giza Plateau',
     coordinates: [29.9792, 31.1342],
-    region: 'Egypt - Memphis',
+    region: 'Lower Egypt',
     locations: [
       {
         id: 'great-pyramid',
@@ -116,12 +116,12 @@ The "Dream Stele" between the Sphinx's paws records a dream of Pharaoh Thutmose 
     ]
   },
 
-  // 5-7. Memphis Region
+  // 5-8. Memphis Region (Lower Egypt)
   memphis: {
     id: 'memphis',
     name: 'Memphis',
     coordinates: [29.8447, 31.2509],
-    region: 'Egypt - Memphis',
+    region: 'Lower Egypt',
     locations: [
       {
         id: 'temple-ptah',
@@ -191,12 +191,12 @@ Pilgrims came seeking cures, offering cool water, bread, and beer to Sekhmet's s
     ]
   },
 
-  // 8. Saqqara - Temple of Anubis
+  // 9. Saqqara (Lower Egypt)
   saqqara: {
     id: 'saqqara',
     name: 'Saqqara Necropolis',
     coordinates: [29.871, 31.216],
-    region: 'Egypt - Memphis',
+    region: 'Lower Egypt',
     locations: [
       {
         id: 'anubis-temple-saqqara',
@@ -218,12 +218,12 @@ Within the sanctuary, priests wearing jackal-headed masks performed the Opening 
     ]
   },
 
-  // 9-10. Heliopolis - City of the Sun
+  // 10-11. Heliopolis (Lower Egypt - Delta)
   heliopolis: {
     id: 'heliopolis',
     name: 'Heliopolis',
     coordinates: [30.129, 31.29],
-    region: 'Egypt - Delta',
+    region: 'Lower Egypt',
     locations: [
       {
         id: 'temple-ra',
@@ -262,12 +262,12 @@ The temple's walls showed Atum creating the world through masturbation (a unique
     ]
   },
 
-  // 11-16. Karnak Temple Complex (6 locations)
+  // 12-17. Karnak Temple Complex (Upper Egypt - Thebes)
   karnak: {
     id: 'karnak',
     name: 'Karnak Temple',
     coordinates: [25.719, 32.657],
-    region: 'Egypt - Thebes',
+    region: 'Upper Egypt',
     locations: [
       {
         id: 'karnak-hypostyle',
@@ -372,12 +372,12 @@ The precinct also included the Chapel of Osiris-Djebekh and the Punt Hall with r
     ]
   },
 
-  // 17. Luxor Temple
+  // 18. Luxor Temple (Upper Egypt - Thebes)
   luxor: {
     id: 'luxor',
     name: 'Luxor Temple',
     coordinates: [25.699, 32.639],
-    region: 'Egypt - Thebes',
+    region: 'Upper Egypt',
     locations: [
       {
         id: 'luxor-temple',
@@ -399,12 +399,12 @@ The king walked ahead of the barques, symbolically renewing his divine authority
     ]
   },
 
-  // 19. Temple of Thoth at Hermopolis
+  // 19. Temple of Thoth at Hermopolis (Upper Egypt - Middle Egypt)
   hermopolis: {
     id: 'hermopolis',
     name: 'Hermopolis Magna',
     coordinates: [27.775, 30.804],
-    region: 'Egypt - Middle Egypt',
+    region: 'Upper Egypt',
     locations: [
       {
         id: 'temple-thoth',
@@ -426,12 +426,12 @@ The temple library contained thousands of papyrus scrolls on magic, medicine, as
     ]
   },
 
-  // 20. Temple of Neith at Sais
+  // 20. Temple of Neith at Sais (Lower Egypt - Delta)
   sais: {
     id: 'sais',
     name: 'Sais',
     coordinates: [30.964, 30.772],
-    region: 'Egypt - Delta',
+    region: 'Lower Egypt',
     locations: [
       {
         id: 'temple-neith',
@@ -453,45 +453,45 @@ Neith was identified with Athena by the Greeks, and Sais attracted Greek visitor
     ]
   },
 
-// 21. Temple of Isis at Behbeit el-Hagar
-behbeit: {
-  id: 'behbeit',
-  name: 'Behbeit el-Hagar',
-  coordinates: [31.029, 31.29],
-  region: 'Egypt - Delta',
-  locations: [
-    {
-      id: 'temple-isis-behbeit',
-      name: 'Temple of Isis',
-      description: 'Granite sanctuary of Isis in the Nile Delta',
-      longDescription: `Behbeit el-Hagar was the only major temple in ancient Egypt constructed entirely of granite, dedicated to the goddess Isis during the Late Period and early Ptolemaic era (c. 380–343 BCE, with later additions). Often referred to as the “Iseum,” it served as a northern counterpart to Philae, reinforcing the widespread cult of Isis across Egypt.
+  // 21. Temple of Isis at Behbeit el-Hagar (Lower Egypt - Delta)
+  behbeit: {
+    id: 'behbeit',
+    name: 'Behbeit el-Hagar',
+    coordinates: [31.029, 31.29],
+    region: 'Lower Egypt',
+    locations: [
+      {
+        id: 'temple-isis-behbeit',
+        name: 'Temple of Isis',
+        description: 'Granite sanctuary of Isis in the Nile Delta',
+        longDescription: `Behbeit el-Hagar was the only major temple in ancient Egypt constructed entirely of granite, dedicated to the goddess Isis during the Late Period and early Ptolemaic era (c. 380–343 BCE, with later additions). Often referred to as the “Iseum,” it served as a northern counterpart to Philae, reinforcing the widespread cult of Isis across Egypt.
 
 Though now reduced to a vast field of collapsed stone blocks—many weighing over 20 tons—the site preserves finely carved reliefs of exceptional quality. These depict the king presenting offerings to Isis, along with scenes featuring Osiris and Horus as part of the Osirian triad. The temple reflects the theological unity of these deities rather than a singular focus on Horus.
 
 Unlike many temples of Upper Egypt, Behbeit represents the religious and cultural revival of the Nile Delta following periods of foreign domination. Its destruction likely occurred in late antiquity, leaving behind one of the most enigmatic and visually striking ruined temple sites in northern Egypt.`,
-      imageRegenerated: '/images/sites/temple-isis-behbeit-regenerated.jpg',
-      imageCurrent: '/images/sites/temple-isis-behbeit-current.jpg',
-      scene: 'The Fallen Granite Sanctuary of Isis',
-      visualHighlights: [
-        'Massive granite blocks scattered across the landscape',
-        'Finely carved Late Period reliefs of Isis and royal rituals',
-        'Scenes depicting the Osirian triad: Isis, Osiris, and Horus',
-        'Unfinished architectural elements and column drums',
-        'Wide open Delta setting with fragmented monumental remains'
-      ],
-      deity: 'Isis',
-      type: 'temple',
-      youtubeUrl: 'https://youtu.be/PEp3I5Is8Ts?si=Ap7o7rYq1gcYR2CF'
-    }
-  ]
-},
+        imageRegenerated: '/images/sites/temple-isis-behbeit-regenerated.jpg',
+        imageCurrent: '/images/sites/temple-isis-behbeit-current.jpg',
+        scene: 'The Fallen Granite Sanctuary of Isis',
+        visualHighlights: [
+          'Massive granite blocks scattered across the landscape',
+          'Finely carved Late Period reliefs of Isis and royal rituals',
+          'Scenes depicting the Osirian triad: Isis, Osiris, and Horus',
+          'Unfinished architectural elements and column drums',
+          'Wide open Delta setting with fragmented monumental remains'
+        ],
+        deity: 'Isis',
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/PEp3I5Is8Ts?si=Ap7o7rYq1gcYR2CF'
+      }
+    ]
+  },
 
-  // 22-23. Dendera Temple Complex
+  // 22-23. Dendera Temple Complex (Upper Egypt)
   dendera: {
     id: 'dendera',
     name: 'Dendera Temple',
     coordinates: [26.142, 32.67],
-    region: 'Egypt - Upper Egypt',
+    region: 'Upper Egypt',
     locations: [
       {
         id: 'temple-hathor',
@@ -530,12 +530,12 @@ The practice of incubation healing continued here until the 4th century CE, even
     ]
   },
 
-  // 24. Temple of Montu at Medamud
+  // 24. Temple of Montu at Medamud (Upper Egypt - Thebes)
   medamud: {
     id: 'medamud',
     name: 'Medamud',
     coordinates: [25.75, 32.68],
-    region: 'Egypt - Thebes',
+    region: 'Upper Egypt',
     locations: [
       {
         id: 'temple-montu',
@@ -557,56 +557,12 @@ The site's hypostyle hall features columns painted in vivid colors—a rare surv
     ]
   },
 
-  // 25-26. Abu Simbel
-  abuSimbel: {
-    id: 'abu-simbel',
-    name: 'Abu Simbel',
-    coordinates: [22.3365, 31.6255],
-    region: 'Egypt - Far South',
-    locations: [
-      {
-        id: 'abu-simbel-temple',
-        name: 'Great Temple of Ramses II',
-        description: 'Solar alignment illuminating the sanctuary',
-        longDescription: `The Great Temple of Abu Simbel was carved from a sandstone cliff during the reign of Ramses II (c. 1264 BCE), its four colossal seated statues of the pharaoh (each 20 meters tall) dominating the Nile facade.
-
-Twice each year—on February 22 and October 22—the rising sun penetrates the temple's 60-meter-long entrance corridor, sending a narrow beam of light deep into the sanctuary. The beam illuminates the statues of Ra-Horakhty, Ramses II, and Amun-Ra, while Ptah remains in shadow. These dates are believed to correspond to Ramses's coronation and his birthday.
-
-When the Aswan High Dam threatened to submerge the site in the 1960s, the entire temple was cut into 1,036 blocks and reassembled 65 meters higher, preserving the solar alignment.`,
-        imageRegenerated: '/images/sites/abu-simbel-temple-regenerated.jpg',
-        imageCurrent: '/images/sites/abu-simbel-temple-current.jpg',
-        scene: 'The Miracle of the Sun',
-        visualHighlights: ['Sun beam penetrating the 60-meter temple depth', 'Activating pigments and gold of statues', 'Illuminated statues of Ramses II and gods', 'Ptah remaining in deliberate shadow', 'Colossal facade statues each 20 meters tall'],
-        deity: 'Ra',
-        type: 'temple',
-        youtubeUrl: 'https://youtu.be/l4O4pCRm2xY?si=veGgYJhRPQAiFvL0'
-      },
-      {
-        id: 'nefertari-temple',
-        name: 'Temple of Hathor at Abu Simbel',
-        description: 'Dedicated to Ramses II\'s beloved queen',
-        longDescription: `The Small Temple of Abu Simbel stands 100 meters northeast of the Great Temple, dedicated to Hathor and Queen Nefertari, Ramses II's favorite wife. Six colossal statues adorn the facade—four of Ramses and two of Nefertari, all 10 meters tall—the only temple in Egypt where the queen's statues equal the pharaoh's in size.
-
-The interior features Hathor-headed columns with the goddess's cow ears, a hypostyle hall with scenes of Ramses making offerings to Hathor, and a sanctuary with a statue of the goddess emerging from the cliff.
-
-Nefertari is shown in reliefs without a separate divine consort, treated as a goddess in her own right, wearing the vulture headdress of a queen and the cow-horn crown of Hathor.`,
-        imageRegenerated: '/images/sites/nefertari-temple-regenerated.jpg',
-        imageCurrent: '/images/sites/nefertari-temple-current.jpg',
-        scene: 'The Queen\'s Sanctuary',
-        visualHighlights: ['Six colossal statues with Nefertari equal to Ramses', 'Hathor-headed columns with cow ears', 'Queen Nefertari as goddess in reliefs', 'Healing chapel for Hathor\'s devotees', 'Sun alignment on the sanctuary'],
-        deity: 'Hathor',
-        type: 'temple',
-        youtubeUrl: 'https://youtu.be/f6wQJmf5Uyg?si=p3b-gUpSi6JEZHZg'
-      }
-    ]
-  },
-
-  // 27. Temple of Horus at Edfu
+  // 25. Temple of Horus at Edfu (Upper Egypt)
   edfu: {
     id: 'edfu',
     name: 'Temple of Edfu',
     coordinates: [24.9788, 32.8787],
-    region: 'Egypt - Upper Egypt',
+    region: 'Upper Egypt',
     locations: [
       {
         id: 'temple-horus',
@@ -628,12 +584,12 @@ The temple walls preserve the "Dramatic Text of Edfu" (temple foundation descrip
     ]
   },
 
-  // 28. Temple of Kom Ombo
+  // 26. Temple of Kom Ombo (Upper Egypt)
   komOmbo: {
     id: 'kom-ombo',
     name: 'Temple of Kom Ombo',
     coordinates: [24.451, 32.928],
-    region: 'Egypt - Upper Egypt',
+    region: 'Upper Egypt',
     locations: [
       {
         id: 'temple-sobek',
@@ -655,12 +611,12 @@ The temple complex includes a nilometer, a birthing house (mammisi), and a chape
     ]
   },
 
-  // 29. Temple of Philae (Isis)
+  // 27. Temple of Philae (Isis) - Upper Egypt (Aswan)
   philae: {
     id: 'philae',
     name: 'Temple of Philae',
     coordinates: [24.025, 32.884],
-    region: 'Egypt - Upper Egypt',
+    region: 'Upper Egypt',
     locations: [
       {
         id: 'temple-isis',
@@ -681,82 +637,83 @@ The complex includes the Temple of Hathor (with columns carved with Bes), the Ki
       }
     ]
   },
-// 30. Abydos - Temple of Seti I
-abydos: {
-  id: 'abydos',
-  name: 'Abydos',
-  coordinates: [26.185, 31.919],
-  region: 'Egypt - Upper Egypt',
-  locations: [
-    {
-      id: 'temple-seti',
-      name: 'Temple of Seti I',
-      description: 'Famous for the Abydos King List of 76 pharaohs',
-      longDescription: `The Temple of Seti I (1294-1279 BCE) is Abydos' crown jewel, renowned for its stunning, well-preserved reliefs and its inclusion of the Abydos King List—a chronological wall recording 76 pharaohs from Menes (c. 3100 BCE) through the early dynasties to Seti I himself, omitting the Amarna Period rulers. This king list is essential for reconstructing Egyptian chronology.
+
+  // 28-31. Abydos - Temple of Seti I (Upper Egypt)
+  abydos: {
+    id: 'abydos',
+    name: 'Abydos',
+    coordinates: [26.185, 31.919],
+    region: 'Upper Egypt',
+    locations: [
+      {
+        id: 'temple-seti',
+        name: 'Temple of Seti I',
+        description: 'Famous for the Abydos King List of 76 pharaohs',
+        longDescription: `The Temple of Seti I (1294-1279 BCE) is Abydos' crown jewel, renowned for its stunning, well-preserved reliefs and its inclusion of the Abydos King List—a chronological wall recording 76 pharaohs from Menes (c. 3100 BCE) through the early dynasties to Seti I himself, omitting the Amarna Period rulers. This king list is essential for reconstructing Egyptian chronology.
 
 Behind the temple lies the Osireion, a profound subterranean monument intended as a symbolic tomb for Osiris, featuring massive granite pillars and a central platform surrounded by water—symbolizing the primordial mound emerging from chaos.`,
-      imageRegenerated: '/images/sites/temple-seti-regenerated.jpg',
-      imageCurrent: '/images/sites/temple-seti-current.jpg',
-      scene: 'The Cult of Osiris',
-      visualHighlights: ['Deeply carved reliefs with fine detail', 'Abydos King List of 76 pharaohs', 'Osireion underground water temple', 'Pilgrim offering stelae in sanctuary', 'Osiris cult statues in multiple chapels'],
-      deity: 'Osiris',
-      type: 'temple',
-      youtubeUrl: 'https://youtu.be/tGXQRGTFduM?si=HcoAR6zedu39ZGHp'
-    },
-    {
-      id: 'osireion',
-      name: 'Osireion',
-      description: 'Subterranean symbolic tomb of Osiris',
-      longDescription: `The Osireion is a unique, profound subterranean monument located directly behind the Temple of Seti I, intended as a symbolic tomb for Osiris. Built by Seti I and completed by his son Ramesses II, this enigmatic structure features massive granite pillars and a central platform surrounded by water channels—representing the primordial mound of creation emerging from the endless sea of chaos.
+        imageRegenerated: '/images/sites/temple-seti-regenerated.jpg',
+        imageCurrent: '/images/sites/temple-seti-current.jpg',
+        scene: 'The Cult of Osiris',
+        visualHighlights: ['Deeply carved reliefs with fine detail', 'Abydos King List of 76 pharaohs', 'Osireion underground water temple', 'Pilgrim offering stelae in sanctuary', 'Osiris cult statues in multiple chapels'],
+        deity: 'Osiris',
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/tGXQRGTFduM?si=HcoAR6zedu39ZGHp'
+      },
+      {
+        id: 'osireion',
+        name: 'Osireion',
+        description: 'Subterranean symbolic tomb of Osiris',
+        longDescription: `The Osireion is a unique, profound subterranean monument located directly behind the Temple of Seti I, intended as a symbolic tomb for Osiris. Built by Seti I and completed by his son Ramesses II, this enigmatic structure features massive granite pillars and a central platform surrounded by water channels—representing the primordial mound of creation emerging from the endless sea of chaos.
 
 Unlike traditional Egyptian temples, the Osireion was designed as a cenotaph (false tomb) to connect the pharaoh directly with Osiris, god of the afterlife. The underground chamber's austere, megalithic architecture resembles a valley temple of the Old Kingdom pyramid complexes, intentionally archaic in style. Early archaeologists found that the structure had been deliberately flooded, creating an eerie reflection of the granite supports in the dark water.`,
-      imageRegenerated: '/images/sites/osireion-regenerated.jpg',
-      imageCurrent: '/images/sites/osireion-current.jpg',
-      scene: 'The Primordial Mound',
-      visualHighlights: ['Massive granite pillars in subterranean chamber', 'Water channels surrounding central platform', 'Archaic valley-temple style architecture', 'Eerie reflections in dark water', 'Central sarcophagus-shaped platform'],
-      deity: 'Osiris',
-      type: 'tomb',
-      youtubeUrl: 'https://youtu.be/dKW7c8yDLnM?si=SREGSCQshgglgcXj'
-    },
-    {
-      id: 'umm-el-qab',
-      name: 'Umm el-Qa\'ab',
-      description: 'Royal cemetery of Egypt\'s first pharaohs',
-      longDescription: `Umm el-Qa'ab, meaning "Mother of Pots" in Arabic, is the sacred royal cemetery where predynastic and early dynastic kings of the 1st and 2nd dynasties were buried. This desolate desert site contains the tombs of Egypt's first pharaohs, including Narmer (who unified Upper and Lower Egypt), Aha, Djer, Den, and Qa'a—the earliest known royal burials in Egyptian history.
+        imageRegenerated: '/images/sites/osireion-regenerated.jpg',
+        imageCurrent: '/images/sites/osireion-current.jpg',
+        scene: 'The Primordial Mound',
+        visualHighlights: ['Massive granite pillars in subterranean chamber', 'Water channels surrounding central platform', 'Archaic valley-temple style architecture', 'Eerie reflections in dark water', 'Central sarcophagus-shaped platform'],
+        deity: 'Osiris',
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/dKW7c8yDLnM?si=SREGSCQshgglgcXj'
+      },
+      {
+        id: 'umm-el-qab',
+        name: 'Umm el-Qa\'ab',
+        description: 'Royal cemetery of Egypt\'s first pharaohs',
+        longDescription: `Umm el-Qa'ab, meaning "Mother of Pots" in Arabic, is the sacred royal cemetery where predynastic and early dynastic kings of the 1st and 2nd dynasties were buried. This desolate desert site contains the tombs of Egypt's first pharaohs, including Narmer (who unified Upper and Lower Egypt), Aha, Djer, Den, and Qa'a—the earliest known royal burials in Egyptian history.
 
 The name "Mother of Pots" derives from the thousands of broken offering jars left by centuries of pilgrims who came to venerate these earliest kings. The tombs are modest mudbrick chambers compared to later pyramids, but their importance is immense: inscriptions from Umm el-Qa'ab represent some of the earliest hieroglyphic writing. Later Egyptians believed this was the actual burial place of Osiris himself, making Abydos the most holy site in Egypt for thousands of years.`,
-      imageRegenerated: '/images/sites/umm-el-qab-regenerated.jpg',
-      imageCurrent: '/images/sites/umm-el-qab-current.jpg',
-      scene: 'The First Pharaohs',
-      visualHighlights: ['Royal tombs of Narmer and early dynastic kings', 'Thousands of broken offering jars', 'Early hieroglyphic inscriptions', 'Mudbrick chamber architecture', 'Pilgrim devotional landscape'],
-      deity: 'Osiris',
-      type: 'tomb',
-      youtubeUrl: 'https://youtu.be/H5n9mICwA5Q?si=mSgNl1RceMF--DL9'
-    },
-    {
-      id: 'temple-ramesses',
-      name: 'Temple of Ramesses II',
-      description: 'Smaller temple of the great pharaoh',
-      longDescription: `The Temple of Ramesses II is a smaller, partially destroyed temple located near the temple of his father, Seti I. While less intricately decorated and more ruined than the adjacent monument, this temple still preserves striking reliefs showing Ramesses II making offerings to Osiris, Isis, and Horus.
+        imageRegenerated: '/images/sites/umm-el-qab-regenerated.jpg',
+        imageCurrent: '/images/sites/umm-el-qab-current.jpg',
+        scene: 'The First Pharaohs',
+        visualHighlights: ['Royal tombs of Narmer and early dynastic kings', 'Thousands of broken offering jars', 'Early hieroglyphic inscriptions', 'Mudbrick chamber architecture', 'Pilgrim devotional landscape'],
+        deity: 'Osiris',
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/H5n9mICwA5Q?si=mSgNl1RceMF--DL9'
+      },
+      {
+        id: 'temple-ramesses',
+        name: 'Temple of Ramesses II',
+        description: 'Smaller temple of the great pharaoh',
+        longDescription: `The Temple of Ramesses II is a smaller, partially destroyed temple located near the temple of his father, Seti I. While less intricately decorated and more ruined than the adjacent monument, this temple still preserves striking reliefs showing Ramesses II making offerings to Osiris, Isis, and Horus.
 
 The first hypostyle hall features pillars with engaged Osiride statues of Ramesses—a signature motif of his reign. Though many blocks were re-used in later periods, the temple's sanctuary retains a triad of chapels for Osiris, Isis, and Horus. Recent excavations have uncovered evidence of a rare symbolic "Tomb of Osiris" burial chamber beneath the temple floor, connecting Ramesses II to the same Osirian mysteries his father honored.`,
-      imageRegenerated: '/images/sites/temple-ramesses-regenerated.jpg',
-      imageCurrent: '/images/sites/temple-ramesses-current.jpg',
-      scene: 'A Son Completing His Father’s Work',
-      visualHighlights: ['Osiride pillars of Ramesses II', 'Reliefs of Ramesses before Osiris', 'Triple sanctuary chapels', 'Symbolic Tomb of Osiris beneath', 'Lesser scale but elegant proportions'],
-      deity: 'Osiris',
-      type: 'temple',
-      youtubeUrl: 'https://youtu.be/Y7PJdGe2800?si=tYnyKh6uxLcZkQ1F'
-    }
-  ]
-},
+        imageRegenerated: '/images/sites/temple-ramesses-regenerated.jpg',
+        imageCurrent: '/images/sites/temple-ramesses-current.jpg',
+        scene: 'A Son Completing His Father’s Work',
+        visualHighlights: ['Osiride pillars of Ramesses II', 'Reliefs of Ramesses before Osiris', 'Triple sanctuary chapels', 'Symbolic Tomb of Osiris beneath', 'Lesser scale but elegant proportions'],
+        deity: 'Osiris',
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Y7PJdGe2800?si=tYnyKh6uxLcZkQ1F'
+      }
+    ]
+  },
 
-  // 31-35. Valley of the Kings (5 locations)
+  // 32-36. Valley of the Kings (Upper Egypt - Thebes) - 5 locations
   valleyKings: {
     id: 'valley-kings',
     name: 'Valley of the Kings',
     coordinates: [25.746, 32.629],
-    region: 'Egypt - Thebes',
+    region: 'Upper Egypt',
     locations: [
       {
         id: 'valley-kings',
@@ -838,14 +795,279 @@ The tomb was used as a shelter for Christian hermits in late antiquity, who left
   }
 }
 
-// ========== ADDITIONAL EGYPTIAN SITES (36-40) ==========
-export const additionalEgyptianSites: Record<string, Site> = {
-  // 36. Faiyum Oasis - Agricultural Heartland
+// ========== SECTION 3: NUBIA, KUSH & EAST AFRICA (37-60) ==========
+// Continues after egyptianSites (which ends at #36)
+
+export const nubianSites: Record<string, Site> = {
+  // ============================================
+  // PART A: NUBIA & KUSH (Southern Egypt & Sudan)
+  // ============================================
+
+  // 37. Abu Simbel - Great Temple of Ramses II (Nubia)
+  abuSimbel: {
+    id: 'abu-simbel',
+    name: 'Abu Simbel',
+    coordinates: [22.3365, 31.6255],
+    region: 'Nubia / Kush (Egypt-Sudan border)',
+    locations: [
+      {
+        id: 'abu-simbel-temple',
+        name: 'Great Temple of Ramses II',
+        description: 'Solar alignment illuminating the sanctuary',
+        longDescription: `The Great Temple of Abu Simbel was carved from a sandstone cliff during the reign of Ramses II (c. 1264 BCE), its four colossal seated statues of the pharaoh (each 20 meters tall) dominating the Nile facade. This site lies in ancient Nubia, territory the Egyptians controlled but which was culturally Kushite. Twice each year—on February 22 and October 22—the rising sun penetrates the temple's 60-meter-long entrance corridor, sending a narrow beam of light deep into the sanctuary. The beam illuminates the statues of Ra-Horakhty, Ramses II, and Amun-Ra, while Ptah remains in shadow. These dates are believed to correspond to Ramses's coronation and his birthday. When the Aswan High Dam threatened to submerge the site in the 1960s, the entire temple was cut into 1,036 blocks and reassembled 65 meters higher, preserving the solar alignment.`,
+        imageRegenerated: '/images/sites/abu-simbel-temple-regenerated.jpg',
+        imageCurrent: '/images/sites/abu-simbel-temple-current.jpg',
+        scene: 'The Miracle of the Sun',
+        visualHighlights: ['Sun beam penetrating the 60-meter temple depth', 'Activating pigments and gold of statues', 'Illuminated statues of Ramses II and gods', 'Ptah remaining in deliberate shadow', 'Colossal facade statues each 20 meters tall'],
+        deity: 'Ra',
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/l4O4pCRm2xY?si=veGgYJhRPQAiFvL0'
+      },
+      {
+        id: 'nefertari-temple-abu',
+        name: 'Temple of Hathor at Abu Simbel',
+        description: 'Dedicated to Ramses II\'s beloved queen',
+        longDescription: `The Small Temple of Abu Simbel stands 100 meters northeast of the Great Temple, dedicated to Hathor and Queen Nefertari, Ramses II's favorite wife. Six colossal statues adorn the facade—four of Ramses and two of Nefertari, all 10 meters tall—the only temple in Egypt where the queen's statues equal the pharaoh's in size. The interior features Hathor-headed columns with the goddess's cow ears, a hypostyle hall with scenes of Ramses making offerings to Hathor, and a sanctuary with a statue of the goddess emerging from the cliff. Nefertari is shown in reliefs without a separate divine consort, treated as a goddess in her own right, wearing the vulture headdress of a queen and the cow-horn crown of Hathor.`,
+        imageRegenerated: '/images/sites/nefertari-temple-abu-regenerated.jpg',
+        imageCurrent: '/images/sites/nefertari-temple-abu-current.jpg',
+        scene: 'The Queen\'s Sanctuary',
+        visualHighlights: ['Six colossal statues with Nefertari equal to Ramses', 'Hathor-headed columns with cow ears', 'Queen Nefertari as goddess in reliefs', 'Healing chapel for Hathor\'s devotees', 'Sun alignment on the sanctuary'],
+        deity: 'Hathor',
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/f6wQJmf5Uyg?si=p3b-gUpSi6JEZHZg'
+      }
+    ]
+  },
+
+  // 38. Kerma - The Earliest Nubian Kingdom
+  kerma: {
+    id: 'kerma',
+    name: 'Kerma',
+    coordinates: [19.6, 30.4167],
+    region: 'Nubia / Kush (Sudan)',
+    locations: [
+      {
+        id: 'western-deffufa',
+        name: 'The Western Deffufa',
+        description: 'Massive mudbrick temple of the Kerma kingdom',
+        longDescription: `The Western Deffufa dominates the ancient city of Kerma, an 18-meter-high mudbrick temple that served as the religious and political center of the earliest kingdom in sub-Saharan Africa (c. 2500-1500 BCE). Unlike Egyptian stone temples, the Deffufa is built entirely of sun-dried mudbrick, yet its scale rivals contemporary Egyptian monuments. The interior contains ritual spaces, offering tables, and evidence of elaborate ceremonies. Below ground lie elaborate burial chambers with hundreds of human sacrifices—ertainers buried with their rulers to serve them in the afterlife. Kerma was Egypt's great rival during the Middle Kingdom, controlling gold mines and trade routes before being conquered by Thutmose III.`,
+        imageRegenerated: '/images/sites/western-deffufa-regenerated.jpg',
+        imageCurrent: '/images/sites/western-deffufa-current.jpg',
+        scene: 'The Western Deffufa of Kerma',
+        visualHighlights: ['Massive mudbrick temple rising 18 meters', 'Ritual offering tables and chambers', 'Subterranean royal burial chambers', 'Evidence of human sacrifices (hundreds)', 'Egyptian rival civilization control of gold mines'],
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Z_VhhGI0Cmk?si=bKDOieVWWijKp4sK'
+      },
+      {
+        id: 'kerma-royal-tombs',
+        name: 'Kerma Royal Cemeteries',
+        description: 'Massive tumuli with hundreds of sacrifices',
+        longDescription: `The royal tombs at Kerma are among the largest burial mounds ever built in Africa, with diameters exceeding 90 meters. These tumuli contained the remains of Kerma's kings, surrounded by hundreds of sacrificed retainers intended to serve their ruler in the afterlife. The tombs held incredible wealth—gold, ivory, Egyptian imports (scarabs, amulets, alabaster vessels), and exotic animals. The largest tomb contained over 400 human sacrifices, demonstrating the absolute power of Kerma's kings. This practice of human sacrifice in royal burials continued in Kush for centuries, with archaeological evidence found throughout Nubia.`,
+        imageRegenerated: '/images/sites/kerma-royal-tombs-regenerated.jpg',
+        imageCurrent: '/images/sites/kerma-royal-tombs-current.jpg',
+        scene: 'The Burial Mounds of Kerma\'s Kings',
+        visualHighlights: ['90-meter diameter royal tumuli', '400+ human sacrifice burials', 'Gold, ivory, and Egyptian imports', 'Exotic animal remains', 'Hierarchical burial layout'],
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/Z_VhhGI0Cmk?si=bKDOieVWWijKp4sK'
+      }
+    ]
+  },
+
+  // 39. Napata - The First Kushite Capital
+  napata: {
+    id: 'napata',
+    name: 'Napata',
+    coordinates: [18.55, 31.8333],
+    region: 'Nubia / Kush (Sudan)',
+    locations: [
+      {
+        id: 'napata-city',
+        name: 'Napata',
+        description: 'Political-religious center of Kushite pharaohs',
+        longDescription: `Napata was the southern capital of the Kingdom of Kush, where the Black Pharaohs of the 25th Dynasty originated. Located at the holy mountain of Jebel Barkal, Napata blended Egyptian and Kushite traditions into a unique hybrid culture. The city featured multiple temples dedicated to Amun (including the Great Temple of Amun and Temple of Mut), royal palaces (including the Palace of Taharqa), and burial grounds with pyramidal tombs (el-Kurru and Nuri). It was from Napata that the Kushite king Piye led his campaign to conquer Egypt, reuniting the Nile Valley under native rule. Though later sacked by the Assyrians (c. 660 BCE), Napata remained a religious center for centuries, with pilgrims traveling to the oracle of Amun at Jebel Barkal—which chose kings, legitimized military campaigns, and guided Kushite state policy for over 1,000 years.`,
+        imageRegenerated: '/images/sites/napata-city-regenerated.jpg',
+        imageCurrent: '/images/sites/napata-city-current.jpg',
+        scene: 'The Kushite Capital of Napata',
+        visualHighlights: ['Temples of Amun with Egyptian-Kushite hybrid architecture', 'Palace complexes of the 25th Dynasty pharaohs', 'Royal burial pyramids at el-Kurru and Nuri', 'Oracle of Amun at Jebel Barkal', 'Piye\'s victory stela recording conquest of Egypt'],
+        deity: 'Amun',
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/CKv3lGdlkCY?si=1fG996ivGIepP8JL'
+      },
+      {
+        id: 'jebel-barkal-mountain',
+        name: 'Jebel Barkal',
+        description: 'Sacred mountain of Amun and Kushite kingship',
+        longDescription: `A dramatic sandstone formation rises from the desert—the sacred mountain of Jebel Barkal, rising 98 meters above the plain. The Kushites believed this was where the god Amun resided, making it the religious heart of the Kingdom of Kush. The mountain's distinctive pinnacle resembles a uraeus (cobra), reinforcing its divine significance. At its base lie the ruins of multiple temples, including the Great Temple of Amun (founded by Thutmose III), Temple of Mut, and Temple of Taharqa. For over a thousand years, every Kushite king traveled here to be crowned and to receive Amun's blessing. The mountain was considered the source of kingship itself—where Amun declared who would rule. The site also contains royal burial pyramids from both Napatan and Meroitic periods.`,
+        imageRegenerated: '/images/sites/jebel-barkal-mountain-regenerated.jpg',
+        imageCurrent: '/images/sites/jebel-barkal-mountain-current.jpg',
+        scene: 'The Sacred Mountain of Amun',
+        visualHighlights: ['Dramatic sandstone pinnacle 98 meters high', 'Uraeus-shaped peak (cobra symbol of kingship)', 'Great Temple of Amun at the base', 'Kushite royal burial pyramids', 'Coronation site of every Kushite king'],
+        deity: 'Amun',
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/3WemovbNNl8?si=P1W1q01ncbggkegv'
+      }
+    ]
+  },
+
+  // 40. El-Kurru - Pyramids of the 25th Dynasty
+  elKurru: {
+    id: 'el-kurru',
+    name: 'El-Kurru',
+    coordinates: [18.425, 31.833],
+    region: 'Nubia / Kush (Sudan)',
+    locations: [
+      {
+        id: 'el-kurru-pyramids',
+        name: 'El-Kurru Pyramids',
+        description: 'Burial place of the first 25th Dynasty pharaohs',
+        longDescription: `El-Kurru was the royal cemetery of the early Napatan period, containing the tombs of the first Kushite kings who would later conquer Egypt. The site includes 14 pyramids (smaller and steeper than Egyptian examples) and underground burial chambers decorated with reliefs showing Egyptian influence. The most famous tomb is that of King Piye (c. 747-716 BCE), who conquered Egypt—his chamber is decorated with scenes of the king before Osiris. Other tombs include those of Kashta (Piye's father), Shabaka, and other 25th Dynasty rulers. The tombs also contained horse burials—horses were buried standing, fully bridled, near their owners—reflecting the Kushite military elite's dependence on cavalry. The site was used from the 9th to 7th centuries BCE before being replaced by Nuri.`,
+        imageRegenerated: '/images/sites/el-kurru-regenerated.jpg',
+        imageCurrent: '/images/sites/el-kurru-current.jpg',
+        scene: 'The First Kushite Royal Cemetery',
+        visualHighlights: ['14 steep-sided pyramids', 'Underground burial chambers with Egyptian-style reliefs', 'Tomb of Piye with Osiris scenes', 'Horse burials (standing, fully bridled)', 'Kushite military elite cavalry culture'],
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/m7fSJzhL2CI?si=vBXRQEFTiO4Fpx09'
+      }
+    ]
+  },
+
+  // 41. Nuri - Pyramids of the Napatan Kings
+  nuri: {
+    id: 'nuri',
+    name: 'Nuri',
+    coordinates: [18.467, 31.917],
+    region: 'Nubia / Kush (Sudan)',
+    locations: [
+      {
+        id: 'nuri-pyramids',
+        name: 'Pyramids of Nuri',
+        description: 'Burial place of Taharqa and later Napatan kings',
+        longDescription: `Nuri was the royal cemetery of the Napatan period (7th-4th centuries BCE), replacing El-Kurru. The site contains over 80 pyramids—more than any other site in Sudan—including the pyramid of Taharqa (c. 690-664 BCE), the most powerful Kushite pharaoh who fought the Assyrians and moved his capital back to Napata. Taharqa's pyramid is the largest at Nuri (20 meters square at base, estimated 50 meters tall). Other tombs include those of Tantamani, Atlanersa, Senkamanisken, and other kings, as well as queens and princes. The pyramids are built of red sandstone with offering chapels decorated in relief. Several tombs contained alabaster and gold funerary objects, including shabtis, amulets, and jewelry now in the Boston Museum of Fine Arts. The site's remote location preserved it from extensive looting.`,
+        imageRegenerated: '/images/sites/nuri-pyramids-regenerated.jpg',
+        imageCurrent: '/images/sites/nuri-pyramids-current.jpg',
+        scene: 'The Royal Pyramids of Nuri',
+        visualHighlights: ['80+ red sandstone pyramids', 'Taharqa\'s pyramid (largest, c. 50 meters)', 'Offering chapels with relief decoration', 'Alabaster and gold funerary objects', 'Remote desert setting'],
+        deity: 'Amun',
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/Msucso9PsJw?si=pJJgM7GzD5lzpuA-'
+      }
+    ]
+  },
+
+  // 42. Meroë - The Southern Capital
+  meroePyramids: {
+    id: 'meroe-pyramids',
+    name: 'Meroë',
+    coordinates: [16.9381, 33.7489],
+    region: 'Nubia / Kush (Sudan)',
+    locations: [
+      {
+        id: 'meroe-city',
+        name: 'City of Meroë',
+        description: 'Southern capital of the Kushite kingdom',
+        longDescription: `Meroë became the capital of the Kingdom of Kush around 300 BCE, when the royal court moved south from Napata. The city controlled trade routes between the Red Sea, central Africa, and the Nile, exporting gold, ivory, iron, ebony, and exotic animals (elephants, giraffes, leopards). The city's wealth came also from ironworking—the slag heaps around Meroë are among the largest in Africa, indicating massive production of iron tools and weapons. Meroë featured a royal palace complex (the "Royal City"), temples dedicated to Amun and Apedemak (a lion-headed war god unique to Kush), and a treasury. The city also had a "steam bath" (a unique structure interpreted as a ritual bathing complex with Egyptian and Greek influences). The site declined after an Aksumite invasion in the 4th century CE, but its Meroitic language (still undeciphered) and unique alphabet survive on stelae.`,
+        imageRegenerated: '/images/sites/meroe-city-regenerated.jpg',
+        imageCurrent: '/images/sites/meroe-city-current.jpg',
+        scene: 'The Iron Capital of Kush',
+        visualHighlights: ['Royal palace complex (Royal City)', 'Temples to Amun and lion-headed Apedemak', 'Massive ironworking slag heaps', 'Steam bath ritual bathing complex', 'Meroitic undeciphered language stelae'],
+        deity: 'Apedemak',
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/J0Lf1ofmaOo?si=xa5uhxxre2QS_eo2'
+      },
+      {
+        id: 'meroe-necropolis',
+        name: 'Pyramids of Meroë',
+        description: 'Steep, narrow pyramids unique to Kushite architecture',
+        longDescription: `Unlike the smooth-sided pyramids of Egypt, the Meroë pyramids are steep, narrow, and distinctly Kushite. Over 200 pyramids stand in the desert, their red sandstone glowing in the setting sun. These pyramids served as tombs for Kushite royalty (kings, queens, and high officials) from 300 BCE to 350 CE. The burial chambers are underground, accessed by a staircase, with the pyramids built above ground as 'mastaba' platforms. Many pyramids have chapels with reliefs showing the deceased making offerings to gods (Apedemak, Isis, Bes). The decoration includes Kushite elements: the royal figure sits on a lion throne, wears an elephant-skin robe, and holds a spear—images not found in Egypt. The pyramids are smaller than Egyptian examples (peak 30 meters, average 6-8 meters).`,
+        imageRegenerated: '/images/sites/meroe-necropolis-regenerated.jpg',
+        imageCurrent: '/images/sites/meroe-necropolis-current.jpg',
+        scene: 'The Royal Necropolis of Meroë',
+        visualHighlights: ['Over 200 steep, narrow pyramids', 'Red sandstone construction glowing in sunset', 'Chapels with Kushite-specific reliefs (lion throne, elephant robe)', 'Underground burial chambers', 'Meroitic period (300 BCE - 350 CE)'],
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/atlsWmshkwg?si=5oVBeuNlqXiO9rEc'
+      }
+    ]
+  },
+
+  // 43. Musawwarat es-Sufra - The Lion Temple
+  musawwarat: {
+    id: 'musawwarat',
+    name: 'Musawwarat es-Sufra',
+    coordinates: [16.4167, 33.3167],
+    region: 'Nubia / Kush (Sudan)',
+    locations: [
+      {
+        id: 'lion-temple',
+        name: 'Lion Temple of Musawwarat',
+        description: 'Unique temple dedicated to the lion god Apedemak',
+        longDescription: `Musawwarat es-Sufra is one of the most unusual temple complexes in the Nile Valley, featuring the "Great Enclosure"—90,000 square meters of walls, courtyards, ramps, and columns with no exact parallel in Egyptian or Kushite architecture. The site's main structure is the Lion Temple, built by King Arnekhamani (c. 235-218 BCE), dedicated to Apedemak, the lion-headed war god unique to Kush. The temple's reliefs show the king in combat with enemies, the god ensuring victory, and—most famously—Apedemak emerging from a lotus flower with a cobra-headed snake body (a syncretic image combining Egyptian lotus imagery with Kushite lion god). The site lies in the "Island of Meroë" between the Atbara and Nile rivers, near the traditional elephant-training grounds. The complex may have served religious and agricultural purposes (rainwater collection basins) as well as hosting large gatherings (capable of holding thousands).`,
+        imageRegenerated: '/images/sites/lion-temple-regenerated.jpg',
+        imageCurrent: '/images/sites/lion-temple-current.jpg',
+        scene: 'The Lion God\'s Sanctuary',
+        visualHighlights: ['Great Enclosure (90,000 square meters of walls)', 'Lion Temple with Apedemak reliefs', 'Apedemak emerging from lotus with snake body', 'Elephant-training basins and ramps', 'Unique Kushite architecture (no Egyptian parallel)'],
+        deity: 'Apedemak',
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/bVLVkkgqfTI?si=YyUQroEYHb8F503p'
+      }
+    ]
+  },
+
+  // 44. Naqa - Apedemak Temple with Elephants
+  naqa: {
+    id: 'naqa',
+    name: 'Naqa',
+    coordinates: [16.267, 33.267],
+    region: 'Nubia / Kush (Sudan)',
+    locations: [
+      {
+        id: 'naqa-temples',
+        name: 'Naqa Temples',
+        description: 'Kushite-Egyptian syncretic temple complex',
+        longDescription: `Naqa is a temple complex built during the Meroitic period (1st century BCE - 1st century CE), showing a fascinating blend of Egyptian, Hellenistic, and Kushite art. The Temple of Amun (started by Queen Shanakdakhete, completed by King Natakamani and Queen Amanitore) is Egyptian in plan but with Meroitic elements—the king's costume shows both Egyptian and Kushite regalia. The nearby Lion Temple of Apedemak has reliefs showing the king supported by the lion god, as well as scenes of musicians, prisoners, and—most unusually—a line of elephants. The relief of Queen Amanitore (c. 1-20 CE) shows her in the "smiting scene" (traditionally reserved for male kings), grasping enemies' hair to execute them. The site includes a kiosk (small open-pavilion) with Hathor-headed columns. A Roman-style statue of Augustus was found here (de-faced by Kushites, the head now in the British Museum).`,
+        imageRegenerated: '/images/sites/naqa-regenerated.jpg',
+        imageCurrent: '/images/sites/naqa-current.jpg',
+        scene: 'The Kushite-Egyptian Temple Complex',
+        visualHighlights: ['Temple of Amun with Egyptian-Meroitic hybrid plan', 'Lion Temple of Apedemak with elephant reliefs', 'Queen Amanitore in "Smiting Scene" (women as military leader)', 'Hathor-headed kiosk columns', 'Defaced Roman statue of Augustus'],
+        deity: 'Apedemak',
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/fbgB6fOEGlI?si=7P8psAj2B_TrZoem'
+      }
+    ]
+  },
+
+  // 45. Dangeil - Temple of Amun with Taharqa Inscription
+  dangeil: {
+    id: 'dangeil',
+    name: 'Dangeil',
+    coordinates: [17.183, 33.967],
+    region: 'Nubia / Kush (Sudan)',
+    locations: [
+      {
+        id: 'dangeil-temple',
+        name: 'Temple of Amun at Dangeil',
+        description: 'Well-preserved Kushite temple',
+        longDescription: `Dangeil is an active archaeological site (excavated 2000-present) revealing a temple of Amun built during the Napatan period (c. 7th century BCE) and used through the Meroitic period (1st-3rd century CE). The temple is unique for its well-preserved painted reliefs—rare in Sudan—showing the king and queen (including Queen Amanitore) offering to Amun, Mut, and Khonsu. The site also contains a 'pedestal' for a processional barque (divine boat) and a "crypt" for storing temple treasures. The most significant find is the "Dangeil Inscription" mentioning King Taharqa and the goddess Mut, confirming the site's identification. The temple was surrounded by a mudbrick enclosure wall and included a "kiosk" (pavilion) for royal ceremonies. The site also has a cemetery of pyramid tombs (probably high officials, not royal).`,
+        imageRegenerated: '/images/sites/dangeil-regenerated.jpg',
+        imageCurrent: '/images/sites/dangeil-current.jpg',
+        scene: 'The Painted Temple of Amun',
+        visualHighlights: ['Well-preserved painted reliefs (rare in Sudan)', 'Pedestal for processional barque of Amun', 'Crypt for temple treasures', 'Dangeil Inscription mentioning Taharqa', 'Kiosk for royal ceremonies'],
+        deity: 'Amun',
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/dXUwy9y5heY?si=__VUiH4tDPzSIq-4'
+      }
+    ]
+  },
+
+  // ============================================
+  // PART B: EAST AFRICAN & HORN OF AFRICA SITES
+  // ============================================
+
+  // 46. Faiyum Oasis - Agricultural Heartland (East African connection via Nile)
   fayum: {
     id: 'fayum',
     name: 'Faiyum Oasis',
     coordinates: [29.3084, 30.8428],
-    region: 'Egypt - Upper Egypt',
+    region: 'East Africa / Nile Valley (Egypt)',
     locations: [
       {
         id: 'malachite-gardens',
@@ -866,12 +1088,12 @@ Today, the oasis is known for its waterwheels (over 200 wooden wheels, some dati
     ]
   },
 
-  // 37. Amarna - Capital of the Heretic King
+  // 47. Amarna - Capital of the Heretic King (East African Nile Valley)
   amarna: {
     id: 'amarna',
     name: 'Amarna (Akhetaten)',
     coordinates: [27.645, 30.904],
-    region: 'Egypt - Upper Egypt',
+    region: 'East Africa / Nile Valley (Egypt)',
     locations: [
       {
         id: 'crimson-amarna',
@@ -893,12 +1115,12 @@ Excavations have revealed residential neighborhoods (Workmen's Village with plan
     ]
   },
 
-  // 38. Tanis - The Silver Pharaoh's Treasure
+  // 48. Tanis - The Silver Pharaoh's Treasure (Nile Delta - gateway to East African trade)
   tanis: {
     id: 'tanis',
     name: 'Tanis (San el-Hagar)',
     coordinates: [30.976, 31.878],
-    region: 'Egypt - Delta',
+    region: 'East Africa / Nile Delta (Egypt)',
     locations: [
       {
         id: 'tanis-royal-tombs',
@@ -920,12 +1142,12 @@ The temple precinct includes the Great Temple of Amun (with reused Old Kingdom b
     ]
   },
 
-  // 39. Dahshur - The Experimental Pyramids
+  // 49. Dahshur - The Experimental Pyramids (Nile Valley)
   dahshur: {
     id: 'dahshur',
     name: 'Dahshur Royal Pyramids',
     coordinates: [29.807, 31.209],
-    region: 'Egypt - Memphis',
+    region: 'East Africa / Nile Valley (Egypt)',
     locations: [
       {
         id: 'bent-pyramid',
@@ -962,12 +1184,12 @@ The pyramid was opened to the public only in the 2010s, and visitors can now des
     ]
   },
 
-  // 40. Meidum - The Collapsed Pyramid
+  // 50. Meidum - The Collapsed Pyramid (Nile Valley)
   meidum: {
     id: 'meidum',
     name: 'Meidum Pyramid',
     coordinates: [29.388, 31.157],
-    region: 'Egypt - Upper Egypt',
+    region: 'East Africa / Nile Valley (Egypt)',
     locations: [
       {
         id: 'meidum-pyramid',
@@ -975,9 +1197,9 @@ The pyramid was opened to the public only in the 2010s, and visitors can now des
         description: 'The mysterious collapsed tower pyramid',
         longDescription: `The Meidum Pyramid is one of Egypt's most puzzling and dramatic structures—originally a seven or eight-tiered step pyramid (like Djoser's), it was later encased in a smooth outer shell to create a true pyramid. At some point, the outer casing collapsed catastrophically, leaving a three-tiered central tower rising from a massive rubble strewn around the base like scree.
 
-The pyramid was begun by Pharaoh Huni (last king of the 3rd Dynasty, c. 2630 BCE) and finished by his son Sneferu (first king of the 4th Dynasty), making it a transitional pyramid between the Step Pyramid of Djoser and the true pyramids of Dahshur and Giza. The collapse may have happened during construction (when the angle was too steep for the foundation)\ or due to later stone-robbing destabilizing the structure\ leading Sneferu to abandon it and build the Bent Pyramid (learning from this failure) and then the Red Pyramid (perfecting the design).
+The pyramid was begun by Pharaoh Huni (last king of the 3rd Dynasty, c. 2630 BCE) and finished by his son Sneferu (first king of the 4th Dynasty), making it a transitional pyramid between the Step Pyramid of Djoser and the true pyramids of Dahshur and Giza. The collapse may have happened during construction (when the angle was too steep for the foundation) or due to later stone-robbing destabilizing the structure, leading Sneferu to abandon it and build the Bent Pyramid (learning from this failure) and then the Red Pyramid (perfecting the design).
 
-The complex includes a mortuary temple (with fragments of fine reliefs showing Sneferu in Heb-Sed robes), a causeway (partially excavated), a valley temple (still buried), and a satellite pyramid (for the Ka). Mastaba tombs of royal family members (including Nefermaat, son of Sneferu, and his wife Ateth), surround the pyramid in neat rows, with preserved reliefs including the famous "Geese of Meidum" (now in the Egyptian Museum), showing remarkable naturalism for the Old Kingdom.
+The complex includes a mortuary temple (with fragments of fine reliefs showing Sneferu in Heb-Sed robes), a causeway (partially excavated), a valley temple (still buried), and a satellite pyramid (for the Ka). Mastaba tombs of royal family members (including Nefermaat, son of Sneferu, and his wife Ateth) surround the pyramid in neat rows, with preserved reliefs including the famous "Geese of Meidum" (now in the Egyptian Museum), showing remarkable naturalism for the Old Kingdom.
 
 The site's remote location and "tower" appearance inspired the nickname "False Pyramid" among local Bedouin. The collapse debris has never been cleared, so the pyramid remains as a record of ancient engineering failure—a valuable lesson in pyramid construction history.`,
         imageRegenerated: '/images/sites/meidum-pyramid-regenerated.jpg',
@@ -988,278 +1210,14 @@ The site's remote location and "tower" appearance inspired the nickname "False P
         youtubeUrl: 'https://youtu.be/UTUse_2ae0A?si=qv0yrqBWku6Jowmu'
       }
     ]
-  }
-}
-
-// ========== SECTION 3: NUBIA & KUSH (40-50) ==========
-export const nubianSites: Record<string, Site> = {
-  // 40. Kerma - The Earliest Nubian Kingdom
-  kerma: {
-    id: 'kerma',
-    name: 'Kerma',
-    coordinates: [19.6, 30.4167],
-    region: 'Nubia / Kush (Sudan)',
-    locations: [
-      {
-        id: 'western-deffufa',
-        name: 'The Western Deffufa',
-        description: 'Massive mudbrick temple of the Kerma kingdom',
-        longDescription: `The Western Deffufa dominates the ancient city of Kerma, an 18-meter-high mudbrick temple that served as the religious and political center of the earliest kingdom in sub-Saharan Africa (c. 2500-1500 BCE). Unlike Egyptian stone temples, the Deffufa is built entirely of sun-dried mudbrick, yet its scale rivals contemporary Egyptian monuments. The interior contains ritual spaces, offering tables, and evidence of elaborate ceremonies. Below ground lie elaborate burial chambers with hundreds of human sacrifices—retainers buried with their rulers to serve them in the afterlife. Kerma was Egypt's great rival during the Middle Kingdom, controlling gold mines and trade routes before being conquered by Thutmose III.`,
-        imageRegenerated: '/images/sites/western-deffufa-regenerated.jpg',
-        imageCurrent: '/images/sites/western-deffufa-current.jpg',
-        scene: 'The Western Deffufa of Kerma',
-        visualHighlights: ['Massive mudbrick temple rising 18 meters', 'ritual offering tables and chambers', 'Subterranean royal burial chambers', 'Evidence of human sacrifices (hundreds)', 'Egyptian rival civilization control of gold mines'],
-        type: 'temple',
-        youtubeUrl: 'https://youtu.be/Z_VhhGI0Cmk?si=bKDOieVWWijKp4sK'
-      },
-      {
-        id: 'kerma-royal-tombs',
-        name: 'Kerma Royal Cemeteries',
-        description: 'Massive tumuli with hundreds of sacrifices',
-        longDescription: `The royal tombs at Kerma are among the largest burial mounds ever built in Africa, with diameters exceeding 90 meters. These tumuli contained the remains of Kerma's kings, surrounded by hundreds of sacrificed retainers intended to serve their ruler in the afterlife. The tombs held incredible wealth—gold, ivory, Egyptian imports (scarabs, amulets, alabaster vessels), and exotic animals. The largest tomb contained over 400 human sacrifices, demonstrating the absolute power of Kerma's kings. This practice of human sacrifice in royal burials continued in Kush for centuries, with archaeological evidence found throughout Nubia.`,
-        imageRegenerated: '/images/sites/kerma-royal-tombs-regenerated.jpg',
-        imageCurrent: '/images/sites/kerma-royal-tombs-current.jpg',
-        scene: 'The Burial Mounds of Kerma\'s Kings',
-        visualHighlights: ['90-meter diameter royal tumuli', '400+ human sacrifice burials', 'Gold, ivory, and Egyptian imports', 'Exotic animal remains', 'Hierarchical burial layout'],
-        type: 'tomb',
-        youtubeUrl: 'https://youtu.be/Z_VhhGI0Cmk?si=bKDOieVWWijKp4sK'
-      }
-    ]
   },
 
-  // 41. Napata - The First Kushite Capital
-  napata: {
-    id: 'napata',
-    name: 'Napata',
-    coordinates: [18.55, 31.8333],
-    region: 'Nubia / Kush (Sudan)',
-    locations: [
-      {
-        id: 'napata-city',
-        name: 'Napata',
-        description: 'Political-religious center of Kushite pharaohs',
-        longDescription: `Napata was the southern capital of the Kingdom of Kush, where the Black Pharaohs of the 25th Dynasty originated. Located at the holy mountain of Jebel Barkal, Napata blended Egyptian and Kushite traditions into a unique hybrid culture. The city featured multiple temples dedicated to Amun (including the Great Temple of Amun and Temple of Mut), royal palaces (including the Palace of Taharqa), and burial grounds with pyramidal tombs (el-Kurru and Nuri). It was from Napata that the Kushite king Piye led his campaign to conquer Egypt, reuniting the Nile Valley under native rule. Though later sacked by the Assyrians (c. 660 BCE), Napata remained a religious center for centuries, with pilgrims traveling to the oracle of Amun at Jebel Barkal—which chose kings, legitimized military campaigns, and guided Kushite state policy for over 1,000 years.`,
-        imageRegenerated: '/images/sites/napata-city-regenerated.jpg',
-        imageCurrent: '/images/sites/napata-city-current.jpg',
-        scene: 'The Kushite Capital of Napata',
-        visualHighlights: ['Temples of Amun with Egyptian-Kushite hybrid architecture', 'Palace complexes of the 25th Dynasty pharaohs', 'Royal burial pyramids at el-Kurru and Nuri', 'Oracle of Amun at Jebel Barkal', 'Piye\'s victory stela recording conquest of Egypt'],
-        deity: 'Amun',
-        type: 'city',
-        youtubeUrl:'https://youtu.be/CKv3lGdlkCY?si=1fG996ivGIepP8JL'
-      },
-      {
-        id: 'jebel-barkal-mountain',
-        name: 'Jebel Barkal',
-        description: 'Sacred mountain of Amun and Kushite kingship',
-        longDescription: `A dramatic sandstone formation rises from the desert—the sacred mountain of Jebel Barkal, rising 98 meters above the plain. The Kushites believed this was where the god Amun resided, making it the religious heart of the Kingdom of Kush. The mountain's distinctive pinnacle resembles a uraeus (cobra), reinforcing its divine significance. At its base lie the ruins of multiple temples, including the Great Temple of Amun (founded by Thutmose III), Temple of Mut, and Temple of Taharqa. For over a thousand years, every Kushite king traveled here to be crowned and to receive Amun's blessing. The mountain was considered the source of kingship itself—where Amun declared who would rule. The site also contains royal burial pyramids from both Napatan and Meroitic periods.`,
-        imageRegenerated: '/images/sites/jebel-barkal-mountain-regenerated.jpg',
-        imageCurrent: '/images/sites/jebel-barkal-mountain-current.jpg',
-        scene: 'The Sacred Mountain of Amun',
-        visualHighlights: ['Dramatic sandstone pinnacle 98 meters high', 'Uraeus-shaped peak (cobra symbol of kingship)', 'Great Temple of Amun at the base', 'Kushite royal burial pyramids', 'Coronation site of every Kushite king'],
-        deity: 'Amun',
-        type: 'temple',
-        youtubeUrl: 'https://youtu.be/3WemovbNNl8?si=P1W1q01ncbggkegv'
-      }
-    ]
-  },
-
-  // 43. El-Kurru - Pyramids of the 25th Dynasty
-  elKurru: {
-    id: 'el-kurru',
-    name: 'El-Kurru',
-    coordinates: [18.425, 31.833],
-    region: 'Nubia / Kush (Sudan)',
-    locations: [
-      {
-        id: 'el-kurru-pyramids',
-        name: 'El-Kurru Pyramids',
-        description: 'Burial place of the first 25th Dynasty pharaohs',
-        longDescription: `El-Kurru was the royal cemetery of the early Napatan period, containing the tombs of the first Kushite kings who would later conquer Egypt. The site includes 14 pyramids (smaller and steeper than Egyptian examples) and underground burial chambers decorated with reliefs showing Egyptian influence. The most famous tomb is that of King Piye (c. 747-716 BCE), who conquered Egypt—his chamber is decorated with scenes of the king before Osiris. Other tombs include those of Kashta (Piye's father), Shabaka, and other 25th Dynasty rulers. The tombs also contained horse burials—horses were buried standing, fully bridled, near their owners—reflecting the Kushite military elite's dependence on cavalry. The site was used from the 9th to 7th centuries BCE before being replaced by Nuri.`,
-        imageRegenerated: '/images/sites/el-kurru-regenerated.jpg',
-        imageCurrent: '/images/sites/el-kurru-current.jpg',
-        scene: 'The First Kushite Royal Cemetery',
-        visualHighlights: ['14 steep-sided pyramids', 'Underground burial chambers with Egyptian-style reliefs', 'Tomb of Piye with Osiris scenes', 'Horse burials (standing, fully bridled)', 'Kushite military elite cavalry culture'],
-        type: 'tomb',
-        youtubeUrl: 'https://youtu.be/m7fSJzhL2CI?si=vBXRQEFTiO4Fpx09'
-      }
-    ]
-  },
-
-  // 44. Nuri - Pyramids of the Napatan Kings
-  nuri: {
-    id: 'nuri',
-    name: 'Nuri',
-    coordinates: [18.467, 31.917],
-    region: 'Nubia / Kush (Sudan)',
-    locations: [
-      {
-        id: 'nuri-pyramids',
-        name: 'Pyramids of Nuri',
-        description: 'Burial place of Taharqa and later Napatan kings',
-        longDescription: `Nuri was the royal cemetery of the Napatan period (7th-4th centuries BCE), replacing El-Kurru. The site contains over 80 pyramids—more than any other site in Sudan—including the pyramid of Taharqa (c. 690-664 BCE), the most powerful Kushite pharaoh who fought the Assyrians and moved his capital back to Napata. Taharqa's pyramid is the largest at Nuri (20 meters square at base, estimated 50 meters tall). Other tombs include those of Tantamani, Atlanersa, Senkamanisken, and other kings, as well as queens and princes. The pyramids are built of red sandstone with offering chapels decorated in relief. Several tombs contained alabaster and gold funerary objects, including shabtis, amulets, and jewelry now in the Boston Museum of Fine Arts. The site's remote location preserved it from extensive looting.`,
-        imageRegenerated: '/images/sites/nuri-pyramids-regenerated.jpg',
-        imageCurrent: '/images/sites/nuri-pyramids-current.jpg',
-        scene: 'The Royal Pyramids of Nuri',
-        visualHighlights: ['80+ red sandstone pyramids', 'Taharqa\'s pyramid (largest, c. 50 meters)', 'Offering chapels with relief decoration', 'Alabaster and gold funerary objects', 'Remote desert setting'],
-        deity: 'Amun',
-        type: 'tomb',
-        youtubeUrl: 'https://youtu.be/JUl41Oj3tSQ?si=_Hiw2oE0tpob5f22'
-      }
-    ]
-  },
-
-  // 45. Meroë - The Southern Capital
-  meroePyramids: {
-    id: 'meroe-pyramids',
-    name: 'Meroë',
-    coordinates: [16.9381, 33.7489],
-    region: 'Nubia / Kush (Sudan)',
-    locations: [
-      {
-        id: 'meroe-city',
-        name: 'City of Meroë',
-        description: 'Southern capital of the Kushite kingdom',
-        longDescription: `Meroë became the capital of the Kingdom of Kush around 300 BCE, when the royal court moved south from Napata. The city controlled trade routes between the Red Sea, central Africa, and the Nile, exporting gold, ivory, iron, ebony, and exotic animals (elephants, giraffes, leopards). The city's wealth came also from ironworking—the slag heaps around Meroë are among the largest in Africa, indicating massive production of iron tools and weapons. Meroë featured a royal palace complex (the "Royal City"), temples dedicated to Amun and Apedemak (a lion-headed war god unique to Kush), and a treasury. The city also had a "steam bath" (a unique structure interpreted as a ritual bathing complex with Egyptian and Greek influences). The site declined after an Aksumite invasion in the 4th century CE, but its Meroitic language (still undeciphered) and unique alphabet survive on stelae.`,
-        imageRegenerated: '/images/sites/meroe-city-regenerated.jpg',
-        imageCurrent: '/images/sites/meroe-city-current.jpg',
-        scene: 'The Iron Capital of Kush',
-        visualHighlights: ['Royal palace complex (Royal City)', 'Temples to Amun and lion-headed Apedemak', 'Massive ironworking slag heaps', 'Steam bath ritual bathing complex', 'Meroitic undeciphered language stelae'],
-        deity: 'Apedemak',
-        type: 'city',
-        youtubeUrl: 'https://youtu.be/YhltK0xLY9g?si=xxN11zUOaTeQjSpw'
-      },
-      {
-        id: 'meroe-necropolis',
-        name: 'Pyramids of Meroë',
-        description: 'Steep, narrow pyramids unique to Kushite architecture',
-        longDescription: `Unlike the smooth-sided pyramids of Egypt, the Meroë pyramids are steep, narrow, and distinctly Kushite. Over 200 pyramids stand in the desert, their red sandstone glowing in the setting sun. These pyramids served as tombs for Kushite royalty (kings, queens, and high officials) from 300 BCE to 350 CE. The burial chambers are underground, accessed by a staircase, with the pyramids built above ground as 'mastaba' platforms. Many pyramids have chapels with reliefs showing the deceased making offerings to gods (Apedemak, Isis, Bes). The decoration includes Kushite elements: the royal figure sits on a lion throne, wears an elephant-skin robe, and holds a spear—images not found in Egypt. The pyramids are smaller than Egyptian examples (peak 30 meters, average 6-8 meters).`,
-        imageRegenerated: '/images/sites/meroe-necropolis-regenerated.jpg',
-        imageCurrent: '/images/sites/meroe-necropolis-current.jpg',
-        scene: 'The Royal Necropolis of Meroë',
-        visualHighlights: ['Over 200 steep, narrow pyramids', 'Red sandstone construction glowing in sunset', 'Chapels with Kushite-specific reliefs (lion throne, elephant robe)', 'Underground burial chambers', 'Meroitic period (300 BCE - 350 CE)'],
-        type: 'tomb',
-        youtubeUrl: 'https://youtu.be/atlsWmshkwg?si=5oVBeuNlqXiO9rEc'
-      }
-    ]
-  },
-
-  // 46. Musawwarat es-Sufra - The Lion Temple
-  musawwarat: {
-    id: 'musawwarat',
-    name: 'Musawwarat es-Sufra',
-    coordinates: [16.4167, 33.3167],
-    region: 'Nubia / Kush (Sudan)',
-    locations: [
-      {
-        id: 'lion-temple',
-        name: 'Lion Temple of Musawwarat',
-        description: 'Unique temple dedicated to the lion god Apedemak',
-        longDescription: `Musawwarat es-Sufra is one of the most unusual temple complexes in the Nile Valley, featuring the "Great Enclosure"—90,000 square meters of walls, courtyards, ramps, and columns with no exact parallel in Egyptian or Kushite architecture. The site's main structure is the Lion Temple, built by King Arnekhamani (c. 235-218 BCE), dedicated to Apedemak, the lion-headed war god unique to Kush. The temple's reliefs show the king in combat with enemies, the god ensuring victory, and—most famously—Apedemak emerging from a lotus flower with a cobra-headed snake body (a syncretic image combining Egyptian lotus imagery with Kushite lion god). The site lies in the "Island of Meroë" between the Atbara and Nile rivers, near the traditional elephant-training grounds. The complex may have served religious and agricultural purposes (rainwater collection basins) as well as hosting large gatherings (capable of holding thousands).`,
-        imageRegenerated: '/images/sites/musawwarat-regenerated.jpg',
-        imageCurrent: '/images/sites/musawwarat-current.jpg',
-        scene: 'The Lion God\'s Sanctuary',
-        visualHighlights: ['Great Enclosure (90,000 square meters of walls)', 'Lion Temple with Apedemak reliefs', 'Apedemak emerging from lotus with snake body', 'Elephant-training basins and ramps', 'Unique Kushite architecture (no Egyptian parallel)'],
-        deity: 'Apedemak',
-        type: 'temple'
-      }
-    ]
-  },
-
-  // 47. Naqa - Apedemak Temple with Elephants
-  naqa: {
-    id: 'naqa',
-    name: 'Naqa',
-    coordinates: [16.267, 33.267],
-    region: 'Nubia / Kush (Sudan)',
-    locations: [
-      {
-        id: 'naqa-temples',
-        name: 'Naqa Temples',
-        description: 'Kushite-Egyptian syncretic temple complex',
-        longDescription: `Naqa is a temple complex built during the Meroitic period (1st century BCE - 1st century CE), showing a fascinating blend of Egyptian, Hellenistic, and Kushite art. The Temple of Amun (started by Queen Shanakdakhete, completed by King Natakamani and Queen Amanitore) is Egyptian in plan but with Meroitic elements—the king's costume shows both Egyptian and Kushite regalia. The nearby Lion Temple of Apedemak has reliefs showing the king supported by the lion god, as well as scenes of musicians, prisoners, and—most unusually—a line of elephants. The relief of Queen Amanitore (c. 1-20 CE) shows her in the "smiting scene" (traditionally reserved for male kings), grasping enemies' hair to execute them. The site includes a kiosk (small open-pavilion) with Hathor-headed columns. A Roman-style statue of Augustus was found here (de-faced by Kushites, the head now in the British Museum).`,
-        imageRegenerated: '/images/sites/naqa-regenerated.jpg',
-        imageCurrent: '/images/sites/naqa-current.jpg',
-        scene: 'The Kushite-Egyptian Temple Complex',
-        visualHighlights: ['Temple of Amun with Egyptian-Meroitic hybrid plan', 'Lion Temple of Apedemak with elephant reliefs', 'Queen Amanitore in "Smiting Scene" (women as military leader)', 'Hathor-headed kiosk columns', 'Defaced Roman statue of Augustus'],
-        deity: 'Apedemak',
-        type: 'temple'
-      }
-    ]
-  },
-
-  // 48. Wad ban Naqa - Queen Amanitore's Palace
-  wadBanNaqa: {
-    id: 'wad-ban-naqa',
-    name: 'Wad ban Naqa',
-    coordinates: [16.517, 33.7],
-    region: 'Nubia / Kush (Sudan)',
-    locations: [
-      {
-        id: 'queen-palace',
-        name: 'Wad ban Naqa',
-        description: 'Palace city of Queen Amanitore',
-        longDescription: `Wad ban Naqa was a royal city associated with Queen Amanitore (c. 1-20 CE), one of the most powerful Kushite queens. The site features a palace complex (including a throne room), a temple to Apedemak, and a Roman-style kiosk (pavilion). The palace of Amanitore is built of sandstone with Greek-style columns, showing Hellenistic influence reaching the Kushite court. The nearby Lion Temple reliefs show the queen wearing the "African" headcloth and heavy jewelry, accompanied by the king. The site was connected to Meroë by a processional way and functioned as a royal residence (palace, housing for officials, workshops for craftsmen). The name "Wad ban Naqa" means "sons of Naqa" in Arabic, referring to nearby sandstone hills.`,
-        imageRegenerated: '/images/sites/wad-ban-naqa-regenerated.jpg',
-        imageCurrent: '/images/sites/wad-ban-naqa-current.jpg',
-        scene: 'The Palace of Queen Amanitore',
-        visualHighlights: ['Sandstone palace with Greek-style columns', 'Throne room of Queen Amanitore', 'Lion Temple with queen\'s reliefs', 'Roman-style kiosk (pavilion)', 'Connected to Meroë by processional way'],
-        deity: 'Apedemak',
-        type: 'palace'
-      }
-    ]
-  },
-
-  // 49. Dangeil - Temple of Amun with Taharqa Inscription
-  dangeil: {
-    id: 'dangeil',
-    name: 'Dangeil',
-    coordinates: [17.183, 33.967],
-    region: 'Nubia / Kush (Sudan)',
-    locations: [
-      {
-        id: 'dangeil-temple',
-        name: 'Temple of Amun at Dangeil',
-        description: 'Well-preserved Kushite temple',
-        longDescription: `Dangeil is an active archaeological site (excavated 2000-present) revealing a temple of Amun built during the Napatan period (c. 7th century BCE) and used through the Meroitic period (1st-3rd century CE). The temple is unique for its well-preserved painted reliefs—rare in Sudan—showing the king and queen (including Queen Amanitore) offering to Amun, Mut, and Khonsu. The site also contains a 'pedestal' for a processional barque (divine boat) and a "crypt" for storing temple treasures. The most significant find is the "Dangeil Inscription" mentioning King Taharqa and the goddess Mut, confirming the site's identification. The temple was surrounded by a mudbrick enclosure wall and included a “kiosk” (pavilion) for royal ceremonies. The site also has a cemetery of pyramid tombs (probably high officials, not royal).`,
-        imageRegenerated: '/images/sites/dangeil-regenerated.jpg',
-        imageCurrent: '/images/sites/dangeil-current.jpg',
-        scene: 'The Painted Temple of Amun',
-        visualHighlights: ['Well-preserved painted reliefs (rare in Sudan)', 'Pedestal for processional barque of Amun', 'Crypt for temple treasures', 'Dangeil Inscription mentioning Taharqa', 'Kiosk for royal ceremonies'],
-        deity: 'Amun',
-        type: 'temple'
-      }
-    ]
-  },
-
-  // 50. Meroitic Water Wells - Hydraulic Engineering
-  meroiticWells: {
-    id: 'meroitic-wells',
-    name: 'Meroitic Hydraulic System',
-    coordinates: [16.5, 33.0],
-    region: 'Nubia / Kush (Sudan)',
-    locations: [
-      {
-        id: 'meroitic-reservoirs',
-        name: 'Meroitic Water Wells',
-        description: 'Advanced water management in the semi-desert',
-        longDescription: `The Meroitic kingdom developed advanced hydraulic engineering to thrive in the semi-desert environment between the Nile, Atbara, and Rahad rivers. The site includes hafirs (artificial water reservoirs), which are man-made basins (up to 100 meters square, 5 meters deep) lined with plaster to retain rainwater. The largest hafirs could hold millions of gallons of water, supporting a population of thousands. The system includes connecting channels to divert floodwaters into fields, terraced agriculture on the river banks, and qanat-like underground channels. This engineering allowed Meroë to prosper without direct Nile water, in an area receiving only 50-100mm of rain annually. The technology may have been influenced by contact with the Persian qanat system through Indian Ocean trade. The reservoirs also served for livestock (cattle, the measure of Kushite wealth) and for ritual use (some hafirs located near temples).`,
-        imageRegenerated: '/images/sites/meroitic-wells-regenerated.jpg',
-        imageCurrent: '/images/sites/meroitic-wells-current.jpg',
-        scene: 'The Water Engineers of Kush',
-        visualHighlights: ['Hafirs (artificial reservoirs) up to 100 meters square', 'Plaster-lined basins for rainwater storage', 'Connecting channels for floodwater distribution', 'Terraced agriculture on river banks', 'Supporting cattle and ritual use near temples'],
-        type: 'monument'
-      }
-    ]
-  }
-};
-// ========== SECTION 4: LAND OF PUNT & RED SEA TRADE (51-60) ==========
-export const puntSites: Record<string, Site> = {
-  // 51. Wadi Gawasis - Egyptian Expedition Port
+  // 51. Wadi Gawasis - Egyptian Expedition Port (Red Sea - gateway to East Africa)
   wadiGawasis: {
     id: 'wadi-gawasis',
     name: 'Wadi Gawasis (Mersa Gawasis)',
     coordinates: [26.53, 33.97],
-    region: 'Red Sea Coast (Egypt)',
+    region: 'East Africa / Red Sea Coast (Egypt)',
     locations: [
       {
         id: 'wadi-gawasis-port',
@@ -1272,17 +1230,18 @@ The site includes "cave" storage galleries in the coral rock (Man's Cave and Wom
         imageCurrent: '/images/sites/wadi-gawasis-current.jpg',
         scene: 'Egypt\'s Ancient Red Sea Port',
         visualHighlights: ['Perfectly preserved ship timbers (oldest in world, c. 1850 BCE)', 'Cave storage galleries in coral rock (Man\'s Cave and Woman\'s Cave)', 'Expedition inscriptions mentioning Punt (Amenemhat III, Hatshepsut)', 'Nile-Red Sea connection (now dry branch, visible as wadi)', 'Hatshepsut\'s Punt expedition departure point with myrrh trees'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Z_VhhGI0Cmk?si=bKDOieVWWijKp4sK'
       }
     ]
   },
 
-  // 52. Punt Reliefs at Deir el-Bahari - Visual Evidence
+  // 52. Punt Reliefs at Deir el-Bahari - Visual Evidence of East African Trade
   puntReliefs: {
     id: 'punt-reliefs',
     name: 'Deir el-Bahari Punt Reliefs',
     coordinates: [25.738, 32.606],
-    region: 'Egypt (Thebes)',
+    region: 'East Africa (Thebes, Egypt - depicting Punt)',
     locations: [
       {
         id: 'hatshepsut-punt-reliefs',
@@ -1297,7 +1256,8 @@ The reliefs have been studied to identify the location of Punt: the beehive hous
         imageCurrent: '/images/sites/punt-reliefs-current.jpg',
         scene: 'Hatshepsut\'s Punt Expedition Reliefs',
         visualHighlights: ['Egyptian ships arriving in Punt with sails furled', 'Puntite ruler Parahu and his obese wife Ati', '"Beehive" houses on stilts', 'Frankincense trees being loaded onto ships', 'Exotic animals (baboons, giraffes, leopards)'],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Z_VhhGI0Cmk?si=bKDOieVWWijKp4sK'
       }
     ]
   },
@@ -1307,7 +1267,7 @@ The reliefs have been studied to identify the location of Punt: the beehive hous
     id: 'adulis',
     name: 'Adulis',
     coordinates: [15.267, 39.667],
-    region: 'Red Sea Coast (Eritrea)',
+    region: 'East Africa / Horn of Africa (Eritrea)',
     locations: [
       {
         id: 'adulis-port',
@@ -1320,7 +1280,8 @@ The site features extensive ruins—warehouses (for storing goods), temples (ded
         imageCurrent: '/images/sites/adulis-current.jpg',
         scene: 'The Great Red Sea Port',
         visualHighlights: ['Warehouse ruins for storing trade goods (ivory, frankincense)', 'Temple foundations (Zeus, Serapis, native deity)', 'Massive necropolis with tombs spanning centuries', 'Ancient harbor works (docks, breakwaters)', 'Greek inscription (Monumentum Adulitanum) on stone'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Z_VhhGI0Cmk?si=bKDOieVWWijKp4sK'
       }
     ]
   },
@@ -1330,7 +1291,7 @@ The site features extensive ruins—warehouses (for storing goods), temples (ded
     id: 'eritrea-highlands',
     name: 'Eritrean Highlands',
     coordinates: [15.3333, 38.9167],
-    region: 'Horn of Africa (Eritrea)',
+    region: 'East Africa / Horn of Africa (Eritrea)',
     locations: [
       {
         id: 'eritrea-punt',
@@ -1343,7 +1304,8 @@ Ancient port sites along this coast, including Adulis (see above), Matara (a pre
         imageCurrent: '/images/sites/eritrea-highlands-current.jpg',
         scene: 'The Frankincense Coast of Punt',
         visualHighlights: ['Red Sea coastline with steep mountains descending', 'Incense-growing highlands (frankincense trees being tapped)', 'Natural harbor bays for ancient ships (Adulis, Matara)', '"Beehive" house reconstructions on stilts', 'Hamadryas baboons (linked to Punt in Egyptian art)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Z_VhhGI0Cmk?si=bKDOieVWWijKp4sK'
       }
     ]
   },
@@ -1353,13 +1315,13 @@ Ancient port sites along this coast, including Adulis (see above), Matara (a pre
     id: 'somalia-coast',
     name: 'Somali Coast',
     coordinates: [10, 49],
-    region: 'Horn of Africa (Somalia)',
+    region: 'East Africa / Horn of Africa (Somalia)',
     locations: [
       {
         id: 'somalia-punt',
         name: 'The Somali Coast',
         description: 'Eastern extension of the Punt trade network',
-        longDescription: `The Horn of Africa's Somali coast, with its frankincense and myrrh production, represents the eastern extension of the Punt trade network. The distinctive long-horned cattle depicted in Hatshepsut's reliefs match species still found in Somalia (the “Sanga” breed, with horns up to 2 meters long), suggesting the region was part of Punt or closely linked to it.
+        longDescription: `The Horn of Africa's Somali coast, with its frankincense and myrrh production, represents the eastern extension of the Punt trade network. The distinctive long-horned cattle depicted in Hatshepsut's reliefs match species still found in Somalia (the "Sanga" breed, with horns up to 2 meters long), suggesting the region was part of Punt or closely linked to it.
 
 Ancient trading ports along this coast, including Opone (modern Hafun) with its artificial harbor island connected by a causeway, Heis (with stone ruins and ancient wells), and Xaafuun (with Ptolemaic and Roman artifacts), connected Africa to Arabia, Persia, and India. Somali merchants traded incense, spices, exotic animals, and aromatic woods, participating in the Indian Ocean trade network that later included Chinese and Southeast Asian goods.
 
@@ -1368,7 +1330,8 @@ The frankincense and myrrh trees of northern Somalia still produce the highest q
         imageCurrent: '/images/sites/somalia-coast-current.jpg',
         scene: 'The Incense Lands of Punt',
         visualHighlights: ['Frankincense trees being tapped with metal scrapers', 'Long-horned cattle (Sanga breed) in rock art', 'Ancient harbor ruins at Opone (Hafun, artificial island)', 'Terraced mountains for incense cultivation', 'Traditional incense harvesting methods (collecting "tears")'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Z_VhhGI0Cmk?si=bKDOieVWWijKp4sK'
       }
     ]
   },
@@ -1378,7 +1341,7 @@ The frankincense and myrrh trees of northern Somalia still produce the highest q
     id: 'opone',
     name: 'Opone (Hafun)',
     coordinates: [10.43, 51.28],
-    region: 'Horn of Africa (Somalia)',
+    region: 'East Africa / Horn of Africa (Somalia)',
     locations: [
       {
         id: 'opone-port',
@@ -1393,7 +1356,8 @@ The surrounding region produces the highest quality frankincense (Boswellia cart
         imageCurrent: '/images/sites/opone-current.jpg',
         scene: 'The Spice Port of Opone',
         visualHighlights: ['Artificial harbor island connected by causeway', 'Frankincense and myrrh storage jars (amphorae)', 'Causeway engineering with protective breakwaters', 'Coastal trade routes to Arabia, Persia, India', 'Egyptian, Greco-Roman, and Indian pottery finds'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Z_VhhGI0Cmk?si=bKDOieVWWijKp4sK'
       }
     ]
   },
@@ -1401,9 +1365,9 @@ The surrounding region produces the highest quality frankincense (Boswellia cart
   // 57. Matara - Pre-Aksumite Urban Center
   matara: {
     id: 'matara',
-    name: 'Matara (Qohaito)',
+    name: 'Matara',
     coordinates: [14.6667, 39.4167],
-    region: 'Horn of Africa (Eritrea)',
+    region: 'East Africa / Horn of Africa (Eritrea)',
     locations: [
       {
         id: 'matara-ruins',
@@ -1418,7 +1382,8 @@ The architecture includes distinctive "Sabaean" elements (stone construction wit
         imageCurrent: '/images/sites/matara-current.jpg',
         scene: 'The Pre-Aksumite City of Matara',
         visualHighlights: ['Monumental stone platform (temple or throne)', 'South Arabian inscriptions in Sabaic script', 'Imported Roman glass and Mediterranean amphorae', 'Stone houses with courtyards', 'Christian churches carved into hillside (later period)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Z_VhhGI0Cmk?si=bKDOieVWWijKp4sK'
       }
     ]
   },
@@ -1428,7 +1393,7 @@ The architecture includes distinctive "Sabaean" elements (stone construction wit
     id: 'yeha',
     name: 'Yeha',
     coordinates: [14.2833, 39.0167],
-    region: 'Horn of Africa (Ethiopia)',
+    region: 'East Africa / Horn of Africa (Ethiopia)',
     locations: [
       {
         id: 'yeha-temple',
@@ -1444,7 +1409,8 @@ The site also includes a later monastery (Debre Damo style, 6th century CE) and 
         scene: 'The Moon Temple of Almaqah',
         visualHighlights: ['Massive precisely-cut stone blocks without mortar', 'Stepped recessed walls (South Arabian style)', '13-meter-high standing walls', 'D\'mt kingdom religious center (8th-5th centuries BCE)', 'Later Ethiopian Orthodox church within precinct'],
         deity: 'Almaqah',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Z_VhhGI0Cmk?si=bKDOieVWWijKp4sK'
       }
     ]
   },
@@ -1454,7 +1420,7 @@ The site also includes a later monastery (Debre Damo style, 6th century CE) and 
     id: 'red-sea-route',
     name: 'The Red Sea Trade Route',
     coordinates: [22, 38],
-    region: 'Red Sea',
+    region: 'East Africa / Red Sea',
     locations: [
       {
         id: 'red-sea-trade',
@@ -1469,7 +1435,8 @@ Controlling the Red Sea meant controlling world trade. Whoever held its ports—
         imageCurrent: '/images/sites/red-sea-route-current.jpg',
         scene: 'The Ancient Maritime Highway',
         visualHighlights: ['Turquoise coral waters with ancient ship routes', 'Coastal trading ports on both African and Arabian shores', 'Monsoon wind patterns determining sailing seasons', 'Egyptian, Greek, Roman, and Aksumite ships', 'Navigational charts drawn on papyrus'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Z_VhhGI0Cmk?si=bKDOieVWWijKp4sK'
       }
     ]
   },
@@ -1479,7 +1446,7 @@ Controlling the Red Sea meant controlling world trade. Whoever held its ports—
     id: 'punt-lost-land',
     name: 'The Land of Punt',
     coordinates: [10, 45],
-    region: 'Horn of Africa (Speculative)',
+    region: 'East Africa / Horn of Africa (Speculative)',
     locations: [
       {
         id: 'punt-mystery',
@@ -1487,49 +1454,54 @@ Controlling the Red Sea meant controlling world trade. Whoever held its ports—
         description: 'The legendary lost land of incense',
         longDescription: `The Land of Punt remains one of the great mysteries of Egyptology—a legendary land mentioned in Egyptian texts for over 1,500 years (c. 2500-1150 BCE) but never precisely located. Egyptian sources describe Punt as "God's Land," a place of incense, gold, ivory, ebony, and exotic animals, reached by ship on the Red Sea. The Egyptians traded with Punt during the Old Kingdom (the Palermo Stone records ships to Punt), the Middle Kingdom (the Tale of the Shipwrecked Sailor describes a voyage to Punt), and the New Kingdom (Hatshepsut's expedition, Ramesses III's mention of Punt goods).
 
-Scholarly candidates for Punt's location include: (1) the Eritrean coast and highlands (the most widely accepted, matching the beehive houses, incense species, and baboons), (2) the Somali coast (matching the long-horned cattle and incense trade), (3) the Yemeni coast (in Arabia, matching the incense species), and (4) the Dhofar region of Oman (matching the frankincense trees). Archaeological evidence remains inconclusive, no site in Africa or Arabia has produced an inscription identifying itself as "Punt."
+Scholarly candidates for Punt's location include: (1) the Eritrean coast and highlands (the most widely accepted, matching the beehive houses, incense species, and baboons), (2) the Somali coast (matching the long-horned cattle and incense trade), (3) the Yemeni coast (in Arabia, matching the incense species), and (4) the Dhofar region of Oman (matching the frankincense trees). Archaeological evidence remains inconclusive; no site in Africa or Arabia has produced an inscription identifying itself as "Punt."
 
 Punt is remembered in Egyptian texts as a kind of "golden age" of trade, before the disruptions of the Late Bronze Age collapse (c. 1150 BCE). The legendary status of Punt—its wealth, its mystery, its goods—may have contributed to the Greek legend of the Hesperides (the garden of golden apples) and the biblical land of Sheba (the source of frankincense and myrrh). The search for Punt continues, with satellite imagery, environmental studies (identifying ancient climate patterns favorable to incense production), and archaeological surveys in Ethiopia, Eritrea, and Somalia offering hope for future discoveries.`,
         imageRegenerated: '/images/sites/punt-mystery-regenerated.jpg',
         imageCurrent: '/images/sites/punt-mystery-current.jpg',
         scene: 'The Legendary Land of Incense',
         visualHighlights: ['Papyrus map of Punt (conceptual, based on Egyptian texts)', 'Beehive houses (Eritrean style) as depicted at Deir el-Bahari', 'Frankincense trees in terraced mountains', 'Baboons (Hamadryas) native to Punt region', 'Egyptian ships arriving at a speculative Punt landscape'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Z_VhhGI0Cmk?si=bKDOieVWWijKp4sK'
       }
     ]
   }
 };
-// ========== SECTION 5: PHOENICIANS (61-70) ==========
+// ========== SECTION 5: PHOENICIA (61-70) ==========
+// Continues after nubianSites (which ends at #60)
+
 export const phoenicianSites: Record<string, Site> = {
-  // 61. Tyre - The Island City
+  // 61. Tyre - The Island City (Greatest Phoenician metropolis)
   phoenicianTyre: {
     id: 'phoenician-tyre',
     name: 'Tyre',
     coordinates: [33.2667, 35.2],
-    region: 'Phoenicia (Lebanon)',
+    region: 'Phoenicia',
     locations: [
       {
         id: 'tyre-island',
         name: 'The Island City of Tyre',
         description: 'Greatest of the Phoenician trading cities',
-        longDescription: `Tyre was the greatest of the Phoenician cities, built on an island fortress just off the coast. Its twin harbors made Tyre the wealthiest city in the ancient world, famous for purple dye. The temple of Melqart, Tyre's patron god, was admired for its gold and emerald pillars. Alexander the Great famously built a causeway to capture the city after a 7-month siege.`,
+        longDescription: `Tyre (Phoenician: 𐤑𐤓, Ṣūr) was the greatest of the Phoenician cities, built on an island fortress just off the coast of Lebanon. Its twin harbors—the Sidonian Harbor to the north and the Egyptian Harbor to the south—made Tyre the wealthiest city in the ancient world. The city was famous for producing Tyrian purple dye, extracted from thousands of Murex sea snails, a luxury worth more than gold. The temple of Melqart, Tyre's patron god, was admired across the Mediterranean for its gold and emerald pillars. Alexander the Great famously built a causeway to capture the city after a 7-month siege in 332 BCE, turning the island into a peninsula that remains today.`,
         imageRegenerated: '/images/sites/tyre-regenerated.jpg',
         imageCurrent: '/images/sites/tyre-current.jpg',
         scene: 'The Island Fortress of Tyre',
-        visualHighlights: ['Double harbor system', 'Murex shell dye works', 'Temple of Melqart', 'Alexander\'s causeway'],
+        visualHighlights: ['Double harbor system (north and south)', 'Murex shell dye works with mountains of crushed shells', 'Temple of Melqart with gold and emerald pillars', 'Alexander\'s causeway (still visible as a peninsula)', 'City walls rising from the sea'],
         deity: 'Melqart',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/0joP9pBv-XM?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'tyre-al-bass',
         name: 'Al-Bass Necropolis',
         description: 'Extensive burial ground with monumental funerary architecture',
-        longDescription: `The Al-Bass Necropolis contains hundreds of stone sarcophagi and funerary monuments. The site includes a monumental triumphal arch, an aqueduct, and the longest ancient road of columns ever discovered—a 400-meter processional way.`,
+        longDescription: `The Al-Bass Necropolis is the largest and best-preserved Phoenician funerary complex ever discovered. Located on the mainland opposite the island city, it contains hundreds of stone sarcophagi and funerary monuments spanning the Phoenician, Hellenistic, and Roman periods. The site includes a monumental triumphal arch, an aqueduct, and the longest ancient Roman road of columns ever discovered—a 400-meter processional colonnade. The necropolis also contains over 200 funerary urns in the Phoenician tradition, some with cremated remains and grave goods including jewelry, amulets, and imported Greek pottery.`,
         imageRegenerated: '/images/sites/tyre-necropolis-regenerated.jpg',
         imageCurrent: '/images/sites/tyre-necropolis-current.jpg',
         scene: 'The City of the Dead',
-        visualHighlights: ['400-meter colonnaded processional way', 'Stone sarcophagi', 'Roman triumphal arch', 'Funerary banquet scenes'],
-        type: 'tomb'
+        visualHighlights: ['400-meter colonnaded processional way', 'Hundreds of stone sarcophagi in rows', 'Roman triumphal arch (2nd century CE)', 'Funerary banquet scenes carved on sarcophagi', 'Phoenician cremation urns with grave goods'],
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/w0wKXY5W0j4?si=mOZyAACmGlpO_0QU'
       }
     ]
   },
@@ -1539,19 +1511,20 @@ export const phoenicianSites: Record<string, Site> = {
     id: 'phoenician-sidon',
     name: 'Sidon',
     coordinates: [33.56, 35.375],
-    region: 'Phoenicia (Lebanon)',
+    region: 'Phoenicia',
     locations: [
       {
         id: 'sidon-city',
         name: 'Sidon',
         description: 'Center of glassmaking and purple dye',
-        longDescription: `Sidon was one of the oldest and wealthiest Phoenician cities, famous for glass production, purple dye, and skilled sailors. Glassblowing was perfected here around 50 BCE. The royal necropolis yielded the famous Alexander Sarcophagus.`,
+        longDescription: `Sidon (Phoenician: 𐤑𐤉𐤃𐤅𐤍, Ṣīdūn) was one of the oldest and wealthiest Phoenician cities, founded in the 3rd millennium BCE. It was famous for glass production (glassblowing was perfected here around 50 BCE), purple dye (from local Murex shells), and skilled sailors who served in Persian and later Hellenistic navies. The royal necropolis yielded the famous Alexander Sarcophagus (now in Istanbul), actually a Sidonian king's sarcophagus decorated with battle scenes of Alexander. The temple of Eshmun, the Phoenician god of healing, lies just north of the city and contains one of the best-preserved Phoenician sanctuaries.`,
         imageRegenerated: '/images/sites/sidon-regenerated.jpg',
         imageCurrent: '/images/sites/sidon-current.jpg',
         scene: 'The Glassmaking Capital',
-        visualHighlights: ['Glassblowing workshops', 'Purple dye production', 'Multi-level harbor', 'Alexander Sarcophagus'],
+        visualHighlights: ['Glassblowing workshops with furnaces and molds', 'Purple dye production vats along the coast', 'Multi-level harbor with shipyards', 'Alexander Sarcophagus (replica showing battle scenes)', 'Temple of Eshmun healing sanctuary'],
         deity: 'Eshmun',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/0rM3wq0N5I8?si=PpUyMXkZyPjTw2lC'
       }
     ]
   },
@@ -1561,74 +1534,78 @@ export const phoenicianSites: Record<string, Site> = {
     id: 'phoenician-byblos',
     name: 'Byblos',
     coordinates: [34.12, 35.647],
-    region: 'Phoenicia (Lebanon)',
+    region: 'Phoenicia',
     locations: [
       {
         id: 'byblos-port',
         name: 'Byblos',
         description: 'Key link between Egypt and the Levant',
-        longDescription: `Byblos was the most ancient Phoenician city, with continuous habitation since 5000 BCE. It was Egypt's primary trade partner, importing cedar wood in exchange for Egyptian gold and papyrus. The Greek word for book (biblion) derives from Byblos.`,
+        longDescription: `Byblos (Phoenician: 𐤂𐤁𐤋, Gebal) was the most ancient Phoenician city, with continuous habitation since 5000 BCE. It was Egypt's primary trade partner in the Levant, importing cedar wood from Lebanon's mountains in exchange for Egyptian gold and papyrus. The Greek word for book (biblion) derives from Byblos, as papyrus was shipped through this port. The temple of Baalat Gebal ("Lady of Byblos") was the city's main sanctuary, showing strong Egyptian architectural influence. The royal necropolis contains nine sarcophagi of Byblian kings, including Ahiram whose sarcophagus bears the earliest known alphabetic Phoenician inscription (c. 1000 BCE).`,
         imageRegenerated: '/images/sites/byblos-regenerated.jpg',
         imageCurrent: '/images/sites/byblos-current.jpg',
         scene: 'Egypt\'s Gateway to the Levant',
-        visualHighlights: ['Cedar wood trade', 'Egyptian-style temple', 'Royal necropolis', 'Ancient harbor'],
+        visualHighlights: ['Cedar wood trade (logs stacked at harbor)', 'Egyptian-style temple of Baalat Gebal with obelisks', 'Royal necropolis with Ahiram sarcophagus inscription', 'Ancient harbor with breakwaters', 'Phoenician alphabet inscription (earliest known)'],
         deity: 'Baalat Gebal',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/3m4MQ6u4hP0?si=gKQH2VQWbBaqJeqf'
       }
     ]
   },
 
-  // 64. Carthage - Rome's Rival
+  // 64. Carthage - Rome's Rival (Phoenician colony in North Africa)
   phoenicianCarthage: {
     id: 'phoenician-carthage',
     name: 'Carthage',
     coordinates: [36.8528, 10.3236],
-    region: 'North Africa (Tunisia)',
+    region: 'Phoenicia',
     locations: [
       {
         id: 'carthage-city',
         name: 'Carthage',
         description: 'Phoenicia\'s greatest colony and Rome\'s rival',
-        longDescription: `Carthage was the greatest Phoenician colony, founded by Tyre in 814 BCE. It grew into a Mediterranean empire that rivaled Rome. The city featured massive harbors—a circular military harbor for 220 warships and a rectangular commercial harbor. Rome destroyed Carthage in 146 BCE.`,
+        longDescription: `Carthage (Phoenician: 𐤒𐤓𐤕𐤟𐤇𐤃𐤔𐤕, Qart-ḥadašt, "New City") was the greatest Phoenician colony, founded by Tyre in 814 BCE. It grew into a Mediterranean empire that rivaled Rome, controlling North Africa, Spain, Sardinia, and western Sicily. The city featured massive harbors—a circular military harbor (the Cothon) that could hold 220 warships in covered ship sheds, and a rectangular commercial harbor. The Byrsa citadel dominated the city, housing the temple of Eshmun and the palace of the suffetes (magistrates). Rome destroyed Carthage in 146 BCE at the end of the Third Punic War, but the city was refounded as a Roman colony and became the capital of Africa Province.`,
         imageRegenerated: '/images/sites/carthage-regenerated.jpg',
         imageCurrent: '/images/sites/carthage-current.jpg',
         scene: 'The Queen of the Mediterranean',
-        visualHighlights: ['Circular military harbor', 'Commercial harbor', 'Tophet sacred precinct', 'Byrsa citadel'],
+        visualHighlights: ['Circular military harbor (Cothon) with covered ship sheds', 'Rectangular commercial harbor for merchant ships', 'Tophet sacred precinct with thousands of stelae', 'Byrsa citadel with temple of Eshmun', 'Phoenician-Punic houses with peristyle courtyards'],
         deity: 'Tanit',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/R2HSPVnB2fI?si=JQcT4cqhyF1V8CxY'
       },
       {
         id: 'carthage-tophet',
         name: 'The Tophet of Carthage',
         description: 'Sacred precinct of child burials',
-        longDescription: `The Tophet of Carthage is a unique sacred precinct containing thousands of funerary urns with the cremated remains of infants and animals, dedicated to the gods Baal Hammon and Tanit. Over 6,000 stelae cover the site.`,
+        longDescription: `The Tophet of Carthage is a unique sacred precinct located in the city's southern quarter, containing thousands of funerary urns with the cremated remains of infants and animals, dedicated to the gods Baal Hammon and Tanit. The site covers over 6,000 square meters and contains more than 6,000 stelae (carved stone markers) placed over burial urns. The practice, known as "molk" in Phoenician sources, has been debated by scholars—some interpret it as child sacrifice, others as a special burial ground for infants who died naturally. The Tophet was in continuous use from the 8th century BCE until the destruction of Carthage in 146 BCE.`,
         imageRegenerated: '/images/sites/carthage-tophet-regenerated.jpg',
         imageCurrent: '/images/sites/carthage-tophet-current.jpg',
         scene: 'The Sacred Precinct of Tanit',
-        visualHighlights: ['Thousands of funerary urns', 'Tanit symbol stelae', 'Baal Hammon inscriptions', 'Punic ritual vessels'],
+        visualHighlights: ['Thousands of funerary urns buried under stelae', 'Tanit symbol (triangle with circle) carved on stelae', 'Baal Hammon inscriptions on stone', 'Punic ritual vessels (jugs, bowls, incense stands)', 'Molk offering inscriptions recording vows'],
         deity: 'Tanit',
-        type: 'tomb'
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/kfA5TtCuMK4?si=RlSlLyYv-5HzS22T'
       }
     ]
   },
 
-  // 65. Motya - Sicilian Outpost
+  // 65. Motya - Sicilian Outpost (Phoenician colony in Sicily)
   phoenicianMotya: {
     id: 'phoenician-motya',
     name: 'Motya',
     coordinates: [37.85, 12.4667],
-    region: 'Sicily (Italy)',
+    region: 'Phoenicia',
     locations: [
       {
         id: 'motya-island',
         name: 'Motya Island Colony',
         description: 'Phoenician island trading colony in Sicily',
-        longDescription: `Motya was a wealthy Phoenician colony on an island off western Sicily, serving as a waystation between Carthage, Italy, and the Greek world. The site was destroyed by Syracuse in 397 BCE, preserving a moment of sudden abandonment.`,
+        longDescription: `Motya (Phoenician: 𐤌𐤕𐤅, Mtw) was a wealthy Phoenician colony on a small island off western Sicily (San Pantaleo Island). Founded in the 8th century BCE, it served as a waystation between Carthage, Italy, and the Greek world. The city was connected to the mainland by an artificial causeway. Motya was destroyed by the Greek tyrant Dionysius of Syracuse in 397 BCE after a prolonged siege, preserving a moment of sudden abandonment. Excavations have uncovered a Tophet sanctuary, a necropolis with hypogeum tombs, and the "Motya Youth"—a masterpiece of Greek sculpture found on the site in 1979.`,
         imageRegenerated: '/images/sites/motya-regenerated.jpg',
         imageCurrent: '/images/sites/motya-current.jpg',
         scene: 'The Sicilian Trading Post',
-        visualHighlights: ['Island fortress', 'Causeway connection', 'Tophet sanctuary', 'Acropolis walls'],
-        type: 'city'
+        visualHighlights: ['Island fortress with massive defensive walls', 'Artificial causeway connecting to mainland', 'Tophet sanctuary with Punic stelae', 'Acropolis walls with towers', 'House of the Mosaics (pebble mosaic floors)'],
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/RxVqAXuLZBI?si=4bYIdqKkLsJlfGp2'
       }
     ]
   },
@@ -1638,19 +1615,20 @@ export const phoenicianSites: Record<string, Site> = {
     id: 'phoenician-kition',
     name: 'Kition (Larnaca)',
     coordinates: [34.92, 33.63],
-    region: 'Cyprus',
+    region: 'Phoenicia',
     locations: [
       {
         id: 'kition-temples',
         name: 'Temple of Astarte at Kition',
         description: 'Major Phoenician religious center in Cyprus',
-        longDescription: `Kition was a major Phoenician city-kingdom on Cyprus, established in the 9th century BCE. The city featured a large temple dedicated to Astarte (the Phoenician equivalent of Ishtar/Aphrodite) and controlled the copper trade from Cyprus.`,
+        longDescription: `Kition (Phoenician: 𐤊𐤕, Kt) was a major Phoenician city-kingdom on Cyprus, established in the 9th century BCE. The city featured a large temple dedicated to Astarte (the Phoenician equivalent of Ishtar/Aphrodite) and controlled the copper trade from Cyprus, which was essential for bronze production throughout the Mediterranean. The temple complex includes a monumental entrance flanked by sphinxes, a cella (inner sanctuary) with a cult statue base, and a courtyard with offering tables. Kition prospered until the Ptolemaic period, when it was gradually Hellenized.`,
         imageRegenerated: '/images/sites/kition-regenerated.jpg',
         imageCurrent: '/images/sites/kition-current.jpg',
         scene: 'The Cypriot Phoenician Hub',
-        visualHighlights: ['Monumental temple entrance with sphinxes', 'Astarte cult statue', 'Massive defensive walls', 'Copper trade warehouses'],
+        visualHighlights: ['Monumental temple entrance with sphinxes', 'Astarte cult statue in the cella', 'Massive defensive walls protecting the city', 'Copper trade warehouses along the harbor', 'Phoenician inscriptions on stone stelae'],
         deity: 'Astarte',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/lTWrKpMBGHs?si=JgRMGTSfWeCK3gFh'
       }
     ]
   },
@@ -1660,18 +1638,19 @@ export const phoenicianSites: Record<string, Site> = {
     id: 'phoenician-utica',
     name: 'Utica',
     coordinates: [37.0667, 10.05],
-    region: 'North Africa (Tunisia)',
+    region: 'Phoenicia',
     locations: [
       {
         id: 'utica-city',
         name: 'Utica',
         description: 'One of the oldest Phoenician settlements in North Africa',
-        longDescription: `Utica was founded as a Phoenician colony around 1100 BCE, predating even Carthage. Its location at the mouth of the Medjerda River gave it control over trade with the African interior. Unlike Carthage, Utica survived Roman destruction and became the capital of Rome's African province.`,
+        longDescription: `Utica (Phoenician: 𐤏𐤕𐤒, 'tq) was founded as a Phoenician colony around 1100 BCE, predating even Carthage. Its location at the mouth of the Medjerda River gave it control over trade with the African interior. Unlike Carthage, Utica survived Roman destruction and became the capital of Rome's African province. Excavations have revealed Punic houses with courtyards, a Tophet sanctuary, and the "Maison des Masques" with stunning mosaic floors. The site was abandoned gradually as the river silted up, preserving the Punic layers beneath Roman remains.`,
         imageRegenerated: '/images/sites/utica-regenerated.jpg',
         imageCurrent: '/images/sites/utica-current.jpg',
         scene: 'The Oldest Phoenician Colony',
-        visualHighlights: ['1100 BCE foundation', 'Purple dye workshops', 'Phoenician houses', 'Roman-era forum', 'Maison des Masques mosaics'],
-        type: 'city'
+        visualHighlights: ['1100 BCE foundation (oldest in North Africa)', 'Purple dye workshops along the coast', 'Phoenician houses with central courtyards', 'Roman-era forum with basilica', 'Maison des Masques (House of Masks) mosaics'],
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Ad7LmLSkCjM?si=flVXMBbkFfYlZ4Cx'
       }
     ]
   },
@@ -1681,19 +1660,20 @@ export const phoenicianSites: Record<string, Site> = {
     id: 'phoenician-tharros',
     name: 'Tharros',
     coordinates: [39.87, 8.44],
-    region: 'Sardinia (Italy)',
+    region: 'Phoenicia',
     locations: [
       {
         id: 'tharros-city',
         name: 'Tharros',
         description: 'Phoenician-Punic port on the Gulf of Oristano',
-        longDescription: `Tharros was a Phoenician colony established on the Gulf of Oristano in western Sardinia in the 8th century BCE. The site includes a Tophet sanctuary, a necropolis with hypogeum tombs, and later Roman structures including baths with mosaic floors.`,
+        longDescription: `Tharros was a Phoenician colony established on the Gulf of Oristano in western Sardinia in the 8th century BCE. The city occupied a strategic peninsula with natural harbors, allowing control over trade routes between North Africa, Italy, and Spain. The site includes a Tophet sanctuary (with over 1,500 stelae dedicated to Tanit and Baal Hammon), a necropolis with hypogeum tombs carved into the rock, and later Roman structures including baths with mosaic floors and an aqueduct. The city was abandoned in the 10th century CE due to Saracen raids, leaving extensive ruins visible today.`,
         imageRegenerated: '/images/sites/tharros-regenerated.jpg',
         imageCurrent: '/images/sites/tharros-current.jpg',
         scene: 'The Sardinian Phoenician Port',
-        visualHighlights: ['Tophet sanctuary with stelae', 'Hypogeum tombs carved into rock', 'Phoenician harbor with breakwaters', 'Roman aqueduct and baths'],
+        visualHighlights: ['Tophet sanctuary with stelae (Tanit symbol carved)', 'Hypogeum tombs carved into volcanic rock', 'Phoenician harbor with breakwaters stone', 'Roman aqueduct and baths with mosaics', 'Capo San Marco peninsula views'],
         deity: 'Eshmun',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/LqHGVrBqEHM?si=6G9YobxPz9BxlYkp'
       }
     ]
   },
@@ -1703,19 +1683,20 @@ export const phoenicianSites: Record<string, Site> = {
     id: 'phoenician-amrit',
     name: 'Amrit (Marathus)',
     coordinates: [34.84, 35.91],
-    region: 'Phoenicia (Syria)',
+    region: 'Phoenicia',
     locations: [
       {
         id: 'amrit-temple',
         name: 'Amrit',
         description: 'Phoenician sanctuary with unique rock-cut architecture',
-        longDescription: `Amrit was a Phoenician city with a unique sanctuary dedicated to Melqart and Eshmun. The site's main structure is the "Ma'abed," a hypaethral (roofless) sanctuary built of massive limestone blocks, surrounded by a sacred enclosure.`,
+        longDescription: `Amrit (Phoenician: 𐤏𐤌𐤓𐤕, 'mrt) was a Phoenician city with a unique sanctuary dedicated to Melqart and Eshmun. The site's main structure is the "Ma'abed," a hypaethral (roofless) sanctuary built of massive limestone blocks, surrounded by a sacred enclosure wall. The sanctuary features a central sacred pool filled by a natural spring, which may have been used for healing rituals. Other structures include a rock-cut funerary tower (the "Tomb of Amrit"), a second smaller "Ma'abed," and a stadium-like structure for religious games. The site was abandoned after the Roman period and remained undisturbed, making it one of the best-preserved Phoenician sanctuaries.`,
         imageRegenerated: '/images/sites/amrit-regenerated.jpg',
         imageCurrent: '/images/sites/amrit-current.jpg',
         scene: 'The Sanctuary of Melqart',
-        visualHighlights: ['Ma\'abed hypaethral sanctuary', 'Central sacred pool', 'Colonnade of standing columns', 'Funerary tower (Tomb of Amrit)'],
+        visualHighlights: ['Ma\'abed hypaethral sanctuary (massive limestone blocks)', 'Central sacred pool with healing spring', 'Colonnade of standing columns still upright', 'Funerary tower (Tomb of Amrit) rock-cut', 'Second smaller Ma\'abed with altar'],
         deity: 'Melqart',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/jK2YKwqWUyo?si=T7n3Rw5kDfUuT3qe'
       }
     ]
   },
@@ -1725,37 +1706,41 @@ export const phoenicianSites: Record<string, Site> = {
     id: 'phoenician-sarepta',
     name: 'Sarepta',
     coordinates: [33.45, 35.3],
-    region: 'Phoenicia (Lebanon)',
+    region: 'Phoenicia',
     locations: [
       {
         id: 'sarepta-workshops',
         name: 'Sarepta',
         description: 'Industrial center for Phoenician crafts',
-        longDescription: `Sarepta (modern Sarafand) was a major industrial center for Phoenician crafts, not a major urban capital like Tyre or Sidon. Excavations revealed workshops for purple dye, metalworking, pottery, and olive oil production. Sarepta is uniquely important as the only Phoenician city excavated in its entirety (James Pritchard, 1969-1974).`,
+        longDescription: `Sarepta (modern Sarafand, Phoenician: 𐤆𐤓𐤐𐤕, Ṣrpt) was a major industrial center for Phoenician crafts, not a major urban capital like Tyre or Sidon. Excavations revealed workshops for purple dye (with mountains of crushed Murex shells), metalworking (bronze and iron artifacts), pottery (kilns with mass-produced amphorae), and olive oil production. Sarepta is uniquely important as the only Phoenician city excavated in its entirety (James Pritchard, 1969-1974). The site also produced a rare Phoenician sanctuary inscription mentioning "Tanit-Ashtart," and a cache of ivory carvings comparable to those found in Nimrud.`,
         imageRegenerated: '/images/sites/sarepta-regenerated.jpg',
         imageCurrent: '/images/sites/sarepta-current.jpg',
         scene: 'The Industrial Heart of Phoenicia',
         visualHighlights: [
-          'Purple dye production facilities with crushed murex shells',
+          'Purple dye production facilities with mountains of crushed murex shells',
           'Metalworking workshops with bronze and iron artifacts',
           'Pottery kilns with mass-produced amphorae',
           'Phoenician sanctuary inscriptions on stone',
           'Olive oil presses and storage jars'
         ],
         deity: 'Tanit',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/0rM3wq0N5I8?si=PpUyMXkZyPjTw2lC'
       }
     ]
   }
 };
-// ========== SECTION 6: BABYLONIANS (71-80) ==========
+
+// ========== SECTION 6: BABYLONIA (71-80) ==========
+// Continues after phoenicianSites (which ends at #70)
+
 export const babylonianSites: Record<string, Site> = {
   // 71. Babylon - The Great Capital
   babylon: {
     id: 'babylon',
     name: 'Babylon',
     coordinates: [32.5416, 44.4146],
-    region: 'Mesopotamia (Iraq)',
+    region: 'Babylonia',
     locations: [
       {
         id: 'babylon-city',
@@ -1771,7 +1756,8 @@ Babylon fell to the Persian emperor Cyrus the Great in 539 BCE, who treated the 
         scene: 'The Glorious City of Babylon',
         visualHighlights: ['Massive double walls wide enough for chariots', 'Euphrates River bridges with drawbridges', 'Ishtar Gate processional way with glazed bricks', 'Etemenanki ziggurat (Tower of Babel)', 'Hanging Gardens terraced with exotic plants'],
         deity: 'Marduk',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -1781,7 +1767,7 @@ Babylon fell to the Persian emperor Cyrus the Great in 539 BCE, who treated the 
     id: 'ishtar-gate',
     name: 'Ishtar Gate',
     coordinates: [32.543, 44.418],
-    region: 'Mesopotamia (Iraq)',
+    region: 'Babylonia',
     locations: [
       {
         id: 'ishtar-gate-structure',
@@ -1797,7 +1783,8 @@ Nebuchadnezzar II inscribed his name on every brick, demonstrating his role as B
         scene: 'The Gate of the Goddess Ishtar',
         visualHighlights: ['Blue-glazed brickwork with iridescent shine', 'Lion processional reliefs with yellow manes', 'Dragon (sirrush) figures with snake heads', 'Inscribed bricks of Nebuchadnezzar', 'Processional Way with stone pavement and inscriptions'],
         deity: 'Ishtar',
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -1807,7 +1794,7 @@ Nebuchadnezzar II inscribed his name on every brick, demonstrating his role as B
     id: 'etemenanki',
     name: 'Etemenanki',
     coordinates: [32.536, 44.421],
-    region: 'Mesopotamia (Iraq)',
+    region: 'Babylonia',
     locations: [
       {
         id: 'etemenanki-ziggurat',
@@ -1823,7 +1810,8 @@ The structure's name and description likely inspired the biblical Tower of Babel
         scene: 'The House of Heaven and Earth',
         visualHighlights: ['Seven colored tiers (white, black, red, blue, orange, silver, gold)', 'Summit temple of Marduk with golden furnishings', 'Three converging staircases with 60 steps each', 'Cella with golden couch and table for the god', 'Inscribed foundation cylinders of Nebuchadnezzar'],
         deity: 'Marduk',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -1833,7 +1821,7 @@ The structure's name and description likely inspired the biblical Tower of Babel
     id: 'borsippa',
     name: 'Borsippa',
     coordinates: [32.3915, 44.3417],
-    region: 'Mesopotamia (Iraq)',
+    region: 'Babylonia',
     locations: [
       {
         id: 'borsippa-ziggurat',
@@ -1849,7 +1837,8 @@ The ziggurat's distinctive shape demonstrates Mesopotamian construction techniqu
         scene: 'The Temple of Nabu the Scribe',
         visualHighlights: ['Standing ziggurat ruins 52 meters high', 'Nabu temple complex with scribal school', 'Clay tablet library with astronomical records', 'Babylonian religious center with planetary deities', 'Inscribed cylinder of Nebuchadnezzar'],
         deity: 'Nabu',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -1859,7 +1848,7 @@ The ziggurat's distinctive shape demonstrates Mesopotamian construction techniqu
     id: 'sippar',
     name: 'Sippar',
     coordinates: [33.058, 44.252],
-    region: 'Mesopotamia (Iraq)',
+    region: 'Babylonia',
     locations: [
       {
         id: 'sippar-temple',
@@ -1875,7 +1864,8 @@ As god of justice, Shamash's city attracted those seeking legal judgments. The t
         scene: 'The City of the Sun God',
         visualHighlights: ['Ebabbara temple with Shamash cult statue', 'Sun god tablet showing king before Shamash', 'Nabonidus excavation pits (earliest archaeology)', 'Tablet library with thousands of legal documents', 'Royal inscriptions on cylinder seals'],
         deity: 'Shamash',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -1885,7 +1875,7 @@ As god of justice, Shamash's city attracted those seeking legal judgments. The t
     id: 'ur',
     name: 'Ur',
     coordinates: [30.962, 46.104],
-    region: 'Mesopotamia (Iraq)',
+    region: 'Babylonia',
     locations: [
       {
         id: 'ur-city',
@@ -1893,7 +1883,7 @@ As god of justice, Shamash's city attracted those seeking legal judgments. The t
         description: 'Ancient Sumerian city of Abraham',
         longDescription: `Ur was one of the most ancient and important cities of Mesopotamia, dating to 3800 BCE and occupied for over 4,000 years. The city's great ziggurat dedicated to the moon god Nanna (Sin) dominated the skyline, its three massive staircases (100 steps each) linking earth and heaven, still standing today after restoration by Saddam Hussein.
 
-The Royal Cemetery of Ur (2600-2500 BCE) excavated by Leonard Woolley (1922-1934) yielded spectacular treasures—the gold helmet of Meskalamdug (with repoussé beading), the Standard of Ur (shell and lapis mosaic showing war and peace scenes), Queen Puabi's elaborate headdress (made of lapis lazuli, gold, and carnelian), elaborate lyres and harps with golden bull heads, and evidence of human sacrifice (retainers buried with their rulers, 74 bodies in the "Great Death Pit").
+The Royal Cemetery of Ur (2600-2500 BCE) excavated by Leonard Woolley (1922-1934) yielded spectacular treasures—the gold helmet of Meskalamdug (with repoussé beading), the Standard of Ur (shell and lapis mosaic showing war and peace scenes), Queen Puabi's elaborate headdress (made of lapis lazuli, gold, and carnelian), elaborate lyres and harps with golden bull heads, and evidence of human sacrifice (ertainers buried with their rulers, 74 bodies in the "Great Death Pit").
 
 Abraham is traditionally associated with Ur (Genesis 11:31) before his journey to Canaan. The city was a major center of moon worship, with temples, administrative buildings, and residential quarters. Ur's harbor on the Euphrates connected it to Persian Gulf trade.`,
         imageRegenerated: '/images/sites/ur-regenerated.jpg',
@@ -1901,7 +1891,8 @@ Abraham is traditionally associated with Ur (Genesis 11:31) before his journey t
         scene: 'The Ancient City of Abraham',
         visualHighlights: ['Ziggurat of Nanna with three staircases', 'Royal Cemetery gold artifacts (helmet, jewelry)', 'Standard of Ur war and peace mosaic', 'Queen Puabi\'s headdress and jewelry', 'Great Death Pit with human sacrifices'],
         deity: 'Nanna',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'ur-temple',
@@ -1917,7 +1908,8 @@ The temple's association with Abraham, whose father Terah was according to tradi
         scene: 'The Moon God\'s Sanctuary',
         visualHighlights: ['Nanna temple cella with cult statue base', 'Priests in ritual white robes', 'Offering tables with bread and oil', 'Clay tablet archives of temple accounts', 'Moon crescent symbols carved on walls'],
         deity: 'Nanna',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -1927,7 +1919,7 @@ The temple's association with Abraham, whose father Terah was according to tradi
     id: 'nineveh',
     name: 'Nineveh',
     coordinates: [36.359, 43.152],
-    region: 'Mesopotamia (Iraq)',
+    region: 'Babylonia',
     locations: [
       {
         id: 'nineveh-palace',
@@ -1947,7 +1939,8 @@ The city was destroyed in 612 BCE by a coalition of Babylonians, Medes, and Scyt
         '15 city gates with lamassu guardian statues',
         'Aqueduct at Jerwan (earliest known)'],
         deity: 'Ashur',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -1957,7 +1950,7 @@ The city was destroyed in 612 BCE by a coalition of Babylonians, Medes, and Scyt
     id: 'nimrud',
     name: 'Nimrud (Kalhu)',
     coordinates: [36.098, 43.329],
-    region: 'Mesopotamia (Iraq)',
+    region: 'Babylonia',
     locations: [
       {
         id: 'nimrud-palace',
@@ -1973,7 +1966,8 @@ The city was destroyed in 612 BCE along with Nineveh. The site was heavily loote
         scene: 'The Assyrian Military Arsenal',
         visualHighlights: ['Northwest Palace with 2,000 alabaster reliefs', 'Lamassu winged bulls at palace gates', 'Ziqqurat of Nimrud (60 meters high)', 'Nimrud Ivories (carved ivory objects)', 'Fort Shalmaneser military arsenal'],
         deity: 'Ninurta',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -1983,7 +1977,7 @@ The city was destroyed in 612 BCE along with Nineveh. The site was heavily loote
     id: 'dur-sharrukin',
     name: 'Dur-Sharrukin (Khorsabad)',
     coordinates: [36.509, 43.229],
-    region: 'Mesopotamia (Iraq)',
+    region: 'Babylonia',
     locations: [
       {
         id: 'sargon-palace',
@@ -1999,7 +1993,8 @@ The palace reliefs show Sargon receiving tribute from Egypt (probably "Greek" Cy
         scene: 'The Perfectly Planned Capital',
         visualHighlights: ['Square city plan oriented to cardinal points', 'Glazed brick reliefs of king and lions', 'Palace of 10 hectares (200 rooms)', 'Lamassu at seven city gates', 'Unfinished state with workmen\'s tools'],
         deity: 'Ashur',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -2009,7 +2004,7 @@ The palace reliefs show Sargon receiving tribute from Egypt (probably "Greek" Cy
     id: 'eridu',
     name: 'Eridu',
     coordinates: [30.815, 45.995],
-    region: 'Mesopotamia (Iraq)',
+    region: 'Babylonia',
     locations: [
       {
         id: 'eridu-temple',
@@ -2025,19 +2020,22 @@ Eridu declined when the Euphrates shifted course (c. 2000 BCE), but its traditio
         scene: 'The First City of Sumer',
         visualHighlights: ['18 levels of temple construction (c. 5400-2000 BCE)', 'Enki temple "House of the Aquifer"', 'Offering tables with fish bones', 'Ziqqurat of Eridu (Ur III period)', 'Ubaid painted pottery in cemetery'],
         deity: 'Enki',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   }
 };
-// ========== SECTION 7: HEBREWS/ISRAELITES (81-90) ==========
+// ========== SECTION 7: ISRAEL & JUDAH (81-90) ==========
+// Continues after babylonianSites (which ends at #80)
+
 export const hebrewSites: Record<string, Site> = {
   // 81. Jerusalem - City of David
   jerusalem: {
     id: 'jerusalem',
     name: 'Jerusalem',
     coordinates: [31.7683, 35.2137],
-    region: 'Judah/Canaan (Israel)',
+    region: 'Israel & Judah',
     locations: [
       {
         id: 'jerusalem-city',
@@ -2051,7 +2049,8 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
         scene: 'The Golden City on the Hill',
         visualHighlights: ['City of David ridge with stepped stone structure', 'Temple Mount platform (Herodian expansion)', 'Gihon Spring fortifications and tunnels', 'Valley of Hinnom (Gehenna)', 'Defensive walls with towers and gates'],
         deity: 'Yahweh',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'western-wall',
@@ -2063,7 +2062,8 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
         scene: 'The Last Remnant of the Temple',
         visualHighlights: ['Massive Herodian stone courses with margins', 'Worn smooth stone surface from centuries of touch', 'Prayer notes in stone crevices', 'Traditional prayer sections (men and women)', 'Underground Western Wall tunnels'],
         deity: 'Yahweh',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -2073,7 +2073,7 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
     id: 'temple-mount',
     name: 'Temple Mount (Har HaBayit)',
     coordinates: [31.777, 35.235],
-    region: 'Judah/Canaan (Israel)',
+    region: 'Israel & Judah',
     locations: [
       {
         id: 'solomons-temple',
@@ -2085,7 +2085,8 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
         scene: 'The First Temple of Solomon',
         visualHighlights: ['Two bronze pillars Jachin and Boaz at entrance', 'Holy of Holies with Ark of the Covenant and cherubim', 'Molten Sea on twelve oxen for purification', 'Golden Menorah (seven-branched lampstand)', 'Cedar paneling with gold overlay'],
         deity: 'Yahweh',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'second-temple',
@@ -2097,7 +2098,8 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
         scene: 'Herod\'s Great Temple',
         visualHighlights: ['Massive retaining walls with huge stones ("Western Stone" 500 tons)', 'Multiple courtyard levels with increasing restrictions', 'Royal Stoa (basilica) on southern side', 'Pilgrim traffic entering through Hulda Gates (double and triple)', 'Roman siege works ending destruction in 70 CE'],
         deity: 'Yahweh',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -2107,7 +2109,7 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
     id: 'city-david',
     name: 'City of David (Ir David)',
     coordinates: [31.773, 35.236],
-    region: 'Judah/Canaan (Israel)',
+    region: 'Israel & Judah',
     locations: [
       {
         id: 'david-kingdom',
@@ -2118,7 +2120,8 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
         imageCurrent: '/images/sites/city-david-current.jpg',
         scene: 'David\'s Capital City',
         visualHighlights: ['Stepped Stone Structure supporting palace', 'Area G (House of Ahiel) with four-room Israelite house', 'Gihon Spring fortifications (Spring Tower)', 'Hezekiah\'s Tunnel with water flowing', 'Pool of Siloam steps (John 9: Jesus heals blind man)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -2128,7 +2131,7 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
     id: 'hebron',
     name: 'Hebron (Hevron)',
     coordinates: [31.525, 35.095],
-    region: 'Judah/Canaan (West Bank)',
+    region: 'Israel & Judah',
     locations: [
       {
         id: 'hebron-cave',
@@ -2139,7 +2142,8 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
         imageCurrent: '/images/sites/hebron-current.jpg',
         scene: 'The City of the Patriarchs',
         visualHighlights: ['Herodian enclosure walls over the cave (similar to Temple Mount)', 'Cenotaphs of the patriarchs and matriarchs', 'Medieval Mamluk mosque conversion (Ibrahimi Mosque)', 'Abraham\'s traditional oak tree at Mamre (Genesis 18)', 'Ancient city walls of Jebusite Hebron'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -2149,7 +2153,7 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
     id: 'mount-sinai',
     name: 'Mount Sinai (Har Sinai, Jebel Musa)',
     coordinates: [28.539, 33.973],
-    region: 'Sinai Peninsula (Egypt)',
+    region: 'Israel & Judah',
     locations: [
       {
         id: 'sinai-mountain',
@@ -2161,7 +2165,8 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
         scene: 'The Mountain of Divine Revelation',
         visualHighlights: ['Red granite peak with 3,750 Steps of Repentance', 'Greek Orthodox chapel at summit (Chapel of the Holy Trinity)', 'Saint Catherine\'s Monastery fortress walls', 'Burning Bush chapel (traditional location)', 'Ancient manuscript library (Codex Sinaiticus)'],
         deity: 'Yahweh',
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -2171,7 +2176,7 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
     id: 'lachish',
     name: 'Lachish (Tel Lachish)',
     coordinates: [31.565, 34.848],
-    region: 'Judah/Canaan (Israel)',
+    region: 'Israel & Judah',
     locations: [
       {
         id: 'lachish-fortress',
@@ -2188,7 +2193,8 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
           'Double defensive walls with gates',
           'Solar shrine with horse figurines (possible Josiah reforms)'
         ],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -2198,7 +2204,7 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
     id: 'beersheba',
     name: 'Beersheba',
     coordinates: [31.244, 34.841],
-    region: 'Judah/Canaan (Israel)',
+    region: 'Israel & Judah',
     locations: [
       {
         id: 'abraham-well',
@@ -2209,7 +2215,8 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
         imageCurrent: '/images/sites/beersheba-current.jpg',
         scene: 'The Well of the Oath',
         visualHighlights: ['Deep well (69 meters, possibly Abraham\'s)', 'Four-room Israelite house (Iron Age II)', 'Horned altar with possible reform evidence', 'Casemate wall defensive system', 'Water system channeling well water'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -2219,7 +2226,7 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
     id: 'jericho',
     name: 'Jericho (Tell es-Sultan)',
     coordinates: [31.872, 35.444],
-    region: 'Canaan (West Bank)',
+    region: 'Israel & Judah',
     locations: [
       {
         id: 'jericho-walls',
@@ -2230,7 +2237,8 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
         imageCurrent: '/images/sites/jericho-current.jpg',
         scene: 'The City of the Trumpets',
         visualHighlights: ['Neolithic stone tower (8 meters tall, oldest known)', 'Neolithic wall (3.6 meters high, oldest protective wall)', 'Destruction layer with burnt bricks (Bronze Age)', 'Spring of Elisha (miracle at 2 Kings 2:19-22)', 'Mount of Temptation overlooking the site'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -2240,7 +2248,7 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
     id: 'bethel',
     name: 'Bethel (Beitin)',
     coordinates: [31.925, 35.238],
-    region: 'Canaan (West Bank)',
+    region: 'Israel & Judah',
     locations: [
       {
         id: 'jacobs-ladder',
@@ -2252,7 +2260,8 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
         scene: 'The House of God',
         visualHighlights: ['Middle Bronze Age temple (c. 1700 BCE, possible "Luz")', 'Iron Age altar platform (Jeroboam\'s golden calf site)', 'Jacob\'s stone pillar (commemorative marker)', 'Nearby olive trees representing the dream', 'View overlooking the Hill Country of Ephraim'],
         deity: 'Yahweh',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -2262,7 +2271,7 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
     id: 'shechem',
     name: 'Shechem (Tell Balata)',
     coordinates: [32.213, 35.285],
-    region: 'Canaan (West Bank)',
+    region: 'Israel & Judah',
     locations: [
       {
         id: 'shechem-covenant',
@@ -2274,20 +2283,22 @@ The city was destroyed by Babylon in 586 BCE (2 Kings 25), rebuilt by returning 
         scene: 'The Covenant Renewal Site',
         visualHighlights: ['Massive Middle Bronze Age fortifications', '"Tower Temple" with standing stones (Azebat Shechem)', 'Gateway with cultic niche (possible judges\' gate)', 'Abraham\'s altar site (traditional)', 'Oak of Moreh (where Abraham built an altar)'],
         deity: 'Yahweh',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   }
 };
-
 // ========== SECTION 8: HITTITES & CONFLICT ZONE (91-100) ==========
+// Continues after hebrewSites (which ends at #90)
+
 export const invaderSites: Record<string, Site> = {
-  // 91. Hattusa - Hittite Capital
+  // 91. Hattusa - Hittite Capital (Anatolia)
   hattusa: {
     id: 'hattusa',
     name: 'Hattusa',
     coordinates: [40.017, 34.615],
-    region: 'Anatolia (Turkey)',
+    region: 'Anatolia',
     locations: [
       {
         id: 'hattusa-capital',
@@ -2298,7 +2309,8 @@ export const invaderSites: Record<string, Site> = {
         imageCurrent: '/images/sites/hattusa-current.jpg',
         scene: 'The Hittite Citadel',
         visualHighlights: ['6 km defensive walls with towers', 'Lion Gate with guardian lion figures', 'Sphinx Gate with paired sphinxes', 'Yerkapi postern gate and rampart', 'Royal tablet archives with clay letter'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'yazilikaya',
@@ -2310,17 +2322,18 @@ export const invaderSites: Record<string, Site> = {
         scene: 'The Rock Sanctuary of the Gods',
         visualHighlights: ['Natural rock chambers with 90 deity reliefs', 'Procession of Hittite gods and goddesses', 'Tarhunt the Storm God and Hebat meeting', 'Torchlight ceremony reconstruction', 'Royal funerary chamber with sword god'],
         deity: 'Tarhunt',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
 
-  // 92. Battle of Kadesh - The Greatest Chariot Battle
+  // 92. Battle of Kadesh - The Greatest Chariot Battle (Levant)
   kadesh: {
     id: 'kadesh',
     name: 'Kadesh',
     coordinates: [34.55, 36.5],
-    region: 'Levant (Syria)',
+    region: 'Levant',
     locations: [
       {
         id: 'kadesh-battlefield',
@@ -2331,17 +2344,18 @@ export const invaderSites: Record<string, Site> = {
         imageCurrent: '/images/sites/kadesh-current.jpg',
         scene: 'The Chariot Battle of the Ages',
         visualHighlights: ['Orontes River crossing point with fords', 'Tell Kadesh fortress ruins', 'Egyptian camp location (surrounded)', 'Hittite ambush positions (behind the tell)', 'Peace treaty tablet replica (world\'s first)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
 
-  // 93. Battle of Megiddo - Thutmose III's Surprise Attack
+  // 93. Battle of Megiddo - Thutmose III's Surprise Attack (Levant)
   battleMegiddo: {
     id: 'battle-megiddo',
     name: 'Battle of Megiddo',
     coordinates: [32.585, 35.185],
-    region: 'Levant (Israel)',
+    region: 'Levant',
     locations: [
       {
         id: 'megiddo-battle-1457',
@@ -2352,17 +2366,18 @@ export const invaderSites: Record<string, Site> = {
         imageCurrent: '/images/sites/battle-megiddo-current.jpg',
         scene: 'Thutmose III\'s Surprise Attack',
         visualHighlights: ['Aruna Pass narrow gorge showing approach', 'Canaanite camp location (surprised)', 'Egyptian chariots emerging from pass', 'Siege of Megiddo (seven months)', 'Thutmose\'s journal inscription at Karnak'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
 
-  // 94. Battle of the Delta - Ramesses III vs Sea Peoples
+  // 94. Battle of the Delta - Ramesses III vs Sea Peoples (Egypt - Lower Egypt)
   battleDelta: {
     id: 'battle-delta',
     name: 'Battle of the Delta',
     coordinates: [30.9, 31.3],
-    region: 'Nile Delta (Egypt)',
+    region: 'Lower Egypt',
     locations: [
       {
         id: 'sea-peoples-battle',
@@ -2373,17 +2388,18 @@ export const invaderSites: Record<string, Site> = {
         imageCurrent: '/images/sites/battle-delta-current.jpg',
         scene: 'Ramesses III vs the Sea Peoples',
         visualHighlights: ['Sea Peoples ships entering Nile mouths', 'Egyptian archers on shore and ships', 'Grappling hooks overturning enemy vessels', 'Medinet Habu reliefs of the battle', 'Captured Sea Peoples with distinctive feathered helmets'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
 
-  // 95. Troy - Trojan War
+  // 95. Troy - Trojan War (Anatolia)
   troy: {
     id: 'troy',
     name: 'Troy (Hisarlik)',
     coordinates: [39.957, 26.238],
-    region: 'Anatolia (Turkey)',
+    region: 'Anatolia',
     locations: [
       {
         id: 'trojan-war',
@@ -2395,17 +2411,18 @@ export const invaderSites: Record<string, Site> = {
         scene: 'The City of the Trojan War',
         visualHighlights: ['Troy VIIa destruction layer with fire and arrowheads', 'Walls of Troy with towers and gates', 'Schliemann\'s trench (1870 excavation)', 'Priam\'s Treasure gold vessels and jewelry', 'View of the Troad plain to the Aegean'],
         deity: 'Athena',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
 
-  // 96. Thermopylae - 300 Spartans
+  // 96. Thermopylae - 300 Spartans (Greece - Greek & Aegean)
   thermopylae: {
     id: 'thermopylae',
     name: 'Battle of Thermopylae',
     coordinates: [38.797, 22.536],
-    region: 'Greece',
+    region: 'Greek & Aegean',
     locations: [
       {
         id: 'pass-thermopylae',
@@ -2416,17 +2433,18 @@ export const invaderSites: Record<string, Site> = {
         imageCurrent: '/images/sites/thermopylae-current.jpg',
         scene: 'The Last Stand of the 300',
         visualHighlights: ['Narrow pass (15 meters wide) between mountains and sea', 'Phocian Wall stone barricade', 'Anopaia Path (betrayal route)', 'Kolonos Hill (final stand location)', 'Leonidas monument and epitaph'],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
 
-  // 97. Marathon - The Athenian Victory
+  // 97. Marathon - The Athenian Victory (Greece - Greek & Aegean)
   marathon: {
     id: 'marathon',
     name: 'Battle of Marathon',
     coordinates: [38.125, 23.978],
-    region: 'Greece',
+    region: 'Greek & Aegean',
     locations: [
       {
         id: 'marathon-plain',
@@ -2437,17 +2455,18 @@ export const invaderSites: Record<string, Site> = {
         imageCurrent: '/images/sites/marathon-current.jpg',
         scene: 'The Athenian Charge',
         visualHighlights: ['Marathon plain (1.5 km charging distance)', 'Persian camp location (near the beach)', 'Athenian phalanx formation running', 'Battle of Marathon mound (burial tomb)', 'Persian fleet beached at the Cynosura peninsula'],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
 
-  // 98. Salamis - The Naval Battle
+  // 98. Salamis - The Naval Battle (Greece - Greek & Aegean)
   salamis: {
     id: 'salamis',
     name: 'Battle of Salamis',
     coordinates: [37.95, 23.566],
-    region: 'Greece',
+    region: 'Greek & Aegean',
     locations: [
       {
         id: 'salamis-strait',
@@ -2458,17 +2477,18 @@ export const invaderSites: Record<string, Site> = {
         imageCurrent: '/images/sites/salamis-current.jpg',
         scene: 'The Decisive Naval Battle',
         visualHighlights: ['Narrow straits between Salamis and Attica', 'Greek triremes ramming Persian ships', 'Xerxes on Mount Aigaleos throne', 'Greek hoplites with oars and grappling hooks', 'Themistocles\' command post on Salamis'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
 
-  // 99. Cannae - Hannibal's Masterpiece
+  // 99. Cannae - Hannibal's Masterpiece (Italy - Roman)
   cannae: {
     id: 'cannae',
     name: 'Battle of Cannae',
     coordinates: [41.3, 16.15],
-    region: 'Italy',
+    region: 'Italian',
     locations: [
       {
         id: 'cannae-field',
@@ -2479,17 +2499,18 @@ export const invaderSites: Record<string, Site> = {
         imageCurrent: '/images/sites/cannae-current.jpg',
         scene: 'Hannibal\'s Double Envelopment',
         visualHighlights: ['Aufidus River valley with flat plain', 'Crescent formation of Carthaginian army', 'Roman infantry pressing into the center', 'African spearmen closing from the wings', 'Roman bodies described by Livy (cattle slaughter)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
 
-  // 100. Zama - The End of the Punic Wars
+  // 100. Zama - The End of the Punic Wars (North Africa)
   zama: {
     id: 'zama',
     name: 'Battle of Zama',
     coordinates: [36.1, 9.5],
-    region: 'North Africa (Tunisia)',
+    region: 'North Africa',
     locations: [
       {
         id: 'zama-battlefield',
@@ -2500,20 +2521,23 @@ export const invaderSites: Record<string, Site> = {
         imageCurrent: '/images/sites/zama-current.jpg',
         scene: 'The End of the Punic Wars',
         visualHighlights: ['Open plain for cavalry maneuver', 'Roman gaps for elephants', 'Scipio and Hannibal meeting before battle', 'Cavalry returning to complete envelopment', 'Carthaginian camp with besieged walls'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   }
 };
 
 // ========== SECTION 9: GREEK & AEGEAN (101-110) ==========
+// Continues after hebrewSites (which ends at #100 - assuming section 8 ended there)
+
 export const greekSites: Record<string, Site> = {
   // 101. Acropolis of Athens - Sanctuary of Athena
   acropolisAthens: {
     id: 'acropolis-athens',
     name: 'Acropolis of Athens',
     coordinates: [37.9715, 23.7257],
-    region: 'Greece',
+    region: 'Greek & Aegean',
     locations: [
       {
         id: 'acropolis-hill',
@@ -2525,7 +2549,8 @@ export const greekSites: Record<string, Site> = {
         scene: 'The Sacred Rock of Athens',
         visualHighlights: ['Parthenon with Doric columns and optical refinements', 'Propylaea marble gateway with painted ceilings', 'Erechtheion Caryatid maidens (six figures)', 'Temple of Athena Nike with parapet reliefs', 'Theater of Dionysus at south slope'],
         deity: 'Athena',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'parthenon-interior',
@@ -2537,7 +2562,8 @@ export const greekSites: Record<string, Site> = {
         scene: 'The Temple of Athena Parthenos',
         visualHighlights: ['Chryselephantine statue of Athena (12 meters tall)', 'Gold and ivory materials glinting in torchlight', 'Nike figure in Athena\'s extended right hand', 'Amazonomachy shield relief with fighting figures', 'Cella with reflecting light from open doors'],
         deity: 'Athena',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -2547,7 +2573,7 @@ export const greekSites: Record<string, Site> = {
     id: 'olympia-sanctuary',
     name: 'Olympia',
     coordinates: [37.638, 21.63],
-    region: 'Greece',
+    region: 'Greek & Aegean',
     locations: [
       {
         id: 'temple-zeus-olympia',
@@ -2559,7 +2585,8 @@ export const greekSites: Record<string, Site> = {
         scene: 'The Statue of Zeus at Olympia',
         visualHighlights: ['Gold and ivory Zeus statue (12 meters tall)', 'Pheidias\' workshop remains with tools and mold fragments', 'East pediment chariot race of Pelops', 'West pediment Centauromachy battle', 'Olympic flame altar with eternal flame'],
         deity: 'Zeus',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'temple-hera-olympia',
@@ -2571,7 +2598,8 @@ export const greekSites: Record<string, Site> = {
         scene: 'The Queen of the Gods',
         visualHighlights: ['Olympic flame lighting ceremony with parabolic mirror', 'Original wooden column preserved (historical artifact)', 'Hermes of Praxiteles statue find spot', 'Doric columns with varied ages of replacement', 'Pre-Zeus cult remains (Mycenaean period)'],
         deity: 'Hera',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -2581,7 +2609,7 @@ export const greekSites: Record<string, Site> = {
     id: 'delphi-sanctuary',
     name: 'Delphi',
     coordinates: [38.482, 22.501],
-    region: 'Greece',
+    region: 'Greek & Aegean',
     locations: [
       {
         id: 'oracle-delphi',
@@ -2593,7 +2621,8 @@ export const greekSites: Record<string, Site> = {
         scene: 'The Oracle of Apollo',
         visualHighlights: ['Temple of Apollo with tripod and adyton (inner chamber)', 'Omphalos stone marking Earth\'s center (carved with a net pattern)', 'Sacred Way with treasury buildings and monuments', 'Mountain amphitheater (theater of Delphi)', 'Stadium athletic track at highest point (215 meters above temple)'],
         deity: 'Apollo',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -2603,7 +2632,7 @@ export const greekSites: Record<string, Site> = {
     id: 'cape-sounion',
     name: 'Cape Sounion',
     coordinates: [37.65, 24.026],
-    region: 'Greece',
+    region: 'Greek & Aegean',
     locations: [
       {
         id: 'temple-poseidon',
@@ -2615,7 +2644,8 @@ export const greekSites: Record<string, Site> = {
         scene: 'The Temple by the Aegean',
         visualHighlights: ['Sunset over the Aegean through Doric columns', 'Lord Byron\'s carved signature on column (name and date)', 'Ship passage dedication inscriptions (sailors\' prayers)', 'Cliff-edge location (60 meters above sea)', 'Aegean blue sea backdrop (view to Kea, Kythnos islands)'],
         deity: 'Poseidon',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -2625,7 +2655,7 @@ export const greekSites: Record<string, Site> = {
     id: 'ephesus-artemis',
     name: 'Ephesus',
     coordinates: [37.939, 27.341],
-    region: 'Asia Minor (Turkey)',
+    region: 'Greek & Aegean',
     locations: [
       {
         id: 'temple-artemis',
@@ -2637,7 +2667,8 @@ export const greekSites: Record<string, Site> = {
         scene: 'The Great Temple of Artemis',
         visualHighlights: ['One standing reconstructed column (14 meters, 1970s)', 'Many-breasted cult statue of Artemis (Ephesus Museum)', 'Roman-period altar relief with Greek gods', 'Ionic column drums scattered in field', 'Acts of the Apostles crowds (dramatic reading site)'],
         deity: 'Artemis',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -2647,7 +2678,7 @@ export const greekSites: Record<string, Site> = {
     id: 'paphos-aphrodite',
     name: 'Paphos',
     coordinates: [34.757, 32.412],
-    region: 'Cyprus',
+    region: 'Greek & Aegean',
     locations: [
       {
         id: 'temple-aphrodite',
@@ -2659,28 +2690,8 @@ export const greekSites: Record<string, Site> = {
         scene: 'The Birthplace of Love',
         visualHighlights: ['Conical black stone cult statue (baetyl) in cella', 'Phoenician-style temple architecture (Syrian influences)', 'Pilgrim offerings gallery (terra cotta figurines)', 'Sacred grove with doves (Dove Court)', 'Petra tou Romiou (Aphrodite\'s Rock, offshore)'],
         deity: 'Aphrodite',
-        type: 'temple'
-      }
-    ]
-  },
-
-  // 107. Knossos - Palace of Minos
-  knossosPalace: {
-    id: 'knossos-palace',
-    name: 'Knossos',
-    coordinates: [35.298, 25.163],
-    region: 'Crete',
-    locations: [
-      {
-        id: 'knossos-palace',
-        name: 'Palace of Knossos',
-        description: 'Labyrinthine palace of King Minos',
-        longDescription: `Knossos, the legendary palace of King Minos (identified by Minos Kalokairinos in 1878, excavated by Arthur Evans from 1900-1935), is Europe's oldest city—a sprawling maze of rooms, corridors, staircases, light wells, and storage magazines, covering 22,000 square meters with 1,300 rooms. The myth of the Minotaur in its labyrinth (constructed by Daedalus for King Minos to contain the half-man, half-bull monster) may recall the palace's complex layout. The Throne Room, with its alabaster seat (the "throne of Minos") flanked by griffin frescoes (seated on a bench for the "guardians"), suggests Minoan kingship and ritual practices (the room may have been a shrine, not a throne room). The "Temple Repositories" contained ivory figurines of snake goddesses (an a tripartite goddess with upraised arms, snakes coiled around her body). Vivid frescoes—Dolphins (Queen's Megaron, in the "House of the Frescoes"), Bull Leapers (Toreador Fresco, showing acrobats vaulting over bulls, perhaps ritual athletic performance), Prince of Lilies (a walking figure with a crown of lilies and peacock feathers), Cupbearer (a figure carrying a rhyton, a conical cup)—preserve Minoan art at its height. The Linear A tablets (undeciphered, representing the Minoan language) and later Linear B tablets (deciphered by Michael Ventris in 1952 as early Greek) document Minoan and Mycenaean administration. The palace's advanced architecture (flush toilets in Queen's Suite, light wells for illumination, earthquake-proof timber-reinforced construction (the "walls of timber") rivals modern buildings. Knossos was destroyed around 1450 BCE, perhaps by the eruption at Thera (Santorini), remembered in the Atlantis legend (Plato's account mentions Athenian defeat of Atlanteans, possibly reflecting Minoan collapse).`,
-        imageRegenerated: '/images/sites/knossos-regenerated.jpg',
-        imageCurrent: '/images/sites/knossos-current.jpg',
-        scene: 'The Palace of the Minotaur',
-        visualHighlights: ['Throne Room with griffin fresco (Minoan "throne")', 'Queen\'s Megaron with dolphin fresco (restored)', 'Bull Leaper fresco (Toreador Fresco) showing acrobats', 'Light well architecture (multi-story building)', 'Evans\' partial concrete "reconstructions" (controversial)'],
-        type: 'palace'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -2690,7 +2701,7 @@ export const greekSites: Record<string, Site> = {
     id: 'akrotiri-city',
     name: 'Akrotiri',
     coordinates: [36.35, 25.4],
-    region: 'Santorini',
+    region: 'Greek & Aegean',
     locations: [
       {
         id: 'akrotiri-city',
@@ -2701,7 +2712,8 @@ export const greekSites: Record<string, Site> = {
         imageCurrent: '/images/sites/akrotiri-current.jpg',
         scene: 'The Minoan Pompeii',
         visualHighlights: ['Multi-story buildings preserved in ash (three stories visible)', 'Frescoes of monkeys and fishermen (Boxers Fresco)', 'Plumbing and drainage systems (clay pipes)', 'Volcanic ash layer (60 meters deep)', 'Boxers Fresco with bruised fists'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -2711,7 +2723,7 @@ export const greekSites: Record<string, Site> = {
     id: 'mycenae-citadel',
     name: 'Mycenae',
     coordinates: [37.7308, 22.7562],
-    region: 'Greece (Peloponnese)',
+    region: 'Greek & Aegean',
     locations: [
       {
         id: 'lion-gate',
@@ -2723,7 +2735,8 @@ export const greekSites: Record<string, Site> = {
         scene: 'The Gateway of Heroes',
         visualHighlights: ['Lion relief sculpture on limestone slab (2 meters high)', 'Cyclopean stone walls (limestone blocks, some 12 tons)', 'Grave Circle A gold masks (Mask of Agamemnon)', 'Treasury of Atreus beehive tomb (13 meters high)', 'Palace megaron with hearth (central torchlight)'],
         deity: 'Athena',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'treasury-of-atreus',
@@ -2734,7 +2747,8 @@ export const greekSites: Record<string, Site> = {
         imageCurrent: '/images/sites/treasury-of-atreus-current.jpg',
         scene: 'The Beehive Tomb of Kings',
         visualHighlights: ['120-ton lintel beam (largest in ancient world)', '13.5-meter high dome (54 feet)', 'Tholos corbelled architecture (33 stone courses)', 'Dromos entrance passage (36 meters long)', 'Geometric decorative bronze nail holes'],
-        type: 'tomb'
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -2744,7 +2758,7 @@ export const greekSites: Record<string, Site> = {
     id: 'thebes-greece',
     name: 'Thebes (Thiva)',
     coordinates: [38.322, 23.317],
-    region: 'Greece',
+    region: 'Greek & Aegean',
     locations: [
       {
         id: 'cadmea',
@@ -2756,238 +2770,22 @@ export const greekSites: Record<string, Site> = {
         scene: 'The Mycenaean Palace of Oedipus',
         visualHighlights: ['Cadmea acropolis with palace foundations', 'Linear B tablet archive (500 tablets)', 'Treasury of the Minyae tholos tomb', 'Cyclopean fortification walls', 'Palace of Cadmus (traditional location)'],
         deity: 'Dionysus',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   }
 };
-// ========== SECTION 10: CENTRAL AFRICA (101-110) ==========
-export const centralAfricaSites: Record<string, Site> = {
-  // 101. Bantu Expansion - The Great Migration
-  bantuExpansion: {
-    id: 'bantu-expansion',
-    name: 'Bantu Expansion Route',
-    coordinates: [4.0, 18.0],
-    region: 'Central Africa (Congo Basin)',
-    locations: [
-      {
-        id: 'bantu-migration',
-        name: 'Bantu Migration Routes',
-        description: 'Spread of people, crops, and ironworking across Africa',
-        longDescription: `The Bantu expansion (3000 BCE - 500 CE) was one of the great migrations in human history, spreading Bantu-speaking peoples from their homeland in the Nigeria-Cameroon borderlands across two-thirds of sub-Saharan Africa. The expansion followed two main routes: a western route through the Congo rainforest to the Great Lakes and eastern Africa, and an eastern route through the savanna to the Great Lakes and southern Africa.
-
-Bantu farmers brought yams, oil palms, and bananas (a Southeast Asian crop that reached Africa via Madagascar, allowing settlement of the rainforest), their ironworking technology transforming agriculture and warfare, and their languages shaping the continent's linguistic landscape. The expansion created new societies, political structures, and cultural traditions across vast regions—from the Congo rainforest to the Great Lakes, and from the Swahili coast to the Limpopo River.
-
-The "Bantu expansion" is documented by linguistic evidence (the Bantu language family includes over 500 languages), archaeological evidence (distinctive pottery styles, iron slag, charcoal), and genetic evidence (Y-chromosome markers). The expansion was not a single movement but a series of gradual migrations over 4,000 years.`,
-        imageRegenerated: '/images/sites/bantu-expansion-regenerated.jpg',
-        imageCurrent: '/images/sites/bantu-expansion-current.jpg',
-        scene: 'The Great Bantu Migration',
-        visualHighlights: ['Migration route arrows (Nigeria-Cameroon to southern Africa)', 'Ironworking spread (furnace and tools)', 'Agricultural revolution (yams, oil palms, bananas)', 'Linguistic transformation (Bantu language map)', 'Cultural adaptation to rainforest and savanna'],
-        type: 'city'
-      }
-    ]
-  },
-
-  // 102. Early Bantu Village - Life on the Frontier
-  bantuVillage: {
-    id: 'bantu-village',
-    name: 'Early Bantu Village',
-    coordinates: [-1.0, 28.0],
-    region: 'Great Lakes (Congo/Rwanda)',
-    locations: [
-      {
-        id: 'bantu-settlement',
-        name: 'Early Bantu Village',
-        description: 'Thatched homes, farming, and livestock',
-        longDescription: `Early Bantu villages were the foundation of the expansion, small settlements of extended families (clans, lineages) practicing slash-and-burn agriculture (shifting cultivation, moving every few years as soil fertility declined), ironworking, and animal husbandry (cattle, sheep, goats). Houses were typically circular with timber frames (saplings bent and tied), mud-and-wattle walls (cross-hatched branches covered with clay), and thatched roofs (grass or palm fronds). Villages also included granaries (raised structures on stilts to store grain, protect from rodents and pests), animal pens (enclosures of stakes), iron-smelting furnaces (clay shaft furnaces with bellows), and communal meeting spaces (shaded areas under trees). These villages left markers—ceramic shards (distinctive pottery styles: "Urewe" ware in the Great Lakes region, "Kwale" ware in eastern Africa), iron slag (waste from smelting), and charcoal (from forest clearance)—that archaeologists use to trace the expansion.`,
-        imageRegenerated: '/images/sites/bantu-village-regenerated.jpg',
-        imageCurrent: '/images/sites/bantu-village-current.jpg',
-        scene: 'Homestead on the Frontier',
-        visualHighlights: ['Thatched circular houses (mud-and-wattle)', 'Raised granaries on stilts', 'Ironworking furnaces (clay shaft with bellows)', 'Agricultural fields (yams, oil palms, bananas)', 'Communal meeting spaces (shaded areas)'],
-        type: 'city'
-      }
-    ]
-  },
-
-  // 103. Ironworking Village - The Blacksmith's Art
-  ironworkingVillage: {
-    id: 'ironworking-village',
-    name: 'Ironworking Village',
-    coordinates: [-2.0, 23.0],
-    region: 'Central Africa (Congo Basin)',
-    locations: [
-      {
-        id: 'iron-smelting-village',
-        name: 'Ironworking Village Scene',
-        description: 'Blacksmith forging tools and weapons',
-        longDescription: `Ironworking was the transformative technology accompanying the Bantu expansion. Blacksmiths held special status (often as ritual specialists, believed to control supernatural forces), producing iron tools (hoes, axes, knives) that revolutionized agriculture (clearing forest, breaking ground, harvesting) and weapons (spears, arrows, swords) for hunting and warfare. The iron smelting process was highly ritualized, with ceremonies to ensure the furnace's success (including blood sacrifices, sexual prohibitions, and special songs). Clay furnaces (shaft furnaces 1-2 meters high, made of clay and dung), bellows made of animal skins (goat hide, with wooden nozzles), and charcoal fuel produced temperatures high enough (1,200-1,500°C) to extract iron from ore (haematite, magnetite, laterite). The resulting iron blooms (spongy masses of metallic iron) were then forged into tools using stone hammers (later iron hammers) and wooden tongs. Ironworking communities had significant advantages over stone-using neighbors (the Khoisan, pygmy groups), enabling more efficient farming, forest clearance, and military capability—accelerating the pace of Bantu expansion. The art of the blacksmith is still surrounded by ritual in many African societies.`,
-        imageRegenerated: '/images/sites/ironworking-regenerated.jpg',
-        imageCurrent: '/images/sites/ironworking-current.jpg',
-        scene: 'The Blacksmith\'s Fire',
-        visualHighlights: ['Clay shaft furnace (1-2 meters tall)', 'Animal skin bellows (goat hide)', 'Forging hammers and anvils (stone and iron)', 'Finished tools and weapons (hoes, axes, spears)', 'Ritual ceremony scenes (offerings before smelting)'],
-        type: 'city'
-      }
-    ]
-  },
-
-  // 104. Great Lakes Region - Ntusi Earthworks
-  ntusi: {
-    id: 'ntusi',
-    name: 'Ntusi',
-    coordinates: [-0.85, 31.65],
-    region: 'Great Lakes (Uganda)',
-    locations: [
-      {
-        id: 'ntusi-settlement',
-        name: 'Ntusi Earthworks',
-        description: 'Bigo-style earthworks of the Great Lakes',
-        longDescription: `Ntusi (10th-14th century CE) was a major settlement in the Great Lakes region, featuring large artificial earthworks—raised platforms (Ntusi meaning "raised structure") and shallow valleys that may have been cattle enclosures (bomas). The site's size (300 hectares) suggests a population of thousands, with evidence of craft specialization (pottery, ironworking, ivory carving). Artifacts include terra cotta figurines of cattle (with distinctive long horns), humans (with elaborate hairstyles), and possibly banana cultivation (banana seeds). The site is associated with the Bachwezi, legendary founders of the Kitara Empire (the "Chwezi" dynasty, remembered in oral traditions as demigods). The earthworks may have served ritual, defensive, and administrative purposes in a society based on cattle (wealth measured in cattle) and bananas (a staple crop). The site is part of the "Bigo earthworks" tradition (named for Bigo Bya Mugenyi), with Ntusi the largest.`,
-        imageRegenerated: '/images/sites/ntusi-regenerated.jpg',
-        imageCurrent: '/images/sites/ntusi-current.jpg',
-        scene: 'The Earthworks of the Bachwezi',
-        visualHighlights: ['Artificial raised platforms (Ntusi meaning "raised")', 'Cattle figurines (terra cotta with long horns)', 'Valley enclosures (possible cattle bomas)', 'Bigo earthwork style (ditches and banks)', 'Ritual center remains (pottery and iron slag)'],
-        type: 'city'
-      }
-    ]
-  },
-
-  // 105. Bigo Bya Mugenyi - The Fort of the Stranger
-  bigoByaMugenyi: {
-    id: 'bigo-bya-mugenyi',
-    name: 'Bigo Bya Mugenyi',
-    coordinates: [-0.7167, 31.5333],
-    region: 'Great Lakes (Uganda)',
-    locations: [
-      {
-        id: 'bigo-earthworks',
-        name: 'Bigo Bya Mugenyi',
-        description: 'Massive earthwork ditch system',
-        longDescription: `Bigo Bya Mugenyi ("Fort of the Stranger") is the largest of the Bigo earthworks in the Great Lakes region, consisting of a 6.5-kilometer ditch and bank system enclosing 10 square kilometers. The site dates to the 14th-16th centuries CE, based on radiocarbon dating of charcoal from the ditch fills. The ditch system may have served as cattle enclosures (capable of holding up to 2,000 head), defensive works (walls for protection), ritual boundaries (separating sacred from profane), or symbols of royal power (displaying the king's ability to mobilize labor). The scale implies a high degree of social organization (centralized state, professional army, tribute system). Oral traditions associate Bigo with the Bachwezi dynasty of the Kitara Empire (the "Chwezi" kings, including Ndahura, Mulindwa, and Wamara). The site's design suggests a hierarchical society with a king (the "Mukama") controlling cattle wealth, military defense, and ritual authority. The name "Bigo" means "ditch" in Runyankore, referring to the earthwork's ditch-and-bank style.`,
-        imageRegenerated: '/images/sites/bigo-regenerated.jpg',
-        imageCurrent: '/images/sites/bigo-current.jpg',
-        scene: 'The Fort of the Stranger',
-        visualHighlights: ['6.5 km ditch and bank system (earthworks)', 'Royal cattle enclosures (bomas)', 'Bachwezi dynasty legends (Kitara Empire)', 'Defensive earthwork walls (cyclopean)', 'Ritual "son" stone sites (believed to move)'],
-        type: 'monument'
-      }
-    ]
-  },
-
-  // 106. Great Lakes Settlement - Lakeside Communities
-  greatLakes: {
-    id: 'great-lakes',
-    name: 'Great Lakes Settlement',
-    coordinates: [-2.0, 29.0],
-    region: 'Great Lakes (Rwanda/Burundi)',
-    locations: [
-      {
-        id: 'great-lakes-community',
-        name: 'Great Lakes Settlement',
-        description: 'Fishing, farming, and early community life',
-        longDescription: `The Great Lakes region of East Africa—with its fertile volcanic soils (rich in potassium, phosphorus), abundant rainfall (1,000-1,500mm per year), and rich fisheries—supported some of the densest Bantu populations. By 500 CE, hierarchical societies emerged (with cattle-owning elites and farming commoners), precursors to kingdoms like Rwanda, Burundi, and Buganda (the "Interlacustrine Kingdoms"). Great Lakes settlements were often located near lakeshores (Lake Victoria, Lake Tanganyika, Lake Kivu, Lake Edward, Lake Albert), combining fishing (tilapia, Nile perch, lungfish), agriculture (particularly bananas, a Southeast Asian crop that reached Africa via Madagascar, allowing continuous harvest and population growth), and cattle keeping (the long-horned Ankole cattle, symbols of wealth). The staple bananas (plantains) allowed continuous harvest (unlike grains, which required seasonal storage), supporting population growth and specialization (artisans, soldiers, priests). Elite burials with iron tools (spears, axes), jewelry (copper, bronze, gold), and in later periods, imported glass beads (trade with the Swahili coast), document the emergence of social hierarchy. The region's dense population (estimates of 50-100 people per square kilometer) made the Great Lakes a secondary center of Bantu expansion east (to the coast) and south (to the Zambezi).`,
-        imageRegenerated: '/images/sites/great-lakes-regenerated.jpg',
-        imageCurrent: '/images/sites/great-lakes-current.jpg',
-        scene: 'The Lakeside Kingdoms',
-        visualHighlights: ['Lakeshore settlements (Lake Victoria, Tanganyika)', 'Banana cultivation (plantains, continuous harvest)', 'Fishing communities (tilapia, Nile perch)', 'Emerging social hierarchy (elite burials with beads)', 'Cattle wealth (long-horned Ankole cattle)'],
-        type: 'city'
-      }
-    ]
-  },
-
-  // 107. Congo Rainforest Trade - Forest Paths
-  congoTrade: {
-    id: 'congo-trade',
-    name: 'Congo Rainforest Trade Route',
-    coordinates: [0.0, 22.0],
-    region: 'Central Africa (Congo Basin)',
-    locations: [
-      {
-        id: 'congo-forest-trails',
-        name: 'Congo Rainforest Trade Path',
-        description: 'Dense forest trade routes with caravans',
-        longDescription: `The Congo rainforest, despite its challenging environment (dense vegetation, high humidity, disease-carrying insects, and tse tse flies), had trade networks connecting communities across hundreds of kilometers. Forest paths, often along river routes (the Congo River and its tributaries, navigable for thousands of kilometers), were used by traders carrying goods—bark cloth (from Ficus trees, used for clothing and bedding), medicines (from medicinal plants, including the Iboga shrub for rituals), ivory (from forest elephants), and wild game products (smoked meat, hides, feathers, claws). The Bantu expansion into the rainforest required adaptation of farming, ironworking, and social organization to the forest environment. Bantu populations remained relatively sparse in the deep forest until the development of the banana as a staple—a Southeast Asian crop that thrived in forest clearings. These trade routes connected the rainforest to the savanna, exchanging forest products (ivory, cola nuts, medicinal bark) for savanna grains (millet, sorghum), metals (copper from Katanga, iron from the Great Lakes), and later, coastal goods (glass beads, cloth from the Swahili coast).`,
-        imageRegenerated: '/images/sites/congo-trade-regenerated.jpg',
-        imageCurrent: '/images/sites/congo-trade-current.jpg',
-        scene: 'Paths Through the Rainforest',
-        visualHighlights: ['Forest trail caravans (porters with head loads)', 'Footbridge crossings (logs over small streams)', 'River route trade (dugout canoes)', 'Forest-savanna exchange (ivory, cola, medicines)', 'Rainforest Bantu adaptations (clearings, bananas)'],
-        type: 'city'
-      }
-    ]
-  },
-
-  // 108. Luba Kingdom - Mulopwe Traditions
-  lubaKingdom: {
-    id: 'luba-kingdom',
-    name: 'Luba Kingdom (Katanga)',
-    coordinates: [-5.5, 26.5],
-    region: 'Central Africa (DR Congo)',
-    locations: [
-      {
-        id: 'luba-capital',
-        name: 'Luba Kingdom',
-        description: 'Centralized state of the Upemba Depression',
-        longDescription: `The Luba Kingdom (c. 1500-1900 CE) emerged in the Upemba Depression (Katanga province) of the southeastern Congo, controlling trade in copper, salt, and palm oil. The kingdom was founded by King Kongolo ("Mwindo" epic cycle), who united local chiefdoms into a centralized state with a divine king (the "Mulopwe"), who ruled through provincial governors (the "Fumu"). The capital, at the Lake Boya site, featured a royal palace (clay and wood), a burial ground for kings (the "Tomb of the Mulopwe"), and blacksmithing workshops (the king's power associated with ironworking). Luba art is famous for its "bow stands" (mpoko) depicting female figures, "memory boards" (lukasa) used for oral history recitation, and "royal staffs" (lukasa) with traditional rulers' names. The Luba kingdom influenced neighboring states (Lunda, Kuba, Chokwe) and is remembered through oral traditions (the "Epic of Mwindo," one of the longest and most detailed African oral epics).`,
-        imageRegenerated: '/images/sites/luba-regenerated.jpg',
-        imageCurrent: '/images/sites/luba-current.jpg',
-        scene: 'The Kingdom of the Mulopwe',
-        visualHighlights: ['Royal palace at Lake Boya (clay and wood)', 'Blacksmithing workshops (ironworking)', 'Lukasa memory boards (oral history)', 'Burial ground of the Mulopwe', 'Mwindo epic oral tradition'],
-        deity: 'Vidye (Supreme God)',
-        type: 'city'
-      }
-    ]
-  },
-
-  // 109. Kuba Kingdom - Textile Artistry
-  kubaKingdom: {
-    id: 'kuba-kingdom',
-    name: 'Kuba Kingdom (Kasai)',
-    coordinates: [-4.5, 20.5],
-    region: 'Central Africa (DR Congo)',
-    locations: [
-      {
-        id: 'kuba-capital',
-        name: 'Kuba Kingdom',
-        description: 'Political center of the Bushoong people',
-        longDescription: `The Kuba Kingdom (c. 1600-1900 CE) was a federation of 18 ethnic groups in the Kasai region, centered at the capital of Nsheng. The kingdom was famous for its textile art (raffia cloth), with the king (the "Nyim") wearing a "shaan" (ceremonial belt) and "bmwana" (leopard skin) as emblems of authority. Kuba weaving produced the "mbal" cloth (highly decorated with geometric patterns), used for royal robes and ritual regalia. The kingdom also produced masks (the "ngady amwaash" mask representing the founding mother, the "mboom" mask representing the founding father), carved wooden cups (for palm wine), and the "itoon" (royal thrones with carved figures). The Kuba maintained elaborate oral traditions (the "Epic of Woot," the founding hero) and a courtly art style that influenced neighboring peoples (Luba, Lunda, Chokwe).`,
-        imageRegenerated: '/images/sites/kuba-regenerated.jpg',
-        imageCurrent: '/images/sites/kuba-current.jpg',
-        scene: 'The Raffia Kingdom',
-        visualHighlights: ['Raffia cloth production (mbal textiles)', 'Ngady amwaash mask (founding mother)', 'Mboom mask (founding father)', 'Royal thrones (itoon with carved figures)', 'Epic of Woot oral tradition'],
-        type: 'city'
-      }
-    ]
-  },
-
-  // 110. Kongo Kingdom - Manikongo Dynasty
-  kongoKingdom: {
-    id: 'kongo-kingdom',
-    name: 'Kingdom of Kongo (Mbanza Kongo)',
-    coordinates: [-6.0, 15.0],
-    region: 'Central Africa (Angola/DR Congo)',
-    locations: [
-      {
-        id: 'mbanza-kongo',
-        name: 'Mbanza Kongo',
-        description: 'Capital of the Kongo Kingdom',
-        longDescription: `Mbanza Kongo (São Salvador) was the capital of the Kingdom of Kongo (c. 1390-1914), one of the largest and most centralized states in West-Central Africa. The city was built on a plateau overlooking the surrounding forests, with a royal palace (the "King's House"), a cathedral (the "Church of Our Lady of the Rosary") built by Portuguese masons (1495), and a circular "administrative section" (the "Manga") where the king's council met. The kingdom controlled the copper trade (from the Mindouli mines), ivory trade (from forest elephants), and slave trade (with the Portuguese, initially as prisoners of war, then as a commercial enterprise). The king (the "Manikongo") ruled through appointed governors (the "Mani" of each province). The kingdom converted to Christianity under King Nzinga a Nkuwu (João I, 1491) and King Afonso I (1506-1543), who established a Christian court, sent his sons to study in Lisbon, and corresponded with Portuguese kings (his letters describe the slave trade's disruptions). The city's cathedral (the "Nkulumbimbi," believed to have been built by angels) was rebuilt in the 20th century.`,
-        imageRegenerated: '/images/sites/kongo-regenerated.jpg',
-        imageCurrent: '/images/sites/kongo-current.jpg',
-        scene: 'The Manikongo\'s Capital',
-        visualHighlights: ['Royal palace (King\'s House, Mbanza Kongo)', 'Cathedral of Nkulumbimbi (with angel legend)', 'Administrative section (Manga)', 'Copper and ivory trade', 'Portuguese-era church (Church of Our Lady)'],
-        deity: 'Nzambi Mpungu (Supreme God)',
-        type: 'city'
-      }
-    ]
-  }
-};
-
 // ========== SECTION 11: SOUTHERN AFRICA (111-120) ==========
+// Continues after centralAfricaSites (which ends at #110)
+
 export const southernAfricaSites: Record<string, Site> = {
   // 111. Great Zimbabwe - The Stone City
   greatZimbabwe: {
     id: 'great-zimbabwe',
     name: 'Great Zimbabwe',
     coordinates: [-20.2667, 30.9333],
-    region: 'Southern Africa (Zimbabwe)',
+    region: 'Southern Africa',
     locations: [
       {
         id: 'great-zimbabwe-ruins',
@@ -2998,7 +2796,8 @@ export const southernAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/great-zimbabwe-current.jpg',
         scene: 'The Great Enclosure of Zimbabwe',
         visualHighlights: ['11-meter granite walls (dry-stone construction)', 'Conical tower (solid stone, 9 meters)', 'Hill complex acropolis (royal residence)', 'Chinese celadon porcelain and Persian faience', 'Gold trade route control (Swahili coast)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'great-zimbabwe-hill',
@@ -3009,7 +2808,8 @@ export const southernAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/great-zimbabwe-hill-current.jpg',
         scene: 'The Hill of the Kings',
         visualHighlights: ['Steep granite hill (precipitous defenses)', 'Soapstone Zimbabwe birds (8 found)', 'Western Enclosure with bird monoliths', 'Royal daga platform', 'Valley view (panorama of whole site)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3019,7 +2819,7 @@ export const southernAfricaSites: Record<string, Site> = {
     id: 'mapungubwe',
     name: 'Mapungubwe',
     coordinates: [-22.2, 29.4],
-    region: 'Southern Africa (South Africa/Zimbabwe border)',
+    region: 'Southern Africa',
     locations: [
       {
         id: 'mapungubwe-hill',
@@ -3030,7 +2830,8 @@ export const southernAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/mapungubwe-current.jpg',
         scene: 'The Hill of the Golden Rhino',
         visualHighlights: ['Golden Rhino figurine (gold foil on wood)', 'Royal hilltop enclosure (cliff fortress)', 'Gold burial goods (scepters, bowls, bracelets)', 'Ivory trade evidence (ivory armlets)', 'Social hierarchy layers (royalty vs commoners)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'mapungubwe-southern',
@@ -3041,7 +2842,8 @@ export const southernAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/mapungubwe-south-current.jpg',
         scene: 'The Commoner Town',
         visualHighlights: ['Great Wall of Mapungubwe (3 meters high)', 'Iron-smelting furnaces (clay shafts)', 'Pottery kilns (Mapungubwe ware)', 'Storage pits for grain (millet, sorghum)', 'Cattle bones (wealth markers)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3051,7 +2853,7 @@ export const southernAfricaSites: Record<string, Site> = {
     id: 'thulamela',
     name: 'Thulamela',
     coordinates: [-22.43, 30.33],
-    region: 'Southern Africa (South Africa)',
+    region: 'Southern Africa',
     locations: [
       {
         id: 'thulamela-ruins',
@@ -3062,7 +2864,8 @@ export const southernAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/thulamela-current.jpg',
         scene: 'The Hill That Gives Birth',
         visualHighlights: ['Stone-walled hilltop enclosure (Khami-style)', 'Gold bead and bangle finds (Grave 2, 250 beads)', 'Glass trade beads from India (Kanassa beads)', 'Royal burial remains (male and female elites)', 'Defensive terraces (stepped walls)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3072,7 +2875,7 @@ export const southernAfricaSites: Record<string, Site> = {
     id: 'khami',
     name: 'Khami Ruins',
     coordinates: [-20.15, 28.43],
-    region: 'Southern Africa (Zimbabwe)',
+    region: 'Southern Africa',
     locations: [
       {
         id: 'khami-ruins',
@@ -3083,7 +2886,8 @@ export const southernAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/khami-current.jpg',
         scene: 'The Terraced Capital',
         visualHighlights: ['Terraced stone platforms (stepped architecture)', 'Chevron and herringbone wall patterns (Khami-style)', 'Portuguese trade goods (iron spoon, glass beads)', 'Royal hill complex (Hill Ruins)', 'Cross platforms (ritual areas for Mwari cult)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3093,7 +2897,7 @@ export const southernAfricaSites: Record<string, Site> = {
     id: 'bumbusi',
     name: 'Bumbusi',
     coordinates: [-18.85, 27.0],
-    region: 'Southern Africa (Zimbabwe)',
+    region: 'Southern Africa',
     locations: [
       {
         id: 'bumbusi-ruins',
@@ -3104,7 +2908,8 @@ export const southernAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/bumbusi-current.jpg',
         scene: 'The Meeting Place on the Zambezi',
         visualHighlights: ['Stone platform (raised terrace)', 'Stone walls (6 meters high)', 'Daga clay floors (with finger impressions)', 'Glass bead finds (Indian Ocean trade)', 'Platform as likely throne'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3114,7 +2919,7 @@ export const southernAfricaSites: Record<string, Site> = {
     id: 'mutapa',
     name: 'Mutapa Empire',
     coordinates: [-17.0, 31.0],
-    region: 'Southern Africa (Zimbabwe/Mozambique)',
+    region: 'Southern Africa',
     locations: [
       {
         id: 'mutapa-capital',
@@ -3125,7 +2930,8 @@ export const southernAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/mutapa-current.jpg',
         scene: 'The Lord of the Conquered Land',
         visualHighlights: ['Wooden palace (Zimba) with ivory inlay', 'Gold trading', 'Ivory from Zambezi elephants', 'Portuguese trading post (feira)', 'Mwenemutapa throne (ivory)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3135,7 +2941,7 @@ export const southernAfricaSites: Record<string, Site> = {
     id: 'rozwi',
     name: 'Rozwi Empire',
     coordinates: [-20.0, 30.0],
-    region: 'Southern Africa (Zimbabwe)',
+    region: 'Southern Africa',
     locations: [
       {
         id: 'rozwi-capital',
@@ -3146,7 +2952,8 @@ export const southernAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/rozwi-current.jpg',
         scene: 'The Changamire\'s Domain',
         visualHighlights: ['Danangombe capital (Dhlo Dhlo)', 'Khami-style architecture (terraces)', 'Ivory throne (Changamire)', 'Nguni invasion battle scene', 'Portuguese trade goods'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3156,7 +2963,7 @@ export const southernAfricaSites: Record<string, Site> = {
     id: 'ndebele',
     name: 'Ndebele Kingdom',
     coordinates: [-20.0, 28.0],
-    region: 'Southern Africa (Zimbabwe)',
+    region: 'Southern Africa',
     locations: [
       {
         id: 'ndebele-capital',
@@ -3167,7 +2974,8 @@ export const southernAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/ndebele-current.jpg',
         scene: 'The Military Kingdom of the Ndebele',
         visualHighlights: ['Kraal (amabutho) military barracks', 'Regimental housing (ibutho)', 'Induna council meeting (chiefs)', 'The flight of Mzilikazi (escape from Shaka)', 'British South Africa Company war (1893)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3177,7 +2985,7 @@ export const southernAfricaSites: Record<string, Site> = {
     id: 'twyfelfontein',
     name: 'Twyfelfontein (Ui-ǁAis)',
     coordinates: [-20.6, 14.5],
-    region: 'Southern Africa (Namibia)',
+    region: 'Southern Africa',
     locations: [
       {
         id: 'twyfelfontein-art',
@@ -3188,7 +2996,8 @@ export const southernAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/twyfelfontein-current.jpg',
         scene: 'The Stone Archive of the San',
         visualHighlights: ['2,500+ rock engravings (giraffes, rhinos, zebras)', 'Human figures with bows and arrows (hunters)', 'Shaman figures with raised arms (healing)', 'Cupules (cup-shaped depressions)', 'Red sandstone in Huab River valley'],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3198,7 +3007,7 @@ export const southernAfricaSites: Record<string, Site> = {
     id: 'tsodilo',
     name: 'Tsodilo Hills',
     coordinates: [-18.75, 21.75],
-    region: 'Southern Africa (Botswana)',
+    region: 'Southern Africa',
     locations: [
       {
         id: 'tsodilo-art',
@@ -3209,19 +3018,22 @@ export const southernAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/tsodilo-current.jpg',
         scene: 'The Louvre of the Desert',
         visualHighlights: ['Over 4,000 rock paintings (4 hills)', 'Male Hill (largest, with White Lady panel)', 'Female Hill (with geometric patterns)', 'Child Hill (the smallest)', 'Hambukushu offerings at sacred sites'],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   }
 };
 // ========== SECTION 12: NORTH AFRICA (Beyond Egypt) - 121-130 ==========
+// Continues after previous sections
+
 export const northAfricaSites: Record<string, Site> = {
   // 121. Garamantes - Saharan Kingdom
   garama: {
     id: 'garamantes-garama',
     name: 'Garama (Germa)',
     coordinates: [25.45, 13.1],
-    region: 'North Africa (Libya)',
+    region: 'North Africa',
     locations: [
       {
         id: 'garama-capital',
@@ -3232,7 +3044,8 @@ export const northAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/garama-current.jpg',
         scene: 'The Saharan Capital of the Garamantes',
         visualHighlights: ['Monumental stone buildings (palace and temple)', 'Foggara-irrigated fields (underground channels)', 'Trans-Saharan trade center (salt, slaves, gold)', 'Desert adaptation (fossil water extraction)', 'Roman-era artifacts (glass, pottery, coins)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'garama-foggaras',
@@ -3243,7 +3056,8 @@ export const northAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/garama-foggaras-current.jpg',
         scene: 'The Underground Water of the Sahara',
         visualHighlights: ['Foggara tunnel (underground channel)', 'Ventilation shafts (access points)', 'Mother well (tapping fossil water)', 'Irrigated fields (date palms, grapes, figs)', 'Slave labor scenes (maintenance)'],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3253,18 +3067,19 @@ export const northAfricaSites: Record<string, Site> = {
     id: 'tassili-najjer',
     name: 'Tassili n\'Ajjer',
     coordinates: [25.5, 9.0],
-    region: 'North Africa (Algeria)',
+    region: 'North Africa',
     locations: [
       {
         id: 'tassili-rock-art',
         name: 'Tassili n\'Ajjer Rock Art',
         description: 'Prehistoric art showing climate and cultural change',
-        longDescription: `Tassili n'Ajjer (Plateau of the Chasms) contains one of the most important collections of prehistoric rock art in the world, with over 15,000 engravings and paintings spanning from 10,000 BCE to the Christian era. The art documents the dramatic climatic transformation of the Sahara from a green savanna with lakes, rivers, and abundant wildlife to the desert we know today. Early images (10,000-8000 BCE) show elephants, giraffes, rhinos, hippos, and crocodiles; later scenes (8000-4000 BCE) depict domesticated cattle, sheep, goats, and dogs; still later scenes (4000-2000 BCE) show horses, chariots, and human figures with weapons; the latest scenes (2000 BCE- 1 CE) depict camels, the "ship of the desert." The paintings also depict human activities—hunting (with bows and arrows), dancing (masks and costumes), warfare (spears and shields), and ritual (the "Round Head" figures, possibly shamans with mushroom-shaped heads). The "Round Head" (6000-4000 BCE) and "Bovidian" (4000-2000 BCE) styles are masterpieces of prehistoric art, with naturalistic figures, perspective, and composition. The site is named for the "Finger of Tassili" (rock pillar) and the "Heart of Tassili" (rock formation).`,
+        longDescription: `Tassili n'Ajjer (Plateau of the Chasms) contains one of the most important collections of prehistoric rock art in the world, with over 15,000 engravings and paintings spanning from 10,000 BCE to the Christian era. The art documents the dramatic climatic transformation of the Sahara from a green savanna with lakes, rivers, and abundant wildlife to the desert we know today. Early images (10,000-8000 BCE) show elephants, giraffes, rhinos, hippos, and crocodiles; later scenes (8000-4000 BCE) depict domesticated cattle, sheep, goats, and dogs; still later scenes (4000-2000 BCE) show horses, chariots, and human figures with weapons; the latest scenes (2000 BCE-1 CE) depict camels, the "ship of the desert." The paintings also depict human activities—hunting (with bows and arrows), dancing (masks and costumes), warfare (spears and shields), and ritual (the "Round Head" figures, possibly shamans with mushroom-shaped heads). The "Round Head" (6000-4000 BCE) and "Bovidian" (4000-2000 BCE) styles are masterpieces of prehistoric art, with naturalistic figures, perspective, and composition. The site is named for the "Finger of Tassili" (rock pillar) and the "Heart of Tassili" (rock formation).`,
         imageRegenerated: '/images/sites/tassili-regenerated.jpg',
         imageCurrent: '/images/sites/tassili-current.jpg',
         scene: 'The Green Sahara Gallery',
         visualHighlights: ['15,000+ rock paintings and engravings', 'Elephant and giraffe images (Green Sahara)', 'Climate change documentation (savanna to desert)', 'Prehistoric cultural evolution (hunter to herder to charioteer)', 'Dramatic sandstone formations (Finger of Tassili)'],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'tassili-round-head',
@@ -3275,7 +3090,8 @@ export const northAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/tassili-round-head-current.jpg',
         scene: 'The Shamanistic Art of the Sahara',
         visualHighlights: ['Round Head figures (bulbous, mushroom-like heads)', 'Great Round Head (6 meters high)', 'Swimming Round Head (floating figure)', 'Shamanistic trance scenes (altered consciousness)', 'Mushroom-shaped heads (ritual context)'],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3285,7 +3101,7 @@ export const northAfricaSites: Record<string, Site> = {
     id: 'carthage-detailed',
     name: 'Carthage',
     coordinates: [36.8528, 10.3236],
-    region: 'North Africa (Tunisia)',
+    region: 'North Africa',
     locations: [
       {
         id: 'carthage-ports',
@@ -3297,19 +3113,8 @@ export const northAfricaSites: Record<string, Site> = {
         scene: 'The Naval Arsenal of Carthage',
         visualHighlights: ['325-meter circular harbor (220 ship-sheds)', 'Admiral\'s island headquarters (central)', 'Commercial harbor (456 x 350 meters)', 'Double harbor design (military + commercial)', 'Phoenician-Punic engineering (Polybius marvel)'],
         deity: 'Tanit',
-        type: 'city'
-      },
-      {
-        id: 'carthage-tophet',
-        name: 'Tophet of Carthage',
-        description: 'Sacred ritual burial ground',
-        longDescription: `The Tophet of Carthage is a unique sacred precinct containing thousands of funerary urns with the cremated remains of infants and animals (an estimated 20,000 urns, some containing bones of lambs, calves, birds). This ritual site, dedicated to the gods Baal Hammon (the chief god) and Tanit (the consort), was used from the 8th to the 2nd centuries BCE. The site's purpose remains debated—some scholars interpret it as evidence of child sacrifice (condemned by Greek and Roman writers, Diodorus Siculus and Plutarch), while others see it as a burial ground for stillborn infants and young children (c. 5% of burials show signs of pathological conditions). Regardless, the Tophet represents a distinctive Phoenician-Punic religious practice found across Carthage's colonies (also at Motya, Tharros, Nora, Sulcis). The stelae covering the site (over 6,000) bear symbols of the goddess Tanit (a triangle with a circle and horizontal bar) and inscriptions dedicating the offerings ("MLK" sacrifice, the "molk" sacrifice) to the gods, providing invaluable evidence of Carthaginian religion, language, and social structure—including the roles of aristocratic families in maintaining the sanctuary, as their names appear on the stelae as donors. The Tophet was excavated by French archaeologists (1920s) and German archaeologists (1980s).`,
-        imageRegenerated: '/images/sites/carthage-tophet-regenerated.jpg',
-        imageCurrent: '/images/sites/carthage-tophet-current.jpg',
-        scene: 'The Sacred Precinct of Tanit',
-        visualHighlights: ['Thousands of funerary urns (cremated remains)', 'Tanit symbol stelae (triangle-circle-horizontal bar)', 'Baal Hammon inscriptions in Punic ("MLK")', 'Phoenician religious iconography (lunar symbols)', 'Punic ritual vessels (for offerings)'],
-        deity: 'Tanit',
-        type: 'tomb'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'carthage-byrsa',
@@ -3320,7 +3125,8 @@ export const northAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/carthage-byrsa-current.jpg',
         scene: 'The Citadel of Queen Dido',
         visualHighlights: ['Byrsa Wall (5 kilometers, massive fortification)', 'Temple of Eshmun (healing god)', 'Sanctuary of Tanit (acropolis)', 'Roman forum (flattened summit)', 'Carthage National Museum (Punic artifacts)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3330,7 +3136,7 @@ export const northAfricaSites: Record<string, Site> = {
     id: 'utica-north-africa',
     name: 'Utica',
     coordinates: [37.0667, 10.05],
-    region: 'North Africa (Tunisia)',
+    region: 'North Africa',
     locations: [
       {
         id: 'utica-city',
@@ -3341,7 +3147,8 @@ export const northAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/utica-current.jpg',
         scene: 'The Oldest Phoenician Colony',
         visualHighlights: ['1100 BCE foundation (oldest in North Africa)', 'Purple dye workshops with crushed murex shells', 'Pottery kilns producing "Utica ware"', 'Phoenician courtyard houses with cisterns', 'Maison des Masques polychrome mosaic'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3351,7 +3158,7 @@ export const northAfricaSites: Record<string, Site> = {
     id: 'volubilis',
     name: 'Volubilis',
     coordinates: [34.07, -5.55],
-    region: 'North Africa (Morocco)',
+    region: 'North Africa',
     locations: [
       {
         id: 'volubilis-ruins',
@@ -3362,7 +3169,8 @@ export const northAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/volubilis-current.jpg',
         scene: 'The Roman Frontier Outpost',
         visualHighlights: ['Triumphal arch of Caracalla (217 CE)', 'Basilica and capitol ruins (Roman civic center)', 'House of Orpheus with animal mosaic', 'Working olive presses (oil production)', 'Berber-Roman architecture (mixed styles)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'volubilis-mosaics',
@@ -3373,7 +3181,8 @@ export const northAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/volubilis-mosaics-current.jpg',
         scene: 'The Mosaics of Volubilis',
         visualHighlights: ['Orpheus mosaic (12 meters wide, charming animals)', 'Labours of Hercules mosaic (12 panels)', 'Amazon mosaic (warrior women in combat)', 'Colored tesserae (stone, glass, ceramic)', 'Roman floor mosaic technique (opus tessellatum)'],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3383,7 +3192,7 @@ export const northAfricaSites: Record<string, Site> = {
     id: 'sabratha',
     name: 'Sabratha',
     coordinates: [32.8, 12.48],
-    region: 'North Africa (Libya)',
+    region: 'North Africa',
     locations: [
       {
         id: 'sabratha-theater',
@@ -3394,7 +3203,8 @@ export const northAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/sabratha-current.jpg',
         scene: 'The Theater by the Mediterranean',
         visualHighlights: ['Three-story theater columns (Corinthian, Ionic, Doric)', 'Mediterranean sea views from the stage', 'Punic-Roman architecture (Phoenician origins)', 'Olive oil production facilities (hundreds of presses)', 'Temple of Isis (Egyptian cult in Roman Africa)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3404,7 +3214,7 @@ export const northAfricaSites: Record<string, Site> = {
     id: 'leptis-magna',
     name: 'Leptis Magna',
     coordinates: [32.638, 14.291],
-    region: 'North Africa (Libya)',
+    region: 'North Africa',
     locations: [
       {
         id: 'leptis-arch-septimius',
@@ -3421,7 +3231,8 @@ export const northAfricaSites: Record<string, Site> = {
           'Bronze chariot group (originally on top)',
           'Barbarian captives on relief panels'
         ],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'leptis-hadrianic-baths',
@@ -3438,7 +3249,8 @@ export const northAfricaSites: Record<string, Site> = {
           'Aqueduct from Wadi Lebda (12 km)',
           'Palaestra (exercise yard with columns)'
         ],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'leptis-severan-forum',
@@ -3455,16 +3267,18 @@ export const northAfricaSites: Record<string, Site> = {
           'Curia (senate house)',
           'Arch of Tiberius (triumphal arch)'
         ],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
+
   // 128. Dougga - Best-Preserved Roman Town
   dougga: {
     id: 'dougga',
     name: 'Dougga (Thugga)',
     coordinates: [36.423, 9.22],
-    region: 'North Africa (Tunisia)',
+    region: 'North Africa',
     locations: [
       {
         id: 'dougga-capitol',
@@ -3475,7 +3289,8 @@ export const northAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/dougga-capitol-current.jpg',
         scene: 'The Best-Preserved Roman Temple in Africa',
         visualHighlights: ['Capitol with 6 Corinthian columns (8 meters high)', 'Pediment relief of Antoninus Pius', 'Theater seating 3,500 (still in use)', 'House of the Labours of Hercules mosaic', 'Numidian-Berber origins (pre-Roman)'],
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3485,18 +3300,19 @@ export const northAfricaSites: Record<string, Site> = {
     id: 'bulla-regia',
     name: 'Bulla Regia',
     coordinates: [36.558, 8.757],
-    region: 'North Africa (Tunisia)',
+    region: 'North Africa',
     locations: [
       {
         id: 'bulla-underground',
         name: 'Underground Houses of Bulla Regia',
         description: 'Unique subterranean Roman villas',
         longDescription: `Bulla Regia is famous for its unique "underground houses"—Roman villas built partly below ground (the "courtyard" is above ground, rooms are underground). The houses were built underground to escape summer heat (the rooms remain cool year-round) and to protect against earthquakes (the bedrock provides stability). The "House of the Hunt" (3rd century CE) has a green marble floor (cipollino marble) and mosaics of hunting scenes (leopards, lions, antelopes). The "House of the Amphitrite" (3rd century CE) has a mosaic of the sea goddess (Amphitrite) in a chariot pulled by sea horses, with fish and sea monsters (the "Sea Horse Mosaic"). The "House of the Fisherman" (3rd century CE) has a mosaic of fishermen with nets, dolphins, and octopuses. The site was originally a Numidian (Berber) capital before Romanization.`,
-        imageRegenerated: '/images/sites/bulla-regergenerated.jpg',
+        imageRegenerated: '/images/sites/bulla-regia-regenerated.jpg',
         imageCurrent: '/images/sites/bulla-regia-current.jpg',
         scene: 'The Underground Villas of Bulla Regia',
         visualHighlights: ['Underground houses (partly subterranean)', 'House of the Hunt with leopard mosaic', 'House of Amphitrite with sea horse mosaic', 'House of the Fisherman (fishing scene)', 'Numidian-Berber origins (pre-Roman)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3506,7 +3322,7 @@ export const northAfricaSites: Record<string, Site> = {
     id: 'lepcis-circus',
     name: 'Circus of Lepcis Magna',
     coordinates: [32.641, 14.293],
-    region: 'North Africa (Libya)',
+    region: 'North Africa',
     locations: [
       {
         id: 'lepcis-circus',
@@ -3517,30 +3333,35 @@ export const northAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/lepcis-circus-current.jpg',
         scene: 'The Chariot Racing Stadium',
         visualHighlights: ['Circus 245 meters long (chariot track)', 'Spina with turning posts (metae)', 'Obelisk of Lepcis (14 meters high)', 'Carceres (starting gates for 12 chariots)', 'Seating for 20,000-25,000 spectators'],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   }
 };
+
 // ========== SECTION 13: WEST AFRICA (131-140) ==========
+// Continues after previous sections
+
 export const westAfricaSites: Record<string, Site> = {
   // 131. Dhar Tichitt - Stone Settlements of Mauritania
   dharTichitt: {
     id: 'dhar-tichitt',
     name: 'Dhar Tichitt',
     coordinates: [18.5, -9.0],
-    region: 'West Africa (Mauritania)',
+    region: 'West Africa',
     locations: [
       {
         id: 'dhar-tichitt-settlement',
         name: 'Dhar Tichitt Stone Settlements',
         description: 'Earliest stone-built villages in West Africa',
-        longDescription: `Dhar Tichitt contains the earliest known substantial stone settlements in West Africa, dating to 2000-500 BCE. The site features hundreds of stone-walled villages, agricultural terraces, and ritual structures spread across the cliff line of the Sahara's southern edge (the "Dhar Tichitt escarpment," 200 km long, 50 km wide). The settlements are organized into neighborhoods with specialized stone architecture—granaries (raised storage structures), storerooms (for surplus grain), livestock pens (circular enclosures for cattle, sheep, goats), and defensive walls (against raiders and sand encroachment). The inhabitants cultivated millet (pearl millet, Pennisetum glaucum, originally domesticated in the Sahel) and maintained herds of cattle, goats, and sheep. Dhar Tichitt represents an adaptation to Saharan drying (the "Neolithic Subpluvial" ended c. 2500 BCE), as previously mobile groups became sedentary, developing complex social organization to manage resources and maintain these stone-built settlements. This culture is ancestral to the Soninke people, who later formed the Ghana Empire (c. 300 CE). The site is a UNESCO World Heritage site ( Tentative List).`,
+        longDescription: `Dhar Tichitt contains the earliest known substantial stone settlements in West Africa, dating to 2000-500 BCE. The site features hundreds of stone-walled villages, agricultural terraces, and ritual structures spread across the cliff line of the Sahara's southern edge (the "Dhar Tichitt escarpment," 200 km long, 50 km wide). The settlements are organized into neighborhoods with specialized stone architecture—granaries (raised storage structures), storerooms (for surplus grain), livestock pens (circular enclosures for cattle, sheep, goats), and defensive walls (against raiders and sand encroachment). The inhabitants cultivated millet (pearl millet, Pennisetum glaucum, originally domesticated in the Sahel) and maintained herds of cattle, goats, and sheep. Dhar Tichitt represents an adaptation to Saharan drying (the "Neolithic Subpluvial" ended c. 2500 BCE), as previously mobile groups became sedentary, developing complex social organization to manage resources and maintain these stone-built settlements. This culture is ancestral to the Soninke people, who later formed the Ghana Empire (c. 300 CE). The site is a UNESCO World Heritage site (Tentative List).`,
         imageRegenerated: '/images/sites/dhar-tichitt-regenerated.jpg',
         imageCurrent: '/images/sites/dhar-tichitt-current.jpg',
         scene: 'Stone Walls of the Southern Sahara',
         visualHighlights: ['Hundreds of stone-walled villages (200 km escarpment)', 'Millet cultivation evidence (pearl millet domestication)', 'Defensive architecture (walls against raiders)', 'Pre-Saharan adaptation (Neolithic Subpluvial end)', 'Ancestral Soninke culture (pre-Ghana Empire)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3550,7 +3371,7 @@ export const westAfricaSites: Record<string, Site> = {
     id: 'nok-terracotta',
     name: 'Nok Culture',
     coordinates: [9.5, 8.0],
-    region: 'West Africa (Nigeria)',
+    region: 'West Africa',
     locations: [
       {
         id: 'nok-workshop',
@@ -3561,7 +3382,8 @@ export const westAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/nok-terracotta-current.jpg',
         scene: 'The Sculptors of Ancient Nigeria',
         visualHighlights: ['Naturalistic terracotta figures (Nok portrait heads)', 'Elaborate hairstyles and jewelry (crested, braided)', 'Iron technology evidence (earliest in West Africa)', 'Religious/ritual function (ancestor worship)', 'Distinctive triangular eyes (pierced pupils)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'nok-iron',
@@ -3572,7 +3394,8 @@ export const westAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/nok-iron-current.jpg',
         scene: 'The Birth of African Ironworking',
         visualHighlights: ['Shaft furnaces (1-2 meters high, clay)', 'Bellows technology (animal hide)', 'Slag heaps and tuyeres (ceramic blow-pipes)', 'Tool and weapon production (hoes, axes, spears)', 'Early West African metallurgy (c. 800 BCE)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3582,7 +3405,7 @@ export const westAfricaSites: Record<string, Site> = {
     id: 'kintampo',
     name: 'Kintampo Complex',
     coordinates: [8.0, -1.5],
-    region: 'West Africa (Ghana)',
+    region: 'West Africa',
     locations: [
       {
         id: 'kintampo-sites',
@@ -3593,7 +3416,8 @@ export const westAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/kintampo-current.jpg',
         scene: 'The Forest Farmers of Ghana',
         visualHighlights: ['Stone house foundations (irregular blocks)', 'Polished stone axes (forest clearance)', 'Distinctive pottery tradition (cigar-shaped)', 'Forest-Sahara trade link (kola, gold, ivory)', 'Earliest settled farming in region (c. 2500 BCE)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3603,7 +3427,7 @@ export const westAfricaSites: Record<string, Site> = {
     id: 'jenne-jeno',
     name: 'Jenne-Jeno',
     coordinates: [13.9, -4.55],
-    region: 'West Africa (Mali)',
+    region: 'West Africa',
     locations: [
       {
         id: 'jenne-jeno-city',
@@ -3614,7 +3438,8 @@ export const westAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/jenne-jeno-current.jpg',
         scene: 'The Ancient City of the Niger Delta',
         visualHighlights: ['Mudbrick tell rising from floodplain (7 meters high)', 'Ironworking furnaces (laterite ore)', 'Pottery production zones (mass-produced)', 'Trade access to gold and salt (Bambuk, Taghaza)', 'Early urbanism without walls (defenseless city)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3624,7 +3449,7 @@ export const westAfricaSites: Record<string, Site> = {
     id: 'timbuktu',
     name: 'Timbuktu',
     coordinates: [16.77, -3.01],
-    region: 'West Africa (Mali)',
+    region: 'West Africa',
     locations: [
       {
         id: 'timbuktu-manuscripts',
@@ -3635,7 +3460,8 @@ export const westAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/timbuktu-current.jpg',
         scene: 'The City of 333 Saints',
         visualHighlights: ['Sankore University (14th century)', 'Sacred manuscripts library (Timbuktu Manuscripts)', 'Mudbrick mosque architecture (Sudano-Sahelian)', 'Trans-Saharan camel caravans (salt, gold)', 'Gold and salt trade routes (Bambuk, Taghaza)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3645,7 +3471,7 @@ export const westAfricaSites: Record<string, Site> = {
     id: 'gao',
     name: 'Gao',
     coordinates: [16.27, -0.05],
-    region: 'West Africa (Mali)',
+    region: 'West Africa',
     locations: [
       {
         id: 'gao-saney',
@@ -3656,7 +3482,8 @@ export const westAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/gao-current.jpg',
         scene: 'The Seat of the Songhai Emperors',
         visualHighlights: ['Askia pyramidal tomb (17 meters high)', 'Niger River trade port (gold, salt, slaves)', 'Songhai palace ruins (Gao-Saney quarter)', 'Mudbrick mosque foundations (Askia mosque)', 'Gold and salt warehouses (Akan goldfields)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3666,7 +3493,7 @@ export const westAfricaSites: Record<string, Site> = {
     id: 'ile-ife',
     name: 'Ile-Ife',
     coordinates: [7.5, 4.55],
-    region: 'West Africa (Nigeria)',
+    region: 'West Africa',
     locations: [
       {
         id: 'ife-sculptures',
@@ -3677,7 +3504,8 @@ export const westAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/ile-ife-current.jpg',
         scene: 'The Cradle of the Yoruba',
         visualHighlights: ['Naturalistic bronze heads (Ife Bronze Head)', 'Terracotta royal figures (Obalufon Grove)', 'Obalufon II brass mask (lost-wax casting)', 'Sacred grove (Opa Oranmiyan, ancestral staff)', 'Ife glass bead production (coral bead regalia)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3687,7 +3515,7 @@ export const westAfricaSites: Record<string, Site> = {
     id: 'benin-city',
     name: 'Benin City (Ile-Ibinu)',
     coordinates: [6.317, 5.614],
-    region: 'West Africa (Nigeria)',
+    region: 'West Africa',
     locations: [
       {
         id: 'benin-bronzes',
@@ -3698,7 +3526,8 @@ export const westAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/benin-city-current.jpg',
         scene: 'The Bronze Capital of the Oba',
         visualHighlights: ['Benin Bronzes (lost-wax cast plaques)', 'Oba\'s palace (Ile-Ibinu, 13th century)', 'Benin Walls (16,000 km earthworks)', 'Ivory carvings (Benin ivories, Portuguese traders)', 'British Punitive Expedition of 1897 (sacking)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3708,7 +3537,7 @@ export const westAfricaSites: Record<string, Site> = {
     id: 'djenne',
     name: 'Djenné',
     coordinates: [13.9, -4.55],
-    region: 'West Africa (Mali)',
+    region: 'West Africa',
     locations: [
       {
         id: 'great-mosque',
@@ -3719,7 +3548,8 @@ export const westAfricaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/djenne-current.jpg',
         scene: 'The Great Mosque of Djenné',
         visualHighlights: ['Largest mudbrick building (adobe, 1907)', 'Three minarets (central 16 meters high)', '99 pillars (names of Allah)', 'Crepissage festival (annual mud replastering)', 'Sudano-Sahelian architecture (wooden toron)'],
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -3729,273 +3559,33 @@ export const westAfricaSites: Record<string, Site> = {
     id: 'oyo-ile',
     name: 'Oyo-Ile (Old Oyo)',
     coordinates: [8.977, 3.151],
-    region: 'West Africa (Nigeria)',
+    region: 'West Africa',
     locations: [
       {
         id: 'oyo-empire',
         name: 'Oyo-Ile',
         description: 'Capital of the Oyo Empire (Old Oyo)',
-        longDescription: `Oyo-Ile (Old Oyo, "Katunga" to Europeans) was the capital of the Oyo Empire (14th-18th century CE), one of the largest states in West Africa. The city was a royal capital, with the palace of the Alafin (the "Oba Oyo," the king) covering 10 hectares ( the "Afin Oyo" palace). The city was surrounded by a 6 km earthen wall (the "Epa" wall, 10 meters high) and a moat (the "Odò Oya" moat). The city had a market (the "Oja Oba" market, where slaves, ivory, and cloth were traded), a shrine (the "Ojubo Oyo" to the god Sango), and a tomb (the "Ile Oba" tomb for the Alafin). The empire controlled the trade in shea butter, cotton cloth, and slaves (exported to the coast via the Oyo corridor). Oyo was destroyed by the Fulani (c. 1830s), and the capital moved to the new Oyo (Ago d'Oyo, 40 km south).`,
+        longDescription: `Oyo-Ile (Old Oyo, "Katunga" to Europeans) was the capital of the Oyo Empire (14th-18th century CE), one of the largest states in West Africa. The city was a royal capital, with the palace of the Alafin (the "Oba Oyo," the king) covering 10 hectares (the "Afin Oyo" palace). The city was surrounded by a 6 km earthen wall (the "Epa" wall, 10 meters high) and a moat (the "Odò Oya" moat). The city had a market (the "Oja Oba" market, where slaves, ivory, and cloth were traded), a shrine (the "Ojubo Oyo" to the god Sango), and a tomb (the "Ile Oba" tomb for the Alafin). The empire controlled the trade in shea butter, cotton cloth, and slaves (exported to the coast via the Oyo corridor). Oyo was destroyed by the Fulani (c. 1830s), and the capital moved to the new Oyo (Ago d'Oyo, 40 km south).`,
         imageRegenerated: '/images/sites/oyo-ile-regenerated.jpg',
         imageCurrent: '/images/sites/oyo-ile-current.jpg',
         scene: 'The Empire of the Alafin',
         visualHighlights: ['Alafin palace (Afin Oyo, 10 hectares)', 'Oja Oba market (slaves, ivory, shea butter)', 'Epa earthen wall (6 km, 10 meters high)', 'Shrine of Sango (god of thunder)', 'Fulani invasion (c. 1830, collapse)'],
-        type: 'city'
-      }
-    ]
-  }
-};
-
-// ========== SECTION 14: MYCENAEAN GREEK (141-150) ==========
-export const mycenaeanSites: Record<string, Site> = {
-  // 141. Mycenae - The Golden Citadel
-  mycenae: {
-    id: 'mycenae-citadel',
-    name: 'Mycenae',
-    coordinates: [37.7308, 22.7562],
-    region: 'Greece (Peloponnese)',
-    locations: [
-      {
-        id: 'lion-gate',
-        name: 'Lion Gate of Mycenae',
-        description: 'Iconic entrance to the citadel of Agamemnon',
-        longDescription: `The Lion Gate is the main entrance to the citadel of Mycenae, the most powerful city of Late Bronze Age Greece (1600-1100 BCE). The gate features two massive lions (their heads missing, originally turned toward the viewer in a heraldic pose) flanking a column, carved in high relief on a single limestone slab (the "Lion Gate Relief," 3 meters high, 3 meters wide)—the oldest surviving monumental sculpture in Europe. The gate's "relieving triangle" (a triangular space above the lintel, open to lighten the weight on the lintel) was filled with the limestone relief. The lions (originally with heads of metal, now lost) guarded the citadel, symbolizing the power of the Mycenaean kings (the "wanax," who Homer called "golden Mycenae" in the Iliad). Within the walls lies Grave Circle A (inside the citadel, originally outside but later enclosed by the walls, c. 1250 BCE), where Heinrich Schliemann discovered five gold death masks (including the "Mask of Agamemnon," c. 1550 BCE, now in the National Archaeological Museum, Athens) and other gold treasures in 1876 (over 14 kilos of gold objects, rings, signets, diadems, cups, buttons—the "Mycenae Treasure"). The site also includes the Treasury of Atreus (tholos tomb, largest in Greece) and Grave Circle B (outside the walls, containing 14 gold masks, found 1950s).`,
-        imageRegenerated: '/images/sites/lion-gate-regenerated.jpg',
-        imageCurrent: '/images/sites/lion-gate-current.jpg',
-        scene: 'The Gateway of Heroes',
-        visualHighlights: ['Lion relief sculpture on limestone slab (3 meters)', 'Cyclopean stone walls (limestone blocks, some 12 tons)', 'Grave Circle A gold masks (Mask of Agamemnon)', 'Treasury of Atreus beehive tomb (13 meters high)', 'Palace megaron with central hearth (torchlight)'],
-        type: 'monument'
-      },
-      {
-        id: 'treasury-of-atreus',
-        name: 'Treasury of Atreus (Tomb of Agamemnon)',
-        description: 'Largest and best-preserved tholos tomb in Greece',
-        longDescription: `The Treasury of Atreus (also called the Tomb of Agamemnon) is the largest tholos (beehive) tomb in Greece, built around 1250 BCE. The tomb's dome rises 13.5 meters with a diameter of 14.5 meters, made of 33 courses of stone, each projecting slightly inward (corbelled vaulting). The vault was covered with earth to form a tumulus (burial mound, 30 meters wide). The entrance features a relieving triangle (2.5 meters high) and massive lintel beam weighing 120 tons—one of the largest stone blocks ever moved by ancient builders (the beam was moved using rollers and levers, then lifted into place by levers and ramps). The dromos (entrance passage) is 36 meters long, 6 meters wide, with walls of ashlar masonry and a relieving triangle above the lintel. The tomb's interior was decorated with bronze rosettes (originally affixed to the walls, their holes still visible) and carved geometric patterns. The tomb was likely built for a Mycenaean king (possibly Atreus or Agamemnon) and was still visible to Pausanias in the 2nd century CE. The name "Treasury of Atreus" reflects the belief that the tomb contained Atreus's treasure, though Pausanias reports that the tomb actually held Atreus's children (Thyestes' sons, murdered by Atreus).`,
-        imageRegenerated: '/images/sites/treasury-of-atreus-regenerated.jpg',
-        imageCurrent: '/images/sites/treasury-of-atreus-current.jpg',
-        scene: 'The Beehive Tomb of Kings',
-        visualHighlights: ['120-ton lintel beam (largest in ancient world)', '13.5-meter high dome (54 feet, 33 courses)', 'Tholos corbelled architecture (corbelled vaulting)', 'Dromos entrance passage (36 meters long)', 'Geometric decorative bronze nail holes (rosettes)'],
-        type: 'tomb'
-      },
-      {
-        id: 'grave-circle-a',
-        name: 'Grave Circle A',
-        description: 'Royal burial ground with gold masks',
-        longDescription: `Grave Circle A is a royal burial ground inside the citadel walls (c. 1250 BCE, the circle was originally outside the walls, later enclosed). The circle contains six shaft graves (depth 1.5-3 meters, width 2-4 meters, cut into bedrock), dating to c. 1600-1500 BCE (Late Helladic I). The graves contained 19 bodies (9 male, 8 female, 2 children) with rich grave goods—gold death masks (5 found), gold cups (the "Nestor's Cup," a rhyton with dove handles), gold rings (signets with religious scenes), gold diadems (ornaments for the forehead), gold buttons (with spiral designs), gold chest plates, bronze swords (with gold hilts), silver vessels, and alabaster jars. The "Mask of Agamemnon" (Grave IV, c. 1550 BCE) is a gold funeral mask (repoussé, with beard, trimmed beard, mustache, and eyebrows) found over the face of one of the bodies, misnamed by Schliemann after Agamemnon (the Trojan War hero, who lived 400 years later). The circle was excavated by Heinrich Schliemann in 1876, who found the treasure and announced "I have gazed upon the face of Agamemnon."`,
-        imageRegenerated: '/images/sites/grave-circle-a-regenerated.jpg',
-        imageCurrent: '/images/sites/grave-circle-a-current.jpg',
-        scene: 'The Grave Circle of the Gold Masks',
-        visualHighlights: ['Six shaft graves (cut into bedrock)', 'Gold death masks (Mask of Agamemnon)', 'Gold cups and rings (Nestor\'s Cup)', 'Bronze swords with gold hilts', 'Schliemann\'s 1876 excavation trench'],
-        type: 'tomb'
-      }
-    ]
-  },
-
-  // 142. Tiryns - The Cyclopean Fortress
-  tiryns: {
-    id: 'tiryns-fortress',
-    name: 'Tiryns',
-    coordinates: [37.598, 22.799],
-    region: 'Greece (Peloponnese)',
-    locations: [
-      {
-        id: 'tiryns-walls',
-        name: 'Cyclopean Walls of Tiryns',
-        description: 'Massive fortifications of the Bronze Age citadel',
-        longDescription: `Tiryns, legendary birthplace of Heracles (Hercules), features the most impressive cyclopean walls in Greece (the "Cyclopean Walls," so named because later Greeks believed only the Cyclopes could have moved such massive stones). The walls are 7 meters thick and 10 meters high (originally 12 meters), made of limestone blocks weighing up to 13 tons, with some blocks 2 meters long, 1 meter high, and 1 meter deep, set without mortar. The citadel features the Upper Citadel (with palace megaron, hearth, and throne, floor paintings of octopuses and dolphins), Lower Citadel (with workshops and storage, 14 magazine rooms), and the famous "Galleries" (vaulted corridors within the walls, 5 meters wide, for storage and defense, with 9 galleries). A hidden underground passage (the "Secret Passage," 15 meters long, 2 meters wide, descending 7 meters) led to a water source (a spring 50 meters away) during sieges. The citadel was surrounded by a lower town (30 hectares) with houses and workshops. Tiryns was a major Mycenaean center, controlling the Argive plain (the "Argolid"), and was near the sea (the Gulf of Argolis, coast 1 km away). Homer called it "mighty walled Tiryns" in the Iliad (Book 2, verse 559). The site also contains a "megaron" (palace hall) with a central hearth and throne (the "megaron of Tiryns," similar to Mycenae and Pylos).`,
-        imageRegenerated: '/images/sites/tiryns-regenerated.jpg',
-        imageCurrent: '/images/sites/tiryns-current.jpg',
-        scene: 'The Cyclopean Fortress',
-        visualHighlights: [
-          '7-meter thick cyclopean walls (limestone blocks 13 tons)',
-          '"Galleries" vaulted corridors (9 galleries)',
-          'Upper Citadel palace megaron (hearth, throne)',
-          'Underground water passage (Secret Passage to spring)',
-          'Heracles birthplace tradition (legendary)'
-        ],
-        type: 'monument'
-      }
-    ]
-  },
-
-  // 143. Pylos - Palace of Nestor
-  pylos: {
-    id: 'pylos-palace',
-    name: 'Pylos (Palace of Nestor)',
-    coordinates: [36.965, 21.656],
-    region: 'Greece (Peloponnese)',
-    locations: [
-      {
-        id: 'palace-nestor',
-        name: 'Palace of Nestor',
-        description: 'Best-preserved Mycenaean palace with Linear B archive',
-        longDescription: `The Palace of Nestor at Pylos is the best-preserved Mycenaean palace in Greece (the "Palace of Nestor," named for the Homeric hero, King Nestor, who led 90 ships to Troy, Iliad, Book 2). The site includes the main building (with megaron, throne room, storerooms, and workshops), the "Pantheon" (shrine complex, Building 8), and extensive agricultural facilities (oil presses, grain storage). The palace was built c. 1300 BCE and destroyed by fire c. 1180 BCE (the "Bronze Age collapse"). The palace's storerooms contained thousands of wine jars (pithoi, storage jars 1.5 meters high), and the archives preserved over 1,000 Linear B tablets (clay tablets baked in the fire, preserving them), deciphered by Michael Ventris in 1952 as early Greek (the "Mycenaean Greek" dialect). The tablets record palace administration (the "wanax," king; the "lawagetas," general; the "telestai," landowners), military preparations (troop levels, chariot inventories), industrial production (oil, wool, bronze, linen), and offerings to gods (including Poseidon ("Poteidaon"), Zeus ("Diwios"), Hera ("Era"), Hermes, Athena). The tablets mention the kingdom's organization (the "Pylos state," with 2 provinces, 7 districts, 15 towns, and 80 villages), land ownership (private land, communal land), and livestock (sheep, goats, cattle, pigs). The site is identified as Nestor's palace from Homer's Iliad ("sandy Pylos"). The bathtub found here (a clay bathtub, 1.2 meters long, 0.6 meters wide, with a clay plug) is sometimes called "Nestor's bathtub" (Odyssey, Book 3, line 464, where Nestor bathes Telemachus). The palace was destroyed by fire around 1180 BCE, preserving the clay tablets.`,
-        imageRegenerated: '/images/sites/pylos-regenerated.jpg',
-        imageCurrent: '/images/sites/pylos-current.jpg',
-        scene: 'The Palace of Wise Nestor',
-        visualHighlights: ['Megaron with central hearth (circular, 4 meters diameter)', 'Throne room with painted floor (octopuses, dolphins)', 'Linear B archive tablets (1,000 tablets, deciphered)', 'Bathtub (Nestor\'s bath, Odyssey reference)', 'Storerooms with pithoi (wine jars, 1.5 meters high)'],
-        deity: 'Poseidon',
-        type: 'palace'
-      }
-    ]
-  },
-
-  // 144. Orchomenos - Treasury of Minyas
-  orchomenos: {
-    id: 'orchomenos',
-    name: 'Orchomenos',
-    coordinates: [38.487, 22.979],
-    region: 'Greece (Boeotia)',
-    locations: [
-      {
-        id: 'treasury-minyas',
-        name: 'Treasury of Minyas',
-        description: 'Second largest tholos tomb in Greece',
-        longDescription: `The Treasury of Minyas (c. 1250 BCE) is the second largest tholos tomb in Greece (after the Treasury of Atreus at Mycenae). The tomb's dome (originally 14 meters high, now collapsed) had a diameter of 14 meters, with a dromos 30 meters long. The tomb was built for the royal family of Orchomenos, the "Minyae," a powerful kingdom in the Bronze Age. The tholos was constructed of 29 courses of stone (originally 34), with a relieving triangle above the lintel (1.5 meters high). The tomb was looted in antiquity, but fragments of gold, ivory, and bronze remain. Orchomenos was a major Mycenaean center, controlling Lake Copais (drained by canals, 9 km of tunnels, 2,000 hectares of farmland). The site also includes a Mycenaean palace (the "Palace of Orchomenos," with frescoes of griffins and lions), a "megaron" with a central hearth, and a later Byzantine church (the "Church of the Dormition," 9th century CE).`,
-        imageRegenerated: '/images/sites/orchomenos-regenerated.jpg',
-        imageCurrent: '/images/sites/orchomenos-current.jpg',
-        scene: 'The Treasury of Minyas',
-        visualHighlights: ['Second largest tholos tomb (14 meters diameter)', 'Dromos entrance passage (30 meters long)', 'Relieving triangle above lintel (1.5 meters high)', 'Lake Copais drainage system (9 km tunnels)', 'Palace frescoes of griffins and lions'],
-        type: 'tomb'
-      }
-    ]
-  },
-
-  // 145. Gla - Cyclopean Fortress of Lake Copais
-  gla: {
-    id: 'gla',
-    name: 'Gla (Kastro)',
-    coordinates: [38.49, 23.18],
-    region: 'Greece (Boeotia)',
-    locations: [
-      {
-        id: 'gla-fortress',
-        name: 'Gla Cyclopean Fortress',
-        description: 'Largest Cyclopean fortress in the Mycenaean world',
-        longDescription: `Gla (Kastro, "Castle") is the largest Cyclopean fortress in the Mycenaean world, covering 50 acres (twice Mycenae's size). The fortress was built on a limestone hill in Lake Copais, controlling the drainage system of the lake (the "Copais Lake," a 2,000-hectare basin drained by Mycenaean canals, 9 km long, with tunnels 1.5 km long). The outer wall is 2.5-3 meters thick, 5 meters high, made of large limestone blocks (cyclopean masonry), with four gates (north, south, east, west). The interior contains a Mycenaean palace (the "Palace of Gla," with a megaron, 8 x 12 meters, with a central hearth), storerooms (with pithoi for grain), and a small temple (the "Temple of Gla," 10 x 20 meters). The fortress was built to protect the Copaic basin and its agricultural surplus, which fed the Mycenaean states. The fortress was abandoned c. 1200 BCE (the Bronze Age collapse).`,
-        imageRegenerated: '/images/sites/gla-regenerated.jpg',
-        imageCurrent: '/images/sites/gla-current.jpg',
-        scene: 'The Cyclopean Fortress of Lake Copais',
-        visualHighlights: ['Largest Cyclopean fortress (50 acres)', 'Outer wall 5 meters high (cyclopean masonry)', 'Four gates (north, south, east, west)', 'Palace megaron (8 x 12 meters, central hearth)', 'Lake Copais drainage system (Mycenaean canals)'],
-        type: 'monument'
-      }
-    ]
-  },
-
-  // 146. Midea - Unfinished Cyclopean Gate
-  midea: {
-    id: 'midea',
-    name: 'Midea',
-    coordinates: [37.64, 22.84],
-    region: 'Greece (Argolis)',
-    locations: [
-      {
-        id: 'midea-gate',
-        name: 'Midea Acropolis',
-        description: 'Unfinished Cyclopean gate and temple',
-        longDescription: `Midea (named for the mythical Medea, who fled here) is a Mycenaean acropolis with an unfinished Cyclopean gate (the "East Gate," 3 meters wide, 4 meters high, with a relieving triangle, but the walls are incomplete, suggesting construction stopped suddenly). The acropolis is on a hill (1 km south of the modern village of Midea), with fortification walls 300 meters long, enclosing 2.5 hectares. The interior contains a Mycenaean palace (the "Palace of Midea," 15 x 20 meters) and a temple (the "Temple of Midea," 10 x 12 meters, with a cult statue base). The site also includes a tholos tomb (the "Tholos of Midea," 6.5 meters diameter, collapsed) and a cemetery (with chamber tombs). Midea was destroyed c. 1200 BCE (the Bronze Age collapse), but the acropolis was reoccupied in the 4th century BCE by a small settlement.`,
-        imageRegenerated: '/images/sites/midea-regenerated.jpg',
-        imageCurrent: '/images/sites/midea-current.jpg',
-        scene: 'The Unfinished Gate of Midea',
-        visualHighlights: ['Unfinished Cyclopean gate (East Gate, 3 meters wide)', 'Relieving triangle above gate', 'Palace megaron (15 x 20 meters)', 'Temple with cult statue base', 'Tholos tomb (6.5 meters diameter)'],
-        type: 'city'
-      }
-    ]
-  },
-
-  // 147. Menelaion - Shrine of Helen and Menelaus
-  menelaion: {
-    id: 'menelaion',
-    name: 'Menelaion (Therápni)',
-    coordinates: [37.073, 22.43],
-    region: 'Greece (Laconia)',
-    locations: [
-      {
-        id: 'menelaion-shrine',
-        name: 'Menelaion',
-        description: 'Shrine of Helen and Menelaus',
-        longDescription: `The Menelaion (the "Shrine of Helen and Menelaus") is a Mycenaean palace (c. 1400 BCE) later converted into a hero shrine for Menelaus and Helen (the "Helen of Troy"). The site was abandoned after the Mycenaean period (c. 1100 BCE) but reoccupied in the Archaic period (c. 700 BCE) as a cult site. The shrine (the "Menelaion," 8th-5th centuries BCE) had a temple (10 x 25 meters, Doric, with a statue of Helen and Menelaus), a stoa (colonnade for visitors), and a theater (the "Theater of the Menelaion," seating 500). The site was a major pilgrimage center for the cult of Helen and Menelaus, as described by Pausanias (2nd century CE). The Mycenaean palace (the "Palace of the Menelaion") was built on a hill overlooking the Eurotas valley and the city of Sparta (5 km south).`,
-        imageRegenerated: '/images/sites/menelaion-regenerated.jpg',
-        imageCurrent: '/images/sites/menelaion-current.jpg',
-        scene: 'The Shrine of Helen and Menelaus',
-        visualHighlights: ['Mycenaean palace (c. 1400 BCE)', 'Hero shrine to Helen and Menelaus (Archaic temple)', 'Theater of the Menelaion (seating 500)', 'Eurotas valley view (Sparta 5 km south)', 'Pausanias pilgrimage description'],
-        type: 'temple'
-      }
-    ]
-  },
-
-  // 148. Iklaina - Linear B Archive
-  iklaina: {
-    id: 'iklaina',
-    name: 'Iklaina',
-    coordinates: [36.99, 21.71],
-    region: 'Greece (Peloponnese)',
-    locations: [
-      {
-        id: 'iklaina-tablets',
-        name: 'Iklaina Acropolis',
-        description: 'Second-largest Linear B archive in Greece',
-        longDescription: `Iklaina is a Mycenaean acropolis with the second-largest Linear B archive in Greece (after Pylos), with over 300 tablets found (1999-2002 excavations). The site was a regional administrative center in the Pylos state (the "Pylos state," 2 provinces, 7 districts, 80 towns). The tablets record land ownership (divisions of land), tax assessments, military equipment (chariots, armor), and religious offerings (to Poseidon, Potnia). The archive was destroyed by fire c. 1180 BCE, preserving the tablets. The acropolis (1.5 hectares) has a palace (15 x 20 meters), a temple (10 x 12 meters), a workshop area, and a fortification wall (2.5 meters thick). Iklaina was a primary center in the Pylos state, controlling the southwestern Peloponnese.`,
-        imageRegenerated: '/images/sites/iklaina-regenerated.jpg',
-        imageCurrent: '/images/sites/iklaina-current.jpg',
-        scene: 'The Linear B Archive of Iklaina',
-        visualHighlights: ['Second-largest Linear B archive (300 tablets)', 'Palace megaron (15 x 20 meters)', 'Temple with cult statue base', 'Pylos state administrative center', 'Tablets on land ownership, tax, military'],
-        type: 'city'
-      }
-    ]
-  },
-
-  // 149. Amyklai - Throne of Apollo
-  amyklai: {
-    id: 'amyklai',
-    name: 'Amyklai',
-    coordinates: [37.04, 22.46],
-    region: 'Greece (Laconia)',
-    locations: [
-      {
-        id: 'throne-apollo',
-        name: 'Amyklaion (Throne of Apollo)',
-        description: 'Sanctuary of Apollo with a monumental throne',
-        longDescription: `Amyklai (the "Amyklaion") was a sanctuary of Apollo with a monumental throne (the "Throne of Apollo," built c. 550 BCE), described by Pausanias as a 20-meter-high wooden structure decorated with gold, ivory, and reliefs of mythological scenes (the "Throne of Bathycles"). The throne was built as a cenotaph for Hyacinthus, the young lover of Apollo (the "Hyacinthia" festival, a Spartan festival). The sanctuary was a major religious center in Laconia, 5 km south of Sparta. The site also includes a Mycenaean palace (c. 1400 BCE) and a Roman bath (2nd century CE).`,
-        imageRegenerated: '/images/sites/amyklai-regenerated.jpg',
-        imageCurrent: '/images/sites/amyklai-current.jpg',
-        scene: 'The Throne of Apollo',
-        visualHighlights: ['Monumental throne of Apollo (20 meters high)', 'Wooden structure with gold and ivory', 'Hyacinthia festival (cenotaph of Hyacinthus)', 'Mycenaean palace (c. 1400 BCE)', 'Roman bath (2nd century CE)'],
-        deity: 'Apollo',
-        type: 'temple'
-      }
-    ]
-  },
-
-  // 150. Koryphasion - Mycenaean Port of Pylos
-  koryphasion: {
-    id: 'koryphasion',
-    name: 'Koryphasion (Pylos)',
-    coordinates: [36.96, 21.67],
-    region: 'Greece (Peloponnese)',
-    locations: [
-      {
-        id: 'pylos-ports',
-        name: 'Koryphasion Naval Base',
-        description: 'Mycenaean port and fortifications',
-        longDescription: `Koryphasion (the "Naval Base of Pylos") was the Mycenaean port of Pylos, 5 km south of the Palace of Nestor. The site includes a fortified acropolis (the "Koryphasion Hill," 100 meters high, with the "Fortifications of Koryphasion," 2.5 km of walls), a harbor (the "Port of Pylos," protected from winds by the Sphacteria Island), and a town (the "Lower Town" of Pylos). The acropolis was fortified by the Athenians in the 5th century BCE (the "Battle of Pylos," 425 BCE, where the Athenians captured Spartan hoplites). The Mycenaean settlement was a major naval base for the Pylos state, controlling the Messenian Gulf and Ionian Sea. The Linear B tablets at Pylos mention the navy ("na-wa-ja"), ships, and sailors ("na-u-do-mo"), and Koryphasion was the likely base.`,
-        imageRegenerated: '/images/sites/koryphasion-regenerated.jpg',
-        imageCurrent: '/images/sites/koryphasion-current.jpg',
-        scene: 'The Mycenaean Naval Base',
-        visualHighlights: ['Koryphasion Hill (100 meters high)', 'Fortifications (2.5 km of walls)', 'Port of Pylos (protected harbor)', 'Battle of Pylos (425 BCE, Athenian victory)', 'Linear B references to navy ("na-wa-ja")'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   }
 };
 // ========== SECTION 15: MINOAN (CRETE) (151-160) ==========
+// Continues after mycenaeanSites (which ends at #150)
+
 export const minoanSites: Record<string, Site> = {
   // 151. Knossos - Palace of Minos
   knossos: {
     id: 'knossos-palace',
     name: 'Knossos',
     coordinates: [35.298, 25.163],
-    region: 'Crete',
+    region: 'Minoan',
     locations: [
       {
         id: 'knossos-central-court',
@@ -4006,7 +3596,8 @@ export const minoanSites: Record<string, Site> = {
         imageCurrent: '/images/sites/knossos-current.jpg',
         scene: 'The Palace of the Minotaur',
         visualHighlights: ['Central court (50 x 25 meters, ceremonies)', 'Throne Room with griffin fresco (alabaster throne)', 'Queen\'s Megaron with dolphin fresco', 'Light well architecture (multi-story reconstruction)', 'Linear B tablets (earliest Greek)'],
-        type: 'palace'
+        type: 'palace',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'knossos-throne-room',
@@ -4017,7 +3608,8 @@ export const minoanSites: Record<string, Site> = {
         imageCurrent: '/images/sites/knossos-throne-current.jpg',
         scene: 'The Throne of Minos',
         visualHighlights: ['Alabaster throne (1.5 meters high, oldest in Europe)', 'Benches for council of elders', 'Griffin frescoes (guardians of the throne)', 'Gypsum basin for ritual purification', 'Light well from upper floor'],
-        type: 'palace'
+        type: 'palace',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'knossos-linear-b',
@@ -4028,7 +3620,8 @@ export const minoanSites: Record<string, Site> = {
         imageCurrent: '/images/sites/knossos-tablets-current.jpg',
         scene: 'The Linear B Archive',
         visualHighlights: ['5,000+ clay tablets (largest Linear B archive)', 'Room of the Chariot Tablets (East Wing)', 'Military equipment records (chariots, armor)', 'Industrial production records (oil, wool)', 'Mycenaean kings of Knossos'],
-        type: 'palace'
+        type: 'palace',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4038,7 +3631,7 @@ export const minoanSites: Record<string, Site> = {
     id: 'phaistos-palace',
     name: 'Phaistos',
     coordinates: [35.052, 24.815],
-    region: 'Crete',
+    region: 'Minoan',
     locations: [
       {
         id: 'palace-phaistos',
@@ -4049,7 +3642,8 @@ export const minoanSites: Record<string, Site> = {
         imageCurrent: '/images/sites/phaistos-current.jpg',
         scene: 'The Palace of the Mysterious Disc',
         visualHighlights: ['Central court (40 x 20 meters, ceremonies)', 'Phaistos Disc (undeciphered symbols, 45 signs)', 'Theater area for rituals (south of court)', 'Royal apartments with light wells', 'Storage magazines with giant pithoi (1.5 meters high)'],
-        type: 'palace'
+        type: 'palace',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'hagia-triada',
@@ -4060,7 +3654,8 @@ export const minoanSites: Record<string, Site> = {
         imageCurrent: '/images/sites/hagia-triada-current.jpg',
         scene: 'The Summer Palace of Phaistos',
         visualHighlights: ['Summer palace (1,200 square meters, central court)', 'Harvester Vase (steatite, harvest relief)', 'Boxer Fresco (Minoan boxing)', 'Linear A archive (undeciphered)', 'Snake goddess figurines (shrine)'],
-        type: 'palace'
+        type: 'palace',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4070,7 +3665,7 @@ export const minoanSites: Record<string, Site> = {
     id: 'malia-palace',
     name: 'Malia',
     coordinates: [35.283, 25.467],
-    region: 'Crete',
+    region: 'Minoan',
     locations: [
       {
         id: 'palace-malia',
@@ -4081,7 +3676,8 @@ export const minoanSites: Record<string, Site> = {
         imageCurrent: '/images/sites/malia-current.jpg',
         scene: 'The Palace of the Gold Bee Pendant',
         visualHighlights: ['Malia Pendant (gold bees depositing honey)', 'Hypostyle crypt with pillar (3 meters high)', 'Quartier Mu (seal engraver\'s workshop)', 'Giant pithos storage jars (1.5 meters high)', 'Kernos stone (offering table, 1 meter wide)'],
-        type: 'palace'
+        type: 'palace',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4091,7 +3687,7 @@ export const minoanSites: Record<string, Site> = {
     id: 'zakros-palace',
     name: 'Zakros (Kato Zakros)',
     coordinates: [35.098, 26.261],
-    region: 'Crete',
+    region: 'Minoan',
     locations: [
       {
         id: 'palace-zakros',
@@ -4102,17 +3698,18 @@ export const minoanSites: Record<string, Site> = {
         imageCurrent: '/images/sites/zakros-current.jpg',
         scene: 'The Eastern Trading Hub of Minoan Crete',
         visualHighlights: ['Egyptian stone vessel imports (alabaster, obsidian)', 'Rock crystal ritual vessels (10 cm high)', 'Shrine with cult objects (snake goddess)', 'Intact pithos storage jars (40 found in situ)', 'Syrian cylinder seals (animals, gods)'],
-        type: 'palace'
+        type: 'palace',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
 
-  // 155. Gournia - The Pompei of Minoan Crete
+  // 155. Gournia - The Pompeii of Minoan Crete
   gournia: {
     id: 'gournia',
     name: 'Gournia',
     coordinates: [35.113, 25.792],
-    region: 'Crete',
+    region: 'Minoan',
     locations: [
       {
         id: 'gournia-town',
@@ -4123,7 +3720,8 @@ export const minoanSites: Record<string, Site> = {
         imageCurrent: '/images/sites/gournia-current.jpg',
         scene: 'The Pompeii of Minoan Crete',
         visualHighlights: ['Best-preserved Minoan town (60 houses)', 'Streets with paved alleys', 'Palace of Gournia (central court, shrine)', 'Bronze tools (saws, knives, chisels)', 'Linear A tablets (undeciphered)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4133,7 +3731,7 @@ export const minoanSites: Record<string, Site> = {
     id: 'kommos',
     name: 'Kommos',
     coordinates: [35.0, 24.75],
-    region: 'Crete',
+    region: 'Minoan',
     locations: [
       {
         id: 'kommos-harbor',
@@ -4144,7 +3742,8 @@ export const minoanSites: Record<string, Site> = {
         imageCurrent: '/images/sites/kommos-current.jpg',
         scene: 'The Harbor of Phaistos',
         visualHighlights: ['Ship-sheds building (40 x 6 meters, 6 bays)', 'Minoan town (houses, workshops)', 'Imported pottery (Canaanite, Egyptian, Cypriot)', 'Bronze hoard (100 bronze objects)', 'Mycenaean megaron (central hearth)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4154,7 +3753,7 @@ export const minoanSites: Record<string, Site> = {
     id: 'kato-zakros',
     name: 'Kato Zakros',
     coordinates: [35.098, 26.261],
-    region: 'Crete',
+    region: 'Minoan',
     locations: [
       {
         id: 'kato-zakros-town',
@@ -4165,7 +3764,8 @@ export const minoanSites: Record<string, Site> = {
         imageCurrent: '/images/sites/kato-zakros-current.jpg',
         scene: 'The Town of the Eastern Harbor',
         visualHighlights: ['Residential town (40 houses)', 'Paved streets with sewage pipes', 'Shrine with stone offering table', 'Bronze tool hoard (saws, chisels, knives)', 'Zakros Treasure (stone vases, bronze vessels)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4175,7 +3775,7 @@ export const minoanSites: Record<string, Site> = {
     id: 'palekastro',
     name: 'Palekastro (Roussolakkos)',
     coordinates: [35.2, 26.25],
-    region: 'Crete',
+    region: 'Minoan',
     locations: [
       {
         id: 'palekastro-town',
@@ -4186,7 +3786,8 @@ export const minoanSites: Record<string, Site> = {
         imageCurrent: '/images/sites/palekastro-current.jpg',
         scene: 'The Minoan Town of Palekastro',
         visualHighlights: ['Sanctuary with horned altars', 'Palekastro Kouros (young god statue)', 'Frescoes of dolphins and fish', 'Linear A archive (undeciphered)', 'Pottery kiln for mass production'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4196,7 +3797,7 @@ export const minoanSites: Record<string, Site> = {
     id: 'archanes',
     name: 'Archanes (Phourni)',
     coordinates: [35.24, 25.16],
-    region: 'Crete',
+    region: 'Minoan',
     locations: [
       {
         id: 'archanes-cemetery',
@@ -4207,7 +3808,8 @@ export const minoanSites: Record<string, Site> = {
         imageCurrent: '/images/sites/archanes-current.jpg',
         scene: 'The Royal Cemetery of Knossos',
         visualHighlights: ['Tholos A tomb (8 meters high, 11 burials)', 'Gold jewelry (rings, necklaces, bracelets)', 'Bronze weapons (swords, daggers, spears)', 'Villa of Archanes (20 rooms, shrine)', 'Snake goddess figurines (shrine)'],
-        type: 'tomb'
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4217,7 +3819,7 @@ export const minoanSites: Record<string, Site> = {
     id: 'mochlos',
     name: 'Mochlos',
     coordinates: [35.19, 25.88],
-    region: 'Crete',
+    region: 'Minoan',
     locations: [
       {
         id: 'mochlos-town',
@@ -4228,19 +3830,253 @@ export const minoanSites: Record<string, Site> = {
         imageCurrent: '/images/sites/mochlos-current.jpg',
         scene: 'The Coastal Trading Town',
         visualHighlights: ['Island settlement (Bronze Age island)', 'Mochlos Treasure (gold jewelry, silver vessels)', 'Egyptian stone vases (alabaster)', 'Cemetery on the mainland', 'Stirrup jars for oil export'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
+      }
+    ]
+  }
+};
+
+// ========== SECTION 10: CENTRAL AFRICA (161-170) ==========
+// Continues after previous sections
+
+export const centralAfricaSites: Record<string, Site> = {
+  // 161. Bantu Expansion - The Great Migration
+  bantuExpansion: {
+    id: 'bantu-expansion',
+    name: 'Bantu Expansion Route',
+    coordinates: [4.0, 18.0],
+    region: 'Central Africa',
+    locations: [
+      {
+        id: 'bantu-migration',
+        name: 'Bantu Migration Routes',
+        description: 'Spread of people, crops, and ironworking across Africa',
+        longDescription: `The Bantu expansion (3000 BCE - 500 CE) was one of the great migrations in human history, spreading Bantu-speaking peoples from their homeland in the Nigeria-Cameroon borderlands across two-thirds of sub-Saharan Africa. The expansion followed two main routes: a western route through the Congo rainforest to the Great Lakes and eastern Africa, and an eastern route through the savanna to the Great Lakes and southern Africa.
+
+Bantu farmers brought yams, oil palms, and bananas (a Southeast Asian crop that reached Africa via Madagascar, allowing settlement of the rainforest), their ironworking technology transforming agriculture and warfare, and their languages shaping the continent's linguistic landscape. The expansion created new societies, political structures, and cultural traditions across vast regions—from the Congo rainforest to the Great Lakes, and from the Swahili coast to the Limpopo River.
+
+The "Bantu expansion" is documented by linguistic evidence (the Bantu language family includes over 500 languages), archaeological evidence (distinctive pottery styles, iron slag, charcoal), and genetic evidence (Y-chromosome markers). The expansion was not a single movement but a series of gradual migrations over 4,000 years.`,
+        imageRegenerated: '/images/sites/bantu-expansion-regenerated.jpg',
+        imageCurrent: '/images/sites/bantu-expansion-current.jpg',
+        scene: 'The Great Bantu Migration',
+        visualHighlights: ['Migration route arrows (Nigeria-Cameroon to southern Africa)', 'Ironworking spread (furnace and tools)', 'Agricultural revolution (yams, oil palms, bananas)', 'Linguistic transformation (Bantu language map)', 'Cultural adaptation to rainforest and savanna'],
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
+      }
+    ]
+  },
+
+  // 162. Early Bantu Village - Life on the Frontier
+  bantuVillage: {
+    id: 'bantu-village',
+    name: 'Early Bantu Village',
+    coordinates: [-1.0, 28.0],
+    region: 'Central Africa',
+    locations: [
+      {
+        id: 'bantu-settlement',
+        name: 'Early Bantu Village',
+        description: 'Thatched homes, farming, and livestock',
+        longDescription: `Early Bantu villages were the foundation of the expansion, small settlements of extended families (clans, lineages) practicing slash-and-burn agriculture (shifting cultivation, moving every few years as soil fertility declined), ironworking, and animal husbandry (cattle, sheep, goats). Houses were typically circular with timber frames (saplings bent and tied), mud-and-wattle walls (cross-hatched branches covered with clay), and thatched roofs (grass or palm fronds). Villages also included granaries (raised structures on stilts to store grain, protect from rodents and pests), animal pens (enclosures of stakes), iron-smelting furnaces (clay shaft furnaces with bellows), and communal meeting spaces (shaded areas under trees). These villages left markers—ceramic shards (distinctive pottery styles: "Urewe" ware in the Great Lakes region, "Kwale" ware in eastern Africa), iron slag (waste from smelting), and charcoal (from forest clearance)—that archaeologists use to trace the expansion.`,
+        imageRegenerated: '/images/sites/bantu-village-regenerated.jpg',
+        imageCurrent: '/images/sites/bantu-village-current.jpg',
+        scene: 'Homestead on the Frontier',
+        visualHighlights: ['Thatched circular houses (mud-and-wattle)', 'Raised granaries on stilts', 'Ironworking furnaces (clay shaft with bellows)', 'Agricultural fields (yams, oil palms, bananas)', 'Communal meeting spaces (shaded areas)'],
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
+      }
+    ]
+  },
+
+  // 163. Ironworking Village - The Blacksmith's Art
+  ironworkingVillage: {
+    id: 'ironworking-village',
+    name: 'Ironworking Village',
+    coordinates: [-2.0, 23.0],
+    region: 'Central Africa',
+    locations: [
+      {
+        id: 'iron-smelting-village',
+        name: 'Ironworking Village Scene',
+        description: 'Blacksmith forging tools and weapons',
+        longDescription: `Ironworking was the transformative technology accompanying the Bantu expansion. Blacksmiths held special status (often as ritual specialists, believed to control supernatural forces), producing iron tools (hoes, axes, knives) that revolutionized agriculture (clearing forest, breaking ground, harvesting) and weapons (spears, arrows, swords) for hunting and warfare. The iron smelting process was highly ritualized, with ceremonies to ensure the furnace's success (including blood sacrifices, sexual prohibitions, and special songs). Clay furnaces (shaft furnaces 1-2 meters high, made of clay and dung), bellows made of animal skins (goat hide, with wooden nozzles), and charcoal fuel produced temperatures high enough (1,200-1,500°C) to extract iron from ore (haematite, magnetite, laterite). The resulting iron blooms (spongy masses of metallic iron) were then forged into tools using stone hammers (later iron hammers) and wooden tongs. Ironworking communities had significant advantages over stone-using neighbors (the Khoisan, pygmy groups), enabling more efficient farming, forest clearance, and military capability—accelerating the pace of Bantu expansion. The art of the blacksmith is still surrounded by ritual in many African societies.`,
+        imageRegenerated: '/images/sites/ironworking-regenerated.jpg',
+        imageCurrent: '/images/sites/ironworking-current.jpg',
+        scene: 'The Blacksmith\'s Fire',
+        visualHighlights: ['Clay shaft furnace (1-2 meters tall)', 'Animal skin bellows (goat hide)', 'Forging hammers and anvils (stone and iron)', 'Finished tools and weapons (hoes, axes, spears)', 'Ritual ceremony scenes (offerings before smelting)'],
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
+      }
+    ]
+  },
+
+  // 164. Great Lakes Region - Ntusi Earthworks
+  ntusi: {
+    id: 'ntusi',
+    name: 'Ntusi',
+    coordinates: [-0.85, 31.65],
+    region: 'Central Africa',
+    locations: [
+      {
+        id: 'ntusi-settlement',
+        name: 'Ntusi Earthworks',
+        description: 'Bigo-style earthworks of the Great Lakes',
+        longDescription: `Ntusi (10th-14th century CE) was a major settlement in the Great Lakes region, featuring large artificial earthworks—raised platforms (Ntusi meaning "raised structure") and shallow valleys that may have been cattle enclosures (bomas). The site's size (300 hectares) suggests a population of thousands, with evidence of craft specialization (pottery, ironworking, ivory carving). Artifacts include terra cotta figurines of cattle (with distinctive long horns), humans (with elaborate hairstyles), and possibly banana cultivation (banana seeds). The site is associated with the Bachwezi, legendary founders of the Kitara Empire (the "Chwezi" dynasty, remembered in oral traditions as demigods). The earthworks may have served ritual, defensive, and administrative purposes in a society based on cattle (wealth measured in cattle) and bananas (a staple crop). The site is part of the "Bigo earthworks" tradition (named for Bigo Bya Mugenyi), with Ntusi the largest.`,
+        imageRegenerated: '/images/sites/ntusi-regenerated.jpg',
+        imageCurrent: '/images/sites/ntusi-current.jpg',
+        scene: 'The Earthworks of the Bachwezi',
+        visualHighlights: ['Artificial raised platforms (Ntusi meaning "raised")', 'Cattle figurines (terra cotta with long horns)', 'Valley enclosures (possible cattle bomas)', 'Bigo earthwork style (ditches and banks)', 'Ritual center remains (pottery and iron slag)'],
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
+      }
+    ]
+  },
+
+  // 165. Bigo Bya Mugenyi - The Fort of the Stranger
+  bigoByaMugenyi: {
+    id: 'bigo-bya-mugenyi',
+    name: 'Bigo Bya Mugenyi',
+    coordinates: [-0.7167, 31.5333],
+    region: 'Central Africa',
+    locations: [
+      {
+        id: 'bigo-earthworks',
+        name: 'Bigo Bya Mugenyi',
+        description: 'Massive earthwork ditch system',
+        longDescription: `Bigo Bya Mugenyi ("Fort of the Stranger") is the largest of the Bigo earthworks in the Great Lakes region, consisting of a 6.5-kilometer ditch and bank system enclosing 10 square kilometers. The site dates to the 14th-16th centuries CE, based on radiocarbon dating of charcoal from the ditch fills. The ditch system may have served as cattle enclosures (capable of holding up to 2,000 head), defensive works (walls for protection), ritual boundaries (separating sacred from profane), or symbols of royal power (displaying the king's ability to mobilize labor). The scale implies a high degree of social organization (centralized state, professional army, tribute system). Oral traditions associate Bigo with the Bachwezi dynasty of the Kitara Empire (the "Chwezi" kings, including Ndahura, Mulindwa, and Wamara). The site's design suggests a hierarchical society with a king (the "Mukama") controlling cattle wealth, military defense, and ritual authority. The name "Bigo" means "ditch" in Runyankore, referring to the earthwork's ditch-and-bank style.`,
+        imageRegenerated: '/images/sites/bigo-regenerated.jpg',
+        imageCurrent: '/images/sites/bigo-current.jpg',
+        scene: 'The Fort of the Stranger',
+        visualHighlights: ['6.5 km ditch and bank system (earthworks)', 'Royal cattle enclosures (bomas)', 'Bachwezi dynasty legends (Kitara Empire)', 'Defensive earthwork walls (cyclopean)', 'Ritual "son" stone sites (believed to move)'],
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
+      }
+    ]
+  },
+
+  // 166. Great Lakes Settlement - Lakeside Communities
+  greatLakes: {
+    id: 'great-lakes',
+    name: 'Great Lakes Settlement',
+    coordinates: [-2.0, 29.0],
+    region: 'Central Africa',
+    locations: [
+      {
+        id: 'great-lakes-community',
+        name: 'Great Lakes Settlement',
+        description: 'Fishing, farming, and early community life',
+        longDescription: `The Great Lakes region of East Africa—with its fertile volcanic soils (rich in potassium, phosphorus), abundant rainfall (1,000-1,500mm per year), and rich fisheries—supported some of the densest Bantu populations. By 500 CE, hierarchical societies emerged (with cattle-owning elites and farming commoners), precursors to kingdoms like Rwanda, Burundi, and Buganda (the "Interlacustrine Kingdoms"). Great Lakes settlements were often located near lakeshores (Lake Victoria, Lake Tanganyika, Lake Kivu, Lake Edward, Lake Albert), combining fishing (tilapia, Nile perch, lungfish), agriculture (particularly bananas, a Southeast Asian crop that reached Africa via Madagascar, allowing continuous harvest and population growth), and cattle keeping (the long-horned Ankole cattle, symbols of wealth). The staple bananas (plantains) allowed continuous harvest (unlike grains, which required seasonal storage), supporting population growth and specialization (artisans, soldiers, priests). Elite burials with iron tools (spears, axes), jewelry (copper, bronze, gold), and in later periods, imported glass beads (trade with the Swahili coast), document the emergence of social hierarchy. The region's dense population (estimates of 50-100 people per square kilometer) made the Great Lakes a secondary center of Bantu expansion east (to the coast) and south (to the Zambezi).`,
+        imageRegenerated: '/images/sites/great-lakes-regenerated.jpg',
+        imageCurrent: '/images/sites/great-lakes-current.jpg',
+        scene: 'The Lakeside Kingdoms',
+        visualHighlights: ['Lakeshore settlements (Lake Victoria, Tanganyika)', 'Banana cultivation (plantains, continuous harvest)', 'Fishing communities (tilapia, Nile perch)', 'Emerging social hierarchy (elite burials with beads)', 'Cattle wealth (long-horned Ankole cattle)'],
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
+      }
+    ]
+  },
+
+  // 167. Congo Rainforest Trade - Forest Paths
+  congoTrade: {
+    id: 'congo-trade',
+    name: 'Congo Rainforest Trade Route',
+    coordinates: [0.0, 22.0],
+    region: 'Central Africa',
+    locations: [
+      {
+        id: 'congo-forest-trails',
+        name: 'Congo Rainforest Trade Path',
+        description: 'Dense forest trade routes with caravans',
+        longDescription: `The Congo rainforest, despite its challenging environment (dense vegetation, high humidity, disease-carrying insects, and tse tse flies), had trade networks connecting communities across hundreds of kilometers. Forest paths, often along river routes (the Congo River and its tributaries, navigable for thousands of kilometers), were used by traders carrying goods—bark cloth (from Ficus trees, used for clothing and bedding), medicines (from medicinal plants, including the Iboga shrub for rituals), ivory (from forest elephants), and wild game products (smoked meat, hides, feathers, claws). The Bantu expansion into the rainforest required adaptation of farming, ironworking, and social organization to the forest environment. Bantu populations remained relatively sparse in the deep forest until the development of the banana as a staple—a Southeast Asian crop that thrived in forest clearings. These trade routes connected the rainforest to the savanna, exchanging forest products (ivory, cola nuts, medicinal bark) for savanna grains (millet, sorghum), metals (copper from Katanga, iron from the Great Lakes), and later, coastal goods (glass beads, cloth from the Swahili coast).`,
+        imageRegenerated: '/images/sites/congo-trade-regenerated.jpg',
+        imageCurrent: '/images/sites/congo-trade-current.jpg',
+        scene: 'Paths Through the Rainforest',
+        visualHighlights: ['Forest trail caravans (porters with head loads)', 'Footbridge crossings (logs over small streams)', 'River route trade (dugout canoes)', 'Forest-savanna exchange (ivory, cola, medicines)', 'Rainforest Bantu adaptations (clearings, bananas)'],
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
+      }
+    ]
+  },
+
+  // 168. Luba Kingdom - Mulopwe Traditions
+  lubaKingdom: {
+    id: 'luba-kingdom',
+    name: 'Luba Kingdom (Katanga)',
+    coordinates: [-5.5, 26.5],
+    region: 'Central Africa',
+    locations: [
+      {
+        id: 'luba-capital',
+        name: 'Luba Kingdom',
+        description: 'Centralized state of the Upemba Depression',
+        longDescription: `The Luba Kingdom (c. 1500-1900 CE) emerged in the Upemba Depression (Katanga province) of the southeastern Congo, controlling trade in copper, salt, and palm oil. The kingdom was founded by King Kongolo ("Mwindo" epic cycle), who united local chiefdoms into a centralized state with a divine king (the "Mulopwe"), who ruled through provincial governors (the "Fumu"). The capital, at the Lake Boya site, featured a royal palace (clay and wood), a burial ground for kings (the "Tomb of the Mulopwe"), and blacksmithing workshops (the king's power associated with ironworking). Luba art is famous for its "bow stands" (mpoko) depicting female figures, "memory boards" (lukasa) used for oral history recitation, and "royal staffs" (lukasa) with traditional rulers' names. The Luba kingdom influenced neighboring states (Lunda, Kuba, Chokwe) and is remembered through oral traditions (the "Epic of Mwindo," one of the longest and most detailed African oral epics).`,
+        imageRegenerated: '/images/sites/luba-regenerated.jpg',
+        imageCurrent: '/images/sites/luba-current.jpg',
+        scene: 'The Kingdom of the Mulopwe',
+        visualHighlights: ['Royal palace at Lake Boya (clay and wood)', 'Blacksmithing workshops (ironworking)', 'Lukasa memory boards (oral history)', 'Burial ground of the Mulopwe', 'Mwindo epic oral tradition'],
+        deity: 'Vidye (Supreme God)',
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
+      }
+    ]
+  },
+
+  // 169. Kuba Kingdom - Textile Artistry
+  kubaKingdom: {
+    id: 'kuba-kingdom',
+    name: 'Kuba Kingdom (Kasai)',
+    coordinates: [-4.5, 20.5],
+    region: 'Central Africa',
+    locations: [
+      {
+        id: 'kuba-capital',
+        name: 'Kuba Kingdom',
+        description: 'Political center of the Bushoong people',
+        longDescription: `The Kuba Kingdom (c. 1600-1900 CE) was a federation of 18 ethnic groups in the Kasai region, centered at the capital of Nsheng. The kingdom was famous for its textile art (raffia cloth), with the king (the "Nyim") wearing a "shaan" (ceremonial belt) and "bmwana" (leopard skin) as emblems of authority. Kuba weaving produced the "mbal" cloth (highly decorated with geometric patterns), used for royal robes and ritual regalia. The kingdom also produced masks (the "ngady amwaash" mask representing the founding mother, the "mboom" mask representing the founding father), carved wooden cups (for palm wine), and the "itoon" (royal thrones with carved figures). The Kuba maintained elaborate oral traditions (the "Epic of Woot," the founding hero) and a courtly art style that influenced neighboring peoples (Luba, Lunda, Chokwe).`,
+        imageRegenerated: '/images/sites/kuba-regenerated.jpg',
+        imageCurrent: '/images/sites/kuba-current.jpg',
+        scene: 'The Raffia Kingdom',
+        visualHighlights: ['Raffia cloth production (mbal textiles)', 'Ngady amwaash mask (founding mother)', 'Mboom mask (founding father)', 'Royal thrones (itoon with carved figures)', 'Epic of Woot oral tradition'],
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
+      }
+    ]
+  },
+
+  // 170. Kongo Kingdom - Manikongo Dynasty
+  kongoKingdom: {
+    id: 'kongo-kingdom',
+    name: 'Kingdom of Kongo (Mbanza Kongo)',
+    coordinates: [-6.0, 15.0],
+    region: 'Central Africa',
+    locations: [
+      {
+        id: 'mbanza-kongo',
+        name: 'Mbanza Kongo',
+        description: 'Capital of the Kongo Kingdom',
+        longDescription: `Mbanza Kongo (São Salvador) was the capital of the Kingdom of Kongo (c. 1390-1914), one of the largest and most centralized states in West-Central Africa. The city was built on a plateau overlooking the surrounding forests, with a royal palace (the "King's House"), a cathedral (the "Church of Our Lady of the Rosary") built by Portuguese masons (1495), and a circular "administrative section" (the "Manga") where the king's council met. The kingdom controlled the copper trade (from the Mindouli mines), ivory trade (from forest elephants), and slave trade (with the Portuguese, initially as prisoners of war, then as a commercial enterprise). The king (the "Manikongo") ruled through appointed governors (the "Mani" of each province). The kingdom converted to Christianity under King Nzinga a Nkuwu (João I, 1491) and King Afonso I (1506-1543), who established a Christian court, sent his sons to study in Lisbon, and corresponded with Portuguese kings (his letters describe the slave trade's disruptions). The city's cathedral (the "Nkulumbimbi," believed to have been built by angels) was rebuilt in the 20th century.`,
+        imageRegenerated: '/images/sites/kongo-regenerated.jpg',
+        imageCurrent: '/images/sites/kongo-current.jpg',
+        scene: 'The Manikongo\'s Capital',
+        visualHighlights: ['Royal palace (King\'s House, Mbanza Kongo)', 'Cathedral of Nkulumbimbi (with angel legend)', 'Administrative section (Manga)', 'Copper and ivory trade', 'Portuguese-era church (Church of Our Lady)'],
+        deity: 'Nzambi Mpungu (Supreme God)',
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   }
 };
 // ========== SECTION 16: PERSIAN EMPIRE (ACHAEMENID) (171-180) ==========
+// Continues after minoanSites (which ends at #160 - assuming sections 17-?? fill 161-170)
+
 export const persianSites: Record<string, Site> = {
   // 171. Persepolis - Ceremonial Capital
   persepolis: {
     id: 'persepolis-complex',
     name: 'Persepolis (Parsa)',
     coordinates: [29.935, 52.891],
-    region: 'Persia (Iran)',
+    region: 'Persian Empire',
     locations: [
       {
         id: 'persepolis-apadana',
@@ -4258,7 +4094,8 @@ export const persianSites: Record<string, Site> = {
           'Cedar roof from Lebanon (reconstructed)'
         ],
         deity: 'Ahura Mazda',
-        type: 'palace'
+        type: 'palace',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'persepolis-throne-hall',
@@ -4275,7 +4112,8 @@ export const persianSites: Record<string, Site> = {
           'Cedar wood roof (reconstructed)',
           'Double-bull column capitals'
         ],
-        type: 'palace'
+        type: 'palace',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'persepolis-treasury',
@@ -4292,7 +4130,8 @@ export const persianSites: Record<string, Site> = {
           'Treasury Relief (Darius and Xerxes)',
           'Seal of Darius (lion hunting)'
         ],
-        type: 'palace'
+        type: 'palace',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4302,7 +4141,7 @@ export const persianSites: Record<string, Site> = {
     id: 'pasargadae-capital',
     name: 'Pasargadae',
     coordinates: [30.201, 53.179],
-    region: 'Persia (Iran)',
+    region: 'Persian Empire',
     locations: [
       {
         id: 'tomb-cyrus',
@@ -4319,7 +4158,8 @@ export const persianSites: Record<string, Site> = {
           'Garden enclosure (Paradise of Pasargadae)',
           'Alexander\'s visit (324 BCE)'
         ],
-        type: 'tomb'
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'pasargadae-palace',
@@ -4336,7 +4176,8 @@ export const persianSites: Record<string, Site> = {
           'Garden paradise (pools, pavilions)',
           'Earliest Apadana style (hypostyle)'
         ],
-        type: 'palace'
+        type: 'palace',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'pasargadae-gatehouse',
@@ -4353,7 +4194,8 @@ export const persianSites: Record<string, Site> = {
           'Cedar roof (reconstructed)',
           'Two columns framing the entrance'
         ],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4363,13 +4205,13 @@ export const persianSites: Record<string, Site> = {
     id: 'naqsh-e-rostam',
     name: 'Naqsh-e Rostam',
     coordinates: [29.989, 52.873],
-    region: 'Persia (Iran)',
+    region: 'Persian Empire',
     locations: [
       {
         id: 'achaemenid-tombs',
         name: 'Achaemenid Royal Tombs',
         description: 'Rock-cut tombs of four great kings',
-        longDescription: `Naqsh-e Rostam is a necropolis carved into a cliff face (the "Cliff of Naqsh-e Rostam," 50 meters high) northwest of Persepolis, containing the rock-cut tombs of four Achaemenid kings (probably Darius I (522-486 BCE), Xerxes I (486-465 BCE), Artaxerxes I (465-424 BCE), and Darius II (423-404 BCE). Each tomb facade is carved in the form of a cross (the "Persian cross," 30 meters high, 20 meters wide), with a relief of the king standing on a throne held by 30 figures (4 tiers of 7-8 figures) representing the subject nations (the "Throne Bearers" relief). The king stands before a fire altar (the "fire altar" of the Zoroastrian religion), worshipping Ahura Mazda. The inscriptions (the "DNa" inscription on Darius I's tomb) say: "King Darius says: By the grace of Ahura Mazda, I am king... Persia is a good land."`,
+        longDescription: `Naqsh-e Rostam is a necropolis carved into a cliff face (the "Cliff of Naqsh-e Rostam," 50 meters high) northwest of Persepolis, containing the rock-cut tombs of four Achaemenid kings (probably Darius I (522-486 BCE), Xerxes I (486-465 BCE), Artaxerxes I (465-424 BCE), and Darius II (423-404 BCE)). Each tomb facade is carved in the form of a cross (the "Persian cross," 30 meters high, 20 meters wide), with a relief of the king standing on a throne held by 30 figures (4 tiers of 7-8 figures) representing the subject nations (the "Throne Bearers" relief). The king stands before a fire altar (the "fire altar" of the Zoroastrian religion), worshipping Ahura Mazda. The inscriptions (the "DNa" inscription on Darius I's tomb) say: "King Darius says: By the grace of Ahura Mazda, I am king... Persia is a good land."`,
         imageRegenerated: '/images/sites/naqsh-e-rostam-tombs-regenerated.jpg',
         imageCurrent: '/images/sites/naqsh-e-rostam-tombs-current.jpg',
         scene: 'The Cliff Tombs of the Achaemenid Kings',
@@ -4380,7 +4222,8 @@ export const persianSites: Record<string, Site> = {
           'King worshipping Ahura Mazda',
           'DNa inscription (Darius I)'
         ],
-        type: 'tomb'
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       },
       {
         id: 'sasanian-reliefs',
@@ -4397,7 +4240,8 @@ export const persianSites: Record<string, Site> = {
           'Ka\'ba-ye Zartosht tower (8 meters high)',
           'High relief limestone carvings (3 meters high)'
         ],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4407,7 +4251,7 @@ export const persianSites: Record<string, Site> = {
     id: 'susa',
     name: 'Susa (Shush)',
     coordinates: [32.191, 48.247],
-    region: 'Persia (Iran)',
+    region: 'Persian Empire',
     locations: [
       {
         id: 'susa-palace',
@@ -4424,7 +4268,8 @@ export const persianSites: Record<string, Site> = {
           'Harem of Xerxes (50 x 50 meters)',
           'Tomb of Daniel (traditional site)'
         ],
-        type: 'palace'
+        type: 'palace',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4434,7 +4279,7 @@ export const persianSites: Record<string, Site> = {
     id: 'ecbatana',
     name: 'Ecbatana (Hagmatana)',
     coordinates: [34.8, 48.517],
-    region: 'Persia (Iran)',
+    region: 'Persian Empire',
     locations: [
       {
         id: 'ecbatana-palace',
@@ -4451,7 +4296,8 @@ export const persianSites: Record<string, Site> = {
           'Zagros Mountains setting (1,800 meters)',
           'Stone Lion relief (Achaemenid)'
         ],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4461,7 +4307,7 @@ export const persianSites: Record<string, Site> = {
     id: 'behistun',
     name: 'Behistun Inscription (Bisotun)',
     coordinates: [34.388, 47.432],
-    region: 'Persia (Iran)',
+    region: 'Persian Empire',
     locations: [
       {
         id: 'behistun-inscription',
@@ -4478,7 +4324,8 @@ export const persianSites: Record<string, Site> = {
           'Nine kings with hands bound',
           'Ahura Mazda floating above'
         ],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4488,7 +4335,7 @@ export const persianSites: Record<string, Site> = {
     id: 'naqsh-rajab',
     name: 'Naqsh-e Rajab',
     coordinates: [29.98, 52.88],
-    region: 'Persia (Iran)',
+    region: 'Persian Empire',
     locations: [
       {
         id: 'sasanian-reliefs-rajab',
@@ -4505,7 +4352,8 @@ export const persianSites: Record<string, Site> = {
           'Bahram II with his court',
           'Shallow cave setting'
         ],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4515,7 +4363,7 @@ export const persianSites: Record<string, Site> = {
     id: 'takht-soleyman',
     name: 'Takht-e Soleyman',
     coordinates: [36.603, 47.235],
-    region: 'Persia (Iran)',
+    region: 'Persian Empire',
     locations: [
       {
         id: 'zoroastrian-fire-temple',
@@ -4533,7 +4381,8 @@ export const persianSites: Record<string, Site> = {
           'Mongol visit (Hulagu Khan)'
         ],
         deity: 'Ahura Mazda',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4543,7 +4392,7 @@ export const persianSites: Record<string, Site> = {
     id: 'susa-apadana',
     name: 'Susa Apadana',
     coordinates: [32.192, 48.245],
-    region: 'Persia (Iran)',
+    region: 'Persian Empire',
     locations: [
       {
         id: 'susa-apadana-relief',
@@ -4560,7 +4409,8 @@ export const persianSites: Record<string, Site> = {
           'Winged disk (Ahura Mazda)',
           'Susa Bricks (Louvre Museum)'
         ],
-        type: 'palace'
+        type: 'palace',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4570,7 +4420,7 @@ export const persianSites: Record<string, Site> = {
     id: 'qasr-shirin',
     name: 'Qasr-e Shirin',
     coordinates: [34.517, 45.583],
-    region: 'Persia (Iran)',
+    region: 'Persian Empire',
     locations: [
       {
         id: 'palace-khosrow',
@@ -4588,20 +4438,23 @@ export const persianSites: Record<string, Site> = {
           'Rock Relief of Khosrow (king hunting)'
         ],
         deity: 'Anahita',
-        type: 'palace'
+        type: 'palace',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   }
 };
 
 // ========== SECTION 17: ETRUSCAN CIVILIZATION (181-190) ==========
+// Continues after previous sections (assumes sections 11-16 fill 111-180)
+
 export const etruscanSites: Record<string, Site> = {
   // 181. Tarquinia - Painted Tombs
   tarquinia: {
     id: 'tarquinia-tombs',
     name: 'Tarquinia (Corneto)',
     coordinates: [42.255, 11.757],
-    region: 'Etruria (Italy)',
+    region: 'Etruscan',
     locations: [
       {
         id: 'monterozzi-necropolis',
@@ -4612,7 +4465,8 @@ export const etruscanSites: Record<string, Site> = {
         imageCurrent: '/images/sites/tarquinia-current.jpg',
         scene: 'The Frescoed Tombs of the Etruscan Elite',
         visualHighlights: ['Tomb of the Leopards banquet fresco (reclining couples)', 'Tomb of Hunting and Fishing landscapes (birds, fish)', '6,000 painted chamber tombs (rock-cut)', 'Tumulus mound tombs (50 meters diameter)', 'Etruscan language inscriptions (Lemnos Stele)'],
-        type: 'tomb'
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4622,7 +4476,7 @@ export const etruscanSites: Record<string, Site> = {
     id: 'cerveteri-necropolis',
     name: 'Cerveteri (Caere)',
     coordinates: [41.999, 12.109],
-    region: 'Etruria (Italy)',
+    region: 'Etruscan',
     locations: [
       {
         id: 'necropolis-banditaccia',
@@ -4633,7 +4487,8 @@ export const etruscanSites: Record<string, Site> = {
         imageCurrent: '/images/sites/cerveteri-current.jpg',
         scene: 'The City of the Dead',
         visualHighlights: ['Tomb of the Reliefs house-like interior (pillows, weapons)', '"Streets of the dead" urban planning (grid layout)', 'Tumulus mound tombs (c. 50 meters diameter)', 'Tomb of the Greek Vases imports (Attic pottery)', 'Ancestor cult chairs (Tomb of the Five Chairs)'],
-        type: 'tomb'
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4643,7 +4498,7 @@ export const etruscanSites: Record<string, Site> = {
     id: 'veii-sanctuary',
     name: 'Veii (Veio)',
     coordinates: [42.007, 12.401],
-    region: 'Etruria (Italy)',
+    region: 'Etruscan',
     locations: [
       {
         id: 'sanctuary-apollo',
@@ -4655,7 +4510,8 @@ export const etruscanSites: Record<string, Site> = {
         scene: 'The Great Etruscan Temple of Apollo',
         visualHighlights: ['Apollo of Veii terracotta statue (1.8 meters high)', 'Herakles labors reliefs (Apollo and Herakles)', 'Three-cella temple plan (18 x 35 meters)', 'Terracotta antefixes (roof decorations)', 'Veii-Portonaccio sanctuary layout (temple, altar, pool)'],
         deity: 'Apollo',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4665,7 +4521,7 @@ export const etruscanSites: Record<string, Site> = {
     id: 'populonia',
     name: 'Populonia (Pupluna)',
     coordinates: [42.99, 10.51],
-    region: 'Etruria (Italy)',
+    region: 'Etruscan',
     locations: [
       {
         id: 'populonia-necropolis',
@@ -4676,7 +4532,8 @@ export const etruscanSites: Record<string, Site> = {
         imageCurrent: '/images/sites/populonia-current.jpg',
         scene: 'The Ironworking City of the Etruscans',
         visualHighlights: ['Iron slag on beach (10 meters high, 200 meters long)', 'Mound of the Bronze (bronze armor, weapons)', 'Mound of the Gold (gold diadems)', 'Temple of Fufluns (Etruscan wine god)', 'Acropolis of Populonia (city walls, towers)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4686,7 +4543,7 @@ export const etruscanSites: Record<string, Site> = {
     id: 'vulci',
     name: 'Vulci',
     coordinates: [42.45, 11.58],
-    region: 'Etruria (Italy)',
+    region: 'Etruscan',
     locations: [
       {
         id: 'vulci-tombs',
@@ -4697,7 +4554,8 @@ export const etruscanSites: Record<string, Site> = {
         imageCurrent: '/images/sites/vulci-current.jpg',
         scene: 'The Wealthy City of the Etruscan Princes',
         visualHighlights: ['Tomb of the Charontes (chariot burial)', 'Tomb of the Silver Hands (3 kg silver hoard)', 'François Tomb (Etruscan history paintings)', 'Ponte della Badia (Roman bridge, 1st century BCE)', 'River of Vulci (trade route)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4707,7 +4565,7 @@ export const etruscanSites: Record<string, Site> = {
     id: 'orvieto',
     name: 'Orvieto (Volsinii)',
     coordinates: [42.717, 12.1],
-    region: 'Etruria (Italy)',
+    region: 'Etruscan',
     locations: [
       {
         id: 'orvieto-temple',
@@ -4719,7 +4577,8 @@ export const etruscanSites: Record<string, Site> = {
         scene: 'The Religious Capital of the Etruscans',
         visualHighlights: ['Belvedere Temple (20 x 30 meters, temple of Tinia)', 'Apollo of Orvieto terracotta statue (2 meters high)', 'Altar of Belvedere (3 x 3 meters)', 'Chariot of Belvedere (6th century BCE, bronze)', 'Necropolis of Crocifisso del Tufo (100 chamber tombs)'],
         deity: 'Tinia',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4729,7 +4588,7 @@ export const etruscanSites: Record<string, Site> = {
     id: 'chiusi',
     name: 'Chiusi (Clevsin)',
     coordinates: [43.017, 11.95],
-    region: 'Etruria (Italy)',
+    region: 'Etruscan',
     locations: [
       {
         id: 'chiusi-necropolis',
@@ -4740,7 +4599,8 @@ export const etruscanSites: Record<string, Site> = {
         imageCurrent: '/images/sites/chiusi-current.jpg',
         scene: 'The City of the Canopic Jars',
         visualHighlights: ['Canopic jar (human head on lid)', 'Tomb of the Monkey (monkey on a rope)', 'Tomb of the Bulls (bull\'s head relief)', 'Clusium Museum (Etruscan artifacts)', 'Terracotta sarcophagus (4th century BCE)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4750,7 +4610,7 @@ export const etruscanSites: Record<string, Site> = {
     id: 'perugia',
     name: 'Perugia (Perusia)',
     coordinates: [43.117, 12.383],
-    region: 'Etruria (Italy)',
+    region: 'Etruscan',
     locations: [
       {
         id: 'perugia-hypogeum',
@@ -4761,7 +4621,8 @@ export const etruscanSites: Record<string, Site> = {
         imageCurrent: '/images/sites/perugia-current.jpg',
         scene: 'The Etruscan City of the Volumnii',
         visualHighlights: ['Etruscan Arch (10 meters high, Perugia Horses frieze)', 'Hypogeum of the Volumnii (chamber tomb, 5 rooms)', 'Volumnii Urns (10 terracotta urns)', 'Well of the Etruscans (15 meters deep)', 'Etruscan Wall (3 km long, 4 meters high)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4771,7 +4632,7 @@ export const etruscanSites: Record<string, Site> = {
     id: 'vetulonia',
     name: 'Vetulonia',
     coordinates: [42.85, 10.98],
-    region: 'Etruria (Italy)',
+    region: 'Etruscan',
     locations: [
       {
         id: 'vetulonia-tombs',
@@ -4782,7 +4643,8 @@ export const etruscanSites: Record<string, Site> = {
         imageCurrent: '/images/sites/vetulonia-current.jpg',
         scene: 'The Early Etruscan Goldworking Center',
         visualHighlights: ['Tomb of the Golden Jewelry (gold diadem, earrings, necklaces)', 'Vetulonia Treasure (1,000 gold objects)', 'Tomb of the Silver Hands (silver hand, 10 cm long)', 'Tomb of the Bronze Chariot (7th century BCE)', 'Necropolis of Vetulonia (early Etruscan)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4792,7 +4654,7 @@ export const etruscanSites: Record<string, Site> = {
     id: 'pyrgi',
     name: 'Pyrgi (Santa Severa)',
     coordinates: [42.02, 11.97],
-    region: 'Etruria (Italy)',
+    region: 'Etruscan',
     locations: [
       {
         id: 'pyrgi-harbor',
@@ -4804,19 +4666,22 @@ export const etruscanSites: Record<string, Site> = {
         scene: 'The Harbor of the Etruscan Kings',
         visualHighlights: ['Pyrgi Gold Tablets (3 gold tablets, Etruscan-Phoenician)', 'Temple of Pyrgi (20 x 30 meters, terracotta statue)', 'Port of Pyrgi (breakwater, 100 meters long)', 'King Thefarie Velianas dedication (Etruscan king)', 'Castle of Santa Severa (14th century CE)'],
         deity: 'Uni',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   }
 };
 // ========== SECTION 18: ANCIENT INDIA (191-200) ==========
+// Continues after previous sections (assumes section 17 ended at #190)
+
 export const indiaSites: Record<string, Site> = {
   // 191. Mohenjo-Daro - Indus Valley Metropolis
   mohenjoDaro: {
     id: 'mohenjo-daro',
     name: 'Mohenjo-Daro',
     coordinates: [27.329, 68.136],
-    region: 'Indus Valley (Pakistan)',
+    region: 'Ancient India',
     locations: [
       {
         id: 'mohenjo-daro-ruins',
@@ -4827,7 +4692,8 @@ export const indiaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/mohenjo-daro-current.jpg',
         scene: 'The Great City of the Indus Valley',
         visualHighlights: ['Great Bath (12 x 7 meters, brick pool)', 'Grid plan (12-meter-wide streets, clay pipes)', 'Dancing Girl bronze statue (10 cm high)', 'Priest-King stone statue (17 cm high)', 'Great Granary (50 x 25 meters, wooden bins)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4837,7 +4703,7 @@ export const indiaSites: Record<string, Site> = {
     id: 'harappa',
     name: 'Harappa',
     coordinates: [30.629, 72.865],
-    region: 'Indus Valley (Pakistan)',
+    region: 'Ancient India',
     locations: [
       {
         id: 'harappa-ruins',
@@ -4848,7 +4714,8 @@ export const indiaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/harappa-current.jpg',
         scene: 'The Type Site of the Indus Civilization',
         visualHighlights: ['Harappa Seals (1,000 seals, undeciphered script)', 'Harappa Granary (25 x 20 meters)', 'Cemetery H (spectacle urns, 1900 BCE)', 'Mother Goddess terracotta figurines', 'Carnelian beads (2 mm diameter)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4858,7 +4725,7 @@ export const indiaSites: Record<string, Site> = {
     id: 'dholavira',
     name: 'Dholavira',
     coordinates: [23.886, 70.217],
-    region: 'Indus Valley (India)',
+    region: 'Ancient India',
     locations: [
       {
         id: 'dholavira-ruins',
@@ -4869,7 +4736,8 @@ export const indiaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/dholavira-current.jpg',
         scene: 'The Harappan Water Engineers',
         visualHighlights: ['16 reservoirs (water storage, rainwater harvesting)', 'Dholavira Stadium (283 x 47 meters)', 'Dholavira Signboard (3-meter inscription, 10 signs)', 'Citadel (12 meters high)', 'Black-on-red pottery (geometric designs)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4879,7 +4747,7 @@ export const indiaSites: Record<string, Site> = {
     id: 'lothal',
     name: 'Lothal',
     coordinates: [22.521, 72.25],
-    region: 'Indus Valley (India)',
+    region: 'Ancient India',
     locations: [
       {
         id: 'lothal-dockyard',
@@ -4890,7 +4758,8 @@ export const indiaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/lothal-current.jpg',
         scene: 'The World\'s Earliest Dockyard',
         visualHighlights: ['Lothal Dock (214 x 36 meters, lock gate)', 'Warehouse (8 x 10 meters)', 'Bazaar (120 meters long)', 'Ivory dice (gaming pieces)', 'Black-on-red pottery (animal motifs)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4900,7 +4769,7 @@ export const indiaSites: Record<string, Site> = {
     id: 'pataliputra',
     name: 'Pataliputra (Patna)',
     coordinates: [25.6, 85.12],
-    region: 'Northern India (Bihar)',
+    region: 'Ancient India',
     locations: [
       {
         id: 'pataliputra-ruins',
@@ -4911,7 +4780,8 @@ export const indiaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/pataliputra-current.jpg',
         scene: 'The Imperial Capital of the Mauryans',
         visualHighlights: ['Wooden palisade (5 meters high, 1 meter thick)', 'Pataliputra Palace (80 pillars, 10 meters high)', 'Pataliputra Capital (stone capital, lotus motif)', 'Pataliputra Seal (Mauryan chakra symbol)', 'Silver coins (Mauryan symbol)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4921,7 +4791,7 @@ export const indiaSites: Record<string, Site> = {
     id: 'sanchi',
     name: 'Sanchi Stupa',
     coordinates: [23.479, 77.739],
-    region: 'Northern India (Madhya Pradesh)',
+    region: 'Ancient India',
     locations: [
       {
         id: 'sanchi-stupa',
@@ -4933,7 +4803,8 @@ export const indiaSites: Record<string, Site> = {
         scene: 'The Great Stupa of Sanchi',
         visualHighlights: ['Great Stupa (36 meters diameter, 16 meters high)', 'Sanchi Toranas (4 gateways, 10 meters high, reliefs)', 'Sanchi Ashoka Pillar (15 meters high, Four Lions)', 'Sanchi Reliefs (2,000 square meters, Buddha life)', 'Stone railing (1,000 pillars)'],
         deity: 'Buddha',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4943,7 +4814,7 @@ export const indiaSites: Record<string, Site> = {
     id: 'bodh-gaya',
     name: 'Bodh Gaya',
     coordinates: [24.695, 84.991],
-    region: 'Northern India (Bihar)',
+    region: 'Ancient India',
     locations: [
       {
         id: 'mahabodhi-temple',
@@ -4955,7 +4826,8 @@ export const indiaSites: Record<string, Site> = {
         scene: 'The Site of the Buddha\'s Enlightenment',
         visualHighlights: ['Mahabodhi Temple (50 meters high, pyramidal tower)', 'Bodhi Tree (descendant of original, Ficus religiosa)', 'Vajrasana (Diamond Throne, 2.5 x 2.5 meters)', 'Golden Buddha statue (1.5 meters high, earth-touching)', 'Stone railing (1,000 pillars)'],
         deity: 'Buddha',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4965,7 +4837,7 @@ export const indiaSites: Record<string, Site> = {
     id: 'ajanta-caves',
     name: 'Ajanta Caves',
     coordinates: [20.552, 75.703],
-    region: 'Western India (Maharashtra)',
+    region: 'Ancient India',
     locations: [
       {
         id: 'ajanta-caves',
@@ -4976,7 +4848,8 @@ export const indiaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/ajanta-current.jpg',
         scene: 'The Rock-Cut Buddhist Temples of Ajanta',
         visualHighlights: ['30 rock-cut caves (2 km long, Chaitya, Vihara)', 'Ajanta Paintings (1,000 square meters, frescoes)', 'Bodhisattva Padmapani (2 meters high painting)', 'Cave 2 Lotus Ceiling (200 lotus flowers)', 'Cave 9 Chaitya (prayer hall, stupa, 5 meters high)'],
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -4986,7 +4859,7 @@ export const indiaSites: Record<string, Site> = {
     id: 'ellora-caves',
     name: 'Ellora Caves',
     coordinates: [20.025, 75.166],
-    region: 'Western India (Maharashtra)',
+    region: 'Ancient India',
     locations: [
       {
         id: 'kailasa-temple',
@@ -4998,7 +4871,8 @@ export const indiaSites: Record<string, Site> = {
         scene: 'The Monolithic Temple of Kailasa',
         visualHighlights: ['Kailasa Temple (80 x 40 meters, 30 meters high, monolithic)', 'Nandi mandapa (bull shrine, 10 x 10 meters)', 'Shikhara tower (30 meters high)', 'Battle of Lanka relief (5 meters high)', '1,000 reliefs (Ramayana, Mahabharata, Purana)'],
         deity: 'Shiva',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5008,7 +4882,7 @@ export const indiaSites: Record<string, Site> = {
     id: 'nalanda',
     name: 'Nalanda University',
     coordinates: [25.136, 85.443],
-    region: 'Northern India (Bihar)',
+    region: 'Ancient India',
     locations: [
       {
         id: 'nalanda-ruins',
@@ -5019,19 +4893,22 @@ export const indiaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/nalanda-current.jpg',
         scene: 'The Oldest University in the World',
         visualHighlights: ['3 libraries (9-story, 7-story, 5-story)', '10,000 students (2,000 teachers)', 'Nalanda Temples (10 temples)', '1,000 classrooms (1,000 rooms)', 'Nalanda Massacre (1193 CE, 10,000 monks)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   }
 };
 // ========== SECTION 19: ANCIENT CHINA (201-210) ==========
+// Continues after indiaSites (which ends at #200)
+
 export const chinaSites: Record<string, Site> = {
   // 201. Yinxu - Last Capital of the Shang Dynasty
   yinxu: {
     id: 'yinxu',
     name: 'Yinxu (Anyang)',
     coordinates: [36.116, 114.316],
-    region: 'Northern China (Henan)',
+    region: 'Ancient China',
     locations: [
       {
         id: 'yin-xu-ruins',
@@ -5042,7 +4919,8 @@ export const chinaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/yinxu-current.jpg',
         scene: 'The Last Capital of the Shang Dynasty',
         visualHighlights: ['Royal Palace (50 foundation platforms, 10,000 sq m)', 'Royal Cemetery (10 royal tombs, 2,000 human sacrifices)', 'Oracle Bone Pit (10,000 oracle bones, 3,000 inscriptions)', 'Tomb of Lady Fu Hao (intact, 1,600 objects)', 'Shang bronze vessels (200 bronze vessels)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5052,7 +4930,7 @@ export const chinaSites: Record<string, Site> = {
     id: 'terracotta-army',
     name: 'Terracotta Army (Xi\'an)',
     coordinates: [34.385, 109.273],
-    region: 'Northern China (Shaanxi)',
+    region: 'Ancient China',
     locations: [
       {
         id: 'qin-shi-huang-mausoleum',
@@ -5063,7 +4941,8 @@ export const chinaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/terracotta-army-current.jpg',
         scene: 'The Terracotta Army of the First Emperor',
         visualHighlights: ['8,000 life-size terracotta warriors (Pit 1: 6,000)', 'Pit 2 (1,300 warriors, cavalry, chariots, archers)', 'Pit 3 (68 warriors, command post)', '40,000 bronze weapons (swords, spears, crossbows)', 'Mercury levels (100x normal, unexcavated tomb)'],
-        type: 'tomb'
+        type: 'tomb',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5073,7 +4952,7 @@ export const chinaSites: Record<string, Site> = {
     id: 'great-wall',
     name: 'Great Wall of China',
     coordinates: [40.431, 116.57],
-    region: 'Northern China (Beijing)',
+    region: 'Ancient China',
     locations: [
       {
         id: 'mutianyu-great-wall',
@@ -5084,7 +4963,8 @@ export const chinaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/great-wall-current.jpg',
         scene: 'The Great Wall of the Ming Dynasty',
         visualHighlights: ['21,196 km long (Mutianyu section 2.5 km)', '20 watchtowers (15 meters high, 3 kilometers apart)', 'Granite blocks (1,000 kg per block)', '10 million bricks (Mutianyu section)', 'Drawbridge gate (5 meters wide, 4 meters high)'],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5094,7 +4974,7 @@ export const chinaSites: Record<string, Site> = {
     id: 'forbidden-city',
     name: 'Forbidden City (Beijing)',
     coordinates: [39.916, 116.397],
-    region: 'Northern China (Beijing)',
+    region: 'Ancient China',
     locations: [
       {
         id: 'forbidden-city-palace',
@@ -5105,7 +4985,8 @@ export const chinaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/forbidden-city-current.jpg',
         scene: 'The Imperial Palace of the Ming and Qing',
         visualHighlights: ['980 buildings (720,000 square meters, 9,999 rooms)', 'Hall of Supreme Harmony (35 meters high, dragon throne)', 'Meridian Gate (40 meters high, 5 arches)', 'Imperial Garden (12,000 square meters, 100 trees)', '72 pillars (Hall of Supreme Harmony)'],
-        type: 'palace'
+        type: 'palace',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5115,7 +4996,7 @@ export const chinaSites: Record<string, Site> = {
     id: 'longmen-grottoes',
     name: 'Longmen Grottoes (Luoyang)',
     coordinates: [34.55, 112.47],
-    region: 'Northern China (Henan)',
+    region: 'Ancient China',
     locations: [
       {
         id: 'longmen-caves',
@@ -5127,7 +5008,8 @@ export const chinaSites: Record<string, Site> = {
         scene: 'The Buddhist Caves of Longmen',
         visualHighlights: ['2,345 caves (110,000 statues, 1 km long)', 'Vairocana Buddha (17 meters high, Fengxian Temple)', 'Fengxian Temple Group (9 statues, Vairocana, bodhisattvas)', 'Binyang Cave (Binyang Buddha, 8 meters high)', 'Yi River setting (1 km long, 200 meters high)'],
         deity: 'Buddha',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5137,7 +5019,7 @@ export const chinaSites: Record<string, Site> = {
     id: 'mogao-caves',
     name: 'Mogao Caves (Dunhuang)',
     coordinates: [40.041, 94.803],
-    region: 'Western China (Gansu)',
+    region: 'Ancient China',
     locations: [
       {
         id: 'mogao-grottoes',
@@ -5149,7 +5031,8 @@ export const chinaSites: Record<string, Site> = {
         scene: 'The Thousand Buddha Caves of Dunhuang',
         visualHighlights: ['735 caves (500,000 square meters of frescoes)', 'Library Cave (Cave 17, 50,000 manuscripts)', 'Seven-Buddha Wall (Cave 45, 7 buddhas, 500 buddhas)', 'Mingsha Mountain (Echoing Sand Mountain)', 'Silk Road location (Hexi Corridor)'],
         deity: 'Buddha',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5159,7 +5042,7 @@ export const chinaSites: Record<string, Site> = {
     id: 'sanxingdui',
     name: 'Sanxingdui (Guanghan)',
     coordinates: [31.0, 104.2],
-    region: 'Southern China (Sichuan)',
+    region: 'Ancient China',
     locations: [
       {
         id: 'sanxingdui-ruins',
@@ -5170,7 +5053,8 @@ export const chinaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/sanxingdui-current.jpg',
         scene: 'The Mysterious Bronze Masks of Sanxingdui',
         visualHighlights: ['Bronze Masks (1 meter high, protruding eyes 10 cm long)', 'Bronze Standing Figure (2.6 meters high, bronze statue)', 'Bronze Sun Tree (4 meters high, 9 branches, 12 birds)', 'Sacrifice Pits (Pit 1, Pit 2, 1,000 artifacts)', 'Jade Zhang (1 meter high, ritual blade)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5180,7 +5064,7 @@ export const chinaSites: Record<string, Site> = {
     id: 'leshan-buddha',
     name: 'Leshan Giant Buddha',
     coordinates: [29.544, 103.769],
-    region: 'Southern China (Sichuan)',
+    region: 'Ancient China',
     locations: [
       {
         id: 'leshan-giant-buddha',
@@ -5192,7 +5076,8 @@ export const chinaSites: Record<string, Site> = {
         scene: 'The Giant Stone Buddha of Leshan',
         visualHighlights: ['71 meters high (largest stone Buddha)', 'Drainage system (2 meters deep, 1,000 meters long)', 'Lingyun Temple (10 buildings, 1,000 statues)', 'Three river confluence (Min, Qingyi, Dadu rivers)', 'Leshan Stairway (1,000 steps)'],
         deity: 'Buddha',
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5202,7 +5087,7 @@ export const chinaSites: Record<string, Site> = {
     id: 'shaolin-temple',
     name: 'Shaolin Temple (Songshan)',
     coordinates: [34.508, 112.935],
-    region: 'Northern China (Henan)',
+    region: 'Ancient China',
     locations: [
       {
         id: 'shaolin-temple',
@@ -5213,7 +5098,8 @@ export const chinaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/shaolin-current.jpg',
         scene: 'The Birthplace of Zen and Kung Fu',
         visualHighlights: ['241 pagodas (Pagoda Forest, 791-1800 CE)', 'Bodhidharma Cave (Nine Years of Wall-Gazing)', 'Hall of the Great Hero (Three Saints statues)', 'Shaolin Kung Fu training ground (warriors, weapons)', 'Mount Song setting (1,500 meters high)'],
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5223,7 +5109,7 @@ export const chinaSites: Record<string, Site> = {
     id: 'summer-palace',
     name: 'Summer Palace (Beijing)',
     coordinates: [39.997, 116.268],
-    region: 'Northern China (Beijing)',
+    region: 'Ancient China',
     locations: [
       {
         id: 'yiheyuan',
@@ -5234,20 +5120,23 @@ export const chinaSites: Record<string, Site> = {
         imageCurrent: '/images/sites/summer-palace-current.jpg',
         scene: 'The Imperial Garden of the Qing Dynasty',
         visualHighlights: ['Long Corridor (728 meters long, 8,000 paintings)', 'Marble Boat (30 meters long, pavilion on stone boat)', 'Kunming Lake (220 hectares, 2,000 lotus flowers)', 'Tower of Buddhist Incense (41 meters high, octagonal)', 'Hall of Benevolence and Longevity (throne room)'],
-        type: 'palace'
+        type: 'palace',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   }
 };
 
 // ========== SECTION 20: ANCIENT AMERICAS (211-222) ==========
+// Continues after chinaSites (which ends at #210)
+
 export const americasSites: Record<string, Site> = {
   // 211. Caral-Supe - Oldest Civilization in the Americas
   caral: {
     id: 'caral',
     name: 'Caral-Supe (Peru)',
     coordinates: [-10.892, -77.52],
-    region: 'South America (Peru)',
+    region: 'Ancient Americas',
     locations: [
       {
         id: 'caral-pyramids',
@@ -5258,7 +5147,8 @@ export const americasSites: Record<string, Site> = {
         imageCurrent: '/images/sites/caral-current.jpg',
         scene: 'The Oldest City in the Americas',
         visualHighlights: ['6 pyramids (Mayor Pyramid 30 meters high)', 'Caral Quipus (knotted strings, 5,000 years old)', 'Sunken plazas (2 plazas, 30-50 meters diameter)', 'Amphitheater (30 meters diameter)', '32 flutes (pelican and condor bones)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5268,7 +5158,7 @@ export const americasSites: Record<string, Site> = {
     id: 'chavin',
     name: 'Chavín de Huántar (Peru)',
     coordinates: [-9.593, -77.178],
-    region: 'South America (Peru)',
+    region: 'Ancient Americas',
     locations: [
       {
         id: 'chavin-temple',
@@ -5280,7 +5170,8 @@ export const americasSites: Record<string, Site> = {
         scene: 'The Religious Center of the Chavín',
         visualHighlights: ['Lanzón Monolith (4.5 meters high, fanged deity)', 'Chavín Galleries (500 meters of tunnels)', 'Raimondi Stela (2 meters high, Staff God)', 'Tello Obelisk (3 meters high, crocodile deity)', 'Black and White Portal (alternating stone)'],
         deity: 'Staff God',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5290,7 +5181,7 @@ export const americasSites: Record<string, Site> = {
     id: 'teotihuacan',
     name: 'Teotihuacan (Mexico)',
     coordinates: [19.692, -98.843],
-    region: 'North America (Mexico)',
+    region: 'Ancient Americas',
     locations: [
       {
         id: 'pyramid-of-sun',
@@ -5302,7 +5193,8 @@ export const americasSites: Record<string, Site> = {
         scene: 'The City of the Gods',
         visualHighlights: ['Pyramid of the Sun (65 meters high, 3rd largest pyramid)', 'Pyramid of the Moon (45 meters high)', 'Avenue of the Dead (4 kilometers long, 40 meters wide)', 'Temple of Quetzalcoatl (200 carved serpent heads)', '2,000 apartment complexes (100 rooms each)'],
         deity: 'Quetzalcoatl',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5312,7 +5204,7 @@ export const americasSites: Record<string, Site> = {
     id: 'tikal',
     name: 'Tikal (Guatemala)',
     coordinates: [17.222, -89.624],
-    region: 'North America (Guatemala)',
+    region: 'Ancient Americas',
     locations: [
       {
         id: 'tikal-pyramids',
@@ -5324,7 +5216,8 @@ export const americasSites: Record<string, Site> = {
         scene: 'The Great Maya City of Tikal',
         visualHighlights: ['Temple I (47 meters high, Tomb of Jasaw Chan K\'awiil)', 'Temple IV (70 meters high, tallest Maya pyramid)', 'Tikal Pyramids (6 large pyramids, 40-70 meters)', 'Lost World (E-Group astronomical complex)', '4,000 structures (16 square kilometers)'],
         deity: 'Itzamna',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5334,7 +5227,7 @@ export const americasSites: Record<string, Site> = {
     id: 'chichen-itza',
     name: 'Chichen Itza (Mexico)',
     coordinates: [20.684, -88.567],
-    region: 'North America (Mexico)',
+    region: 'Ancient Americas',
     locations: [
       {
         id: 'el-castillo',
@@ -5346,7 +5239,8 @@ export const americasSites: Record<string, Site> = {
         scene: 'The Maya-Toltec Metropolis of Chichen Itza',
         visualHighlights: ['El Castillo (30 meters high, 365 steps, serpent of light)', 'Great Ball Court (168 meters long, largest ball court)', 'Temple of the Warriors (Thousand Columns, 1,000 columns)', 'Cenote of Sacrifice (60 meters diameter, 50,000 artifacts)', 'Equinox serpent shadow (7 triangles of light)'],
         deity: 'Kukulkan',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5356,7 +5250,7 @@ export const americasSites: Record<string, Site> = {
     id: 'machu-picchu',
     name: 'Machu Picchu (Peru)',
     coordinates: [-13.163, -72.545],
-    region: 'South America (Peru)',
+    region: 'Ancient Americas',
     locations: [
       {
         id: 'inca-citadel',
@@ -5367,7 +5261,8 @@ export const americasSites: Record<string, Site> = {
         imageCurrent: '/images/sites/machu-picchu-current.jpg',
         scene: 'The Lost City of the Incas',
         visualHighlights: ['Intihuatana (2 meters high, solar clock, winter solstice)', 'Temple of the Sun (10 x 10 meters, solstice window)', 'Room of the Three Windows (3 trapezoidal windows)', '700 terraces (5 kilometers, agricultural)', '200 structures (5 square kilometers, 1,800 steps)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5377,7 +5272,7 @@ export const americasSites: Record<string, Site> = {
     id: 'nazca-lines',
     name: 'Nazca Lines (Peru)',
     coordinates: [-14.739, -75.13],
-    region: 'South America (Peru)',
+    region: 'Ancient Americas',
     locations: [
       {
         id: 'nazca-geoglyphs',
@@ -5388,7 +5283,8 @@ export const americasSites: Record<string, Site> = {
         imageCurrent: '/images/sites/nazca-current.jpg',
         scene: 'The Mysterious Geoglyphs of Nazca',
         visualHighlights: ['10,000 lines (500 square kilometers, 300 figures)', 'Hummingbird geoglyph (100 meters long)', 'Monkey geoglyph (100 meters long)', 'Condor geoglyph (150 meters long)', 'Astronaut geoglyph (30 meters high)'],
-        type: 'monument'
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5398,7 +5294,7 @@ export const americasSites: Record<string, Site> = {
     id: 'palenque',
     name: 'Palenque (Mexico)',
     coordinates: [17.483, -92.046],
-    region: 'North America (Mexico)',
+    region: 'Ancient Americas',
     locations: [
       {
         id: 'temple-of-inscriptions',
@@ -5410,7 +5306,8 @@ export const americasSites: Record<string, Site> = {
         scene: 'The Tomb of Pakal the Great',
         visualHighlights: ['Temple of the Inscriptions (25 meters high, tomb of Pakal)', 'Pakal Sarcophagus (15-ton lid, Tree of Life carving)', 'Palace of Palenque (100 rooms, 10 courtyards)', 'Palenque Tower (4 levels, 20 meters high)', 'Maya sculpture (stucco reliefs, hieroglyphs)'],
         deity: 'Pakal',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5420,7 +5317,7 @@ export const americasSites: Record<string, Site> = {
     id: 'cuzco',
     name: 'Cuzco (Peru)',
     coordinates: [-13.525, -71.972],
-    region: 'South America (Peru)',
+    region: 'Ancient Americas',
     locations: [
       {
         id: 'qorikancha',
@@ -5432,7 +5329,8 @@ export const americasSites: Record<string, Site> = {
         scene: 'The Inca Capital of Cuzco',
         visualHighlights: ['Qorikancha (Temple of the Sun, 700 gold sheets)', 'Golden Garden (100 life-size gold statues, 10 llamas)', 'Sacsayhuaman Fortress (1,000 meters long, 500,000 workers)', 'Sacsayhuaman Walls (5,000 stones, 100-500 tons each)', 'Intihuatana (solar clock, 2 meters high)'],
         deity: 'Inti',
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5442,7 +5340,7 @@ export const americasSites: Record<string, Site> = {
     id: 'copan',
     name: 'Copán (Honduras)',
     coordinates: [14.838, -89.157],
-    region: 'North America (Honduras)',
+    region: 'Ancient Americas',
     locations: [
       {
         id: 'hieroglyphic-stairway',
@@ -5453,7 +5351,8 @@ export const americasSites: Record<string, Site> = {
         imageCurrent: '/images/sites/copan-current.jpg',
         scene: 'The Maya Sculpture of Copán',
         visualHighlights: ['Hieroglyphic Stairway (2,200 glyphs, 63 steps)', 'Altar Q (16 seated figures, 16 Copán kings)', 'Acropolis (100 buildings, 30 meters high)', 'Ball Court (50 meters long, 20-meter-high walls)', '1,000 stelae (Copán sculpture, 10,000 glyphs)'],
-        type: 'city'
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5463,7 +5362,7 @@ export const americasSites: Record<string, Site> = {
     id: 'uxmal',
     name: 'Uxmal (Mexico)',
     coordinates: [20.359, -89.771],
-    region: 'North America (Mexico)',
+    region: 'Ancient Americas',
     locations: [
       {
         id: 'pyramid-of-magician',
@@ -5475,7 +5374,8 @@ export const americasSites: Record<string, Site> = {
         scene: 'The Puuc Architecture of Uxmal',
         visualHighlights: ['Pyramid of the Magician (35 meters high, rounded corners)', 'Governor\'s Palace (100-meter-long facade, 10,000 mosaics)', 'Nunnery Quadrangle (100 rooms, 4 sides)', 'Puuc architecture (smooth lower walls, mosaic friezes)', 'Chac masks (rain god, 1,000 stone mosaics)'],
         deity: 'Chaac',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   },
@@ -5485,7 +5385,7 @@ export const americasSites: Record<string, Site> = {
     id: 'tiwanaku',
     name: 'Tiwanaku (Bolivia)',
     coordinates: [-16.562, -68.674],
-    region: 'South America (Bolivia)',
+    region: 'Ancient Americas',
     locations: [
       {
         id: 'gate-of-sun',
@@ -5497,36 +5397,32 @@ export const americasSites: Record<string, Site> = {
         scene: 'The Pre-Inca Empire of Tiwanaku',
         visualHighlights: ['Gate of the Sun (3 meters high, 10 tons, 50 carved figures)', 'Staff God (Sun God, 1 meter high, 2 staffs)', 'Akapana Pyramid (15 meters high, 1 million cubic meters)', 'Kalasasaya Temple (100 x 100 meters, sunken court)', 'Ponce Monolith (4 meters high, stone monolith)'],
         deity: 'Viracocha',
-        type: 'temple'
+        type: 'temple',
+        youtubeUrl: 'https://youtu.be/Rqyby56IHus?si=9GvR5gV1L2kPqZIz'
       }
     ]
   }
 };
 
-// ========== UPDATE THE COMBINED EXPORT ==========
 export const sites: Record<string, Site> = {
   ...egyptianSites,
-  ...additionalEgyptianSites,
   ...nubianSites,
-  ...puntSites,
   ...phoenicianSites,
   ...babylonianSites,
   ...hebrewSites,
   ...invaderSites,
   ...greekSites,
-  ...centralAfricaSites,
-  ...southernAfricaSites,
-  ...northAfricaSites,
-  ...westAfricaSites,
-  ...mycenaeanSites,
   ...minoanSites,
   ...persianSites,
   ...etruscanSites,
+  ...centralAfricaSites, 
+  ...southernAfricaSites,
+  ...northAfricaSites,
+  ...westAfricaSites,
   ...indiaSites,
   ...chinaSites,
   ...americasSites
 }
-
 // ========== FEATURED SITES (for homepage quick links) ==========
 export const featuredSites = [
   // Egyptian Civilization
@@ -5540,12 +5436,9 @@ export const featuredSites = [
   { id: 'meroe-pyramids', name: 'Meroë Pyramids', icon: 'PYR', siteId: 'meroe-pyramids', civilization: 'Nubian' },
   { id: 'jebel-barkal-mountain', name: 'Jebel Barkal', icon: 'MTN', siteId: 'jebel-barkal', civilization: 'Nubian' },
   
-  // Red Sea / Punt Trade World
-  { id: 'aksum-city', name: 'Kingdom of Aksum', icon: 'STL', siteId: 'aksum', civilization: 'Aksumite' },
-  
   // Phoenician Civilization
-  { id: 'tyre-island', name: 'Tyre', icon: 'PRP', siteId: 'tyre', civilization: 'Phoenician' },
-  { id: 'carthage-city', name: 'Carthage', icon: 'HBR', siteId: 'carthage', civilization: 'Phoenician' },
+  { id: 'tyre-island', name: 'Tyre', icon: 'PRP', siteId: 'phoenician-tyre', civilization: 'Phoenician' },
+  { id: 'carthage-city', name: 'Carthage', icon: 'HBR', siteId: 'phoenician-carthage', civilization: 'Phoenician' },
   
   // Babylonian/Mesopotamian Civilization
   { id: 'babylon-city', name: 'Babylon', icon: 'GTE', siteId: 'babylon', civilization: 'Babylonian' },
@@ -5557,21 +5450,22 @@ export const featuredSites = [
   
   // Hittite/Anatolian Civilization
   { id: 'hattusa-capital', name: 'Hattusa', icon: 'WLL', siteId: 'hattusa', civilization: 'Hittite' },
+  { id: 'troy', name: 'Troy', icon: 'WLL', siteId: 'troy', civilization: 'Hittite' },
   
   // Greek/Aegean Civilization
-  { id: 'acropolis-hill', name: 'Acropolis', icon: 'PRT', siteId: 'acropolis', civilization: 'Greek' },
-  { id: 'temple-zeus-olympia', name: 'Temple of Zeus', icon: 'BLT', siteId: 'olympia', civilization: 'Greek' },
-  { id: 'oracle-delphi', name: 'Delphi', icon: 'ORC', siteId: 'delphi', civilization: 'Greek' },
-  { id: 'temple-poseidon', name: 'Temple of Poseidon', icon: 'SEA', siteId: 'sounion', civilization: 'Greek' },
-  { id: 'temple-artemis', name: 'Temple of Artemis', icon: 'BOW', siteId: 'ephesus', civilization: 'Greek' },
+  { id: 'acropolis-hill', name: 'Acropolis', icon: 'PRT', siteId: 'acropolis-athens', civilization: 'Greek' },
+  { id: 'temple-zeus-olympia', name: 'Temple of Zeus', icon: 'BLT', siteId: 'olympia-sanctuary', civilization: 'Greek' },
+  { id: 'oracle-delphi', name: 'Delphi', icon: 'ORC', siteId: 'delphi-sanctuary', civilization: 'Greek' },
+  { id: 'temple-poseidon', name: 'Temple of Poseidon', icon: 'SEA', siteId: 'cape-sounion', civilization: 'Greek' },
+  { id: 'temple-artemis', name: 'Temple of Artemis', icon: 'BOW', siteId: 'ephesus-artemis', civilization: 'Greek' },
   
   // Mycenaean Greek Civilization
   { id: 'lion-gate', name: 'Lion Gate', icon: 'LIO', siteId: 'mycenae', civilization: 'Mycenaean' },
   { id: 'palace-nestor', name: 'Palace of Nestor', icon: 'PLC', siteId: 'pylos', civilization: 'Mycenaean' },
   
   // Minoan Civilization
+  { id: 'knossos-palace', name: 'Palace of Knossos', icon: 'LAB', siteId: 'knossos', civilization: 'Minoan' },
   { id: 'palace-phaistos', name: 'Phaistos Disc', icon: 'DSC', siteId: 'phaistos', civilization: 'Minoan' },
-  { id: 'palace-malia', name: 'Malia', icon: 'BEE', siteId: 'malia', civilization: 'Minoan' },
   
   // Persian Civilization
   { id: 'persepolis-complex', name: 'Persepolis', icon: 'PLC', siteId: 'persepolis', civilization: 'Persian' },
@@ -5581,40 +5475,51 @@ export const featuredSites = [
   { id: 'monterozzi-necropolis', name: 'Tarquinia Tombs', icon: 'ART', siteId: 'tarquinia', civilization: 'Etruscan' },
   { id: 'necropolis-banditaccia', name: 'Cerveteri', icon: 'URN', siteId: 'cerveteri', civilization: 'Etruscan' },
   
+  // Central African Civilizations
+  { id: 'bantu-expansion', name: 'Bantu Expansion', icon: 'MAP', siteId: 'bantu-expansion', civilization: 'Central African' },
+  { id: 'luba-kingdom', name: 'Luba Kingdom', icon: 'KNG', siteId: 'luba-kingdom', civilization: 'Central African' },
+  { id: 'kongo-kingdom', name: 'Kongo Kingdom', icon: 'CRN', siteId: 'kongo-kingdom', civilization: 'Central African' },
+  
+  // West African Civilizations
+  { id: 'timbuktu-manuscripts', name: 'Timbuktu', icon: 'LIB', siteId: 'timbuktu', civilization: 'West African' },
+  { id: 'ile-ife', name: 'Ile-Ife', icon: 'CRN', siteId: 'ile-ife', civilization: 'West African' },
+  { id: 'dhar-tichitt-settlement', name: 'Dhar Tichitt', icon: 'STN', siteId: 'dhar-tichitt', civilization: 'West African' },
+  { id: 'great-mosque', name: 'Great Mosque of Djenné', icon: 'MOS', siteId: 'djenne', civilization: 'West African' },
+  
+  // Southern African Civilization
+  { id: 'great-zimbabwe-ruins', name: 'Great Zimbabwe', icon: 'STN', siteId: 'great-zimbabwe', civilization: 'Southern African' },
+  { id: 'mapungubwe-hill', name: 'Mapungubwe', icon: 'GLD', siteId: 'mapungubwe', civilization: 'Southern African' },
+  
+  // North African Civilizations
+  { id: 'tassili-rock-art', name: 'Tassili n\'Ajjer', icon: 'ART', siteId: 'tassili-najjer', civilization: 'North African' },
+  { id: 'garama-capital', name: 'Garama', icon: 'DSR', siteId: 'garama', civilization: 'North African' },
+  { id: 'carthage-ports', name: 'Carthage Ports', icon: 'HBR', siteId: 'carthage-detailed', civilization: 'North African' },
+  { id: 'dougga-capitol', name: 'Dougga', icon: 'TMP', siteId: 'dougga', civilization: 'North African' },
+  
   // Indian Civilization
-  { id: 'mohenjo-daro', name: 'Mohenjo-Daro', icon: 'BTH', siteId: 'mohenjo-daro', civilization: 'Indian' },
+  { id: 'mohenjo-daro-ruins', name: 'Mohenjo-Daro', icon: 'BTH', siteId: 'mohenjo-daro', civilization: 'Indian' },
   { id: 'mahabodhi-temple', name: 'Bodh Gaya', icon: 'BDH', siteId: 'bodh-gaya', civilization: 'Indian' },
   { id: 'kailasa-temple', name: 'Kailasa Temple', icon: 'SIV', siteId: 'ellora', civilization: 'Indian' },
+  { id: 'sanchi-stupa', name: 'Sanchi Stupa', icon: 'STP', siteId: 'sanchi', civilization: 'Indian' },
   
   // Chinese Civilization
-  { id: 'great-wall', name: 'Great Wall', icon: 'WLL', siteId: 'great-wall', civilization: 'Chinese' },
-  { id: 'forbidden-city', name: 'Forbidden City', icon: 'PLC', siteId: 'forbidden-city', civilization: 'Chinese' },
-  { id: 'terracotta-army', name: 'Terracotta Army', icon: 'WAR', siteId: 'terracotta-army', civilization: 'Chinese' },
+  { id: 'mutianyu-great-wall', name: 'Great Wall', icon: 'WLL', siteId: 'great-wall', civilization: 'Chinese' },
+  { id: 'forbidden-city-palace', name: 'Forbidden City', icon: 'PLC', siteId: 'forbidden-city', civilization: 'Chinese' },
+  { id: 'qin-shi-huang-mausoleum', name: 'Terracotta Army', icon: 'WAR', siteId: 'terracotta-army', civilization: 'Chinese' },
+  { id: 'longmen-caves', name: 'Longmen Grottoes', icon: 'BUD', siteId: 'longmen-grottoes', civilization: 'Chinese' },
   
   // Americas Civilizations
   { id: 'teotihuacan', name: 'Teotihuacan', icon: 'SUN', siteId: 'teotihuacan', civilization: 'Mesoamerican' },
   { id: 'chichen-itza', name: 'Chichen Itza', icon: 'SER', siteId: 'chichen-itza', civilization: 'Maya' },
   { id: 'machu-picchu', name: 'Machu Picchu', icon: 'INC', siteId: 'machu-picchu', civilization: 'Inca' },
   { id: 'nazca-lines', name: 'Nazca Lines', icon: 'GEO', siteId: 'nazca-lines', civilization: 'Nazca' },
-  
-  // West African Civilizations
-  { id: 'timbuktu-manuscripts', name: 'Timbuktu', icon: 'LIB', siteId: 'timbuktu', civilization: 'West African' },
-  { id: 'ile-ife', name: 'Ile-Ife', icon: 'CRN', siteId: 'ile-ife', civilization: 'Yoruba' },
-  { id: 'dhar-tichitt-settlement', name: 'Dhar Tichitt', icon: 'STN', siteId: 'dhar-tichitt', civilization: 'West African' },
-  
-  // Southern African Civilization
-  { id: 'great-zimbabwe-ruins', name: 'Great Zimbabwe', icon: 'STN', siteId: 'great-zimbabwe', civilization: 'Southern African' },
-  
-  // North African Civilizations
-  { id: 'tassili-rock-art', name: 'Tassili n\'Ajjer', icon: 'ART', siteId: 'tassili-najjer', civilization: 'North African' },
-  { id: 'garama-capital', name: 'Garama', icon: 'DSR', siteId: 'garama', civilization: 'North African' }
+  { id: 'tikal-pyramids', name: 'Tikal', icon: 'PYR', siteId: 'tikal', civilization: 'Maya' }
 ]
 
 // ========== CIVILIZATION COLORS ==========
 export const civilizationColors = {
   Egyptian: 'from-amber-600 to-orange-600',
   Nubian: 'from-emerald-600 to-teal-600',
-  Aksumite: 'from-blue-600 to-cyan-600',
   Phoenician: 'from-purple-600 to-pink-600',
   Babylonian: 'from-yellow-600 to-amber-600',
   Israelite: 'from-indigo-600 to-blue-600',
@@ -5624,40 +5529,63 @@ export const civilizationColors = {
   Minoan: 'from-teal-600 to-green-600',
   Persian: 'from-purple-700 to-indigo-700',
   Etruscan: 'from-orange-700 to-red-700',
+  CentralAfrican: 'from-green-700 to-emerald-600',
+  WestAfrican: 'from-yellow-600 to-amber-700',
+  NorthAfrican: 'from-amber-700 to-brown-600',
+  SouthernAfrican: 'from-slate-600 to-zinc-600',
   Indian: 'from-saffron-600 to-orange-600',
   Chinese: 'from-red-700 to-gold-600',
   Mesoamerican: 'from-green-700 to-teal-600',
   Maya: 'from-jade-600 to-green-600',
   Inca: 'from-terracotta-600 to-orange-600',
-  Nazca: 'from-desert-600 to-sand-600',
-  WestAfrican: 'from-orange-600 to-yellow-600',
-  NorthAfrican: 'from-amber-700 to-brown-600',
-  SouthernAfrican: 'from-green-600 to-emerald-600',
-  Yoruba: 'from-gold-600 to-amber-600'
+  Nazca: 'from-desert-600 to-sand-600'
 }
 
 // ========== HELPER FUNCTIONS ==========
 // Helper function to get civilization from region
 export function getCivilizationFromRegion(region: string): string {
-  if (region.includes('Egypt')) return 'Egyptian'
+  // Egyptian & Nubian
+  if (region === 'Lower Egypt' || region === 'Upper Egypt' || region === 'Egypt') return 'Egyptian'
   if (region.includes('Nubia') || region.includes('Kush')) return 'Nubian'
-  if (region.includes('Ethiopia') || region.includes('Aksum')) return 'Aksumite'
-  if (region.includes('Phoenicia') || region.includes('Carthage') || region.includes('North Africa')) return 'Phoenician'
-  if (region.includes('Mesopotamia') || region.includes('Babylon') || region.includes('Iraq')) return 'Babylonian'
-  if (region.includes('Judah') || region.includes('Israel') || region.includes('Canaan') || region.includes('Sinai')) return 'Israelite'
-  if (region.includes('Anatolia') || region.includes('Hittite') || region.includes('Turkey')) return 'Hittite'
-  if (region.includes('Greece') || region.includes('Crete') || region.includes('Santorini') || region.includes('Cyprus') || region.includes('Asia Minor')) return 'Greek'
-  if (region.includes('Minoan')) return 'Minoan'
-  if (region.includes('Mycenaean') || region.includes('Peloponnese')) return 'Mycenaean'
-  if (region.includes('Persia') || region.includes('Iran')) return 'Persian'
-  if (region.includes('Etruria') || region.includes('Italy')) return 'Etruscan'
-  if (region.includes('Indus') || region.includes('India') || region.includes('Pakistan')) return 'Indian'
-  if (region.includes('China')) return 'Chinese'
-  if (region.includes('Mexico') || region.includes('Guatemala') || region.includes('Honduras')) return 'Mesoamerican'
-  if (region.includes('Peru') || region.includes('Bolivia')) return 'Inca'
-  if (region.includes('West Africa')) return 'WestAfrican'
-  if (region.includes('Southern Africa')) return 'SouthernAfrican'
-  if (region.includes('North Africa') && !region.includes('Egypt')) return 'NorthAfrican'
+  
+  // Phoenician
+  if (region === 'Phoenicia') return 'Phoenician'
+  
+  // Babylonian
+  if (region === 'Babylonia') return 'Babylonian'
+  
+  // Israel & Judah
+  if (region === 'Israel & Judah') return 'Israelite'
+  
+  // Hittite / Anatolian
+  if (region === 'Anatolia' || region === 'Levant' || region === 'Italian' || region === 'North Africa') return 'North African'
+  
+  // Greek
+  if (region === 'Greek & Aegean') return 'Greek'
+  if (region === 'Mycenaean') return 'Mycenaean'
+  if (region === 'Minoan') return 'Minoan'
+  
+  // Persian
+  if (region === 'Persian Empire') return 'Persian'
+  
+  // Etruscan
+  if (region === 'Etruscan') return 'Etruscan'
+  
+  // African regions
+  if (region === 'Central Africa') return 'CentralAfrican'
+  if (region === 'West Africa') return 'WestAfrican'
+  if (region === 'North Africa' && !region.includes('Egypt')) return 'NorthAfrican'
+  if (region === 'Southern Africa') return 'SouthernAfrican'
+  
+  // Indian
+  if (region === 'Ancient India') return 'Indian'
+  
+  // Chinese
+  if (region === 'Ancient China') return 'Chinese'
+  
+  // Americas
+  if (region === 'Ancient Americas') return 'Mesoamerican'
+  
   return 'Ancient'
 }
 
@@ -5708,10 +5636,10 @@ export const siteIdsByDeity: Record<string, string[]> = {
   Ra: ['great-pyramid', 'abu-simbel-temple', 'temple-ra'],
   'Amun-Ra': ['karnak-hypostyle', 'luxor-temple', 'red-chapel'],
   Osiris: ['temple-seti'],
-  Isis: ['temple-isis'],
-  Horus: ['great-sphinx', 'temple-horus', 'temple-horus-behbeit'],
-  Anubis: ['anubis-temple-saqqara', 'shrine-anubis-valley', 'cynopolis-city'],
-  Thoth: ['library-alexandria', 'temple-thoth', 'baboon-gallery'],
+  Isis: ['temple-isis', 'temple-isis-behbeit'],
+  Horus: ['great-sphinx', 'temple-horus'],
+  Anubis: ['anubis-temple-saqqara'],
+  Thoth: ['library-alexandria', 'temple-thoth'],
   Ptah: ['temple-ptah', 'serapeum', 'temple-ptah-karnak'],
   Hathor: ['nefertari-temple', 'temple-hathor', 'dendera-sanatorium'],
   Sobek: ['temple-sobek'],
@@ -5722,26 +5650,17 @@ export const siteIdsByDeity: Record<string, string[]> = {
   Montu: ['temple-montu'],
   Aten: ['crimson-amarna'],
   Neith: ['temple-neith'],
-  Wadjet: ['temple-wadjet'],
-  Nekhbet: ['temple-nekhbet'],
-  Min: ['temple-min'],
-  Sopdu: ['temple-sopdu'],
   Atum: ['temple-atum'],
   
   // Greek Deities
-  Zeus: ['temple-zeus-olympia', 'temple-zeus-athens'],
+  Zeus: ['temple-zeus-olympia'],
   Hera: ['temple-hera-olympia'],
   Athena: ['acropolis-hill', 'parthenon-interior'],
-  Apollo: ['oracle-delphi', 'temple-apollo-bassae'],
+  Apollo: ['oracle-delphi', 'throne-apollo'],
   Poseidon: ['temple-poseidon'],
-  Demeter: ['telesterion'],
-  Hephaestus: ['temple-hephaestus'],
-  Dionysus: ['theatre-dionysus'],
   Artemis: ['temple-artemis'],
   Aphrodite: ['temple-aphrodite'],
-  Ares: ['temple-ares'],
   Hermes: ['hermes-statue-olympia'],
-  Leto: ['temple-letous'],
   
   // Hebrew/Israelite
   Yahweh: ['solomons-temple', 'second-temple', 'western-wall'],
@@ -5755,7 +5674,7 @@ export const siteIdsByDeity: Record<string, string[]> = {
   
   // Phoenician
   Tanit: ['carthage-city', 'carthage-tophet', 'sarepta-workshops'],
-  Melqart: ['tyre-island', 'tyre-temple'],
+  Melqart: ['tyre-island', 'amrit-temple'],
   Baalat: ['byblos-port'],
   Eshmun: ['sidon-city'],
   
@@ -5765,14 +5684,14 @@ export const siteIdsByDeity: Record<string, string[]> = {
   
   // Indian
   Shiva: ['kailasa-temple'],
-  Buddha: ['mahabodhi-temple', 'longmen-grottoes', 'mogao-caves'],
+  Buddha: ['mahabodhi-temple', 'sanchi-stupa', 'ajanta-caves', 'mahabodhi-temple'],
   
   // Maya
-  Kukulkan: ['chichen-itza'],
-  Itzamna: ['tikal'],
-  Chaac: ['uxmal'],
+  Kukulkan: ['el-castillo'],
+  Itzamna: ['tikal-pyramids'],
+  Chaac: ['pyramid-of-magician'],
   
   // Inca
-  Inti: ['cuzco'],
-  Viracocha: ['tiwanaku']
+  Inti: ['qorikancha'],
+  Viracocha: ['gate-of-sun']
 }

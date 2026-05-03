@@ -56,7 +56,7 @@ export default function AncientEgyptMap({ onSelectSite, selectedSite }: Props) {
     })
   }, [])
 
-  // ✅ FILTER LOGIC (memoized instead of state)
+  // Filter logic
   const filteredSites = useMemo(() => {
     return Object.values(sites).filter(site => {
       const matchesSearch =
@@ -86,7 +86,7 @@ export default function AncientEgyptMap({ onSelectSite, selectedSite }: Props) {
     [filteredSites]
   )
 
-  // ✅ MARKERS
+  // Markers
   const markers = useMemo(() => {
     return filteredSites.map(site => (
       <Marker
@@ -117,33 +117,51 @@ export default function AncientEgyptMap({ onSelectSite, selectedSite }: Props) {
   }
 
   return (
-    <div className="relative w-full h-[70vh] rounded-lg overflow-hidden">
+    <>
+      {/* FILTER PANEL - Fixed to viewport, outside the map container */}
+      <MapFilters 
+        filters={filters} 
+        onFilterChange={setFilters}
+        sites={sites}
+      />
 
-      {/* MAP */}
-      <MapContainer
-        center={[32, 35]}
-        zoom={4.5}
-        style={{ height: '100%', width: '100%' }}
-      >
-        <TileLayer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
-        {markers}
-      </MapContainer>
+      {/* MAP CONTAINER */}
+      <div className="relative w-full h-[70vh] rounded-lg overflow-hidden">
+        <MapContainer
+          center={[32, 35]}
+          zoom={4.5}
+          style={{ height: '100%', width: '100%' }}
+        >
+          <TileLayer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
+          {markers}
+        </MapContainer>
 
-      {/* 📱 MOBILE FILTER BUTTON */}
-      <button
-        onClick={() => setShowFilters(prev => !prev)}
-        className="absolute top-4 right-4 z-[2000] bg-black/70 text-white px-3 py-2 rounded-lg md:hidden"
-      >
-        Filters
-      </button>
+        {/* 📱 MOBILE FILTER BUTTON - Hidden on desktop since filter is always visible */}
+        <button
+          onClick={() => setShowFilters(prev => !prev)}
+          className="absolute top-4 right-4 z-[2000] bg-black/70 text-white px-3 py-2 rounded-lg md:hidden"
+        >
+          Filters
+        </button>
 
-      {/* FILTER PANEL */}
-      <div
-        className={`absolute top-4 right-4 z-[2000] transition ${
-          showFilters ? 'block' : 'hidden md:block'
-        }`}
-      >
-        <MapFilters filters={filters} onFilterChange={setFilters} />
+        {/* DESKTOP HOVER TOOLTIP */}
+        <AnimatePresence>
+          {hoveredSite && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="hidden md:block absolute bottom-16 left-1/2 -translate-x-1/2 bg-black text-white px-3 py-1 rounded text-xs z-[2000]"
+            >
+              {filteredSites.find(s => s.id === hoveredSite)?.name}
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* COUNTER */}
+        <div className="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded text-xs z-[2000]">
+          🏺 {totalLocations} sites
+        </div>
       </div>
 
       {/* 📱 MOBILE BOTTOM SHEET */}
@@ -153,7 +171,7 @@ export default function AncientEgyptMap({ onSelectSite, selectedSite }: Props) {
             initial={{ y: 200 }}
             animate={{ y: 0 }}
             exit={{ y: 200 }}
-            className="absolute bottom-0 left-0 w-full bg-black/90 text-white p-4 rounded-t-2xl z-[3000] md:hidden"
+            className="fixed bottom-0 left-0 w-full bg-black/90 text-white p-4 rounded-t-2xl z-[3000] md:hidden"
           >
             <h3 className="text-lg font-bold">{selectedSite.name}</h3>
             <p className="text-sm opacity-80">{selectedSite.region}</p>
@@ -171,25 +189,6 @@ export default function AncientEgyptMap({ onSelectSite, selectedSite }: Props) {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* DESKTOP HOVER TOOLTIP */}
-      <AnimatePresence>
-        {hoveredSite && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="hidden md:block absolute bottom-16 left-1/2 -translate-x-1/2 bg-black text-white px-3 py-1 rounded"
-          >
-            {filteredSites.find(s => s.id === hoveredSite)?.name}
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* COUNTER */}
-      <div className="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded text-xs">
-        🏺 {totalLocations} sites
-      </div>
-    </div>
+    </>
   )
 }

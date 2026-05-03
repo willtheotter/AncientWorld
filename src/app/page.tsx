@@ -149,6 +149,7 @@ export default function Home() {
         <div className="text-center">
           <h2 className="text-2xl font-bold text-amber-800">Civilizations Explored</h2>
           <p className="text-sm text-gray-600">20+ ancient cultures across 4 continents</p>
+          <p className="text-xs text-gray-500 mt-1">⭐ Filter panel is now on the left side of the map</p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
           {civilizationStats.map((civ, index) => (

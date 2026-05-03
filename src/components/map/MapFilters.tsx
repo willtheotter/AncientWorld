@@ -15,10 +15,10 @@ interface MapFiltersProps {
   filters: FilterOptions
   onFilterChange: (filters: FilterOptions) => void
   onClose?: () => void
-  sites?: Record<string, any> // Pass sites from your sites.ts
+  sites?: Record<string, any>
 }
 
-// Deities from your siteIdsByDeity
+// Complete Deities list
 const deities = [
   { id: 'all', name: 'All Deities', icon: '𓋹' },
   // Egyptian Deities
@@ -46,13 +46,12 @@ const deities = [
   { id: 'Athena', name: 'Athena', icon: '🦉' },
   { id: 'Apollo', name: 'Apollo', icon: '🎵' },
   { id: 'Poseidon', name: 'Poseidon', icon: '🌊' },
-  { id: 'Demeter', name: 'Demeter', icon: '🌾' },
-  { id: 'Hephaestus', name: 'Hephaestus', icon: '🔨' },
-  { id: 'Dionysus', name: 'Dionysus', icon: '🍷' },
   { id: 'Artemis', name: 'Artemis', icon: '🏹' },
   { id: 'Aphrodite', name: 'Aphrodite', icon: '❤️' },
-  { id: 'Ares', name: 'Ares', icon: '⚔️' },
   { id: 'Hermes', name: 'Hermes', icon: '✈️' },
+  { id: 'Demeter', name: 'Demeter', icon: '🌾' },
+  { id: 'Dionysus', name: 'Dionysus', icon: '🍷' },
+  { id: 'Ares', name: 'Ares', icon: '⚔️' },
   // Babylonian Deities
   { id: 'Marduk', name: 'Marduk', icon: '𓊨' },
   { id: 'Ishtar', name: 'Ishtar', icon: '⭐' },
@@ -80,74 +79,28 @@ const deities = [
   { id: 'Viracocha', name: 'Viracocha', icon: '👑' },
 ]
 
-// Regions that match your site.region values
+// Simplified regions matching your data files
 const regions = [
   { id: 'all', name: 'All Regions', icon: <Globe size={14} /> },
-  // North Africa
-  { id: 'Egypt - Delta', name: 'Egypt - Nile Delta', icon: <MapPin size={14} /> },
-  { id: 'Egypt - Memphis', name: 'Egypt - Memphis / Giza', icon: <Pyramid size={14} /> },
-  { id: 'Egypt - Thebes', name: 'Egypt - Thebes / Luxor', icon: <Building2 size={14} /> },
-  { id: 'Egypt - Upper Egypt', name: 'Egypt - Upper Egypt', icon: <Compass size={14} /> },
-  { id: 'Egypt - Far South', name: 'Egypt - Far South / Nubia', icon: <Compass size={14} /> },
-  { id: 'Egypt - Middle Egypt', name: 'Egypt - Middle Egypt', icon: <Compass size={14} /> },
-  // Nubia & East Africa
-  { id: 'Nubia / Kush (Sudan)', name: 'Nubia / Kush (Sudan)', icon: <Pyramid size={14} /> },
-  { id: 'East Africa (Ethiopia)', name: 'East Africa - Aksum (Ethiopia)', icon: <Landmark size={14} /> },
-  // Red Sea & Horn of Africa
-  { id: 'Red Sea Coast (Egypt)', name: 'Red Sea Coast', icon: <Compass size={14} /> },
-  { id: 'Horn of Africa (Eritrea)', name: 'Horn of Africa (Eritrea)', icon: <MapPin size={14} /> },
-  { id: 'Horn of Africa (Somalia)', name: 'Horn of Africa (Somalia)', icon: <MapPin size={14} /> },
-  // West Africa
-  { id: 'West Africa (Mauritania)', name: 'West Africa - Mauritania', icon: <Landmark size={14} /> },
-  { id: 'West Africa (Nigeria)', name: 'West Africa - Nigeria', icon: <Building2 size={14} /> },
-  { id: 'West Africa (Mali)', name: 'West Africa - Mali', icon: <Landmark size={14} /> },
-  { id: 'West Africa (Ghana)', name: 'West Africa - Ghana', icon: <Compass size={14} /> },
-  // Central Africa
-  { id: 'Central Africa (Congo Basin)', name: 'Central Africa (Congo Basin)', icon: <Compass size={14} /> },
-  { id: 'Great Lakes (Congo/Rwanda)', name: 'Great Lakes (Congo/Rwanda)', icon: <Landmark size={14} /> },
-  // Southern Africa
-  { id: 'Southern Africa (Zimbabwe)', name: 'Southern Africa (Zimbabwe)', icon: <Landmark size={14} /> },
-  { id: 'Southern Africa (South Africa)', name: 'Southern Africa (South Africa)', icon: <Landmark size={14} /> },
-  { id: 'Southern Africa (Botswana)', name: 'Southern Africa (Botswana)', icon: <Landmark size={14} /> },
-  { id: 'Southern Africa (Namibia)', name: 'Southern Africa (Namibia)', icon: <Landmark size={14} /> },
-  // North Africa (non-Egypt)
-  { id: 'North Africa (Tunisia)', name: 'North Africa (Tunisia)', icon: <Landmark size={14} /> },
-  { id: 'North Africa (Algeria)', name: 'North Africa (Algeria)', icon: <Landmark size={14} /> },
-  { id: 'North Africa (Morocco)', name: 'North Africa (Morocco)', icon: <Landmark size={14} /> },
-  { id: 'North Africa (Libya)', name: 'North Africa (Libya)', icon: <Landmark size={14} /> },
-  // Mediterranean & Middle East
-  { id: 'Phoenicia (Lebanon)', name: 'Phoenicia (Lebanon)', icon: <Building2 size={14} /> },
-  { id: 'Mesopotamia (Iraq)', name: 'Mesopotamia (Iraq)', icon: <Building2 size={14} /> },
-  { id: 'Judah/Canaan (Israel)', name: 'Judah / Canaan (Israel)', icon: <Landmark size={14} /> },
-  { id: 'Judah/Canaan (West Bank)', name: 'Judah / Canaan (West Bank)', icon: <Landmark size={14} /> },
-  { id: 'Anatolia (Turkey)', name: 'Anatolia (Turkey)', icon: <Castle size={14} /> },
-  { id: 'Levant (Syria)', name: 'Levant (Syria)', icon: <Compass size={14} /> },
-  { id: 'Sinai Peninsula (Egypt)', name: 'Sinai Peninsula', icon: <Compass size={14} /> },
-  { id: 'Cyprus', name: 'Cyprus', icon: <MapPin size={14} /> },
-  // Greece & Europe
-  { id: 'Greece', name: 'Greece', icon: <Landmark size={14} /> },
-  { id: 'Crete', name: 'Crete', icon: <Building2 size={14} /> },
-  { id: 'Santorini', name: 'Santorini', icon: <Compass size={14} /> },
-  { id: 'Asia Minor (Turkey)', name: 'Asia Minor (Turkey)', icon: <Castle size={14} /> },
-  { id: 'Etruria (Italy)', name: 'Etruria (Italy)', icon: <Castle size={14} /> },
-  { id: 'Italy', name: 'Italy', icon: <Castle size={14} /> },
-  // Asia
-  { id: 'Persia (Iran)', name: 'Persia (Iran)', icon: <Building2 size={14} /> },
-  { id: 'Indus Valley (Pakistan)', name: 'Indus Valley (Pakistan)', icon: <Building2 size={14} /> },
-  { id: 'India', name: 'India', icon: <Landmark size={14} /> },
-  { id: 'Northern India (Bihar)', name: 'Northern India (Bihar)', icon: <Landmark size={14} /> },
-  { id: 'Western India (Maharashtra)', name: 'Western India (Maharashtra)', icon: <Compass size={14} /> },
-  { id: 'Northern China (Henan)', name: 'Northern China (Henan)', icon: <Pyramid size={14} /> },
-  { id: 'Northern China (Shaanxi)', name: 'Northern China (Shaanxi)', icon: <Pyramid size={14} /> },
-  { id: 'Northern China (Beijing)', name: 'Northern China (Beijing)', icon: <Pyramid size={14} /> },
-  { id: 'Western China (Gansu)', name: 'Western China (Gansu)', icon: <Compass size={14} /> },
-  { id: 'Southern China (Sichuan)', name: 'Southern China (Sichuan)', icon: <Landmark size={14} /> },
-  // Americas
-  { id: 'North America (Mexico)', name: 'North America (Mexico)', icon: <Pyramid size={14} /> },
-  { id: 'North America (Guatemala)', name: 'North America (Guatemala)', icon: <Pyramid size={14} /> },
-  { id: 'North America (Honduras)', name: 'North America (Honduras)', icon: <Pyramid size={14} /> },
-  { id: 'South America (Peru)', name: 'South America (Peru)', icon: <Landmark size={14} /> },
-  { id: 'South America (Bolivia)', name: 'South America (Bolivia)', icon: <Landmark size={14} /> },
+  { id: 'Lower Egypt', name: 'Lower Egypt (Nile Delta)', icon: <Compass size={14} /> },
+  { id: 'Upper Egypt', name: 'Upper Egypt (Thebes to Aswan)', icon: <Pyramid size={14} /> },
+  { id: 'Nubia / Kush (Sudan)', name: 'Nubia & Kush (Sudan)', icon: <Pyramid size={14} /> },
+  { id: 'North Africa', name: 'North Africa (Carthage, Garamantes)', icon: <Landmark size={14} /> },
+  { id: 'West Africa', name: 'West Africa (Nok, Mali, Ghana)', icon: <Landmark size={14} /> },
+  { id: 'Central Africa', name: 'Central Africa (Bantu, Kongo, Luba)', icon: <Compass size={14} /> },
+  { id: 'Southern Africa', name: 'Southern Africa (Zimbabwe, Mapungubwe)', icon: <Landmark size={14} /> },
+  { id: 'Phoenicia', name: 'Phoenicia (Tyre, Sidon, Carthage)', icon: <Building2 size={14} /> },
+  { id: 'Babylonia', name: 'Babylonia (Mesopotamia)', icon: <Building2 size={14} /> },
+  { id: 'Israel & Judah', name: 'Israel & Judah', icon: <Landmark size={14} /> },
+  { id: 'Anatolia', name: 'Anatolia (Hittites, Troy)', icon: <Castle size={14} /> },
+  { id: 'Levant', name: 'Levant (Kadesh, Megiddo)', icon: <Compass size={14} /> },
+  { id: 'Greek & Aegean', name: 'Greek & Aegean (Athens, Delphi)', icon: <Landmark size={14} /> },
+  { id: 'Minoan', name: 'Minoan (Crete, Knossos, Phaistos)', icon: <Building2 size={14} /> },
+  { id: 'Persian Empire', name: 'Persian Empire (Persepolis)', icon: <Castle size={14} /> },
+  { id: 'Etruscan', name: 'Etruscan (Tarquinia, Cerveteri)', icon: <Landmark size={14} /> },
+  { id: 'Ancient India', name: 'Ancient India (Indus Valley)', icon: <Landmark size={14} /> },
+  { id: 'Ancient China', name: 'Ancient China (Shang, Qin, Ming)', icon: <Pyramid size={14} /> },
+  { id: 'Ancient Americas', name: 'Ancient Americas (Maya, Inca)', icon: <Landmark size={14} /> },
 ]
 
 const types = [
@@ -165,7 +118,7 @@ export default function MapFilters({ filters, onFilterChange, onClose, sites }: 
 
   // Calculate real counts from sites data
   const getFilterCounts = useMemo(() => {
-    if (!sites) return { totalSites: '200+', deityCounts: {}, regionCounts: {}, typeCounts: {} }
+    if (!sites) return { totalSites: '0', deityCounts: {}, regionCounts: {}, typeCounts: {} }
     
     let totalLocations = 0
     const deityCounts: Record<string, number> = {}
@@ -176,18 +129,15 @@ export default function MapFilters({ filters, onFilterChange, onClose, sites }: 
       site.locations?.forEach((location: any) => {
         totalLocations++
         
-        // Count by deity (from location.deity)
         if (location.deity) {
           deityCounts[location.deity] = (deityCounts[location.deity] || 0) + 1
         }
         
-        // Count by region (from site.region)
         if (site.region) {
           regionCounts[site.region] = (regionCounts[site.region] || 0) + 1
         }
         
-        // Count by type (from location.type)
-        if (location.type) {
+        if (location.type && typeCounts[location.type] !== undefined) {
           typeCounts[location.type] = (typeCounts[location.type] || 0) + 1
         }
       })
@@ -236,7 +186,7 @@ export default function MapFilters({ filters, onFilterChange, onClose, sites }: 
   }, [filters.deity])
 
   return (
-    <div className="absolute top-4 right-4 z-[2000] w-80">
+    <div className="fixed top-24 left-4 z-[2000] w-80">
       {/* Search Bar */}
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
@@ -283,10 +233,10 @@ export default function MapFilters({ filters, onFilterChange, onClose, sites }: 
             animate={{ opacity: 1, y: 0, height: 'auto' }}
             exit={{ opacity: 0, y: -10, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="bg-papyrus/95 backdrop-blur-md rounded-lg shadow-xl border border-gold/30 overflow-hidden max-h-[80vh] overflow-y-auto"
+            className="bg-papyrus/95 backdrop-blur-md rounded-lg shadow-xl border border-gold/30 overflow-y-auto max-h-[70vh]"
           >
-            <div className="p-5 space-y-5 pb-8">
-              {/* Clear Filter Button - Prominent at top */}
+            <div className="p-5 pt-6 pb-8 space-y-5">
+              {/* Clear Filter Button */}
               <div>
                 {hasActiveFilters ? (
                   <button
@@ -303,7 +253,7 @@ export default function MapFilters({ filters, onFilterChange, onClose, sites }: 
                 )}
               </div>
 
-              {/* Region Filter - Moved to Top */}
+              {/* Region Filter */}
               <div>
                 <label className="text-xs text-gold font-semibold uppercase tracking-wider flex items-center gap-1 mb-2">
                   <Globe size={12} /> Filter by Region
@@ -311,6 +261,7 @@ export default function MapFilters({ filters, onFilterChange, onClose, sites }: 
                 <div className="grid grid-cols-1 gap-1.5 mt-1 max-h-48 overflow-y-auto pr-1">
                   {regions.map((region) => {
                     const count = getFilterCounts.regionCounts[region.id] || 0
+                    if (region.id !== 'all' && count === 0) return null
                     return (
                       <button
                         key={region.id}
@@ -336,7 +287,7 @@ export default function MapFilters({ filters, onFilterChange, onClose, sites }: 
                 </div>
               </div>
 
-              {/* Deity Filter - Below Regions */}
+              {/* Deity Filter - Always show all deities with counts */}
               <div>
                 <label className="text-xs text-gold font-semibold uppercase tracking-wider flex items-center gap-1 mb-2">
                   <span>𓋹</span> Filter by Deity
@@ -346,8 +297,6 @@ export default function MapFilters({ filters, onFilterChange, onClose, sites }: 
                     const count = deity.id === 'all' 
                       ? Object.values(getFilterCounts.deityCounts).reduce((a, b) => a + b, 0)
                       : getFilterCounts.deityCounts[deity.id] || 0
-                    
-                    if (deity.id !== 'all' && count === 0) return null
                     
                     return (
                       <button
@@ -361,7 +310,7 @@ export default function MapFilters({ filters, onFilterChange, onClose, sites }: 
                       >
                         <span className="mr-1">{deity.icon}</span>
                         {deity.name}
-                        {deity.id !== 'all' && count > 0 && (
+                        {count > 0 && (
                           <span className="ml-1 opacity-70">({count})</span>
                         )}
                       </button>
@@ -420,14 +369,6 @@ export default function MapFilters({ filters, onFilterChange, onClose, sites }: 
                   </div>
                 </div>
               )}
-
-              {/* Results Count */}
-              <div className="text-center text-xs text-gray-500 pt-3 border-t border-gold/20">
-                <span className="text-gold font-semibold">🏺 {getFilterCounts.totalSites} total sites</span>
-                {hasActiveFilters && <span className="text-gray-400"> • Filtered results</span>}
-              </div>
-
-              <div className="h-2" />
             </div>
           </motion.div>
         )}
