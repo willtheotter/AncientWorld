@@ -3646,7 +3646,7 @@ export default function StoneDirectory() {
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.9, opacity: 0 }}
         onClick={(e) => e.stopPropagation()}
-        className="bg-white w-full h-full sm:h-auto sm:rounded-2xl sm:max-w-2xl sm:max-h-[85vh] sm:overflow-y-auto relative flex flex-col"
+        className="bg-white w-full h-full sm:h-auto sm:rounded-2xl sm:max-w-2xl sm:max-h-[85vh] relative flex flex-col"
       >
         {/* Fixed header with close button - always visible at top */}
         <div className="bg-white border-b z-10 flex-shrink-0">
@@ -3678,54 +3678,56 @@ export default function StoneDirectory() {
           </div>
         </div>
         
-        {/* Scrollable content area with visible scrollbar */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-5" style={{ WebkitOverflowScrolling: 'touch' }}>
-          <div>
-            <h4 className="font-semibold text-gray-700 mb-1">Meaning</h4>
-            <p className="text-gray-600">{selectedStone.meaning}</p>
-          </div>
-          
-          <div>
-            <h4 className="font-semibold text-gray-700 mb-1">Healing Properties</h4>
-            <p className="text-gray-600">{selectedStone.healing}</p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {/* Scrollable content area with padding-top to avoid header overlap */}
+        <div className="flex-1 overflow-y-auto" style={{ WebkitOverflowScrolling: 'touch' }}>
+          <div className="p-4 space-y-5">
             <div>
-              <h4 className="font-semibold text-gray-700 mb-1">Color</h4>
-              <p className="text-gray-600">{selectedStone.color}</p>
+              <h4 className="font-semibold text-gray-700 mb-1">Meaning</h4>
+              <p className="text-gray-600">{selectedStone.meaning}</p>
             </div>
+            
             <div>
-              <h4 className="font-semibold text-gray-700 mb-1">Chakra</h4>
-              <p className="text-gray-600">{selectedStone.chakra}</p>
+              <h4 className="font-semibold text-gray-700 mb-1">Healing Properties</h4>
+              <p className="text-gray-600">{selectedStone.healing}</p>
             </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <h4 className="font-semibold text-gray-700 mb-1">Color</h4>
+                <p className="text-gray-600">{selectedStone.color}</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-700 mb-1">Chakra</h4>
+                <p className="text-gray-600">{selectedStone.chakra}</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-700 mb-1">Frequency</h4>
+                <p className="text-gray-600">{selectedStone.frequency}</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-700 mb-1">Deity</h4>
+                <p className="text-gray-600">{selectedStone.deity}</p>
+              </div>
+            </div>
+            
             <div>
-              <h4 className="font-semibold text-gray-700 mb-1">Frequency</h4>
-              <p className="text-gray-600">{selectedStone.frequency}</p>
+              <h4 className="font-semibold text-gray-700 mb-1">Symbol</h4>
+              <p className="text-gray-600">{selectedStone.symbol}</p>
             </div>
+            
             <div>
-              <h4 className="font-semibold text-gray-700 mb-1">Deity</h4>
-              <p className="text-gray-600">{selectedStone.deity}</p>
+              <h4 className="font-semibold text-gray-700 mb-1">Ancient Uses</h4>
+              <p className="text-gray-600">{selectedStone.ancientUses}</p>
             </div>
+            
+            <div>
+              <h4 className="font-semibold text-gray-700 mb-1">Common Uses Today</h4>
+              <p className="text-gray-600">{selectedStone.commonUses}</p>
+            </div>
+            
+            {/* Extra bottom padding */}
+            <div className="h-4"></div>
           </div>
-          
-          <div>
-            <h4 className="font-semibold text-gray-700 mb-1">Symbol</h4>
-            <p className="text-gray-600">{selectedStone.symbol}</p>
-          </div>
-          
-          <div>
-            <h4 className="font-semibold text-gray-700 mb-1">Ancient Uses</h4>
-            <p className="text-gray-600">{selectedStone.ancientUses}</p>
-          </div>
-          
-          <div>
-            <h4 className="font-semibold text-gray-700 mb-1">Common Uses Today</h4>
-            <p className="text-gray-600">{selectedStone.commonUses}</p>
-          </div>
-          
-          {/* Extra bottom padding */}
-          <div className="h-4"></div>
         </div>
       </motion.div>
     </motion.div>
