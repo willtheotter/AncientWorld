@@ -3631,96 +3631,116 @@ export default function StoneDirectory() {
           </div>
         )}
       </main>
-
-      {/* Modal */}
-      <AnimatePresence>
-        {selectedStone && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setSelectedStone(null)}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto"
+{/* Modal */}
+<AnimatePresence>
+  {selectedStone && (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      onClick={() => setSelectedStone(null)}
+      className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+    >
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.9, opacity: 0 }}
+        onClick={(e) => e.stopPropagation()}
+        drag="y"
+        dragConstraints={{ top: 0, bottom: 0 }}
+        dragElastic={0.2}
+        onDragEnd={(e, { offset, velocity }) => {
+          if (offset.y > 100 || velocity.y > 500) {
+            setSelectedStone(null)
+          }
+        }}
+        className="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto relative"
+      >
+        {/* Sticky header with close button - large padding top on mobile */}
+        <div className="sticky top-0 bg-white border-b z-10">
+          <div className="pt-8 sm:pt-4 pb-3 sm:pb-4 px-4 sm:px-6 flex justify-between items-start">
+            <div className="flex items-center gap-3">
+              {(() => {
+                const ModalIcon = getIcon(selectedStone.icon)
+                return (
+                  <div className="p-2 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100 flex-shrink-0">
+                    <ModalIcon className="w-6 h-6 text-purple-600" />
+                  </div>
+                )
+              })()}
+              <div>
+                <h2 className="text-xl font-bold text-gray-800">{selectedStone.name}</h2>
+                <p className="text-sm text-purple-500">{selectedStone.civilization}</p>
+              </div>
+            </div>
+            <button
+              onClick={() => setSelectedStone(null)}
+              className="p-3 -m-1 rounded-full hover:bg-gray-100 transition-colors flex-shrink-0"
+              aria-label="Close"
             >
-              <div className="sticky top-0 bg-white border-b p-4 flex justify-between items-center">
-                <div className="flex items-center gap-3">
-                  {(() => {
-                    const ModalIcon = getIcon(selectedStone.icon)
-                    return (
-                      <div className="p-2 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100">
-                        <ModalIcon className="w-6 h-6 text-purple-600" />
-                      </div>
-                    )
-                  })()}
-                  <div>
-                    <h2 className="text-xl font-bold text-gray-800">{selectedStone.name}</h2>
-                    <p className="text-sm text-purple-500">{selectedStone.civilization}</p>
-                  </div>
-                </div>
-                <button
-                  onClick={() => setSelectedStone(null)}
-                  className="p-2 rounded-full hover:bg-gray-100 transition-colors"
-                >
-                  ✕
-                </button>
-              </div>
-              
-              <div className="p-6 space-y-5">
-                <div>
-                  <h4 className="font-semibold text-gray-700 mb-1">Meaning</h4>
-                  <p className="text-gray-600">{selectedStone.meaning}</p>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold text-gray-700 mb-1">Healing Properties</h4>
-                  <p className="text-gray-600">{selectedStone.healing}</p>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <h4 className="font-semibold text-gray-700 mb-1">Color</h4>
-                    <p className="text-gray-600">{selectedStone.color}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-700 mb-1">Chakra</h4>
-                    <p className="text-gray-600">{selectedStone.chakra}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-700 mb-1">Frequency</h4>
-                    <p className="text-gray-600">{selectedStone.frequency}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-700 mb-1">Deity</h4>
-                    <p className="text-gray-600">{selectedStone.deity}</p>
-                  </div>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold text-gray-700 mb-1">Symbol</h4>
-                  <p className="text-gray-600">{selectedStone.symbol}</p>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold text-gray-700 mb-1">Ancient Uses</h4>
-                  <p className="text-gray-600">{selectedStone.ancientUses}</p>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold text-gray-700 mb-1">Common Uses Today</h4>
-                  <p className="text-gray-600">{selectedStone.commonUses}</p>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        
+        {/* Content with extra top padding on mobile for better scroll spacing */}
+        <div className="p-4 sm:p-6 pt-2 sm:pt-4 space-y-5">
+          <div>
+            <h4 className="font-semibold text-gray-700 mb-1">Meaning</h4>
+            <p className="text-gray-600">{selectedStone.meaning}</p>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold text-gray-700 mb-1">Healing Properties</h4>
+            <p className="text-gray-600">{selectedStone.healing}</p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <h4 className="font-semibold text-gray-700 mb-1">Color</h4>
+              <p className="text-gray-600">{selectedStone.color}</p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-700 mb-1">Chakra</h4>
+              <p className="text-gray-600">{selectedStone.chakra}</p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-700 mb-1">Frequency</h4>
+              <p className="text-gray-600">{selectedStone.frequency}</p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-700 mb-1">Deity</h4>
+              <p className="text-gray-600">{selectedStone.deity}</p>
+            </div>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold text-gray-700 mb-1">Symbol</h4>
+            <p className="text-gray-600">{selectedStone.symbol}</p>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold text-gray-700 mb-1">Ancient Uses</h4>
+            <p className="text-gray-600">{selectedStone.ancientUses}</p>
+          </div>
+          
+          <div>
+            <h4 className="font-semibold text-gray-700 mb-1">Common Uses Today</h4>
+            <p className="text-gray-600">{selectedStone.commonUses}</p>
+          </div>
+          
+          {/* Extra bottom padding for better scrolling on mobile */}
+          <div className="h-8 sm:h-6"></div>
+        </div>
+        
+        {/* Drag indicator line at the top for mobile */}
+        <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gray-300 rounded-full" />
+      </motion.div>
+    </motion.div>
+  )}
+</AnimatePresence>
     </div>
   )
 }
