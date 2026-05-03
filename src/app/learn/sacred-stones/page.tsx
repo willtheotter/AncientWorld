@@ -3476,7 +3476,6 @@ const stones = [
     isCrossCultural: false
   }
 ]
-
 export default function StoneDirectory() {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCivilization, setSelectedCivilization] = useState('All')
@@ -3631,107 +3630,112 @@ export default function StoneDirectory() {
           </div>
         )}
       </main>
-{/* Modal */}
-<AnimatePresence>
-  {selectedStone && (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      onClick={() => setSelectedStone(null)}
-      className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-0 sm:p-4"
-    >
-      <motion.div
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.9, opacity: 0 }}
-        onClick={(e) => e.stopPropagation()}
-        className="bg-white w-full h-full sm:h-auto sm:rounded-2xl sm:max-w-2xl sm:max-h-[85vh] relative flex flex-col"
-      >
-        {/* Fixed header with close button */}
-        <div className="bg-white border-b z-10 flex-shrink-0">
-          <div className="p-4 flex justify-between items-center">
-            <div className="flex items-center gap-3 min-w-0 flex-1">
-              {(() => {
-                const ModalIcon = getIcon(selectedStone.icon)
-                return (
-                  <div className="p-2 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100 flex-shrink-0">
-                    <ModalIcon className="w-6 h-6 text-purple-600" />
-                  </div>
-                )
-              })()}
-              <div className="min-w-0 flex-1">
-                <h2 className="text-xl font-bold text-gray-800 truncate">{selectedStone.name}</h2>
-                <p className="text-sm text-purple-500 truncate">{selectedStone.civilization}</p>
-              </div>
-            </div>
-            <button
-              onClick={() => setSelectedStone(null)}
-              className="p-3 -mr-2 rounded-full hover:bg-gray-100 active:bg-gray-200 transition-colors flex-shrink-0"
-              aria-label="Close"
-              style={{ minWidth: '48px', minHeight: '48px' }}
+
+      {/* Modal - Completely independent, higher z-index than header */}
+      <AnimatePresence>
+        {selectedStone && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedStone(null)}
+            className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center"
+          >
+            <motion.div
+              initial={{ y: "100%", scale: 1 }}
+              animate={{ y: 0, scale: 1 }}
+              exit={{ y: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              onClick={(e) => e.stopPropagation()}
+              className="bg-white w-full sm:w-auto sm:rounded-2xl sm:max-w-2xl sm:max-h-[85vh] sm:min-w-[500px] relative flex flex-col"
+              style={{ maxHeight: "90vh" }}
             >
-              <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        
-        {/* Scrollable content area with LARGE top padding so content is visible below the header */}
-        <div className="flex-1 overflow-y-auto" style={{ WebkitOverflowScrolling: 'touch' }}>
-          <div className="p-4 pt-20 space-y-5">
-            <div>
-              <h4 className="font-semibold text-gray-700 mb-1">Meaning</h4>
-              <p className="text-gray-600">{selectedStone.meaning}</p>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold text-gray-700 mb-1">Healing Properties</h4>
-              <p className="text-gray-600">{selectedStone.healing}</p>
-            </div>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <h4 className="font-semibold text-gray-700 mb-1">Color</h4>
-                <p className="text-gray-600">{selectedStone.color}</p>
+              {/* Simple fixed header with close button - always visible */}
+              <div className="bg-white border-b flex-shrink-0 rounded-t-2xl">
+                <div className="p-4 flex justify-between items-center">
+                  <div className="flex items-center gap-3 min-w-0 flex-1">
+                    {(() => {
+                      const ModalIcon = getIcon(selectedStone.icon)
+                      return (
+                        <div className="p-2 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100 flex-shrink-0">
+                          <ModalIcon className="w-6 h-6 text-purple-600" />
+                        </div>
+                      )
+                    })()}
+                    <div className="min-w-0 flex-1">
+                      <h2 className="text-xl font-bold text-gray-800">{selectedStone.name}</h2>
+                      <p className="text-sm text-purple-500">{selectedStone.civilization}</p>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => setSelectedStone(null)}
+                    className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 active:bg-gray-200 transition-colors flex-shrink-0 ml-2"
+                    aria-label="Close"
+                  >
+                    <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
               </div>
-              <div>
-                <h4 className="font-semibold text-gray-700 mb-1">Chakra</h4>
-                <p className="text-gray-600">{selectedStone.chakra}</p>
+              
+              {/* Scrollable content */}
+              <div className="overflow-y-auto flex-1 p-4 space-y-5" style={{ WebkitOverflowScrolling: 'touch' }}>
+                <div>
+                  <h4 className="font-semibold text-gray-700 mb-1">Meaning</h4>
+                  <p className="text-gray-600">{selectedStone.meaning}</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-700 mb-1">Healing Properties</h4>
+                  <p className="text-gray-600">{selectedStone.healing}</p>
+                </div>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <h4 className="font-semibold text-gray-700 mb-1">Color</h4>
+                    <p className="text-gray-600">{selectedStone.color}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-700 mb-1">Chakra</h4>
+                    <p className="text-gray-600">{selectedStone.chakra}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-700 mb-1">Frequency</h4>
+                    <p className="text-gray-600">{selectedStone.frequency}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-700 mb-1">Deity</h4>
+                    <p className="text-gray-600">{selectedStone.deity}</p>
+                  </div>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-700 mb-1">Symbol</h4>
+                  <p className="text-gray-600">{selectedStone.symbol}</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-700 mb-1">Ancient Uses</h4>
+                  <p className="text-gray-600">{selectedStone.ancientUses}</p>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-700 mb-1">Common Uses Today</h4>
+                  <p className="text-gray-600">{selectedStone.commonUses}</p>
+                </div>
+                
+                <div className="h-4"></div>
               </div>
-              <div>
-                <h4 className="font-semibold text-gray-700 mb-1">Frequency</h4>
-                <p className="text-gray-600">{selectedStone.frequency}</p>
+              
+              {/* Drag handle for mobile */}
+              <div className="sm:hidden flex justify-center py-2 flex-shrink-0">
+                <div className="w-12 h-1 bg-gray-300 rounded-full"></div>
               </div>
-              <div>
-                <h4 className="font-semibold text-gray-700 mb-1">Deity</h4>
-                <p className="text-gray-600">{selectedStone.deity}</p>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold text-gray-700 mb-1">Symbol</h4>
-              <p className="text-gray-600">{selectedStone.symbol}</p>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold text-gray-700 mb-1">Ancient Uses</h4>
-              <p className="text-gray-600">{selectedStone.ancientUses}</p>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold text-gray-700 mb-1">Common Uses Today</h4>
-              <p className="text-gray-600">{selectedStone.commonUses}</p>
-            </div>
-            
-            <div className="h-4"></div>
-          </div>
-        </div>
-      </motion.div>
-    </motion.div>
-  )}
-</AnimatePresence>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }
