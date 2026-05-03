@@ -3648,7 +3648,7 @@ export default function StoneDirectory() {
         onClick={(e) => e.stopPropagation()}
         className="bg-white w-full h-full sm:h-auto sm:rounded-2xl sm:max-w-2xl sm:max-h-[85vh] relative flex flex-col"
       >
-        {/* Fixed header with close button - always visible at top */}
+        {/* Fixed header with close button */}
         <div className="bg-white border-b z-10 flex-shrink-0">
           <div className="p-4 flex justify-between items-center">
             <div className="flex items-center gap-3 min-w-0 flex-1">
@@ -3678,9 +3678,9 @@ export default function StoneDirectory() {
           </div>
         </div>
         
-        {/* Scrollable content area with padding-top to avoid header overlap */}
+        {/* Scrollable content area with LARGE top padding so content is visible below the header */}
         <div className="flex-1 overflow-y-auto" style={{ WebkitOverflowScrolling: 'touch' }}>
-          <div className="p-4 space-y-5">
+          <div className="p-4 pt-20 space-y-5">
             <div>
               <h4 className="font-semibold text-gray-700 mb-1">Meaning</h4>
               <p className="text-gray-600">{selectedStone.meaning}</p>
@@ -3725,7 +3725,6 @@ export default function StoneDirectory() {
               <p className="text-gray-600">{selectedStone.commonUses}</p>
             </div>
             
-            {/* Extra bottom padding */}
             <div className="h-4"></div>
           </div>
         </div>
