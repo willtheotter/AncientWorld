@@ -79,27 +79,41 @@ const deities = [
   { id: 'Viracocha', name: 'Viracocha', icon: '👑' },
 ]
 
-// Simplified regions matching your data files
+// Regions matching your data files - UPDATED with Nubia & Kush and East Africa
 const regions = [
   { id: 'all', name: 'All Regions', icon: <Globe size={14} /> },
+  // Egypt
   { id: 'Lower Egypt', name: 'Lower Egypt (Nile Delta)', icon: <Compass size={14} /> },
   { id: 'Upper Egypt', name: 'Upper Egypt (Thebes to Aswan)', icon: <Pyramid size={14} /> },
-  { id: 'Nubia / Kush (Sudan)', name: 'Nubia & Kush (Sudan)', icon: <Pyramid size={14} /> },
+  // Nubia & Kush (NEW)
+  { id: 'Nubia & Kush', name: 'Nubia & Kush (Sudan)', icon: <Pyramid size={14} /> },
+  // East Africa (NEW)
+  { id: 'East Africa', name: 'East Africa (Punt, Aksum, Horn of Africa)', icon: <Compass size={14} /> },
+  // North Africa
   { id: 'North Africa', name: 'North Africa (Carthage, Garamantes)', icon: <Landmark size={14} /> },
+  // West Africa
   { id: 'West Africa', name: 'West Africa (Nok, Mali, Ghana)', icon: <Landmark size={14} /> },
+  // Central Africa
   { id: 'Central Africa', name: 'Central Africa (Bantu, Kongo, Luba)', icon: <Compass size={14} /> },
+  // Southern Africa
   { id: 'Southern Africa', name: 'Southern Africa (Zimbabwe, Mapungubwe)', icon: <Landmark size={14} /> },
+  // Mediterranean & Middle East
   { id: 'Phoenicia', name: 'Phoenicia (Tyre, Sidon, Carthage)', icon: <Building2 size={14} /> },
   { id: 'Babylonia', name: 'Babylonia (Mesopotamia)', icon: <Building2 size={14} /> },
   { id: 'Israel & Judah', name: 'Israel & Judah', icon: <Landmark size={14} /> },
   { id: 'Anatolia', name: 'Anatolia (Hittites, Troy)', icon: <Castle size={14} /> },
   { id: 'Levant', name: 'Levant (Kadesh, Megiddo)', icon: <Compass size={14} /> },
+  // Greece & Aegean
   { id: 'Greek & Aegean', name: 'Greek & Aegean (Athens, Delphi)', icon: <Landmark size={14} /> },
+  { id: 'Mycenaean', name: 'Mycenaean (Mycenae, Tiryns, Pylos)', icon: <Castle size={14} /> },
   { id: 'Minoan', name: 'Minoan (Crete, Knossos, Phaistos)', icon: <Building2 size={14} /> },
+  // Persia & Etruria
   { id: 'Persian Empire', name: 'Persian Empire (Persepolis)', icon: <Castle size={14} /> },
   { id: 'Etruscan', name: 'Etruscan (Tarquinia, Cerveteri)', icon: <Landmark size={14} /> },
+  // Asia
   { id: 'Ancient India', name: 'Ancient India (Indus Valley)', icon: <Landmark size={14} /> },
   { id: 'Ancient China', name: 'Ancient China (Shang, Qin, Ming)', icon: <Pyramid size={14} /> },
+  // Americas
   { id: 'Ancient Americas', name: 'Ancient Americas (Maya, Inca)', icon: <Landmark size={14} /> },
 ]
 
@@ -287,7 +301,7 @@ export default function MapFilters({ filters, onFilterChange, onClose, sites }: 
                 </div>
               </div>
 
-              {/* Deity Filter - Always show all deities with counts */}
+              {/* Deity Filter */}
               <div>
                 <label className="text-xs text-gold font-semibold uppercase tracking-wider flex items-center gap-1 mb-2">
                   <span>𓋹</span> Filter by Deity

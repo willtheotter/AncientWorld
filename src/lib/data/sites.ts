@@ -707,6 +707,183 @@ The first hypostyle hall features pillars with engaged Osiride statues of Ramess
       }
     ]
   },
+// In egyptianSites - add after valleyKings section
+
+  // 37. Faiyum Oasis - Agricultural Heartland
+  fayum: {
+    id: 'fayum',
+    name: 'Faiyum Oasis',
+    coordinates: [29.3084, 30.8428],
+    region: 'Lower Egypt',
+    locations: [
+      {
+        id: 'malachite-gardens',
+        name: 'Faiyum Oasis',
+        description: 'Lush agricultural heartland of ancient Egypt',
+        longDescription: `The Faiyum Oasis has been inhabited since at least the Neolithic period (c. 5000 BCE), with the ancient Egyptians developing a sophisticated irrigation system to control water from the Nile through the Bahr Yussef canal—a waterway that still functions today. The oasis became the agricultural heartland of Egypt during the Middle Kingdom (c. 2000 BCE), when pharaohs of the 12th Dynasty built pyramids and temples here, including the famous Labyrinth (described by Herodotus as "beyond description") that contained the funerary complex of Amenemhat III.
+
+The "Malachite Gardens" refers to the intense green of the cultivated fields—irrigated by a network of canals—set against the golden-yellow desert cliffs. The oasis produces dates, figs, grapes, olives, and roses (used for perfumes). The area was also a center for fishing (Lake Qarun, once called Lake Moeris, teeming with tilapia) and hunting (waterfowl, crocodiles, hippos), as shown in tomb paintings of officials who served here.
+
+Today, the oasis is known for its waterwheels (over 200 wooden wheels, some dating to the Ptolemaic period), which raise water from canals to higher fields—a continuous technology spanning over 2,000 years. The site also contains the Hawara Pyramid (Amenemhat III) and the necropolis of Lahun (Senusret II), with the famous "Lahun Papyri" documenting daily life.`,
+        imageRegenerated: '/images/sites/malachite-gardens-regenerated.jpg',
+        imageCurrent: '/images/sites/malachite-gardens-current.jpg',
+        scene: 'The Oasis Gardens',
+        visualHighlights: ['Vibrant green cultivated fields against golden desert cliffs', 'Bahr Yussef canal distributing Nile water', 'Wooden waterwheels (200+ still in use)', 'Lake Qarun fishing and hunting scenes in tombs', 'Agricultural abundance (dates, figs, olives, roses)'],
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/mGPIgnVeutk?si=ldesXFSJUJ1pxOOk'
+      }
+    ]
+  },
+
+  // 38. Amarna - Capital of the Heretic King
+  amarna: {
+    id: 'amarna',
+    name: 'Amarna (Akhetaten)',
+    coordinates: [27.645, 30.904],
+    region: 'Upper Egypt',
+    locations: [
+      {
+        id: 'crimson-amarna',
+        name: 'City of Akhetaten',
+        description: 'The experimental capital of Akhenaten\'s sun worship',
+        longDescription: `Amarna (modern Tell el-Amarna) was founded by Pharaoh Akhenaten (Amenhotep IV) in 1346 BCE as his new capital, dedicated to the sun disk Aten. The city was built on virgin land in middle Egypt, deliberately avoiding the old gods of Thebes and Memphis. Akhenaten's religious revolution suppressed the worship of Amun and other traditional gods, promoting Aten as the sole deity—one of the earliest attempts at monotheism in history.
+
+The city was called Akhetaten ("Horizon of the Aten"), and its boundaries were marked by 14 boundary stelae carved into the cliffs, recording Akhenaten's founding declaration. The city was abandoned shortly after Akhenaten's death (c. 1336 BCE), when his son Tutankhamun restored the old gods and moved the capital back to Thebes. This short occupation (only 15 years) preserved the city as a time capsule of 14th-century BCE life.
+
+Excavations have revealed residential neighborhoods (Workmen's Village with planned housing, North Suburb for elites), palaces (North Palace, Great Palace with the "Window of Appearance" where Akhenaten and Nefertiti appeared to reward officials), temples (Great Temple of Aten, the most open-air temple in Egypt, with thousands of offering tables), and rock-cut tombs of nobles. The site is the only ancient Egyptian city preserved as a planned settlement, allowing archaeologists to study daily life, social organization, and the distinctive Amarna art style with its elongated figures, intimate family scenes (Akhenaten playing with his daughters, kissing Nefertiti), and realistic depictions of royal life.`,
+        imageRegenerated: '/images/sites/crimson-amarna-regenerated.jpg',
+        imageCurrent: '/images/sites/crimson-amarna-current.jpg',
+        scene: 'The Sun City of Akhenaten',
+        visualHighlights: ['Open-air Aten temples with thousands of offering tables', 'Sun altars with no roofs or enclosed spaces (direct sunlight worship)', 'Royal tomb with reliefs of Akhenaten mourning his daughter Meketaten', 'Amarna art style with elongated figures and realistic family scenes', 'Boundary stelae with founding declaration in hieroglyphs'],
+        deity: 'Aten',
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/UZhHbrtVZnY?si=tJno5WiJ-rpWxxkP'
+      }
+    ]
+  },
+
+  // 39. Tanis - The Silver Pharaoh's Treasure
+  tanis: {
+    id: 'tanis',
+    name: 'Tanis (San el-Hagar)',
+    coordinates: [30.976, 31.878],
+    region: 'Lower Egypt',
+    locations: [
+      {
+        id: 'tanis-royal-tombs',
+        name: 'Royal Necropolis of Tanis',
+        description: 'Treasure-filled tombs of the 21st-22nd Dynasty kings',
+        longDescription: `Tanis (Biblical Zoan) was the capital of Egypt during the 21st-22nd Dynasties (c. 1075-712 BCE), ruling during a period of division when the High Priests of Amun controlled Upper Egypt from Thebes. The site was completely overlooked by archaeologists until 1939-1944, when French archaeologist Pierre Montet discovered intact royal tombs—the only pharaonic burials besides Tutankhamun found with their treasures intact.
+
+The tombs of Psusennes I ('The Silver Pharaoh'), Amenemope, Shoshenq II, and others contained a silver coffin (the only silver royal coffin ever found, weighing 400 kg), a gold funerary mask (second only to Tutankhamun's in beauty), gold and lapis lazuli jewelry, hundreds of ushabti figures, and canopic jars of alabaster. The treasure was moved to Cairo for safekeeping just before WWII and then overlooked for decades due to the war's chaos and the fame of Tutankhamun's discovery.
+
+The temple precinct includes the Great Temple of Amun (with reused Old Kingdom blocks, some from Giza?), walls inscribed by Ramesses II (who built extensively here), and a sacred lake. Tanis's remote location—now surrounded by agricultural fields, not heavily touristed—preserved its mystery, including persistent pop-culture myths connecting it to Raiders of the Lost Ark (though the Ark never was here, the site was used as a filming location for the movie's map room).`,
+        imageRegenerated: '/images/sites/tanis-royal-tombs-regenerated.jpg',
+        imageCurrent: '/images/sites/tanis-royal-tombs-current.jpg',
+        scene: 'The Silver Pharaoh\'s Treasure',
+        visualHighlights: ['Silver coffin of Psusennes I (unique royal silver burial)', 'Gold funerary mask with lapis lazuli inlay', 'Intact royal burial chambers with stacked treasures', 'Lapis lazuli and gold jewelry collection', 'Reused Old Kingdom temple blocks with earlier inscriptions'],
+        deity: 'Amun',
+        type: 'city',
+        youtubeUrl: 'https://youtu.be/GQsiDLqKb5Y?si=NrWwm6cnJUtOkgGa'
+      }
+    ]
+  },
+
+  // 40. Dahshur - The Experimental Pyramids
+  dahshur: {
+    id: 'dahshur',
+    name: 'Dahshur Royal Pyramids',
+    coordinates: [29.807, 31.209],
+    region: 'Lower Egypt',
+    locations: [
+      {
+        id: 'bent-pyramid',
+        name: 'Bent Pyramid of Sneferu',
+        description: 'The experimental pyramid that changed angle mid-construction',
+        longDescription: `The Bent Pyramid of Pharaoh Sneferu (c. 2600 BCE) is unique in Egyptian architecture—its lower half rises at a steep 54-degree angle, then abruptly changes to a shallower 43-degree angle halfway up. This unusual shape records an engineering crisis: the builders realized the base foundation was failing (cracks appearing in the outer casing stones, the internal chambers showing stress), and they reduced the angle to prevent collapse, leaving the pyramid permanently "bent."
+
+The pyramid's original polished limestone casing remains partially intact—unique among pyramids where the casing is preserved from top to bottom on the lower courses. Two entrances (one on the north, one on the west—an unusual orientation suggesting ritual change) lead to interior chambers, one with a magnificent corbelled ceiling similar to the Great Pyramid's Grand Gallery, and a secondary "hidden" pyramid nearby (possibly for the queen, which still has its satellite enclosure wall).
+
+The pyramid complex includes a small satellite pyramid (for the Ka, the pharaoh's double) and a rubble-filled chamber. The Bent Pyramid was Sneferu's second pyramid (after Meidum's collapse) as he experimented toward the true pyramid form achieved later at Dahshur's Red Pyramid. The site's remote location and preserved casing make it one of the most visually striking pyramids today.`,
+        imageRegenerated: '/images/sites/bent-pyramid-regenerated.jpg',
+        imageCurrent: '/images/sites/bent-pyramid-current.jpg',
+        scene: 'The Pyramid That Changed Shape',
+        visualHighlights: ['Lower steep 54-degree angle', 'Upper shallower 43-degree angle', 'Preserved limestone casing partially intact (unique)', 'Two entrances (north and west) with descending passages', 'Corbelled interior ceiling reminiscent of the Grand Gallery'],
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/LZ0sSIIaXRU?si=H1qAI5ZuliMdpZMW'
+      },
+      {
+        id: 'red-pyramid',
+        name: 'Red Pyramid of Sneferu',
+        description: 'Egypt\'s first successful true pyramid',
+        longDescription: `The Red Pyramid of Sneferu, named for the pinkish hue of its limestone core (the original white casing has been stripped for medieval Cairo buildings), was Egypt's first successful true pyramid (the third built by Sneferu, after Meidum's collapse and the Bent Pyramid's correction). Rising 105 meters (344 feet), it was the second tallest pyramid in Egypt at completion (after Khufu's Great Pyramid), built at a constant 43-degree angle with no structural changes.
+
+The pyramid's interior comprises three chambers, with the highest having a corbelled ceiling 15 meters high. Entrance is through a 62-meter sloping passage on the north side (descending at 27 degrees). Unlike the Bent Pyramid, the Red Pyramid's interior is relatively simple (no interior decoration, just bare stone), but it served as the prototype for all later smooth-sided pyramids, including the Great Pyramid of Giza. The pyramid's burial chamber originally contained Sneferu's sarcophagus (now broken), though whether he was actually buried here is debated—he may have been buried at all three of his pyramids or only one.
+
+The pyramid was opened to the public only in the 2010s, and visitors can now descend the 62-meter passage into the cool, empty chambers—a rare experience of experiencing a pyramid as a tomb space (uncluttered by tourist infrastructure). The pyramid's location in the desert, away from Giza's crowds, makes it a more contemplative site.`,
+        imageRegenerated: '/images/sites/red-pyramid-regenerated.jpg',
+        imageCurrent: '/images/sites/red-pyramid-current.jpg',
+        scene: 'The First True Pyramid',
+        visualHighlights: ['Constant 43-degree slope (engineering success)', 'Pink-hued limestone core giving its name', '62-meter descending entrance passage', 'Corbelled interior chamber ceiling 15m high', 'Model for all later smooth-sided pyramids'],
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/2I_Syq0ULVo?si=wKh6B5bDDlAmmGe5'
+      }
+    ]
+  },
+
+  // 41. Meidum - The Collapsed Pyramid
+  meidum: {
+    id: 'meidum',
+    name: 'Meidum Pyramid',
+    coordinates: [29.388, 31.157],
+    region: 'Upper Egypt',
+    locations: [
+      {
+        id: 'meidum-pyramid',
+        name: 'Pyramid of Huni / Sneferu',
+        description: 'The mysterious collapsed tower pyramid',
+        longDescription: `The Meidum Pyramid is one of Egypt's most puzzling and dramatic structures—originally a seven or eight-tiered step pyramid (like Djoser's), it was later encased in a smooth outer shell to create a true pyramid. At some point, the outer casing collapsed catastrophically, leaving a three-tiered central tower rising from a massive rubble strewn around the base like scree.
+
+The pyramid was begun by Pharaoh Huni (last king of the 3rd Dynasty, c. 2630 BCE) and finished by his son Sneferu (first king of the 4th Dynasty), making it a transitional pyramid between the Step Pyramid of Djoser and the true pyramids of Dahshur and Giza. The collapse may have happened during construction (when the angle was too steep for the foundation) or due to later stone-robbing destabilizing the structure, leading Sneferu to abandon it and build the Bent Pyramid (learning from this failure) and then the Red Pyramid (perfecting the design).
+
+The complex includes a mortuary temple (with fragments of fine reliefs showing Sneferu in Heb-Sed robes), a causeway (partially excavated), a valley temple (still buried), and a satellite pyramid (for the Ka). Mastaba tombs of royal family members (including Nefermaat, son of Sneferu, and his wife Ateth) surround the pyramid in neat rows, with preserved reliefs including the famous "Geese of Meidum" (now in the Egyptian Museum), showing remarkable naturalism for the Old Kingdom.
+
+The site's remote location and "tower" appearance inspired the nickname "False Pyramid" among local Bedouin. The collapse debris has never been cleared, so the pyramid remains as a record of ancient engineering failure—a valuable lesson in pyramid construction history.`,
+        imageRegenerated: '/images/sites/meidum-pyramid-regenerated.jpg',
+        imageCurrent: '/images/sites/meidum-pyramid-current.jpg',
+        scene: 'The Tower of Collapse',
+        visualHighlights: ['Three-tiered central tower rising from rubble mound', 'Collapsed outer casing blocks strewn around base', 'Transitional pyramid design (step pyramid → true pyramid)', 'Mastaba tombs with "Geese of Meidum" relief', 'Remote desert location with dramatic views'],
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/UTUse_2ae0A?si=qv0yrqBWku6Jowmu'
+      }
+    ]
+  },
+
+  // 42. Punt Reliefs at Deir el-Bahari
+  puntReliefs: {
+    id: 'punt-reliefs',
+    name: 'Deir el-Bahari Punt Reliefs',
+    coordinates: [25.738, 32.606],
+    region: 'Upper Egypt',
+    locations: [
+      {
+        id: 'hatshepsut-punt-reliefs',
+        name: 'Hatshepsut\'s Punt Expedition Reliefs',
+        description: 'The most detailed visual record of Punt',
+        longDescription: `The Punt reliefs at Hatshepsut's temple at Deir el-Bahari (c. 1470 BCE) are the most detailed visual record of ancient Egypt's trade with the Land of Punt. The reliefs show Egyptian ships arriving in Punt, the Puntite ruler (Parahu) and his obese wife (Ati), the distinctive "beehive" houses on stilts, Egyptian soldiers carrying weapons, and the loading of goods—incense trees, gold, ivory, ebony, animal skins, and exotic animals (baboons, giraffes, leopards). The reliefs also show the Puntite chief offering gifts to the Egyptian ambassador.
+
+The text identifies Punt as "God's Land" and describes the expedition's success: "Never was brought the like of this to any king who has been since the beginning of the earth." The reliefs were a political statement by Hatshepsut, legitimizing her rule by reviving trade contacts. They provide scholars with their only contemporary Egyptian depiction of Puntite society—the clothing, the houses, the landscape (steep mountains descending to the sea, with incense trees in terraces), the animals, and the physical appearance of its people.
+
+The reliefs have been studied to identify the location of Punt: the beehive houses resemble modern Eritrean architecture; the incense trees (Boswellia species) grow in Eritrea, Ethiopia, and Somalia; the baboons (Papio hamadryas) are native to Ethiopia and Eritrea.`,
+        imageRegenerated: '/images/sites/punt-reliefs-regenerated.jpg',
+        imageCurrent: '/images/sites/punt-reliefs-current.jpg',
+        scene: 'Hatshepsut\'s Punt Expedition Reliefs',
+        visualHighlights: ['Egyptian ships arriving in Punt with sails furled', 'Puntite ruler Parahu and his obese wife Ati', '"Beehive" houses on stilts', 'Frankincense trees being loaded onto ships', 'Exotic animals (baboons, giraffes, leopards)'],
+        type: 'monument',
+        youtubeUrl: 'https://youtu.be/Z_VhhGI0Cmk?si=bKDOieVWWijKp4sK'
+      }
+    ]
+  },
 
   // 32-36. Valley of the Kings (Upper Egypt - Thebes) - 5 locations
   valleyKings: {
@@ -795,7 +972,8 @@ The tomb was used as a shelter for Christian hermits in late antiquity, who left
   }
 }
 
-// ========== SECTION 3: NUBIA, KUSH & EAST AFRICA (37-60) ==========
+
+// ========== SECTION 3: NUBIA & KUSH / EAST AFRICA (37-60) ==========
 // Continues after egyptianSites (which ends at #36)
 
 export const nubianSites: Record<string, Site> = {
@@ -808,7 +986,7 @@ export const nubianSites: Record<string, Site> = {
     id: 'abu-simbel',
     name: 'Abu Simbel',
     coordinates: [22.3365, 31.6255],
-    region: 'Nubia / Kush (Egypt-Sudan border)',
+    region: 'Nubia & Kush',
     locations: [
       {
         id: 'abu-simbel-temple',
@@ -844,7 +1022,7 @@ export const nubianSites: Record<string, Site> = {
     id: 'kerma',
     name: 'Kerma',
     coordinates: [19.6, 30.4167],
-    region: 'Nubia / Kush (Sudan)',
+    region: 'Nubia & Kush',
     locations: [
       {
         id: 'western-deffufa',
@@ -878,7 +1056,7 @@ export const nubianSites: Record<string, Site> = {
     id: 'napata',
     name: 'Napata',
     coordinates: [18.55, 31.8333],
-    region: 'Nubia / Kush (Sudan)',
+    region: 'Nubia & Kush',
     locations: [
       {
         id: 'napata-city',
@@ -914,7 +1092,7 @@ export const nubianSites: Record<string, Site> = {
     id: 'el-kurru',
     name: 'El-Kurru',
     coordinates: [18.425, 31.833],
-    region: 'Nubia / Kush (Sudan)',
+    region: 'Nubia & Kush',
     locations: [
       {
         id: 'el-kurru-pyramids',
@@ -936,7 +1114,7 @@ export const nubianSites: Record<string, Site> = {
     id: 'nuri',
     name: 'Nuri',
     coordinates: [18.467, 31.917],
-    region: 'Nubia / Kush (Sudan)',
+    region: 'Nubia & Kush',
     locations: [
       {
         id: 'nuri-pyramids',
@@ -959,7 +1137,7 @@ export const nubianSites: Record<string, Site> = {
     id: 'meroe-pyramids',
     name: 'Meroë',
     coordinates: [16.9381, 33.7489],
-    region: 'Nubia / Kush (Sudan)',
+    region: 'Nubia & Kush',
     locations: [
       {
         id: 'meroe-city',
@@ -994,7 +1172,7 @@ export const nubianSites: Record<string, Site> = {
     id: 'musawwarat',
     name: 'Musawwarat es-Sufra',
     coordinates: [16.4167, 33.3167],
-    region: 'Nubia / Kush (Sudan)',
+    region: 'Nubia & Kush',
     locations: [
       {
         id: 'lion-temple',
@@ -1017,7 +1195,7 @@ export const nubianSites: Record<string, Site> = {
     id: 'naqa',
     name: 'Naqa',
     coordinates: [16.267, 33.267],
-    region: 'Nubia / Kush (Sudan)',
+    region: 'Nubia & Kush',
     locations: [
       {
         id: 'naqa-temples',
@@ -1040,7 +1218,7 @@ export const nubianSites: Record<string, Site> = {
     id: 'dangeil',
     name: 'Dangeil',
     coordinates: [17.183, 33.967],
-    region: 'Nubia / Kush (Sudan)',
+    region: 'Nubia & Kush',
     locations: [
       {
         id: 'dangeil-temple',
@@ -1059,165 +1237,16 @@ export const nubianSites: Record<string, Site> = {
   },
 
   // ============================================
-  // PART B: EAST AFRICAN & HORN OF AFRICA SITES
+  // PART B: EAST AFRICA (Horn of Africa & Red Sea)
   // ============================================
 
-  // 46. Faiyum Oasis - Agricultural Heartland (East African connection via Nile)
-  fayum: {
-    id: 'fayum',
-    name: 'Faiyum Oasis',
-    coordinates: [29.3084, 30.8428],
-    region: 'East Africa / Nile Valley (Egypt)',
-    locations: [
-      {
-        id: 'malachite-gardens',
-        name: 'Faiyum Oasis',
-        description: 'Lush agricultural heartland of ancient Egypt',
-        longDescription: `The Faiyum Oasis has been inhabited since at least the Neolithic period (c. 5000 BCE), with the ancient Egyptians developing a sophisticated irrigation system to control water from the Nile through the Bahr Yussef canal—a waterway that still functions today. The oasis became the agricultural heartland of Egypt during the Middle Kingdom (c. 2000 BCE), when pharaohs of the 12th Dynasty built pyramids and temples here, including the famous Labyrinth (described by Herodotus as "beyond description") that contained the funerary complex of Amenemhat III.
 
-The "Malachite Gardens" refers to the intense green of the cultivated fields—irrigated by a network of canals—set against the golden-yellow desert cliffs. The oasis produces dates, figs, grapes, olives, and roses (used for perfumes). The area was also a center for fishing (Lake Qarun, once called Lake Moeris, teeming with tilapia) and hunting (waterfowl, crocodiles, hippos), as shown in tomb paintings of officials who served here.
-
-Today, the oasis is known for its waterwheels (over 200 wooden wheels, some dating to the Ptolemaic period), which raise water from canals to higher fields—a continuous technology spanning over 2,000 years. The site also contains the Hawara Pyramid (Amenemhat III) and the necropolis of Lahun (Senusret II), with the famous "Lahun Papyri" documenting daily life.`,
-        imageRegenerated: '/images/sites/malachite-gardens-regenerated.jpg',
-        imageCurrent: '/images/sites/malachite-gardens-current.jpg',
-        scene: 'The Oasis Gardens',
-        visualHighlights: ['Vibrant green cultivated fields against golden desert cliffs', 'Bahr Yussef canal distributing Nile water', 'Wooden waterwheels (200+ still in use)', 'Lake Qarun fishing and hunting scenes in tombs', 'Agricultural abundance (dates, figs, olives, roses)'],
-        type: 'city',
-        youtubeUrl: 'https://youtu.be/mGPIgnVeutk?si=ldesXFSJUJ1pxOOk'
-      }
-    ]
-  },
-
-  // 47. Amarna - Capital of the Heretic King (East African Nile Valley)
-  amarna: {
-    id: 'amarna',
-    name: 'Amarna (Akhetaten)',
-    coordinates: [27.645, 30.904],
-    region: 'East Africa / Nile Valley (Egypt)',
-    locations: [
-      {
-        id: 'crimson-amarna',
-        name: 'City of Akhetaten',
-        description: 'The experimental capital of Akhenaten\'s sun worship',
-        longDescription: `Amarna (modern Tell el-Amarna) was founded by Pharaoh Akhenaten (Amenhotep IV) in 1346 BCE as his new capital, dedicated to the sun disk Aten. The city was built on virgin land in middle Egypt, deliberately avoiding the old gods of Thebes and Memphis. Akhenaten's religious revolution suppressed the worship of Amun and other traditional gods, promoting Aten as the sole deity—one of the earliest attempts at monotheism in history.
-
-The city was called Akhetaten ("Horizon of the Aten"), and its boundaries were marked by 14 boundary stelae carved into the cliffs, recording Akhenaten's founding declaration. The city was abandoned shortly after Akhenaten's death (c. 1336 BCE), when his son Tutankhamun restored the old gods and moved the capital back to Thebes. This short occupation (only 15 years) preserved the city as a time capsule of 14th-century BCE life.
-
-Excavations have revealed residential neighborhoods (Workmen's Village with planned housing, North Suburb for elites), palaces (North Palace, Great Palace with the "Window of Appearance" where Akhenaten and Nefertiti appeared to reward officials), temples (Great Temple of Aten, the most open-air temple in Egypt, with thousands of offering tables), and rock-cut tombs of nobles. The site is the only ancient Egyptian city preserved as a planned settlement, allowing archaeologists to study daily life, social organization, and the distinctive Amarna art style with its elongated figures, intimate family scenes (Akhenaten playing with his daughters, kissing Nefertiti), and realistic depictions of royal life.`,
-        imageRegenerated: '/images/sites/crimson-amarna-regenerated.jpg',
-        imageCurrent: '/images/sites/crimson-amarna-current.jpg',
-        scene: 'The Sun City of Akhenaten',
-        visualHighlights: ['Open-air Aten temples with thousands of offering tables', 'Sun altars with no roofs or enclosed spaces (direct sunlight worship)', 'Royal tomb with reliefs of Akhenaten mourning his daughter Meketaten', 'Amarna art style with elongated figures and realistic family scenes', 'Boundary stelae with founding declaration in hieroglyphs'],
-        deity: 'Aten',
-        type: 'city',
-        youtubeUrl: 'https://youtu.be/UZhHbrtVZnY?si=tJno5WiJ-rpWxxkP'
-      }
-    ]
-  },
-
-  // 48. Tanis - The Silver Pharaoh's Treasure (Nile Delta - gateway to East African trade)
-  tanis: {
-    id: 'tanis',
-    name: 'Tanis (San el-Hagar)',
-    coordinates: [30.976, 31.878],
-    region: 'East Africa / Nile Delta (Egypt)',
-    locations: [
-      {
-        id: 'tanis-royal-tombs',
-        name: 'Royal Necropolis of Tanis',
-        description: 'Treasure-filled tombs of the 21st-22nd Dynasty kings',
-        longDescription: `Tanis (Biblical Zoan) was the capital of Egypt during the 21st-22nd Dynasties (c. 1075-712 BCE), ruling during a period of division when the High Priests of Amun controlled Upper Egypt from Thebes. The site was completely overlooked by archaeologists until 1939-1944, when French archaeologist Pierre Montet discovered intact royal tombs—the only pharaonic burials besides Tutankhamun found with their treasures intact.
-
-The tombs of Psusennes I ('The Silver Pharaoh'), Amenemope, Shoshenq II, and others contained a silver coffin (the only silver royal coffin ever found, weighing 400 kg), a gold funerary mask (second only to Tutankhamun's in beauty), gold and lapis lazuli jewelry, hundreds of ushabti figures, and canopic jars of alabaster. The treasure was moved to Cairo for safekeeping just before WWII and then overlooked for decades due to the war's chaos and the fame of Tutankhamun's discovery.
-
-The temple precinct includes the Great Temple of Amun (with reused Old Kingdom blocks, some from Giza?), walls inscribed by Ramesses II (who built extensively here), and a sacred lake. Tanis's remote location—now surrounded by agricultural fields, not heavily touristed—preserved its mystery, including persistent pop-culture myths connecting it to Raiders of the Lost Ark (though the Ark never was here, the site was used as a filming location for the movie's map room).`,
-        imageRegenerated: '/images/sites/tanis-royal-tombs-regenerated.jpg',
-        imageCurrent: '/images/sites/tanis-royal-tombs-current.jpg',
-        scene: 'The Silver Pharaoh\'s Treasure',
-        visualHighlights: ['Silver coffin of Psusennes I (unique royal silver burial)', 'Gold funerary mask with lapis lazuli inlay', 'Intact royal burial chambers with stacked treasures', 'Lapis lazuli and gold jewelry collection', 'Reused Old Kingdom temple blocks with earlier inscriptions'],
-        deity: 'Amun',
-        type: 'city',
-        youtubeUrl: 'https://youtu.be/GQsiDLqKb5Y?si=NrWwm6cnJUtOkgGa'
-      }
-    ]
-  },
-
-  // 49. Dahshur - The Experimental Pyramids (Nile Valley)
-  dahshur: {
-    id: 'dahshur',
-    name: 'Dahshur Royal Pyramids',
-    coordinates: [29.807, 31.209],
-    region: 'East Africa / Nile Valley (Egypt)',
-    locations: [
-      {
-        id: 'bent-pyramid',
-        name: 'Bent Pyramid of Sneferu',
-        description: 'The experimental pyramid that changed angle mid-construction',
-        longDescription: `The Bent Pyramid of Pharaoh Sneferu (c. 2600 BCE) is unique in Egyptian architecture—its lower half rises at a steep 54-degree angle, then abruptly changes to a shallower 43-degree angle halfway up. This unusual shape records an engineering crisis: the builders realized the base foundation was failing (cracks appearing in the outer casing stones, the internal chambers showing stress), and they reduced the angle to prevent collapse, leaving the pyramid permanently "bent."
-
-The pyramid's original polished limestone casing remains partially intact—unique among pyramids where the casing is preserved from top to bottom on the lower courses. Two entrances (one on the north, one on the west—an unusual orientation suggesting ritual change) lead to interior chambers, one with a magnificent corbelled ceiling similar to the Great Pyramid's Grand Gallery, and a secondary "hidden" pyramid nearby (possibly for the queen, which still has its satellite enclosure wall).
-
-The pyramid complex includes a small satellite pyramid (for the Ka, the pharaoh's double) and a rubble-filled chamber. The Bent Pyramid was Sneferu's second pyramid (after Meidum's collapse) as he experimented toward the true pyramid form achieved later at Dahshur's Red Pyramid. The site's remote location and preserved casing make it one of the most visually striking pyramids today.`,
-        imageRegenerated: '/images/sites/bent-pyramid-regenerated.jpg',
-        imageCurrent: '/images/sites/bent-pyramid-current.jpg',
-        scene: 'The Pyramid That Changed Shape',
-        visualHighlights: ['Lower steep 54-degree angle', 'Upper shallower 43-degree angle', 'Preserved limestone casing partially intact (unique)', 'Two entrances (north and west) with descending passages', 'Corbelled interior ceiling reminiscent of the Grand Gallery'],
-        type: 'monument',
-        youtubeUrl: 'https://youtu.be/LZ0sSIIaXRU?si=H1qAI5ZuliMdpZMW'
-      },
-      {
-        id: 'red-pyramid',
-        name: 'Red Pyramid of Sneferu',
-        description: 'Egypt\'s first successful true pyramid',
-        longDescription: `The Red Pyramid of Sneferu, named for the pinkish hue of its limestone core (the original white casing has been stripped for medieval Cairo buildings), was Egypt's first successful true pyramid (the third built by Sneferu, after Meidum's collapse and the Bent Pyramid's correction). Rising 105 meters (344 feet), it was the second tallest pyramid in Egypt at completion (after Khufu's Great Pyramid), built at a constant 43-degree angle with no structural changes.
-
-The pyramid's interior comprises three chambers, with the highest having a corbelled ceiling 15 meters high. Entrance is through a 62-meter sloping passage on the north side (descending at 27 degrees). Unlike the Bent Pyramid, the Red Pyramid's interior is relatively simple (no interior decoration, just bare stone), but it served as the prototype for all later smooth-sided pyramids, including the Great Pyramid of Giza. The pyramid's burial chamber originally contained Sneferu's sarcophagus (now broken), though whether he was actually buried here is debated—he may have been buried at all three of his pyramids or only one.
-
-The pyramid was opened to the public only in the 2010s, and visitors can now descend the 62-meter passage into the cool, empty chambers—a rare experience of experiencing a pyramid as a tomb space (uncluttered by tourist infrastructure). The pyramid's location in the desert, away from Giza's crowds, makes it a more contemplative site.`,
-        imageRegenerated: '/images/sites/red-pyramid-regenerated.jpg',
-        imageCurrent: '/images/sites/red-pyramid-current.jpg',
-        scene: 'The First True Pyramid',
-        visualHighlights: ['Constant 43-degree slope (engineering success)', 'Pink-hued limestone core giving its name', '62-meter descending entrance passage', 'Corbelled interior chamber ceiling 15m high', 'Model for all later smooth-sided pyramids'],
-        type: 'monument',
-        youtubeUrl: 'https://youtu.be/2I_Syq0ULVo?si=wKh6B5bDDlAmmGe5'
-      }
-    ]
-  },
-
-  // 50. Meidum - The Collapsed Pyramid (Nile Valley)
-  meidum: {
-    id: 'meidum',
-    name: 'Meidum Pyramid',
-    coordinates: [29.388, 31.157],
-    region: 'East Africa / Nile Valley (Egypt)',
-    locations: [
-      {
-        id: 'meidum-pyramid',
-        name: 'Pyramid of Huni / Sneferu',
-        description: 'The mysterious collapsed tower pyramid',
-        longDescription: `The Meidum Pyramid is one of Egypt's most puzzling and dramatic structures—originally a seven or eight-tiered step pyramid (like Djoser's), it was later encased in a smooth outer shell to create a true pyramid. At some point, the outer casing collapsed catastrophically, leaving a three-tiered central tower rising from a massive rubble strewn around the base like scree.
-
-The pyramid was begun by Pharaoh Huni (last king of the 3rd Dynasty, c. 2630 BCE) and finished by his son Sneferu (first king of the 4th Dynasty), making it a transitional pyramid between the Step Pyramid of Djoser and the true pyramids of Dahshur and Giza. The collapse may have happened during construction (when the angle was too steep for the foundation) or due to later stone-robbing destabilizing the structure, leading Sneferu to abandon it and build the Bent Pyramid (learning from this failure) and then the Red Pyramid (perfecting the design).
-
-The complex includes a mortuary temple (with fragments of fine reliefs showing Sneferu in Heb-Sed robes), a causeway (partially excavated), a valley temple (still buried), and a satellite pyramid (for the Ka). Mastaba tombs of royal family members (including Nefermaat, son of Sneferu, and his wife Ateth) surround the pyramid in neat rows, with preserved reliefs including the famous "Geese of Meidum" (now in the Egyptian Museum), showing remarkable naturalism for the Old Kingdom.
-
-The site's remote location and "tower" appearance inspired the nickname "False Pyramid" among local Bedouin. The collapse debris has never been cleared, so the pyramid remains as a record of ancient engineering failure—a valuable lesson in pyramid construction history.`,
-        imageRegenerated: '/images/sites/meidum-pyramid-regenerated.jpg',
-        imageCurrent: '/images/sites/meidum-pyramid-current.jpg',
-        scene: 'The Tower of Collapse',
-        visualHighlights: ['Three-tiered central tower rising from rubble mound', 'Collapsed outer casing blocks strewn around base', 'Transitional pyramid design (step pyramid → true pyramid)', 'Mastaba tombs with "Geese of Meidum" relief', 'Remote desert location with dramatic views'],
-        type: 'monument',
-        youtubeUrl: 'https://youtu.be/UTUse_2ae0A?si=qv0yrqBWku6Jowmu'
-      }
-    ]
-  },
-
-  // 51. Wadi Gawasis - Egyptian Expedition Port (Red Sea - gateway to East Africa)
+  // 51. Wadi Gawasis - Egyptian Expedition Port
   wadiGawasis: {
     id: 'wadi-gawasis',
     name: 'Wadi Gawasis (Mersa Gawasis)',
     coordinates: [26.53, 33.97],
-    region: 'East Africa / Red Sea Coast (Egypt)',
+    region: 'East Africa',
     locations: [
       {
         id: 'wadi-gawasis-port',
@@ -1236,38 +1265,12 @@ The site includes "cave" storage galleries in the coral rock (Man's Cave and Wom
     ]
   },
 
-  // 52. Punt Reliefs at Deir el-Bahari - Visual Evidence of East African Trade
-  puntReliefs: {
-    id: 'punt-reliefs',
-    name: 'Deir el-Bahari Punt Reliefs',
-    coordinates: [25.738, 32.606],
-    region: 'East Africa (Thebes, Egypt - depicting Punt)',
-    locations: [
-      {
-        id: 'hatshepsut-punt-reliefs',
-        name: 'Hatshepsut\'s Punt Expedition Reliefs',
-        description: 'The most detailed visual record of Punt',
-        longDescription: `The Punt reliefs at Hatshepsut's temple at Deir el-Bahari (c. 1470 BCE) are the most detailed visual record of ancient Egypt's trade with the Land of Punt. The reliefs show Egyptian ships arriving in Punt, the Puntite ruler (Parahu) and his obese wife (Ati), the distinctive "beehive" houses on stilts, Egyptian soldiers carrying weapons, and the loading of goods—incense trees, gold, ivory, ebony, animal skins, and exotic animals (baboons, giraffes, leopards). The reliefs also show the Puntite chief offering gifts to the Egyptian ambassador.
-
-The text identifies Punt as "God's Land" and describes the expedition's success: "Never was brought the like of this to any king who has been since the beginning of the earth." The reliefs were a political statement by Hatshepsut, legitimizing her rule by reviving trade contacts. They provide scholars with their only contemporary Egyptian depiction of Puntite society—the clothing, the houses, the landscape (steep mountains descending to the sea, with incense trees in terraces), the animals, and the physical appearance of its people.
-
-The reliefs have been studied to identify the location of Punt: the beehive houses resemble modern Eritrean architecture; the incense trees (Boswellia species) grow in Eritrea, Ethiopia, and Somalia; the baboons (Papio hamadryas) are native to Ethiopia and Eritrea.`,
-        imageRegenerated: '/images/sites/punt-reliefs-regenerated.jpg',
-        imageCurrent: '/images/sites/punt-reliefs-current.jpg',
-        scene: 'Hatshepsut\'s Punt Expedition Reliefs',
-        visualHighlights: ['Egyptian ships arriving in Punt with sails furled', 'Puntite ruler Parahu and his obese wife Ati', '"Beehive" houses on stilts', 'Frankincense trees being loaded onto ships', 'Exotic animals (baboons, giraffes, leopards)'],
-        type: 'monument',
-        youtubeUrl: 'https://youtu.be/Z_VhhGI0Cmk?si=bKDOieVWWijKp4sK'
-      }
-    ]
-  },
-
-  // 53. Adulis - Aksumite Port (Eritrea)
+  // 53. Adulis - Aksumite Port
   adulis: {
     id: 'adulis',
     name: 'Adulis',
     coordinates: [15.267, 39.667],
-    region: 'East Africa / Horn of Africa (Eritrea)',
+    region: 'East Africa',
     locations: [
       {
         id: 'adulis-port',
@@ -1291,7 +1294,7 @@ The site features extensive ruins—warehouses (for storing goods), temples (ded
     id: 'eritrea-highlands',
     name: 'Eritrean Highlands',
     coordinates: [15.3333, 38.9167],
-    region: 'East Africa / Horn of Africa (Eritrea)',
+    region: 'East Africa',
     locations: [
       {
         id: 'eritrea-punt',
@@ -1315,7 +1318,7 @@ Ancient port sites along this coast, including Adulis (see above), Matara (a pre
     id: 'somalia-coast',
     name: 'Somali Coast',
     coordinates: [10, 49],
-    region: 'East Africa / Horn of Africa (Somalia)',
+    region: 'East Africa',
     locations: [
       {
         id: 'somalia-punt',
@@ -1341,7 +1344,7 @@ The frankincense and myrrh trees of northern Somalia still produce the highest q
     id: 'opone',
     name: 'Opone (Hafun)',
     coordinates: [10.43, 51.28],
-    region: 'East Africa / Horn of Africa (Somalia)',
+    region: 'East Africa',
     locations: [
       {
         id: 'opone-port',
@@ -1367,7 +1370,7 @@ The surrounding region produces the highest quality frankincense (Boswellia cart
     id: 'matara',
     name: 'Matara',
     coordinates: [14.6667, 39.4167],
-    region: 'East Africa / Horn of Africa (Eritrea)',
+    region: 'East Africa',
     locations: [
       {
         id: 'matara-ruins',
@@ -1393,7 +1396,7 @@ The architecture includes distinctive "Sabaean" elements (stone construction wit
     id: 'yeha',
     name: 'Yeha',
     coordinates: [14.2833, 39.0167],
-    region: 'East Africa / Horn of Africa (Ethiopia)',
+    region: 'East Africa',
     locations: [
       {
         id: 'yeha-temple',
@@ -1420,7 +1423,7 @@ The site also includes a later monastery (Debre Damo style, 6th century CE) and 
     id: 'red-sea-route',
     name: 'The Red Sea Trade Route',
     coordinates: [22, 38],
-    region: 'East Africa / Red Sea',
+    region: 'East Africa',
     locations: [
       {
         id: 'red-sea-trade',
@@ -1446,7 +1449,7 @@ Controlling the Red Sea meant controlling world trade. Whoever held its ports—
     id: 'punt-lost-land',
     name: 'The Land of Punt',
     coordinates: [10, 45],
-    region: 'East Africa / Horn of Africa (Speculative)',
+    region: 'East Africa',
     locations: [
       {
         id: 'punt-mystery',
@@ -1467,6 +1470,7 @@ Punt is remembered in Egyptian texts as a kind of "golden age" of trade, before 
     ]
   }
 };
+
 // ========== SECTION 5: PHOENICIA (61-70) ==========
 // Continues after nubianSites (which ends at #60)
 
@@ -5415,7 +5419,7 @@ export const sites: Record<string, Site> = {
   ...minoanSites,
   ...persianSites,
   ...etruscanSites,
-  ...centralAfricaSites, 
+  ...centralAfricaSites,
   ...southernAfricaSites,
   ...northAfricaSites,
   ...westAfricaSites,
@@ -5423,6 +5427,7 @@ export const sites: Record<string, Site> = {
   ...chinaSites,
   ...americasSites
 }
+
 // ========== FEATURED SITES (for homepage quick links) ==========
 export const featuredSites = [
   // Egyptian Civilization
@@ -5435,6 +5440,10 @@ export const featuredSites = [
   // Nubian/Kushite Civilization
   { id: 'meroe-pyramids', name: 'Meroë Pyramids', icon: 'PYR', siteId: 'meroe-pyramids', civilization: 'Nubian' },
   { id: 'jebel-barkal-mountain', name: 'Jebel Barkal', icon: 'MTN', siteId: 'jebel-barkal', civilization: 'Nubian' },
+  
+  // East African Civilization (Punt, Aksum, Horn of Africa)
+  { id: 'adulis-port', name: 'Adulis Port', icon: 'PRT', siteId: 'adulis', civilization: 'EastAfrican' },
+  { id: 'yeha-temple', name: 'Temple of Yeha', icon: 'TMP', siteId: 'yeha', civilization: 'EastAfrican' },
   
   // Phoenician Civilization
   { id: 'tyre-island', name: 'Tyre', icon: 'PRP', siteId: 'phoenician-tyre', civilization: 'Phoenician' },
@@ -5460,7 +5469,7 @@ export const featuredSites = [
   { id: 'temple-artemis', name: 'Temple of Artemis', icon: 'BOW', siteId: 'ephesus-artemis', civilization: 'Greek' },
   
   // Mycenaean Greek Civilization
-  { id: 'lion-gate', name: 'Lion Gate', icon: 'LIO', siteId: 'mycenae', civilization: 'Mycenaean' },
+  { id: 'lion-gate', name: 'Lion Gate', icon: 'LIO', siteId: 'mycenae-citadel', civilization: 'Mycenaean' },
   { id: 'palace-nestor', name: 'Palace of Nestor', icon: 'PLC', siteId: 'pylos', civilization: 'Mycenaean' },
   
   // Minoan Civilization
@@ -5476,25 +5485,25 @@ export const featuredSites = [
   { id: 'necropolis-banditaccia', name: 'Cerveteri', icon: 'URN', siteId: 'cerveteri', civilization: 'Etruscan' },
   
   // Central African Civilizations
-  { id: 'bantu-expansion', name: 'Bantu Expansion', icon: 'MAP', siteId: 'bantu-expansion', civilization: 'Central African' },
-  { id: 'luba-kingdom', name: 'Luba Kingdom', icon: 'KNG', siteId: 'luba-kingdom', civilization: 'Central African' },
-  { id: 'kongo-kingdom', name: 'Kongo Kingdom', icon: 'CRN', siteId: 'kongo-kingdom', civilization: 'Central African' },
+  { id: 'bantu-expansion', name: 'Bantu Expansion', icon: 'MAP', siteId: 'bantu-expansion', civilization: 'CentralAfrican' },
+  { id: 'luba-kingdom', name: 'Luba Kingdom', icon: 'KNG', siteId: 'luba-kingdom', civilization: 'CentralAfrican' },
+  { id: 'kongo-kingdom', name: 'Kongo Kingdom', icon: 'CRN', siteId: 'kongo-kingdom', civilization: 'CentralAfrican' },
   
   // West African Civilizations
-  { id: 'timbuktu-manuscripts', name: 'Timbuktu', icon: 'LIB', siteId: 'timbuktu', civilization: 'West African' },
-  { id: 'ile-ife', name: 'Ile-Ife', icon: 'CRN', siteId: 'ile-ife', civilization: 'West African' },
-  { id: 'dhar-tichitt-settlement', name: 'Dhar Tichitt', icon: 'STN', siteId: 'dhar-tichitt', civilization: 'West African' },
-  { id: 'great-mosque', name: 'Great Mosque of Djenné', icon: 'MOS', siteId: 'djenne', civilization: 'West African' },
+  { id: 'timbuktu-manuscripts', name: 'Timbuktu', icon: 'LIB', siteId: 'timbuktu', civilization: 'WestAfrican' },
+  { id: 'ile-ife', name: 'Ile-Ife', icon: 'CRN', siteId: 'ile-ife', civilization: 'WestAfrican' },
+  { id: 'dhar-tichitt-settlement', name: 'Dhar Tichitt', icon: 'STN', siteId: 'dhar-tichitt', civilization: 'WestAfrican' },
+  { id: 'great-mosque', name: 'Great Mosque of Djenné', icon: 'MOS', siteId: 'djenne', civilization: 'WestAfrican' },
   
   // Southern African Civilization
-  { id: 'great-zimbabwe-ruins', name: 'Great Zimbabwe', icon: 'STN', siteId: 'great-zimbabwe', civilization: 'Southern African' },
-  { id: 'mapungubwe-hill', name: 'Mapungubwe', icon: 'GLD', siteId: 'mapungubwe', civilization: 'Southern African' },
+  { id: 'great-zimbabwe-ruins', name: 'Great Zimbabwe', icon: 'STN', siteId: 'great-zimbabwe', civilization: 'SouthernAfrican' },
+  { id: 'mapungubwe-hill', name: 'Mapungubwe', icon: 'GLD', siteId: 'mapungubwe', civilization: 'SouthernAfrican' },
   
   // North African Civilizations
-  { id: 'tassili-rock-art', name: 'Tassili n\'Ajjer', icon: 'ART', siteId: 'tassili-najjer', civilization: 'North African' },
-  { id: 'garama-capital', name: 'Garama', icon: 'DSR', siteId: 'garama', civilization: 'North African' },
-  { id: 'carthage-ports', name: 'Carthage Ports', icon: 'HBR', siteId: 'carthage-detailed', civilization: 'North African' },
-  { id: 'dougga-capitol', name: 'Dougga', icon: 'TMP', siteId: 'dougga', civilization: 'North African' },
+  { id: 'tassili-rock-art', name: 'Tassili n\'Ajjer', icon: 'ART', siteId: 'tassili-najjer', civilization: 'NorthAfrican' },
+  { id: 'garama-capital', name: 'Garama', icon: 'DSR', siteId: 'garamantes-garama', civilization: 'NorthAfrican' },
+  { id: 'carthage-ports', name: 'Carthage Ports', icon: 'HBR', siteId: 'carthage-detailed', civilization: 'NorthAfrican' },
+  { id: 'dougga-capitol', name: 'Dougga', icon: 'TMP', siteId: 'dougga', civilization: 'NorthAfrican' },
   
   // Indian Civilization
   { id: 'mohenjo-daro-ruins', name: 'Mohenjo-Daro', icon: 'BTH', siteId: 'mohenjo-daro', civilization: 'Indian' },
@@ -5520,6 +5529,7 @@ export const featuredSites = [
 export const civilizationColors = {
   Egyptian: 'from-amber-600 to-orange-600',
   Nubian: 'from-emerald-600 to-teal-600',
+  EastAfrican: 'from-blue-600 to-cyan-600',
   Phoenician: 'from-purple-600 to-pink-600',
   Babylonian: 'from-yellow-600 to-amber-600',
   Israelite: 'from-indigo-600 to-blue-600',
@@ -5544,9 +5554,14 @@ export const civilizationColors = {
 // ========== HELPER FUNCTIONS ==========
 // Helper function to get civilization from region
 export function getCivilizationFromRegion(region: string): string {
-  // Egyptian & Nubian
+  // Egyptian
   if (region === 'Lower Egypt' || region === 'Upper Egypt' || region === 'Egypt') return 'Egyptian'
-  if (region.includes('Nubia') || region.includes('Kush')) return 'Nubian'
+  
+  // Nubia & Kush
+  if (region === 'Nubia & Kush') return 'Nubian'
+  
+  // East Africa
+  if (region === 'East Africa') return 'EastAfrican'
   
   // Phoenician
   if (region === 'Phoenicia') return 'Phoenician'
@@ -5557,8 +5572,11 @@ export function getCivilizationFromRegion(region: string): string {
   // Israel & Judah
   if (region === 'Israel & Judah') return 'Israelite'
   
-  // Hittite / Anatolian
-  if (region === 'Anatolia' || region === 'Levant' || region === 'Italian' || region === 'North Africa') return 'North African'
+  // Hittite / Anatolian / Levant
+  if (region === 'Anatolia' || region === 'Levant') return 'Hittite'
+  
+  // Italian (Roman battles)
+  if (region === 'Italian') return 'NorthAfrican'
   
   // Greek
   if (region === 'Greek & Aegean') return 'Greek'
@@ -5574,7 +5592,7 @@ export function getCivilizationFromRegion(region: string): string {
   // African regions
   if (region === 'Central Africa') return 'CentralAfrican'
   if (region === 'West Africa') return 'WestAfrican'
-  if (region === 'North Africa' && !region.includes('Egypt')) return 'NorthAfrican'
+  if (region === 'North Africa') return 'NorthAfrican'
   if (region === 'Southern Africa') return 'SouthernAfrican'
   
   // Indian
